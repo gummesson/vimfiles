@@ -81,7 +81,7 @@ set showmode       " Display the current mode
 set ruler          " Show line, columns and percentage in status line
 
 set nowrap         " No word wrap
-set scrolloff=10   " Enable more context around cursor
+set scrolloff=99   " Place the coursor in the middle of the window when scrolling
 set showmatch      " Show matching parenthesis
 set wildmenu       " Show options for file/command completion
 
