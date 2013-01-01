@@ -1,8 +1,8 @@
-## Vimfiles
+# Vimfiles
 
 My (g)Vim files.
 
-### Plugins
+## Plugins
 
 - [Pathogen](https://github.com/tpope/vim-pathogen "Pathogen")
 - [NERDTree](https://github.com/scrooloose/nerdtree "NERDTree") *(with [NERDTreeTabs](https://github.com/jistr/vim-nerdtree-tabs "NERDTreeTabs"))*
@@ -12,12 +12,12 @@ My (g)Vim files.
 - [Fugitive](https://github.com/tpope/vim-fugitive "Fugitive")
 - [YankRing](https://github.com/vim-scripts/YankRing.vim "YankRing")
 
-### Syntax
+## Syntax
 
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
 - Markdown "tweaks" *(custom made settings)*
 
-### Color schemes
+## Color schemes
 
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
 - [Base16](https://github.com/chriskempson/base16-vim "Base16") *(Eighties, Monokai and Railscasts)*
