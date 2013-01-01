@@ -8,7 +8,7 @@ iabbrev <head> <head><cr></head><Up>
 iabbrev <metachar> <meta charset="utf-8" />
 iabbrev <title> <title><cr></title><Up>
 iabbrev <linkstyle> <link rel="stylesheet" href="" type="text/css" />
-iabbrev <metaview> <meta name="viewport" content="width=device-width,initial-scale=1.0">
+iabbrev <metaview> <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 iabbrev <body> <body><cr></body><Up>
 
 iabbrev <div> <div><cr></div><Up>
