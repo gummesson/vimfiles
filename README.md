@@ -11,6 +11,7 @@ My (g)Vim files.
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
 - [Fugitive](https://github.com/tpope/vim-fugitive "Fugitive")
 - [YankRing](https://github.com/vim-scripts/YankRing.vim "YankRing")
+- [Surround](https://github.com/tpope/vim-surround "Surround")
 
 ## Syntax
 
@@ -26,3 +27,4 @@ My (g)Vim files.
 ## Others
 
 - Abbreviations
+- Snippets

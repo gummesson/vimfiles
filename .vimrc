@@ -228,9 +228,11 @@ map <C-Right> <C-W>l  " Ctrl+Right goes to the right window
 " Window size
 map <leader>eq <C-W>=  " Make all windows equal in size
 
-" Abbreviations
+" Abbreviations and snippets
 if has("win32")
-   source $HOME/vimfiles/config/abbrev.vim  " Set filepath for Windows
+  source $HOME/vimfiles/config/abbrev.vim    " Set filepath for Windows
+  source $HOME/vimfiles/config/snippets.vim
 else
-   source $HOME/.vim/config/abbrev.vim      " Set filepath for Linux
-endif 
+  source $HOME/.vim/config/abbrev.vim        " Set filepath for Linux
+  source $HOME/.vim/config/snippets.vim
+endif
