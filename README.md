@@ -15,7 +15,7 @@ My (g)Vim files.
 ## Syntax
 
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
-- Markdown "tweaks" *(custom made settings)*
+- Markdown and Jekyll tweaks *(custom made settings)*
 
 ## Color schemes
 
