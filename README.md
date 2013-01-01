@@ -22,3 +22,7 @@ My (g)Vim files.
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
 - [Base16](https://github.com/chriskempson/base16-vim "Base16") *(Eighties, Monokai and Railscasts)*
 - [Blackboard](https://github.com/nelstrom/vim-blackboard "Blackboard")
+
+## Others
+
+- Abbreviations

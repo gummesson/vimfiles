@@ -28,13 +28,13 @@ filetype plugin on      " Detect filetype
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
 if has("autocmd")
-  autocmd GUIEnter * set visualbell t_vb=      
+  au GUIEnter * set visualbell t_vb=      
 endif
 
 " Autoreload Vim settings
 augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  au!
+  au BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
   
 set hidden     " Hide the buffers instead of closing them
@@ -163,9 +163,13 @@ else
    let g:yankring_history_dir = "$HOME/.vim"      " Set filepath for Linux
 endif
 
+au VimLeave * :YRClear  " Clear history when exiting
+
 "--------
 "  Keys
 "--------
+"
+" Ctrl+Space: Escape insert mode
 "
 " F1: Toogle NERDTreeTabs
 " F2: Toogle (relative) Numbers.vim
@@ -186,6 +190,8 @@ endif
 " Ctrl+Right: Go to right window
 "        ,eq: Make all windows equal in size
 "
+
+imap <C-Space> <Esc>  " Map space to Esc
 
 " Remove help toggling from F1
 imap <F1> <nop>
@@ -221,3 +227,10 @@ map <C-Right> <C-W>l  " Ctrl+Right goes to the right window
 
 " Window size
 map <leader>eq <C-W>=  " Make all windows equal in size
+
+" Abbreviations
+if has("win32")
+   source $HOME/vimfiles/config/abbrev.vim  " Set filepath for Windows
+else
+   source $HOME/.vim/config/abbrev.vim      " Set filepath for Linux
+endif 
