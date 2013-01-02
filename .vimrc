@@ -26,6 +26,7 @@ filetype plugin on      " Detect filetype
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
+au GUIEnter * set visualbell t_vb=
 
 " Autoreload Vim settings
 augroup reload_vimrc
