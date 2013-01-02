@@ -3,7 +3,7 @@
 "===================
 "
 "  + General
-"  + Color Scheme
+"  + Colors
 "  + Visual
 "  + Indentation
 "  + Search
@@ -18,11 +18,12 @@
 "  General
 "-----------
 
-set nocompatible        " No compatibility with Vi
-call pathogen#infect()  " Enable the Pathogen plugin for easier plugin management
-syntax on               " Enable syntax highighting
-set encoding=utf-8      " Set encoding to UTF-8
-filetype plugin on      " Detect filetype
+set nocompatible          " No compatibility with Vi
+call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
+call pathogen#helptags()
+syntax on                 " Enable syntax highighting
+set encoding=utf-8        " Set encoding to UTF-8
+filetype plugin on        " Detect filetype
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
@@ -38,14 +39,20 @@ set hidden     " Hide the buffers instead of closing them
 set autowrite  " Write file while switching
 set autoread   " Reload files that has been changed outside of Vim
 
-"----------------
-"  Color Scheme
-"----------------
+"----------
+"  Colors
+"----------
 
 " Solarized
 let g:solarized_menu=0  " Remove menu
 colorscheme solarized   " Solarized theme
 set background=dark     " Set dark background
+
+" Set color column
+if exists("+colorcolumn")
+  set colorcolumn=81
+  "hi colorcolumn ctermbg=black guibg=black
+endif
 
 "----------
 "  Visual
@@ -83,15 +90,9 @@ set scrolloff=99   " Place the coursor in the middle of the window when scrollin
 set showmatch      " Show matching parenthesis
 set wildmenu       " Show options for file/command completion
 
-" Set color column
-if exists("+colorcolumn")
-  set colorcolumn=81
-endif
-
 " Mouse
 set mouse=a    " Enable mouse usage
 set mousehide  " Hide the mouse cursor while typing
-
 
 " Code folding
 set foldenable         " Enable code folding
