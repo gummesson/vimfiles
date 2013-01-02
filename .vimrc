@@ -4,7 +4,6 @@
 "
 "  + General
 "  + Color Scheme
-"  + Platform
 "  + Visual
 "  + Indentation
 "  + Search
@@ -20,23 +19,20 @@
 "-----------
 
 set nocompatible        " No compatibility with Vi
-call pathogen#infect()  " Enable the Pathogen plugin for easier management
+call pathogen#infect()  " Enable the Pathogen plugin for easier plugin management
 syntax on               " Enable syntax highighting
 set encoding=utf-8      " Set encoding to UTF-8
 filetype plugin on      " Detect filetype
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
-if has("autocmd")
-  au GUIEnter * set visualbell t_vb=      
-endif
 
 " Autoreload Vim settings
-augroup reload_vimrc " {
+augroup reload_vimrc
   au!
   au BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
-  
+augroup END
+
 set hidden     " Hide the buffers instead of closing them
 set autowrite  " Write file while switching
 set autoread   " Reload files that has been changed outside of Vim
@@ -50,27 +46,28 @@ let g:solarized_menu=0  " Remove menu
 colorscheme solarized   " Solarized theme
 set background=dark     " Set dark background
 
-"------------
-"  Platform
-"------------
-
-if has("gui_running")
-  if has("gui_gtk2")                          " Linux (for a smaller screen)
-    set lines=35                              " Height
-    set columns=100                           " Width
-    set guifont=Liberation\ Mono\ 10          " Set font for GUI
-    set clipboard=unnamedplus                 " Use + register for copy-paste
-  else                                        " Windows (for a bigger screen)
-    set lines=45                              " Height      
-    set columns=140                           " Width
-    set guifont=Liberation_Mono:h10:cDEFAULT  " Set font for GUI
-    set clipboard=unnamed                     " Use * register for copy-paste
-  end
-endif
-
 "----------
 "  Visual
 "----------
+
+" Set font
+if has("gui_running")
+  if has("gui_gtk2")                          " Linux
+    set guifont=Liberation\ Mono\ 10
+  else                                        " Windows
+    set guifont=Liberation_Mono:h10:cDEFAULT
+  end
+endif
+
+if has("unix")               " Linux
+  set lines=35               " Height
+  set columns=100            " Width
+  set clipboard=unnamedplus  " Use + register for copy-paste
+else                         " Windows
+  set lines=45               " Height
+  set columns=140            " Width
+  set clipboard=unnamed      " Use * register for copy-paste
+endif
 
 set guioptions-=T  " Hide toolbar
 set number         " Show line numbering
@@ -148,12 +145,11 @@ set noswapfile  " No swap file
 " NERDTreeTabs
 let g:nerdtree_tabs_open_on_gui_startup = 0  " Prevent from opening up on startup
 
-if has("gui_running")
-  if has("gui_gtk2")
-    let g:NERDTreeWinSize = 25  " Set size (Linux)
-  else
-    let g:NERDTreeWinSize = 30  " Set size (Windows)
-  end
+" Set size
+if has("unix")
+  let g:NERDTreeWinSize = 25  " Linux
+else
+  let g:NERDTreeWinSize = 30  " Windows
 endif
 
 " YankRing
@@ -229,10 +225,10 @@ map <C-Right> <C-W>l  " Ctrl+Right goes to the right window
 map <leader>eq <C-W>=  " Make all windows equal in size
 
 " Abbreviations and snippets
-if has("win32")
-  source $HOME/vimfiles/config/abbrev.vim    " Set filepath for Windows
+if has("win32")                              " Set filepath for Windows 
+  source $HOME/vimfiles/config/abbrev.vim
   source $HOME/vimfiles/config/snippets.vim
-else
-  source $HOME/.vim/config/abbrev.vim        " Set filepath for Linux
+else                                         " Set filepath for Linux
+  source $HOME/.vim/config/abbrev.vim
   source $HOME/.vim/config/snippets.vim
 endif
