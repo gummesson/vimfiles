@@ -69,11 +69,11 @@ endif
 
 if has("unix")               " Linux
   set lines=35               " Height
-  set columns=100            " Width
+  set columns=95             " Width
   set clipboard=unnamedplus  " Use + register for copy-paste
 else                         " Windows
   set lines=45               " Height
-  set columns=140            " Width
+  set columns=130            " Width
   set clipboard=unnamed      " Use * register for copy-paste
 endif
 
