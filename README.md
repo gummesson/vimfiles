@@ -12,6 +12,7 @@ My (g)Vim files.
 - [Fugitive](https://github.com/tpope/vim-fugitive "Fugitive")
 - [YankRing](https://github.com/vim-scripts/YankRing.vim "YankRing")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
+- [hexHighlighter](https://github.com/yurifury/hexHighlight "hexHighlighter")
 
 ## Syntax
 

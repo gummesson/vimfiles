@@ -170,6 +170,9 @@ endif
 
 au VimLeave * :YRClear  " Clear history when exiting
 
+" hexHighlighter
+map <leader>hh :call HexHighlight()<cr>
+
 "--------
 "  Keys
 "--------

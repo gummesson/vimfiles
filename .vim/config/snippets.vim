@@ -3,7 +3,8 @@
 "------------
 
 " HTML (trigger with <Enter> for best results)
-iabbrev <html> <html><cr></html><Up>
+iabbrev <doct> <!DOCTYPE html>
+abbrev <html> <html><cr></html><Up>
 iabbrev <head> <head><cr></head><Up>
 iabbrev <metachar> <meta charset="utf-8" />
 iabbrev <title> <title><cr></title><Up>
@@ -24,8 +25,10 @@ iabbrev <h3> <h3><cr></h3><Up>
 iabbrev <h4> <h4><cr></h4><Up>
 iabbrev <h5> <h5><cr></h5><Up>
 iabbrev <h6> <h6><cr></h6><Up>
+
 iabbrev <p> <p></p>
 iabbrev <a> <a href="" title="" alt=""></a><Up>
+iabbrev <img> <img src="" title="" alt="" /><Up>
 
 iabbrev <ul> <ul><cr></ul><Up>
 iabbrev <ol> <ol><cr></ol><Up>
