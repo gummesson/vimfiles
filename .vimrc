@@ -18,6 +18,13 @@
 "  General
 "-----------
 
+" Set language to english
+if has("unix") 
+  language messages C 
+else 
+  language messages en 
+endif 
+
 set nocompatible          " No compatibility with Vi
 call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
 call pathogen#helptags()
