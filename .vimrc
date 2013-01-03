@@ -170,9 +170,6 @@ endif
 
 au VimLeave * :YRClear  " Clear history when exiting
 
-" hexHighlighter
-map <leader>hh :call HexHighlight()<cr>
-
 "--------
 "  Keys
 "--------
@@ -185,6 +182,8 @@ map <leader>hh :call HexHighlight()<cr>
 " F4: Remove search highlightning
 "
 " ,cd: Set current directory as root
+"
+" ,hh: Toogle hexHighlighter
 "
 " j: Move down row by row
 " k: Move up row by row
@@ -218,6 +217,8 @@ let mapleader = ","  " Map leader to ,
 set timeoutlen=500   " Faster leader execution
 
 map <leader>cd :cd %:p:h<cr>:pwd<cr>  " Set current directory as root
+
+map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to ,hh
 
 " Move row by row instead of line by line
 nmap k gk  " Up
