@@ -19,11 +19,11 @@
 "-----------
 
 " Set language to english
-if has("unix") 
-  language messages C 
-else 
-  language messages en 
-endif 
+if has("unix")
+  language messages C
+else
+  language messages en
+endif
 
 set nocompatible          " No compatibility with Vi
 call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
@@ -92,10 +92,12 @@ set showcmd        " Show command in bottom right of the screen
 set showmode       " Display the current mode
 set ruler          " Show line, columns and percentage in status line
 
-set nowrap         " No word wrap
-set scrolloff=99   " Place the coursor in the middle of the window when scrolling
-set showmatch      " Show matching parenthesis
-set wildmenu       " Show options for file/command completion
+set nowrap            " No word wrap
+set scrolloff=5       " Start scrolling when the cursor is near the edges
+set sidescrolloff=10
+set sidescroll=1      " Scroll one character at a time
+set showmatch         " Show matching parenthesis
+set wildmenu          " Show options for file/command completion
 
 " Mouse
 set mouse=a    " Enable mouse usage
@@ -108,6 +110,9 @@ set foldmethod=manual  " Use manual code folding
                        " za: Open fold
                        " zi: Toogle folding on/off
                        " zd: Remove fold
+
+" Whitespace characters
+set listchars=tab:—\ ,eol:¬
 
 "---------------
 "  Indentation
@@ -198,7 +203,7 @@ au VimLeave * :YRClear  " Clear history when exiting
 "        ,eq: Make all windows equal in size
 "
 
-imap <C-Space> <Esc><Left> " Map space to Esc ("Left" maintains cursor position in the middle of lines)
+imap <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
 
 " Remove help toggling from F1
 imap <F1> <nop>
@@ -216,9 +221,10 @@ nmap <F4> :nohl<cr>             " Redraws the screen and removes any search high
 let mapleader = ","  " Map leader to ,
 set timeoutlen=500   " Faster leader execution
 
-map <leader>cd :cd %:p:h<cr>:pwd<cr>  " Set current directory as root
-
+" Leader keybindings
+map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
 map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to ,hh
+map <leader>w :set list!<cr>             " Toggle whitespace
 
 " Move row by row instead of line by line
 nmap k gk  " Up
