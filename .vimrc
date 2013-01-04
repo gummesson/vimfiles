@@ -187,8 +187,8 @@ au VimLeave * :YRClear  " Clear history when exiting
 " F4: Remove search highlightning
 "
 " ,cd: Set current directory as root
-"
-" ,hh: Toogle hexHighlighter
+" ,hh: Toggle hexHighlighter
+"  ,w: Toggle whitespace
 "
 " j: Move down row by row
 " k: Move up row by row
