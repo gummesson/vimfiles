@@ -58,7 +58,7 @@ set background=dark     " Set dark background
 " Set color column
 if exists("+colorcolumn")
   set colorcolumn=81
-  "hi colorcolumn guibg=PaleVioletRed1  " For color scheme without a color column
+  "hi colorcolumn guibg=PaleVioletRed1  " For color schemes without a color column
 endif
 
 "----------
@@ -75,13 +75,13 @@ if has("gui_running")
 endif
 
 if has("unix")               " Linux
-  set lines=35               " Height
-  set columns=95             " Width
-  set clipboard=unnamedplus  " Use + register for copy-paste
+  set lines=35                 " Height
+  set columns=95               " Width
+  set clipboard=unnamedplus    " Use + register for copy-paste
 else                         " Windows
-  set lines=45               " Height
-  set columns=130            " Width
-  set clipboard=unnamed      " Use * register for copy-paste
+  set lines=45                 " Height
+  set columns=130              " Width
+  set clipboard=unnamed        " Use * register for copy-paste
 endif
 
 set guioptions-=T  " Hide toolbar
@@ -100,9 +100,9 @@ set showmatch         " Show matching parenthesis
 set wildmenu          " Show options for file/command completion
 
 " Wild ignores
-set wildignore+=.git         " Version control
-set wildignore+=.sass-cache  " Sass/SCSS
-set wildignore+=.jpg,.png    " Pictures
+set wildignore+=.git            " Version control
+set wildignore+=.sass-cache     " Sass/SCSS
+set wildignore+=.jpg,.png,.svg  " Graphics
 
 " Mouse
 set mouse=a    " Enable mouse usage
@@ -117,7 +117,7 @@ set foldmethod=manual  " Use manual code folding
                        " zd: Remove fold
 
 " Whitespace characters
-set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
 set showbreak=↪
 
 " Windows 
@@ -201,9 +201,6 @@ au VimLeave * :YRClear  " Clear history when exiting
 " ,hh: Toggle hexHighlighter
 "  ,w: Toggle whitespace
 "
-" j: Move down row by row
-" k: Move up row by row
-"
 "  Shift+Left: Go to previous tab
 " Shift+Right: Go to next tab
 "
@@ -236,10 +233,6 @@ set timeoutlen=500   " Faster leader execution
 map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
 map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to ,hh
 map <leader>w :set list!<cr>             " Toggle whitespace
-
-" Move row by row instead of line by line
-nmap k gk  " Up
-nmap j gj  " Down
 
 " Tab navigation
 map <S-Left> :tabprevious<cr>  " Shift+Left goes to previous tab
