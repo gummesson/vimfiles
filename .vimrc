@@ -58,7 +58,7 @@ set background=dark     " Set dark background
 " Set color column
 if exists("+colorcolumn")
   set colorcolumn=81
-  "hi colorcolumn ctermbg=black guibg=black
+  "hi colorcolumn guibg=PaleVioletRed1  " For color scheme without a color column
 endif
 
 "----------
@@ -99,6 +99,11 @@ set sidescroll=1      " Scroll one character at a time
 set showmatch         " Show matching parenthesis
 set wildmenu          " Show options for file/command completion
 
+" Wild ignores
+set wildignore+=.git         " Version control
+set wildignore+=.sass-cache  " Sass/SCSS
+set wildignore+=.jpg,.png    " Pictures
+
 " Mouse
 set mouse=a    " Enable mouse usage
 set mousehide  " Hide the mouse cursor while typing
@@ -112,7 +117,13 @@ set foldmethod=manual  " Use manual code folding
                        " zd: Remove fold
 
 " Whitespace characters
-set listchars=tab:—\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set showbreak=↪
+
+" Windows 
+set splitbelow
+set splitright
+au VimResized * :wincmd =  " Autoresize windows
 
 "---------------
 "  Indentation
