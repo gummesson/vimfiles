@@ -211,12 +211,12 @@ au VimLeave * :YRClear  " Clear history when exiting
 "        ,eq: Make all windows equal in size
 "
 
-imap <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
+map <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
 
 " Remove help toggling from F1
-imap <F1> <nop>
-nmap <F1> <nop>
-vmap <F1> <nop>
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
 
 map <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
 map <F2> :NumbersToggle<cr>       " Map Numbers to F4
@@ -224,7 +224,7 @@ map <F2> :NumbersToggle<cr>       " Map Numbers to F4
 set pastetoggle=<F3>            " Enable pasting without indentation
 au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
-nmap <F4> :nohl<cr>             " Redraws the screen and removes any search highlighting
+nnoremap <F4> :nohl<cr>         " Redraws the screen and removes any search highlighting
 
 let mapleader = ","  " Map leader to ,
 set timeoutlen=500   " Faster leader execution
@@ -233,6 +233,7 @@ set timeoutlen=500   " Faster leader execution
 map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
 map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to ,hh
 map <leader>w :set list!<cr>             " Toggle whitespace
+map <leader>tw :%s/\s\+$//e<cr>          " Trim trailing whitespace
 
 " Tab navigation
 map <S-Left> :tabprevious<cr>  " Shift+Left goes to previous tab

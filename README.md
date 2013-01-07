@@ -6,6 +6,7 @@ My (g)Vim files.
 
 - [Pathogen](https://github.com/tpope/vim-pathogen "Pathogen")
 - [NERDTree](https://github.com/scrooloose/nerdtree "NERDTree") *(with [NERDTreeTabs](https://github.com/jistr/vim-nerdtree-tabs "NERDTreeTabs"))*
+- [NERDCommenter](https://github.com/scrooloose/nerdcommenter "NERDCommenter")
 - [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
