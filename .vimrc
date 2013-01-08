@@ -200,6 +200,7 @@ au VimLeave * :YRClear  " Clear history when exiting
 " ,cd: Set current directory as root
 " ,hh: Toggle hexHighlighter
 "  ,w: Toggle whitespace
+" ,tw: Trim trailing whitspace
 "
 "  Shift+Left: Go to previous tab
 " Shift+Right: Go to next tab
