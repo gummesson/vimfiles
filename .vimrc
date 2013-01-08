@@ -211,7 +211,7 @@ au VimLeave * :YRClear  " Clear history when exiting
 "        ,eq: Make all windows equal in size
 "
 
-map <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
+inoremap <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
 
 " Remove help toggling from F1
 inoremap <F1> <nop>
