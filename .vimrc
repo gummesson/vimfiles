@@ -58,7 +58,6 @@ set background=dark     " Set dark background
 " Set color column
 if exists("+colorcolumn")
   set colorcolumn=81
-  "hi colorcolumn guibg=PaleVioletRed1  " For color schemes without a color column
 endif
 
 "----------
@@ -111,10 +110,6 @@ set mousehide  " Hide the mouse cursor while typing
 " Code folding
 set foldenable         " Enable code folding
 set foldmethod=manual  " Use manual code folding
-                       " zf: Create fold
-                       " za: Open fold
-                       " zi: Toogle folding on/off
-                       " zd: Remove fold
 
 " Whitespace characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
@@ -190,17 +185,15 @@ au VimLeave * :YRClear  " Clear history when exiting
 "  Keys
 "--------
 "
-" Ctrl+Space: Escape insert mode
-"
 " F1: Toogle NERDTreeTabs
 " F2: Toogle (relative) Numbers.vim
 " F3: Toogle paste mode
 " F4: Remove search highlightning
 "
-" ,cd: Set current directory as root
-" ,hh: Toggle hexHighlighter
-"  ,w: Toggle whitespace
-" ,tw: Trim trailing whitspace
+" \cd: Set current directory as root
+" \hh: Toggle hexHighlighter
+"  \w: Toggle whitespace
+" \tw: Trim trailing whitspace
 "
 "  Shift+Left: Go to previous tab
 " Shift+Right: Go to next tab
@@ -209,10 +202,8 @@ au VimLeave * :YRClear  " Clear history when exiting
 "  Ctrl+Down: Go to bottom window
 "  Ctrl+Left: Go to left window
 " Ctrl+Right: Go to right window
-"        ,eq: Make all windows equal in size
+"        \eq: Make all windows equal in size
 "
-
-inoremap <C-Space> <Esc><Left>  " Map space to Esc (<Left> maintains cursor position in the middle of lines)
 
 " Remove help toggling from F1
 inoremap <F1> <nop>
@@ -227,12 +218,11 @@ au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
 nnoremap <F4> :nohl<cr>         " Redraws the screen and removes any search highlighting
 
-let mapleader = ","  " Map leader to ,
-set timeoutlen=500   " Faster leader execution
+set timeoutlen=500  " Faster leader execution
 
 " Leader keybindings
 map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
-map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to ,hh
+map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to hh
 map <leader>w :set list!<cr>             " Toggle whitespace
 map <leader>tw :%s/\s\+$//e<cr>          " Trim trailing whitespace
 
@@ -250,10 +240,8 @@ map <C-Right> <C-W>l  " Ctrl+Right goes to the right window
 map <leader>eq <C-W>=  " Make all windows equal in size
 
 " Abbreviations and snippets
-if has("win32")                              " Set filepath for Windows 
-  source $HOME/vimfiles/config/abbrev.vim
-  source $HOME/vimfiles/config/snippets.vim
-else                                         " Set filepath for Linux
-  source $HOME/.vim/config/abbrev.vim
-  source $HOME/.vim/config/snippets.vim
+if has("win32")                                   " Set filepath for Windows 
+  source $HOME/vimfiles/config/abbreviations.vim
+else                                              " Set filepath for Linux
+  source $HOME/.vim/config/abbreviations.vim
 endif
