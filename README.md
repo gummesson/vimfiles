@@ -29,4 +29,3 @@ My (g)Vim files.
 ## Others
 
 - Abbreviations
-- Snippets
