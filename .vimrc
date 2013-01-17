@@ -9,6 +9,7 @@
 "  + Search
 "  + History
 "  + Backups
+"  + Abbreviations
 "  + Plugins
 "  + Keys
 "
