@@ -11,7 +11,7 @@
 "  + Backups
 "  + Plugins
 "  + Keys
-"  
+"
 "===================
 
 "-----------
@@ -115,7 +115,7 @@ set foldmethod=manual  " Use manual code folding
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
 set showbreak=↪
 
-" Windows 
+" Windows
 set splitbelow
 set splitright
 au VimResized * :wincmd =  " Autoresize windows
@@ -158,6 +158,16 @@ set undolevels=1000  " Enable many, many undos
 set nobackup    " No backups
 set noswapfile  " No swap file
 
+" ----------------
+"  Abbreviations
+"-----------------
+
+if has("win32")                                   " Set filepath for Windows
+  source $HOME/vimfiles/config/abbreviations.vim
+else                                              " Set filepath for Linux
+  source $HOME/.vim/config/abbreviations.vim
+endif
+
 "-----------
 "  Plugins
 "-----------
@@ -195,15 +205,6 @@ au VimLeave * :YRClear  " Clear history when exiting
 "  \w: Toggle whitespace
 " \tw: Trim trailing whitspace
 "
-"  Shift+Left: Go to previous tab
-" Shift+Right: Go to next tab
-"
-"    Ctrl+Up: Go to top window
-"  Ctrl+Down: Go to bottom window
-"  Ctrl+Left: Go to left window
-" Ctrl+Right: Go to right window
-"        \eq: Make all windows equal in size
-"
 
 " Remove help toggling from F1
 inoremap <F1> <nop>
@@ -211,37 +212,19 @@ nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
 map <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
+
 map <F2> :NumbersToggle<cr>       " Map Numbers to F4
 
 set pastetoggle=<F3>            " Enable pasting without indentation
 au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
+
 nnoremap <F4> :nohl<cr>         " Redraws the screen and removes any search highlighting
 
-set timeoutlen=500  " Faster leader execution
-
-" Leader keybindings
+" Leader
 map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
 map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to hh
 map <leader>w :set list!<cr>             " Toggle whitespace
 map <leader>tw :%s/\s\+$//e<cr>          " Trim trailing whitespace
 
-" Tab navigation
-map <S-Left> :tabprevious<cr>  " Shift+Left goes to previous tab
-map <S-Right> :tabnext<cr>     " Shift+Right goes to next tab
-
-" Window navigation
-map <C-Up> <C-W>k     " Ctrl+Up goes to the top window
-map <C-Down> <C-W>j   " Ctrl+Down goes to the bottom window
-map <C-Left> <C-W>h   " Ctrl+Left goes to the left window
-map <C-Right> <C-W>l  " Ctrl+Right goes to the right window
-
-" Window size
-map <leader>eq <C-W>=  " Make all windows equal in size
-
-" Abbreviations and snippets
-if has("win32")                                   " Set filepath for Windows 
-  source $HOME/vimfiles/config/abbreviations.vim
-else                                              " Set filepath for Linux
-  source $HOME/.vim/config/abbreviations.vim
-endif
+set timeoutlen=500  " Faster leader execution
