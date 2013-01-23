@@ -159,15 +159,16 @@ set undolevels=1000  " Enable many, many undos
 set nobackup    " No backups
 set noswapfile  " No swap file
 
-" ----------------
+"-----------------
 "  Abbreviations
 "-----------------
 
-if has("win32")                                   " Set filepath for Windows
-  source $HOME/vimfiles/config/abbreviations.vim
-else                                              " Set filepath for Linux
-  source $HOME/.vim/config/abbreviations.vim
-endif
+" Date and time
+abbrev idate <C-R>=strftime("%d/%m/%Y")<cr>
+abbrev itime <C-R>=strftime("%H:%M")<cr>
+
+" Lorem ipsum
+abbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 "-----------
 "  Plugins
@@ -185,9 +186,9 @@ endif
 
 " YankRing
 if has("win32")
-   let g:yankring_history_dir = "$HOME/vimfiles"  " Set filepath for Windows
+   let g:yankring_history_dir = "$HOME/vimfiles/yankring"  " Set filepath for Windows
 else
-   let g:yankring_history_dir = "$HOME/.vim"      " Set filepath for Linux
+   let g:yankring_history_dir = "$HOME/.vim/yankring"      " Set filepath for Linux
 endif
 
 au VimLeave * :YRClear  " Clear history when exiting
