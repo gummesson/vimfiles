@@ -10,7 +10,6 @@ My (g)Vim files.
 - [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
-- [YankRing](https://github.com/vim-scripts/YankRing.vim "YankRing")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
 
 ## Syntax

@@ -184,15 +184,6 @@ else
   let g:NERDTreeWinSize = 30  " Windows
 endif
 
-" YankRing
-if has("win32")
-   let g:yankring_history_dir = "$HOME/vimfiles/yankring"  " Set filepath for Windows
-else
-   let g:yankring_history_dir = "$HOME/.vim/yankring"      " Set filepath for Linux
-endif
-
-au VimLeave * :YRClear  " Clear history when exiting
-
 "--------
 "  Keys
 "--------
@@ -215,7 +206,7 @@ vnoremap <F1> <nop>
 
 map <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
 
-map <F2> :NumbersToggle<cr>       " Map Numbers to F4
+map <F2> :NumbersToggle<cr>  " Map Numbers to F2
 
 set pastetoggle=<F3>            " Enable pasting without indentation
 au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
