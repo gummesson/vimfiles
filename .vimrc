@@ -19,10 +19,10 @@
 "  General
 "-----------
 
-" Language 
-if has("unix")
+" Language
+if has("unix")          " Linux
   language messages C
-else
+else                    " Windows
   language messages en
 endif
 
@@ -44,7 +44,7 @@ augroup reload_vimrc
 augroup END
 
 set hidden     " Hide the buffers instead of closing them
-set autowrite  " Write file while switching
+set autowrite  " Write to files while switching
 set autoread   " Reload files that has been changed outside of Vim
 
 "----------------
@@ -54,7 +54,7 @@ set autoread   " Reload files that has been changed outside of Vim
 " Solarized
 let g:solarized_menu=0  " Remove menu
 colorscheme solarized   " Solarized theme
-set background=dark     " Set dark background
+set background=dark     " Set background to dark
 
 "----------
 "  Visual
@@ -80,13 +80,13 @@ else                         " Windows
   set clipboard=unnamed        " Use * register for copy-paste
 endif
 
-set guioptions-=T   " Hide toolbar
+set guioptions-=T   " Hide the awful toolbar
 set number          " Show line numbering
 set laststatus=2    " Display status line
-set showcmd         " Show command in bottom right of the screen
+set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
 set ruler           " Show line, columns and percentage in status line
-set colorcolumn=81  " Display color column at 81 characters
+set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
 au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
@@ -128,7 +128,7 @@ au VimResized * :wincmd =  " Autoresize windows
 filetype plugin indent on  " Enable indent plugin
 set autoindent             " Enable auto indent
 set smartindent            " Enable context-sensitive indentation
-set smarttab               " Insert tabs on the start of a line according to shiftwidth
+set smarttab               " Insert spaces on the start of a line (shiftwidth)
 set expandtab              " Replace tabs with spaces
 
 " Set two spaces as default
@@ -141,16 +141,16 @@ set softtabstop=2
 "----------
 
 set hlsearch    " Highlight search terms
-set incsearch   " Show search matches as you type
+set incsearch   " Show search matches as they get typed
 set ignorecase  " Ignore case when searching
-set smartcase   " Ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smartcase   " Ignore case if search pattern is all lowercase, otherwise make it case-sensitive
 
 "-----------
 "  History
 "-----------
 
-set history=1000     " Remember more commands and search history
-set undolevels=1000  " Enable many, many undos
+set history=1000     " Remember more commands and a longer search history
+set undolevels=1000  " Enable many, many, many, many, many undos
 
 "-----------
 "  Backups
@@ -170,7 +170,7 @@ abbrev itime <C-R>=strftime("%H:%M")<cr>
 " Lorem ipsum
 abbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-" Footnotes (inline and reference)
+" Footnotes for Markdown (inline and reference)
 abbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
 abbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
@@ -198,7 +198,6 @@ endif
 " F4: Remove search highlightning
 "
 " \cd: Set current directory as root
-" \hh: Toggle hexHighlighter
 "  \w: Toggle whitespace
 " \tw: Trim trailing whitspace
 "
@@ -216,11 +215,10 @@ set pastetoggle=<F3>            " Enable pasting without indentation
 au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
 
-nnoremap <F4> :nohl<cr>         " Redraws the screen and removes any search highlighting
+nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlighting
 
 " Leader
 map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
-map <leader>hh :call HexHighlight()<cr>  " Map hexHighlighter to hh
 map <leader>w :set list!<cr>             " Toggle whitespace
 map <leader>tw :%s/\s\+$//e<cr>          " Trim trailing whitespace
 
