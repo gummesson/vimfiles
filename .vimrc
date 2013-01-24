@@ -3,7 +3,7 @@
 "===================
 "
 "  + General
-"  + Colors
+"  + Color Scheme
 "  + Visual
 "  + Indentation
 "  + Search
@@ -19,7 +19,7 @@
 "  General
 "-----------
 
-" Set language to english
+" Language 
 if has("unix")
   language messages C
 else
@@ -47,25 +47,20 @@ set hidden     " Hide the buffers instead of closing them
 set autowrite  " Write file while switching
 set autoread   " Reload files that has been changed outside of Vim
 
-"----------
-"  Colors
-"----------
+"----------------
+"  Color Scheme
+"----------------
 
 " Solarized
 let g:solarized_menu=0  " Remove menu
 colorscheme solarized   " Solarized theme
 set background=dark     " Set dark background
 
-" Set color column
-if exists("+colorcolumn")
-  set colorcolumn=81
-endif
-
 "----------
 "  Visual
 "----------
 
-" Set font
+" Font
 if has("gui_running")
   if has("gui_gtk2")                          " Linux
     set guifont=Liberation\ Mono\ 10
@@ -74,6 +69,7 @@ if has("gui_running")
   end
 endif
 
+" Window size and clipboard
 if has("unix")               " Linux
   set lines=35                 " Height
   set columns=95               " Width
@@ -84,13 +80,17 @@ else                         " Windows
   set clipboard=unnamed        " Use * register for copy-paste
 endif
 
-set guioptions-=T  " Hide toolbar
-set number         " Show line numbering
-set cursorline     " Highlight current line
-set laststatus=2   " Display status line
-set showcmd        " Show command in bottom right of the screen
-set showmode       " Display the current mode
-set ruler          " Show line, columns and percentage in status line
+set guioptions-=T   " Hide toolbar
+set number          " Show line numbering
+set laststatus=2    " Display status line
+set showcmd         " Show command in bottom right of the screen
+set showmode        " Display the current mode
+set ruler           " Show line, columns and percentage in status line
+set colorcolumn=81  " Display color column at 81 characters
+
+" Cursorline
+au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
+au InsertLeave * set cursorline    " ...but show it in all the other modes.
 
 set nowrap            " No word wrap
 set scrolloff=5       " Start scrolling when the cursor is near the edges
