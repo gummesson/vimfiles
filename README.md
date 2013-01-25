@@ -11,6 +11,7 @@ My (g)Vim files.
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
+- [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides "Indent Guides")
 
 ## Syntax
 

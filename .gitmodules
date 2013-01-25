@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/hemisu"]
 	path = .vim/bundle/hemisu
 	url = https://github.com/noahfrederick/Hemisu.git
+[submodule ".vim/bundle/indent-guides"]
+	path = .vim/bundle/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides

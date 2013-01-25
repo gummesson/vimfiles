@@ -30,7 +30,8 @@ set nocompatible          " No compatibility with Vi
 call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
-set encoding=utf-8        " Set encoding to UTF-8
+set encoding=utf-8        " UTF-8 encoding
+set fileformat=unix       " Unix line-endings
 filetype plugin on        " Detect filetype
 
 " Remove sound and visual error
@@ -192,14 +193,16 @@ endif
 "  Keys
 "--------
 "
-" F1: Toogle NERDTreeTabs
-" F2: Toogle (relative) Numbers.vim
-" F3: Toogle paste mode
-" F4: Remove search highlightning
+" F1 - Toogle NERDTreeTabs
+" F2 - Toogle (relative) Numbers.vim
+" F3 - Toogle paste mode
+" F4 - Remove search highlightning
 "
-" \cd: Set current directory as root
-"  \w: Toggle whitespace
-" \tw: Trim trailing whitspace
+" \cd - Set current directory as root
+"  \w - Toggle whitespace
+" \tw - Trim trailing whitspace
+"
+" \ig - Toggle indent guides
 "
 
 " Remove help toggling from F1
