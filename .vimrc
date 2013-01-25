@@ -10,6 +10,7 @@
 "  + History
 "  + Backups
 "  + Abbreviations
+"  + Functions
 "  + Plugins
 "  + Keys
 "
@@ -117,6 +118,8 @@ set foldmethod=manual  " Use manual code folding
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
 set showbreak=↪
 
+set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
+
 " Windows
 set splitbelow
 set splitright
@@ -175,6 +178,15 @@ abbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do ei
 abbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
 abbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
+"-------------
+"  Functions
+"-------------
+
+" Render Markdown preview (via Pandoc)
+function! PandocMarkdownPreview()
+  silent exec '!pandoc -o preview.html %'
+endfunction
+
 "-----------
 "  Plugins
 "-----------
@@ -198,9 +210,10 @@ endif
 " F3 - Toogle paste mode
 " F4 - Remove search highlightning
 "
-" \cd - Set current directory as root
-"  \w - Toggle whitespace
-" \tw - Trim trailing whitspace
+" \cd  - Set current directory as root
+"  \w  - Toggle whitespace
+" \tw  - Trim trailing whitspace
+" \pmd - Render Markdown preview
 "
 " \ig - Toggle indent guides
 "
@@ -214,15 +227,15 @@ map <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
 
 map <F2> :NumbersToggle<cr>  " Map Numbers to F2
 
-set pastetoggle=<F3>            " Enable pasting without indentation
-au InsertLeave * set nopaste    " Diable paste mode when leaving insert mode
-set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
+set pastetoggle=<F3>          " Enable pasting without indentation
+au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
+
 
 nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlighting
 
-" Leader
-map <leader>cd :cd %:p:h<cr>:pwd<cr>     " Set current file directory as root
-map <leader>w :set list!<cr>             " Toggle whitespace
-map <leader>tw :%s/\s\+$//e<cr>          " Trim trailing whitespace
-
 set timeoutlen=500  " Faster leader execution
+
+map <leader>cd :cd %:p:h<cr>:pwd<cr>               " Set current file directory as root
+map <leader>w :set list!<cr>                       " Toggle whitespace
+map <leader>tw :%s/\s\+$//e<cr>                    " Trim trailing whitespace
+map <leader>pmd :call PandocMarkdownPreview()<cr>  " Render Markdown preview

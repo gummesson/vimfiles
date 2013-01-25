@@ -15,8 +15,8 @@ My (g)Vim files.
 
 ## Syntax
 
-- Various [Markdown](http://daringfireball.net/projects/markdown/ "Markdown") and [Jekyll](http://jekyllrb.com/ "Jekyll") tweaks
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
+- Various Markdown, Jekyll and Ruby tweaks
 
 ## Color schemes
 
