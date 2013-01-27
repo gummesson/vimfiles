@@ -184,7 +184,14 @@ abbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
 " Render Markdown preview (via Pandoc)
 function! PandocMarkdownPreview()
+  silent exec 'cd %:p:h'
+  silent exec 'pwd'
   silent exec '!pandoc -o preview.html %'
+  if has("win32")                             " Windows
+    silent exec '!start cmd /c preview.html'
+  else                                        " Linux
+    silent exec '!xdg-open preview.html'
+  endif
 endfunction
 
 "-----------
@@ -209,7 +216,7 @@ endif
 " F2 - Toogle (relative) Numbers.vim
 " F3 - Toogle paste mode
 " F4 - Remove search highlightning
-"
+"'
 " \cd  - Set current directory as root
 "  \w  - Toggle whitespace
 " \tw  - Trim trailing whitspace
@@ -229,7 +236,6 @@ map <F2> :NumbersToggle<cr>  " Map Numbers to F2
 
 set pastetoggle=<F3>          " Enable pasting without indentation
 au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
-
 
 nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlighting
 
