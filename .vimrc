@@ -32,7 +32,6 @@ call pathogen#infect()    " Enable the Pathogen plugin for easier plugin managem
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
 set encoding=utf-8        " UTF-8 encoding
-set fileformat=unix       " Unix line-endings
 filetype plugin on        " Detect filetype
 
 " Remove sound and visual error
@@ -218,7 +217,7 @@ let g:ctrlp_max_height = 7  " Search window
 " F2 - Toogle (relative) Numbers.vim
 " F3 - Toogle paste mode
 " F4 - Remove search highlightning
-"'
+"
 " \cd  - Set current directory as root
 "  \w  - Toggle whitespace
 " \tw  - Trim trailing whitspace
@@ -232,7 +231,7 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
-nnoremap <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
+nnoremap <F1> :NERDTreeToggle<cr>  " Map NERDTree to F1
 
 nnoremap <F2> :NumbersToggle<cr>  " Map Numbers to F2
 
