@@ -46,7 +46,6 @@ augroup reload_vimrc
 augroup END
 
 set hidden     " Hide the buffers instead of closing them
-set autowrite  " Write to files while switching
 set autoread   " Reload files that has been changed outside of Vim
 
 "----------------
@@ -168,7 +167,7 @@ set noswapfile  " No swap file
 "-----------------
 
 " Date and time
-abbrev idate <C-R>=strftime("%d/%m/%Y")<cr>
+abbrev idate <C-R>=strftime("%Y/%m/%d")<cr>
 abbrev itime <C-R>=strftime("%H:%M")<cr>
 
 " Lorem ipsum
@@ -208,6 +207,9 @@ else
   let g:NERDTreeWinSize = 30  " Windows
 endif
 
+" CtrlP
+let g:ctrlp_max_height = 7  " Search window
+
 "--------
 "  Keys
 "--------
@@ -230,9 +232,9 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
-map <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
+nnoremap <F1> :NERDTreeTabsToggle<cr>  " Map NERDTreeTabs to F1
 
-map <F2> :NumbersToggle<cr>  " Map Numbers to F2
+nnoremap <F2> :NumbersToggle<cr>  " Map Numbers to F2
 
 set pastetoggle=<F3>          " Enable pasting without indentation
 au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
@@ -241,7 +243,7 @@ nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlightin
 
 set timeoutlen=500  " Faster leader execution
 
-map <leader>cd :cd %:p:h<cr>:pwd<cr>               " Set current file directory as root
-map <leader>w :set list!<cr>                       " Toggle whitespace
-map <leader>tw :%s/\s\+$//e<cr>                    " Trim trailing whitespace
-map <leader>pmd :call PandocMarkdownPreview()<cr>  " Render Markdown preview
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>               " Set current file directory as root
+nnoremap <leader>w :set list!<cr>                       " Toggle whitespace
+nnoremap <leader>tw :%s/\s\+$//e<cr>                    " Trim trailing whitespace
+nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>  " Render Markdown preview

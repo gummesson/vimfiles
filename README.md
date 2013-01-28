@@ -18,7 +18,11 @@ My (g)Vim files.
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
 - Various Markdown, Jekyll and Ruby tweaks
 
-## Color schemes
+## Functions
+
+- [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
+
+## Color Schemes
 
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
 - [Base16](https://github.com/chriskempson/base16-vim "Base16")
