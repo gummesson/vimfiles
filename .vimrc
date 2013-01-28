@@ -45,8 +45,8 @@ augroup reload_vimrc
   au BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-set hidden     " Hide the buffers instead of closing them
-set autoread   " Reload files that has been changed outside of Vim
+set hidden    " Hide the buffers instead of closing them
+set autoread  " Reload files that has been changed outside of Vim
 
 "----------------
 "  Color Scheme

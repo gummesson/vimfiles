@@ -12,6 +12,7 @@ My (g)Vim files.
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
 - [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides "Indent Guides")
+- [CtrlP](https://github.com/kien/ctrlp.vim "CtrlP")
 
 ## Syntax
 
