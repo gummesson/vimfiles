@@ -97,6 +97,7 @@ set scrolloff=5       " Start scrolling when the cursor is near the edges
 set sidescrolloff=10
 set sidescroll=1      " Scroll one character at a time
 set showmatch         " Show matching parenthesis
+set matchtime=1       " Show matching paren a tenth of a second
 set wildmenu          " Show options for file/command completion
 
 " Wild ignores
@@ -167,15 +168,15 @@ set noswapfile  " No swap file
 "-----------------
 
 " Date and time
-abbrev idate <C-R>=strftime("%Y/%m/%d")<cr>
-abbrev itime <C-R>=strftime("%H:%M")<cr>
+iabbrev idate <C-R>=strftime("%Y/%m/%d")<cr>
+iabbrev itime <C-R>=strftime("%H:%M")<cr>
 
 " Lorem ipsum
-abbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 " Footnotes for Markdown (inline and reference)
-abbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
-abbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
+iabbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
+iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
 "-------------
 "  Functions
@@ -193,11 +194,10 @@ function! PandocMarkdownPreview()
   endif
 endfunction
 
-
 " Write mode
 "
 "  Changes the colorscheme and background, makes the font a bit bigger and
-"  makes the windows adjust (85% of the original columns and lines setting).
+"  makes the window adjust (85% of the original columns and lines setting).
 "
 function! WriteMode()
   colorscheme hemisu
@@ -231,7 +231,7 @@ else
 endif
 
 " CtrlP
-let g:ctrlp_max_height = 7  " Search window
+let g:ctrlp_max_height = 8  " Search window
 
 "--------
 "  Keys
@@ -247,8 +247,6 @@ let g:ctrlp_max_height = 7  " Search window
 " \tw  - Trim trailing whitspace
 " \pmd - Render Markdown preview
 "
-" \ig - Toggle indent guides
-"
 
 " Remove help toggling from F1
 inoremap <F1> <nop>
@@ -262,7 +260,7 @@ nnoremap <F2> :NumbersToggle<cr>  " Map Numbers to F2
 set pastetoggle=<F3>          " Enable pasting without indentation
 au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
 
-nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlighting
+nnoremap <F4> :nohl<cr>  " Redraw the screen and remove any search highlighting
 
 set timeoutlen=500  " Faster leader execution
 
