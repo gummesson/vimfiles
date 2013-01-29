@@ -127,16 +127,17 @@ au VimResized * :wincmd =  " Autoresize windows
 "  Indentation
 "---------------
 
+" Set two spaces as default
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+
 filetype plugin indent on  " Enable indent plugin
 set autoindent             " Enable auto indent
 set smartindent            " Enable context-sensitive indentation
 set smarttab               " Insert spaces on the start of a line (shiftwidth)
 set expandtab              " Replace tabs with spaces
-
-" Set two spaces as default
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftround             " Round indent to multiple of shiftwidth
 
 "----------
 "  Search
@@ -192,6 +193,29 @@ function! PandocMarkdownPreview()
   endif
 endfunction
 
+
+" Write mode
+"
+"  Changes the colorscheme and background, makes the font a bit bigger and
+"  makes the windows adjust (85% of the original columns and lines setting).
+"
+function! WriteMode()
+  colorscheme hemisu
+  set background=light
+
+if has("gui_running")
+    if has("gui_gtk2")                          " Linux
+      set guifont=Liberation\ Mono\ 12
+      set columns=80
+      set lines=30
+    else                                        " Windows
+      set guifont=Liberation_Mono:h12:cDEFAULT
+      set columns=110
+      set lines=40
+    end
+  endif
+endfunction
+
 "-----------
 "  Plugins
 "-----------
@@ -242,7 +266,10 @@ nnoremap <F4> :nohl<cr>  " Redraws the screen and removes any search highlightin
 
 set timeoutlen=500  " Faster leader execution
 
-nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>               " Set current file directory as root
-nnoremap <leader>w :set list!<cr>                       " Toggle whitespace
-nnoremap <leader>tw :%s/\s\+$//e<cr>                    " Trim trailing whitespace
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>  " Set current file directory as root
+nnoremap <leader>w :set list!<cr>          " Toggle whitespace
+nnoremap <leader>tw :%s/\s\+$//e<cr>       " Trim trailing whitespace
+
+" For writing
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>  " Render Markdown preview
+nnoremap <leader>wm :call WriteMode()<cr>               " Switch to Write Mode
