@@ -11,3 +11,6 @@ set colorcolumn=0
 
 " Remove line highlight
 set nocursorline
+
+" Remove showbreak
+set showbreak=
