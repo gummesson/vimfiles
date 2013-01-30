@@ -197,8 +197,8 @@ endfunction
 
 " Write mode
 "
-"  Changes the colorscheme and background, makes the font a bit bigger and
-"  makes the window adjust (75% of the original columns and lines settings).
+"  Changes the colorscheme and background, makes the font a bit bigger
+"  and makes the window adjust.
 "
 function! WriteMode()
   colorscheme hemisu
