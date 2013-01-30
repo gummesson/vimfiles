@@ -80,14 +80,14 @@ else                         " Windows
   set clipboard=unnamed        " Use * register for copy-paste
 endif
 
-set guioptions-=T   " Hide the awful toolbar
-set guioptions+=b   " Display a horizontal scrollbar
-set number          " Show line numbering
-set laststatus=2    " Always display the status line
-set showcmd         " Show current command in the bottom right of the screen
-set showmode        " Display the current mode
-set ruler           " Show line, columns and percentage in status line
-set colorcolumn=81  " Show a color column at the 81st column
+set guioptions-=T    " Hide the awful toolbar
+set guioptions+=b,h  " Display a horizontal scrollbar
+set number           " Show line numbering
+set laststatus=2     " Always display the status line
+set showcmd          " Show current command in the bottom right of the screen
+set showmode         " Display the current mode
+set ruler            " Show line, columns and percentage in status line
+set colorcolumn=81   " Show a color column at the 81st column
 
 " Cursorline
 au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
@@ -198,7 +198,7 @@ endfunction
 " Write mode
 "
 "  Changes the colorscheme and background, makes the font a bit bigger and
-"  makes the window adjust (85% of the original columns and lines setting).
+"  makes the window adjust (75% of the original columns and lines settings).
 "
 function! WriteMode()
   colorscheme hemisu
@@ -206,13 +206,13 @@ function! WriteMode()
 
 if has("gui_running")
     if has("gui_gtk2")                          " Linux
-      set guifont=Liberation\ Mono\ 12
-      set columns=80
-      set lines=30
+      set guifont=Liberation\ Mono\ 14
+      set lines=25
+      set columns=70
     else                                        " Windows
-      set guifont=Liberation_Mono:h12:cDEFAULT
-      set columns=110
-      set lines=40
+      set guifont=Liberation_Mono:h14:cDEFAULT
+      set lines=35
+      set columns=100
     end
   endif
 endfunction
