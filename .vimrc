@@ -242,6 +242,7 @@ let g:ctrlp_max_height = 8  " Search window
 " F2 - Toogle (relative) Numbers.vim
 " F3 - Toogle paste mode
 " F4 - Remove search highlightning
+" F6 - List all buffers
 "
 " \cd  - Set current directory as root
 "  \w  - Toggle whitespace
@@ -254,21 +255,34 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
-nnoremap <F1> :NERDTreeToggle<cr>  " Map NERDTree to F1
+" Map NERDTree to F1
+nnoremap <F1> :NERDTreeToggle<cr>
 
-nnoremap <F2> :NumbersToggle<cr>  " Map Numbers to F2
+" Map Numbers to F2
+nnoremap <F2> :NumbersToggle<cr>
 
 set pastetoggle=<F3>          " Enable pasting without indentation
 au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
 
-nnoremap <F4> :nohl<cr>  " Redraw the screen and remove any search highlighting
+" Redraw the screen and remove any search highlighting
+nnoremap <F4> :nohl<cr>
+
+" List all buffers
+nnoremap <F6> :ls<cr>
 
 set timeoutlen=500  " Faster leader execution
 
-nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>  " Set current file directory as root
-nnoremap <leader>w :set list!<cr>          " Toggle whitespace
-nnoremap <leader>tw :%s/\s\+$//e<cr>       " Trim trailing whitespace
+" Set current file directory as root
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" For writing
-nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>  " Render Markdown preview
-nnoremap <leader>wm :call WriteMode()<cr>               " Switch to Write Mode
+" Toggle whitespace
+nnoremap <leader>w :set list!<cr>
+
+" Trim trailing whitespace
+nnoremap <leader>tw :%s/\s\+$//e<cr>
+
+" Render Markdown preview
+nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
+
+" Switch to Write Mode
+nnoremap <leader>wm :call WriteMode()<cr>
