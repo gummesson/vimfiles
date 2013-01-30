@@ -204,14 +204,14 @@ function! WriteMode()
   colorscheme hemisu
   set background=light
 
-if has("gui_running")
+  if has("gui_running")
     if has("gui_gtk2")                          " Linux
       set guifont=Liberation\ Mono\ 14
-      set lines=25
+      set lines=23
       set columns=70
     else                                        " Windows
       set guifont=Liberation_Mono:h14:cDEFAULT
-      set lines=35
+      set lines=33
       set columns=100
     end
   endif
