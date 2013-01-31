@@ -22,7 +22,7 @@ My (g)Vim files.
 ## Functions
 
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
-- [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.vimrcL198 "Write Mode") *(changes the colorscheme, font size and window size)*
+- [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L198 "Write Mode") *(changes the colorscheme, font size and window size)*
 
 ## Color Schemes
 
