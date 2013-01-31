@@ -183,7 +183,7 @@ iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 "  Functions
 "-------------
 
-" Render Markdown preview (via Pandoc)
+" Pandoc Markdown Preview
 function! PandocMarkdownPreview()
   silent exec 'cd %:p:h'
   silent exec 'pwd'
@@ -195,11 +195,7 @@ function! PandocMarkdownPreview()
   endif
 endfunction
 
-" Write mode
-"
-"  Changes the colorscheme and background, makes the font a bit bigger
-"  and makes the window adjust.
-"
+" Write Mode
 function! WriteMode()
   colorscheme hemisu
   set background=light
@@ -221,7 +217,7 @@ endfunction
 "  Plugins
 "-----------
 
-" NERDTreeTabs
+" ~ NERDTreeTabs ~
 let g:nerdtree_tabs_open_on_gui_startup = 0  " Prevent from opening up on startup
 
 " Set size
@@ -231,24 +227,15 @@ else
   let g:NERDTreeWinSize = 30  " Windows
 endif
 
-" CtrlP
+" ~ CtrlP ~
 let g:ctrlp_max_height = 8  " Search window
 
 "--------
 "  Keys
 "--------
-"
-" F1 - Toogle NERDTreeTabs
-" F2 - Toogle (relative) Numbers.vim
-" F3 - Toogle paste mode
-" F4 - Remove search highlightning
-" F6 - List all buffers
-"
-" \cd  - Set current directory as root
-"  \w  - Toggle whitespace
-" \tw  - Trim trailing whitspace
-" \pmd - Render Markdown preview
-"
+
+" Make Y behave like C and D
+nnoremap Y y$
 
 " Remove help toggling from F1
 inoremap <F1> <nop>
@@ -281,7 +268,7 @@ nnoremap <leader>w :set list!<cr>
 " Trim trailing whitespace
 nnoremap <leader>tw :%s/\s\+$//e<cr>
 
-" Render Markdown preview
+" Pandoc Markdown preview
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
 
 " Switch to Write Mode

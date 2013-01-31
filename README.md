@@ -17,11 +17,12 @@ My (g)Vim files.
 ## Syntax
 
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
-- Various Markdown, Jekyll and Ruby tweaks
+- Various [Markdown](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftplugin/markdown.vim "Markdown tweaks"), [Jekyll](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/after/syntax/markdown.vim "Jekyll tweaks") and [Ruby](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftdetect/ruby.vim "Ruby tweaks") tweaks
 
 ## Functions
 
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
+- [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.vimrcL198 "Write Mode") *(changes the colorscheme, font size and window size)*
 
 ## Color Schemes
 
