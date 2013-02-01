@@ -238,6 +238,7 @@ endfunction
 "-----------
 
 " ~ Netrw ~
+let g:netrw_winsize=25        " Windows size (percent of current open window)
 let g:netrw_liststyle=3       " Tree style listing
 let g:netrw_browse_split = 4  " Open in previous window 
 let g:netrw_altv = 1          " Split to right
