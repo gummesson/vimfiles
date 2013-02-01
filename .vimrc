@@ -238,9 +238,12 @@ endfunction
 "-----------
 
 " ~ Netrw ~
-let g:netrw_liststyle=3       " Tree style listing
-let g:netrw_browse_split = 4  " Open in previous window 
-let g:netrw_altv = 1          " Split to right
+let g:netrw_liststyle=3                     " Tree style listing
+let g:netrw_browse_split = 4                " Open in previous window 
+let g:netrw_altv = 1                        " Split to right
+
+" Hide wildignore files and folders
+let g:netrw_list_hide = ".git,.sass-cache,.jpg,.png,.svg"
 
 " ~ CtrlP ~
 let g:ctrlp_max_height = 8  " Max window size
