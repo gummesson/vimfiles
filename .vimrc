@@ -183,9 +183,29 @@ iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 "  Functions
 "-------------
 
+" VExplorer (Netrw)
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+    let expl_win_num = bufwinnr(t:expl_buf_num)
+    if expl_win_num != -1
+      let cur_win_nr = winnr()
+      exec expl_win_num . 'wincmd w'
+      close
+      exec cur_win_nr . 'wincmd w'
+      unlet t:expl_buf_num
+    else
+      unlet t:expl_buf_num
+    endif
+  else
+    exec '1wincmd w'
+    Vexplore
+    let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+
 " Pandoc Markdown Preview
 function! PandocMarkdownPreview()
-  silent exec 'cd %:p:h'
+  silent exec 'lcd %:p:h'
   silent exec 'pwd'
   silent exec '!pandoc -o preview.html %'
   if has("win32")                             " Windows
@@ -217,18 +237,13 @@ endfunction
 "  Plugins
 "-----------
 
-" ~ NERDTreeTabs ~
-let g:nerdtree_tabs_open_on_gui_startup = 0  " Prevent from opening up on startup
-
-" Set size
-if has("unix")
-  let g:NERDTreeWinSize = 25  " Linux
-else
-  let g:NERDTreeWinSize = 30  " Windows
-endif
+" ~ Netrw ~
+let g:netrw_liststyle=3       " Tree style listing
+let g:netrw_browse_split = 4  " Open in previous window 
+let g:netrw_altv = 1          " Split to right
 
 " ~ CtrlP ~
-let g:ctrlp_max_height = 8  " Search window
+let g:ctrlp_max_height = 8  " Max window size
 
 "--------
 "  Keys
@@ -242,20 +257,21 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
-" Map NERDTree to F1
-nnoremap <F1> :NERDTreeToggle<cr>
+" Map VExplorer (Netrw) to F1
+nnoremap <F1> :call ToggleVExplorer()<cr>
+
+" Map buffer list to F2
+nnoremap <F2> :ls<cr>
 
 " Map Numbers to F2
-nnoremap <F2> :NumbersToggle<cr>
+nnoremap <F3> :NumbersToggle<cr>
 
-set pastetoggle=<F3>          " Enable pasting without indentation
-au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
-
-" Redraw the screen and remove any search highlighting
+" Map search highlight clearing to F4
 nnoremap <F4> :nohl<cr>
 
-" List all buffers
-nnoremap <F6> :ls<cr>
+" Map paste mode to F6
+set pastetoggle=<F6>          " Enable pasting without indentation
+au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
 
 set timeoutlen=500  " Faster leader execution
 
