@@ -72,7 +72,7 @@ endif
 " Window size and clipboard
 if has("unix")               " Linux
   set lines=35                 " Height
-  set columns=95               " Width
+  set columns=115               " Width
   set clipboard=unnamedplus    " Use + register for copy-paste
 else                         " Windows
   set lines=45                 " Height
@@ -224,7 +224,7 @@ function! WriteMode()
     if has("gui_gtk2")                          " Linux
       set guifont=Liberation\ Mono\ 14
       set lines=23
-      set columns=70
+      set columns=75
     else                                        " Windows
       set guifont=Liberation_Mono:h14:cDEFAULT
       set lines=33
@@ -267,7 +267,7 @@ nnoremap <F1> :call ToggleVExplorer()<cr>
 " Map buffer list to F2
 nnoremap <F2> :ls<cr>
 
-" Map Numbers to F2
+" Map Numbers to F3
 nnoremap <F3> :NumbersToggle<cr>
 
 " Map search highlight clearing to F4
