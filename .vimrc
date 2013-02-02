@@ -249,6 +249,9 @@ let g:netrw_list_hide = ".git,.sass-cache,.jpg,.png,.svg"
 " ~ CtrlP ~
 let g:ctrlp_max_height = 8  " Max window size
 
+" ~ Yankstack ~
+call yankstack#setup()
+
 "--------
 "  Keys
 "--------

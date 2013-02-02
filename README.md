@@ -2,11 +2,15 @@
 
 My (g)Vim files.
 
-## Plugins
+## Plugin Manager
 
 - [Pathogen](https://github.com/tpope/vim-pathogen "Pathogen")
+
+## Plugins
+
 - [CtrlP](https://github.com/kien/ctrlp.vim "CtrlP")
 - [Zencoding](https://github.com/mattn/zencoding-vim "Zencoding")
+- [Yankstack](https://github.com/maxbrunsfeld/vim-yankstack "Yankstack")
 - [Endwise](https://github.com/tpope/vim-endwise "Endwise")
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
