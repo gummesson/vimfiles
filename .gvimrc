@@ -13,7 +13,7 @@
 "-----------
 "  General
 "-----------
-"
+
 " Autoreload Vim settings
 augroup reload_gvimrc
   au!
