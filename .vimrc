@@ -1,18 +1,18 @@
 "===================
-"  (g)Vim settings
+"  Vim settings
 "===================
 "
-"  + General
-"  + Color Scheme
-"  + Visual
-"  + Indentation
-"  + Search
-"  + History
-"  + Backups
-"  + Abbreviations
-"  + Functions
-"  + Plugins
-"  + Keys
+"  ~ General
+"  ~ Colorscheme
+"  ~ Visual
+"  ~ Indentation
+"  ~ Search
+"  ~ History
+"  ~ Backups
+"  ~ Abbreviations
+"  ~ Functions
+"  ~ Plugins
+"  ~ Mappings
 "
 "===================
 
@@ -36,7 +36,6 @@ filetype plugin on        " Detect filetype
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
-au GUIEnter * set visualbell t_vb=
 
 " Autoreload Vim settings
 augroup reload_vimrc
@@ -47,9 +46,9 @@ augroup END
 set hidden    " Hide the buffers instead of closing them
 set autoread  " Reload files that has been changed outside of Vim
 
-"----------------
-"  Color Scheme
-"----------------
+"---------------
+"  Colorscheme
+"---------------
 
 " Solarized
 let g:solarized_menu=0  " Remove menu
@@ -59,15 +58,6 @@ set background=dark     " Set background to dark
 "----------
 "  Visual
 "----------
-
-" Font
-if has("gui_running")
-  if has("gui_gtk2")                          " Linux
-    set guifont=Liberation\ Mono\ 10
-  else                                        " Windows
-    set guifont=Liberation_Mono:h10:cDEFAULT
-  end
-endif
 
 " Window size and clipboard
 if has("unix")               " Linux
@@ -80,14 +70,12 @@ else                         " Windows
   set clipboard=unnamed        " Use * register for copy-paste
 endif
 
-set guioptions-=T    " Hide the awful toolbar
-set guioptions+=b,h  " Display a horizontal scrollbar
-set number           " Show line numbering
-set laststatus=2     " Always display the status line
-set showcmd          " Show current command in the bottom right of the screen
-set showmode         " Display the current mode
-set ruler            " Show line, columns and percentage in status line
-set colorcolumn=81   " Show a color column at the 81st column
+set number          " Show line numbering
+set laststatus=2    " Always display the status line
+set showcmd         " Show current command in the bottom right of the screen
+set showmode        " Display the current mode
+set ruler           " Show line, columns and percentage in status line
+set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
 au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
@@ -215,24 +203,6 @@ function! PandocMarkdownPreview()
   endif
 endfunction
 
-" Write Mode
-function! WriteMode()
-  colorscheme hemisu
-  set background=light
-
-  if has("gui_running")
-    if has("gui_gtk2")                          " Linux
-      set guifont=Liberation\ Mono\ 14
-      set lines=23
-      set columns=75
-    else                                        " Windows
-      set guifont=Liberation_Mono:h14:cDEFAULT
-      set lines=33
-      set columns=100
-    end
-  endif
-endfunction
-
 "-----------
 "  Plugins
 "-----------
@@ -258,9 +228,9 @@ let g:ctrlp_max_height = 8  " Max window size
 " ~ Yankstack ~
 call yankstack#setup()
 
-"--------
-"  Keys
-"--------
+"------------
+"  Mappings
+"------------
 
 " Make Y behave like C and D
 nnoremap Y y$
@@ -279,7 +249,7 @@ nnoremap <F2> :ls<cr>
 " Map Numbers to F3
 nnoremap <F3> :NumbersToggle<cr>
 
-" Map search highlight clearing to F4
+" Map clear search highlight to F4
 nnoremap <F4> :nohl<cr>
 
 " Map paste mode to F6
@@ -300,5 +270,3 @@ nnoremap <leader>tw :%s/\s\+$//e<cr>
 " Pandoc Markdown preview
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
 
-" Switch to Write Mode
-nnoremap <leader>wm :call WriteMode()<cr>

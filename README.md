@@ -28,7 +28,7 @@ My (g)Vim files.
 
 - [VExplorer](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L186 "VExplorer") *(makes the native file explorer [Netrw](http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html "Netrw") behave more like [NERDTree](https://github.com/scrooloose/nerdtree "NERDTree"))*
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
-- [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L219 "Write Mode") *(changes the colorscheme, font size and window size)*
+- [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L47 "Write Mode") *(changes the colorscheme, font size and window size)*
 
 ## Color Schemes
 
