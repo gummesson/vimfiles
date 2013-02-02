@@ -6,11 +6,13 @@ My (g)Vim files.
 
 - [Pathogen](https://github.com/tpope/vim-pathogen "Pathogen")
 - [CtrlP](https://github.com/kien/ctrlp.vim "CtrlP")
-- [Commentary](https://github.com/tpope/vim-commentary "Commentary")
-- [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
+- [Zencoding](https://github.com/mattn/zencoding-vim "Zencoding")
+- [Endwise](https://github.com/tpope/vim-endwise "Endwise")
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
+- [Commentary](https://github.com/tpope/vim-commentary "Commentary")
+- [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
 - [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides "Indent Guides")
 
 ## Syntax

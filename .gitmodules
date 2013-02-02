@@ -31,3 +31,9 @@
 [submodule ".vim/bundle/commentary"]
 	path = .vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/bundle/endwise"]
+	path = .vim/bundle/endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule ".vim/bundle/zencoding"]
+	path = .vim/bundle/zencoding
+	url = https://github.com/mattn/zencoding-vim
