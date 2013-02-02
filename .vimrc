@@ -72,7 +72,7 @@ endif
 " Window size and clipboard
 if has("unix")               " Linux
   set lines=35                 " Height
-  set columns=115               " Width
+  set columns=110               " Width
   set clipboard=unnamedplus    " Use + register for copy-paste
 else                         " Windows
   set lines=45                 " Height
@@ -238,13 +238,19 @@ endfunction
 "-----------
 
 " ~ Netrw ~
-let g:netrw_winsize=25        " Windows size (percent of current open window)
-let g:netrw_liststyle=3       " Tree style listing
+let g:netrw_liststyle = 3     " Tree style listing
 let g:netrw_browse_split = 4  " Open in previous window 
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
 let g:netrw_list_hide = ".git,.sass-cache,.jpg,.png,.svg"
+
+" Windows size (percentage of the current window)
+if has("unix")              " Linux
+  let g:netrw_winsize = 20
+else                        " Windows
+  let g:netrw_winsize = 25
+endif
 
 " ~ CtrlP ~
 let g:ctrlp_max_height = 8  " Max window size
