@@ -269,4 +269,3 @@ nnoremap <leader>tw :%s/\s\+$//e<cr>
 
 " Pandoc Markdown preview
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
-
