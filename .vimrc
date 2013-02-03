@@ -232,6 +232,12 @@ call yankstack#setup()
 "  Mappings
 "------------
 
+" Easier window navigation
+nnoremap <C-H> <C-W>h 
+nnoremap <C-J> <C-W>j 
+nnoremap <C-K> <C-W>k 
+nnoremap <C-L> <C-W>l 
+
 " Make Y behave like C and D
 nnoremap Y y$
 
@@ -249,7 +255,7 @@ nnoremap <F2> :ls<cr>
 " Map Numbers to F3
 nnoremap <F3> :NumbersToggle<cr>
 
-" Map clear search highlight to F4
+" Map clear search highlighting to F4
 nnoremap <F4> :nohl<cr>
 
 " Map paste mode to F6
