@@ -22,7 +22,7 @@ My (g)Vim files.
 ## Syntax
 
 - [SCSS](https://github.com/cakebaker/scss-syntax.vim "SCSS")
-- Various [Markdown](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftplugin/markdown.vim "Markdown tweaks"), [Jekyll](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/after/syntax/markdown.vim "Jekyll tweaks") and [Ruby](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftdetect/ruby.vim "Ruby tweaks") tweaks
+- [HTML](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/after/syntax/html.vim "HTML tweaks"), [CSS](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/after/syntax/css.vim "CSS tweaks"), [Markdown](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftplugin/markdown.vim "Markdown tweaks"), [Jekyll](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/after/syntax/markdown.vim "Jekyll tweaks") and [Ruby](https://github.com/gummesson/vimfiles/blob/master/.vim/bundle/tweaks/ftdetect/ruby.vim "Ruby tweaks") tweaks
 
 ## Functions
 

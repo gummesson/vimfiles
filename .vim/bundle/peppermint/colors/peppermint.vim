@@ -46,12 +46,12 @@ hi String      guifg=#86d1d7 gui=NONE
 hi Identifier  guifg=#a6eba6 gui=NONE
 hi Function    guifg=#dbdbdb gui=NONE
 hi Type        guifg=#5dc6f5 gui=NONE
-hi Statement   guifg=#86d1d7 gui=NONE
+hi Statement   guifg=#86d1d7 gui=bold
 hi Keyword     guifg=#ffdc72 gui=NONE
 hi Constant    guifg=#ff8fff gui=NONE
 hi Number      guifg=#ffdc72 gui=NONE
 hi Special     guifg=#ffdc72 gui=NONE
-hi PreProc     guifg=#ff6685 gui=NONE
+hi PreProc     guifg=#ff6685 gui=bold
 
 " Language specific (HTML)
 hi Underlined  gui=NONE
