@@ -18,7 +18,7 @@
 " Autoreload Vim settings
 augroup reload_gvimrc
   au!
-  au BufWritePost $MGYVIMRC source $MYGGVIMRC
+  au BufWritePost $MGYVIMRC source $MYGVIMRC
 augroup END
 
 " Remove sound and visual error
