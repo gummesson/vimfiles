@@ -248,8 +248,8 @@ vnoremap <F1> <nop>
 " Map VExplorer (Netrw) to F1
 nnoremap <F1> :call ToggleVExplorer()<cr>
 
-" Map buffer list to F2
-nnoremap <F2> :ls<cr>
+" Map CtrlP's buffer list to F2
+nnoremap <F2> :CtrlPBuffer<cr>
 
 " Map Numbers to F3
 nnoremap <F3> :NumbersToggle<cr>
