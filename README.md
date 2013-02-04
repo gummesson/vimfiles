@@ -30,8 +30,9 @@ My (g)Vim files.
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
 - [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L47 "Write Mode") *(changes the colorscheme, font size and window size)*
 
-## Color Schemes
+## Colorschemes
 
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
 - [Base16](https://github.com/chriskempson/base16-vim "Base16")
 - [Hemisu](https://github.com/noahfrederick/Hemisu "Hemisu")
+- [Peppermint](https://github.com/gummesson/vimfiles/tree/master/.vim/bundle/peppermint/colors/peppermint.vim "Peppermint")

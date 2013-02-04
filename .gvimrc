@@ -5,6 +5,7 @@
 "  ~ General
 "  ~ Interface
 "  ~ Font
+"  ~ Colorscheme
 "  ~ Functions
 "  ~ Mappings
 "
@@ -39,6 +40,13 @@ if has("gui_gtk2")                          " Linux
 else                                        " Windows
   set guifont=Liberation_Mono:h10:cDEFAULT
 end
+
+"---------------
+"  Colorscheme
+"---------------
+
+" Use Peppermint when in GUI mode
+colorscheme peppermint
 
 "-------------
 "  Functions
