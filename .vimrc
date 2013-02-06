@@ -89,9 +89,10 @@ set matchtime=1       " Show matching paren a tenth of a second
 set wildmenu          " Show options for file/command completion
 
 " Wild ignores
-set wildignore+=.git            " Version control
-set wildignore+=.sass-cache     " Sass/SCSS
-set wildignore+=.jpg,.png,.svg  " Graphics
+set wildignore+=.git               " Version control
+set wildignore+=.sass-cache        " Sass/SCSS
+set wildignore+=*.jpg,*.png,*.svg  " Graphics
+set wildignore+=*.min.*            " Minified versions
 
 " Mouse
 set mouse=a    " Enable mouse usage
@@ -212,7 +213,7 @@ let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
-let g:netrw_list_hide = ".git,.sass-cache,.jpg,.png,.svg"
+let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg"
 
 " Windows size (percentage of the current window)
 if has("unix")              " Linux
@@ -237,6 +238,12 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k 
 nnoremap <C-L> <C-W>l 
 
+" Move by display lines rather than linewise
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
 " Make Y behave like C and D
 nnoremap Y y$
 
@@ -244,6 +251,9 @@ nnoremap Y y$
 inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
+
+" Map Space to insert new line
+nnoremap <Space> o<Esc>
 
 " Map VExplorer (Netrw) to F1
 nnoremap <F1> :call ToggleVExplorer()<cr>
