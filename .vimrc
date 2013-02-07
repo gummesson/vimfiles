@@ -107,6 +107,7 @@ set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
 set showbreak=↪
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
+set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 
 " Windows
 set splitbelow
