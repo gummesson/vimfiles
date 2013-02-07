@@ -39,8 +39,8 @@ hi Folded        guifg=#e6e6e6 guibg=#444444 gui=bold
 " Status line
 hi StatusLine    guifg=#e6e6e6 guibg=#444444 gui=bold
 hi StatusLineNC  guifg=#737373 guibg=#444444 gui=bold
-hi WildMenu      guifg=#5dc6f5 guibg=#4c4c4c gui=bold
-hi Question      guifg=#ffdc72 guibg=#4c4c4c gui=bold
+hi WildMenu      guifg=#5dc6f5 guibg=#444444 gui=bold
+hi Question      guifg=#ffdc72 guibg=#444444 gui=bold
 
 " Messages
 hi ModeMsg       guifg=#ff6685 guibg=#444444 gui=bold

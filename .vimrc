@@ -61,7 +61,7 @@ let g:solarized_menu=0  " Remove it's menu
 " Window size and clipboard
 if has("unix")               " Linux
   set lines=35                 " Height
-  set columns=110               " Width
+  set columns=110              " Width
   set clipboard=unnamedplus    " Use + register for copy-paste
 else                         " Windows
   set lines=45                 " Height
