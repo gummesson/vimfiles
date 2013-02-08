@@ -173,6 +173,7 @@ iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 "-------------
 
 " VExplorer (Netrw)
+" (http://stackoverflow.com/questions/5006950/setting-netrw-like-nerdtree)
 function! ToggleVExplorer()
   if exists("t:expl_buf_num")
     let expl_win_num = bufwinnr(t:expl_buf_num)
@@ -194,9 +195,12 @@ endfunction
 
 " Pandoc Markdown Preview
 function! PandocMarkdownPreview()
+  " Set current working directory as root (for the current window only)
   silent exec 'lcd %:p:h'
   silent exec 'pwd'
+  " Call Pandoc to do the conversion
   silent exec '!pandoc -o preview.html %'
+  " Open the preview file in browser
   if has("win32")                             " Windows
     silent exec '!start cmd /c preview.html'
   else                                        " Linux
