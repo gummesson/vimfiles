@@ -6,6 +6,7 @@
 "  It's mostly designed to look good with Ruby and CSS/SCSS files and 
 "  currently only works in GUI mode.
 
+" Setup settings
 set background=dark
 hi clear
 
@@ -13,7 +14,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "peppermint"
+let g:colors_name = "peppermint"
 
 " Vim >= 7.0
 if version >= 700
@@ -29,7 +30,10 @@ hi Cursor        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 hi Normal        guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
 hi NonText       guifg=#737373 guibg=#4c4c4c gui=NONE
 hi Visual        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+
+" Search
 hi Search        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi IncSearch     guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 
 " Window
 hi LineNr        guifg=#737373 guibg=#444444 gui=NONE
@@ -46,6 +50,12 @@ hi Question      guifg=#ffdc72 guibg=#444444 gui=bold
 hi ModeMsg       guifg=#ff6685 guibg=#444444 gui=bold
 hi ErrorMsg      guifg=#ffdc72 guibg=#444444 gui=bold
 hi WarningMsg    guifg=#ffdc72 guibg=#444444 gui=bold
+
+" Diff
+hi DiffAdd       guifg=#a6eba6 guibg=#444444 gui=NONE
+hi DiffChange    guifg=#ffdc72 guibg=#444444 gui=NONE
+hi DiffDelete    guifg=#ff6685 guibg=#444444 gui=NONE
+hi DiffText      guifg=#ffdc72 guibg=#444444 gui=NONE
 
 " Others
 hi SpecialKey    guifg=#e6e6e6 guibg=#4c4c4c gui=NONE

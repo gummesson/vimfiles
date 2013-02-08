@@ -253,8 +253,9 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
-" Map Space to insert new line
-nnoremap <Space> o<Esc>
+" Map Space and Ctrl+Space to insert a new line above/below the current line
+nnoremap <Space> O<Esc>
+nnoremap <C-Space> o<Esc>
 
 " Map VExplorer (Netrw) to F1
 nnoremap <F1> :call ToggleVExplorer()<cr>
@@ -266,11 +267,11 @@ nnoremap <F2> :CtrlPBuffer<cr>
 nnoremap <F3> :NumbersToggle<cr>
 
 " Map clear search highlighting to F4
-nnoremap <F4> :nohl<cr>
+nnoremap <F4> :nohls<cr>
 
 " Map paste mode to F6
 set pastetoggle=<F6>          " Enable pasting without indentation
-au InsertLeave * set nopaste  " Diable paste mode when leaving insert mode
+au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 
 set timeoutlen=500  " Faster leader execution
 
