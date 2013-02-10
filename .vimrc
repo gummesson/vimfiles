@@ -168,6 +168,9 @@ iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do e
 iabbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
 iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
+" Save session
+cabbrev Session call SaveSession()<cr>
+
 "-------------
 "  Functions
 "-------------
@@ -197,7 +200,6 @@ endfunction
 function! PandocMarkdownPreview()
   " Set current working directory as root (for the current window only)
   silent exec 'lcd %:p:h'
-  silent exec 'pwd'
   " Call Pandoc to do the conversion
   silent exec '!pandoc -o preview.html %'
   " Open the preview file in browser
@@ -206,6 +208,24 @@ function! PandocMarkdownPreview()
   else                                        " Linux
     silent exec '!xdg-open preview.html'
   endif
+  echo 'preview.html was generated.'
+endfunction
+
+" Save session
+function! SaveSession()
+  " Set the current working directory as root 
+  silent exec 'lcd %:p:h'
+  " Use the current working directory as the filename
+  let filename=fnamemodify(getcwd(), ":t")
+  " Path to the 'sessions' directory
+  if has("win32")
+    let vimdir="vimfiles/"
+  else
+    let vimdir=".vim/"
+  endif
+  " Execute mksession with the given variables
+  silent exec 'mksession $HOME/'.vimdir.'/sessions/'.filename.'.vim'
+  echo 'The session was saved as '.filename.'.vim'
 endfunction
 
 "-----------
