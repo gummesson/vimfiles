@@ -36,11 +36,12 @@ hi Search        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 hi IncSearch     guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 
 " Window
-hi LineNr        guifg=#737373 guibg=#444444 gui=NONE
+hi LineNr        guifg=#737373 guibg=#444444 gui=bold
 hi VertSplit     guifg=#444444 guibg=#444444 gui=NONE
+hi FoldColumn                  guibg=#444444
 hi Folded        guifg=#e6e6e6 guibg=#444444 gui=bold
 
-" Status line
+" Statusline
 hi StatusLine    guifg=#e6e6e6 guibg=#444444 gui=bold
 hi StatusLineNC  guifg=#737373 guibg=#444444 gui=bold
 hi WildMenu      guifg=#5dc6f5 guibg=#444444 gui=bold

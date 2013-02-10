@@ -7,3 +7,7 @@ syntax keyword htmlTagName contained rp rt ruby section source summary time vide
 syntax keyword htmlArg contained autofocus placeholder min max step
 syntax keyword htmlArg contained contenteditable contextmenu draggable hidden item
 syntax keyword htmlArg contained itemprop list subject spellcheck
+
+" Jekyll
+syntax match PreProc /\%^---\_.\{-}---$/  " YAML front matter  
+syntax match Float /{[%{].*[}%]}/         " Liquid tags
