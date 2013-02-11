@@ -168,9 +168,6 @@ iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do e
 iabbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
 iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
-" Save session
-cabbrev Session call SaveSession()<cr>
-
 "-------------
 "  Functions
 "-------------
@@ -211,23 +208,6 @@ function! PandocMarkdownPreview()
   echo 'preview.html was generated.'
 endfunction
 
-" Save session
-function! SaveSession()
-  " Set the current working directory as root 
-  silent exec 'lcd %:p:h'
-  " Use the current working directory as the filename
-  let filename=fnamemodify(getcwd(), ":t")
-  " Path to the 'sessions' directory
-  if has("win32")
-    let vimdir="vimfiles/"
-  else
-    let vimdir=".vim/"
-  endif
-  " Execute mksession with the given variables
-  silent exec 'mksession $HOME/'.vimdir.'/sessions/'.filename.'.vim'
-  echo 'The session was saved as '.filename.'.vim'
-endfunction
-
 "-----------
 "  Plugins
 "-----------
@@ -252,6 +232,13 @@ let g:ctrlp_max_height = 8  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
+
+" ~ Easy Session ~
+if has("win32")
+  let g:vim_session_dir = "D:/Git/Sessions"
+else
+  let g:vim_session_dir = "~/Git/Sessions"
+endif
 
 "------------
 "  Mappings

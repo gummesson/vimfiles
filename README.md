@@ -18,6 +18,7 @@ My (g)Vim files.
 - [Commentary](https://github.com/tpope/vim-commentary "Commentary")
 - [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
 - [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides "Indent Guides")
+- [Easy Session](https://github.com/gummesson/easy-session.vim "Easy Session")
 
 ## Syntax
 
@@ -26,8 +27,7 @@ My (g)Vim files.
 
 ## Functions
 
-- [VExplorer](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L178 "VExplorer") *(makes the native file explorer [Netrw](http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html "Netrw") behave more like [NERDTree](https://github.com/scrooloose/nerdtree "NERDTree"))*
-- [Save Session](https://gist.github.com/gummesson/4750775 "Save Session")
+- [VExplorer](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L175 "VExplorer") *(makes the native file explorer [Netrw](http://vimdoc.sourceforge.net/htmldoc/pi_netrw.html "Netrw") behave more like [NERDTree](https://github.com/scrooloose/nerdtree "NERDTree"))*
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
 - [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L55 "Write Mode") *(changes the colorscheme, font size and window size)*
 
