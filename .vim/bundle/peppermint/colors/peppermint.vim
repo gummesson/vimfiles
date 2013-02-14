@@ -5,6 +5,7 @@
 "
 "  It's mostly designed to look good with Ruby and CSS/SCSS files and 
 "  currently only works in GUI mode.
+"
 
 " Setup settings
 set background=dark
@@ -18,63 +19,68 @@ let g:colors_name = "peppermint"
 
 " Vim >= 7.0
 if version >= 700
-  hi CursorLine                 guibg=#444444 gui=NONE
-  hi ColorColumn                guibg=#444444 gui=NONE
-  hi MatchParen   guifg=#4c4c4c guibg=#737373 gui=bold
-  hi Pmenu        guifg=#e6e6e6 guibg=#444444 gui=NONE
-  hi PmenuSel     guifg=#ff6685 guibg=#444444 gui=bold
+  hi CursorLine                  guibg=#444444 gui=NONE
+  hi ColorColumn                 guibg=#444444 gui=NONE
+  hi MatchParen    guifg=#4c4c4c guibg=#737373 gui=bold
+  hi Pmenu         guifg=#e6e6e6 guibg=#444444 gui=NONE
+  hi PmenuSel      guifg=#ff6685 guibg=#444444 gui=bold
+  hi PmenuSbar     guifg=#ff6685 guibg=#444444 gui=bold
 endif
 
 " General
-hi Cursor        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
-hi Normal        guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
-hi NonText       guifg=#737373 guibg=#4c4c4c gui=NONE
-hi Visual        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi Cursor         guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi Normal         guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
+hi NonText        guifg=#737373 guibg=#4c4c4c gui=NONE
+hi Visual         guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 
 " Search
-hi Search        guifg=#e6e6e6 guibg=#ff6685 gui=NONE
-hi IncSearch     guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi Search         guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi IncSearch      guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 
 " Window
-hi LineNr        guifg=#737373 guibg=#444444 gui=bold
-hi VertSplit     guifg=#444444 guibg=#444444 gui=NONE
-hi FoldColumn                  guibg=#444444
-hi Folded        guifg=#e6e6e6 guibg=#444444 gui=bold
+hi LineNr         guifg=#737373 guibg=#444444 gui=bold
+hi VertSplit      guifg=#444444 guibg=#444444 gui=NONE
+hi FoldColumn                   guibg=#444444
+hi Folded         guifg=#e6e6e6 guibg=#444444 gui=bold
 
 " Statusline
-hi StatusLine    guifg=#e6e6e6 guibg=#444444 gui=bold
-hi StatusLineNC  guifg=#737373 guibg=#444444 gui=bold
-hi WildMenu      guifg=#5dc6f5 guibg=#444444 gui=bold
-hi Question      guifg=#ffdc72 guibg=#444444 gui=bold
+hi StatusLine     guifg=#e6e6e6 guibg=#444444 gui=bold
+hi StatusLineNC   guifg=#737373 guibg=#444444 gui=bold
+hi WildMenu       guifg=#5dc6f5 guibg=#444444 gui=bold
+hi Question       guifg=#ffdc72 guibg=#444444 gui=bold
 
 " Messages
-hi ModeMsg       guifg=#ff6685 guibg=#444444 gui=bold
-hi ErrorMsg      guifg=#ffdc72 guibg=#444444 gui=bold
-hi WarningMsg    guifg=#ffdc72 guibg=#444444 gui=bold
+hi ModeMsg        guifg=#ff6685 guibg=#444444 gui=bold
+hi ErrorMsg       guifg=#ffdc72 guibg=#444444 gui=bold
+hi WarningMsg     guifg=#ffdc72 guibg=#444444 gui=bold
 
 " Diff
-hi DiffAdd       guifg=#a6eba6 guibg=#444444 gui=NONE
-hi DiffChange    guifg=#ffdc72 guibg=#444444 gui=NONE
-hi DiffDelete    guifg=#ff6685 guibg=#444444 gui=NONE
-hi DiffText      guifg=#ffdc72 guibg=#444444 gui=NONE
+hi DiffAdd        guifg=#a6eba6 guibg=#444444 gui=NONE
+hi DiffChange     guifg=#ffdc72 guibg=#444444 gui=NONE
+hi DiffDelete     guifg=#ff6685 guibg=#444444 gui=NONE
+hi DiffText       guifg=#ffdc72 guibg=#444444 gui=NONE
 
 " Others
-hi SpecialKey    guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
-hi Title         guifg=#e6e6e6 guibg=NONE    gui=bold
+hi SpecialKey     guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
+hi Title          guifg=#e6e6e6 guibg=NONE    gui=bold
 
 " Syntax highlighting
-hi Comment     guifg=#737373                 gui=italic
-hi Boolean     guifg=#a6eba6                 gui=NONE
-hi String      guifg=#86d1d7                 gui=NONE
-hi Identifier  guifg=#a6eba6                 gui=NONE
-hi Function    guifg=#dbdbdb                 gui=NONE
-hi Type        guifg=#5dc6f5                 gui=NONE
-hi Statement   guifg=#86d1d7                 gui=bold
-hi Keyword     guifg=#ffdc72                 gui=NONE
-hi Constant    guifg=#ff8fff                 gui=NONE
-hi Number      guifg=#ffdc72                 gui=NONE
-hi Special     guifg=#ffdc72                 gui=NONE
-hi PreProc     guifg=#ff6685                 gui=bold
-
-" HTML specific syntax highlighting
-hi Underlined                                gui=NONE
+hi Comment        guifg=#737373               gui=italic
+hi Boolean        guifg=#a6eba6               gui=NONE
+hi String         guifg=#86d1d7               gui=NONE
+hi Identifier     guifg=#a6eba6               gui=NONE
+hi Function       guifg=#dbdbdb               gui=NONE
+hi Type           guifg=#5dc6f5               gui=NONE
+hi Statement      guifg=#86d1d7               gui=bold
+hi Keyword        guifg=#ffdc72               gui=NONE
+hi Constant       guifg=#ff8fff               gui=NONE
+hi Number         guifg=#ffdc72               gui=NONE
+hi Special        guifg=#ffdc72               gui=NONE
+hi PreProc        guifg=#ff6685               gui=bold
+hi Interpolation  guifg=#ffdc72               gui=NONE
+hi Method         guifg=#ff8fff               gui=NONE
+hi Symbol         guifg=#a6eba6               gui=NONE
+hi Underlined     guifg=#ff8fff               gui=NONE
+hi Ignore         guifg=#4c4c4c               gui=NONE
+hi Structure      guifg=#a6eba6               gui=NONE
+hi Delimiter      guifg=#ffdc72               gui=NONE

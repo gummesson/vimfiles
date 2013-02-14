@@ -9,5 +9,5 @@ syntax keyword htmlArg contained contenteditable contextmenu draggable hidden it
 syntax keyword htmlArg contained itemprop list subject spellcheck
 
 " Jekyll
-syntax match PreProc /\v^(\-\-\-)(\_.*)^(\-\-\-)/  " YAML front matter  
-syntax match Float   /\v\{(\{|\%)(.*)(\%|\})\}/    " Liquid tags
+syntax match PreProc /\v^(---)$(\_.*)^(---)$/    " YAML front matter  
+syntax match Float   /\v\{(\{|\%)(.*)(\%|\})\}/  " Liquid tags

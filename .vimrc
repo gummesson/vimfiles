@@ -158,15 +158,11 @@ set noswapfile  " No swap file
 "-----------------
 
 " Date and time
-iabbrev idate <C-R>=strftime("%Y/%m/%d")<cr>
+iabbrev idate <C-R>=strftime("%d/%m/%Y")<cr>
 iabbrev itime <C-R>=strftime("%H:%M")<cr>
 
 " Lorem ipsum
 iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-" Footnotes for Markdown (inline and reference)
-iabbrev fni <C-R>=strftime("[^%Y%m%d-]")<cr>
-iabbrev fnr <C-R>=strftime("[^%Y%m%d-]:")<cr>
 
 "-------------
 "  Functions
@@ -200,7 +196,7 @@ function! PandocMarkdownPreview()
   " Call Pandoc to do the conversion
   silent exec '!pandoc -o preview.html %'
   " Open the preview file in browser
-  if has("win32")                             " Windows
+  if has("win32") || has("win64")             " Windows
     silent exec '!start cmd /c preview.html'
   else                                        " Linux
     silent exec '!xdg-open preview.html'
@@ -234,7 +230,7 @@ let g:ctrlp_max_height = 8  " Max window size
 call yankstack#setup()
 
 " ~ Easy Session ~
-if has("win32")
+if has("win32") || has("win64")
   let g:vim_session_dir = "D:/Git/Sessions"
 else
   let g:vim_session_dir = "~/Git/Sessions"
@@ -268,6 +264,9 @@ vnoremap <F1> <nop>
 nnoremap <Space> O<Esc>
 nnoremap <C-Space> o<Esc>
 
+" Map Shift+Tab to unindent in insert mode
+inoremap <S-Tab> <Esc><<I
+
 " Map VExplorer (Netrw) to F1
 nnoremap <F1> :call ToggleVExplorer()<cr>
 
@@ -283,6 +282,9 @@ nnoremap <F4> :nohls<cr>
 " Map paste mode to F6
 set pastetoggle=<F6>          " Enable pasting without indentation
 au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
+
+" Map Footnotes to F7
+nnoremap <F7> :FootnotesToggle<cr>
 
 set timeoutlen=500  " Faster leader execution
 

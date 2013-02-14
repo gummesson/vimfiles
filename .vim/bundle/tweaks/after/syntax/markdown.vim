@@ -1,5 +1,5 @@
 " Jekyll
-syntax match PreProc /\v^(\-\-\-)(\_.*)^(\-\-\-)/  " YAML front matter  
+syntax match PreProc /\v^(---)$(\_.*)^(---)$/  " YAML front matter  
 
 " CriticMarkup
 syntax match Boolean  /\v\{(\+\+)(\_.*)(\+\+)\}/              " Addition (green)
