@@ -156,10 +156,10 @@ set noswapfile  " No swap file
 "-----------------
 "  Abbreviations
 "-----------------
-
+ 
 " Date and time
-iabbrev idate <C-R>=strftime("%d/%m/%Y")<cr>
-iabbrev itime <C-R>=strftime("%H:%M")<cr>
+iabbrev cdate <C-R>=strftime("%d/%m/%Y")<cr>
+iabbrev ctime <C-R>=strftime("%H:%M")<cr>
 
 " Lorem ipsum
 iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -231,9 +231,9 @@ call yankstack#setup()
 
 " ~ Easy Session ~
 if has("win32") || has("win64")
-  let g:vim_session_dir = "D:/Git/Sessions"
+  let g:vim_sessions_dir = "D:/Git/Sessions"
 else
-  let g:vim_session_dir = "~/Git/Sessions"
+  let g:vim_sessions_dir = "~/Git/Sessions"
 endif
 
 "------------
@@ -285,6 +285,11 @@ au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 
 " Map Footnotes to F7
 nnoremap <F7> :FootnotesToggle<cr>
+
+" Map various code folding actions to F8
+nnoremap <F8> za
+vnoremap <F8> zf
+inoremap <F8> <C-o>za
 
 set timeoutlen=500  " Faster leader execution
 
