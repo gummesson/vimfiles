@@ -3,9 +3,8 @@
 "  Colors adapted from Noah Frederick's Peppermint Terminal.app theme
 "  (http://noahfrederick.com/blog/2011/lion-terminal-theme-peppermint/)
 "
-"  It's mostly designed to look good with Ruby and CSS/SCSS files and 
-"  currently only works in GUI mode.
-"
+"  It's mostly designed to look good with Ruby code and currently only works in
+"  GUI mode.
 
 " Setup settings
 set background=dark
@@ -40,7 +39,7 @@ hi IncSearch      guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 " Window
 hi LineNr         guifg=#737373 guibg=#444444 gui=bold
 hi VertSplit      guifg=#444444 guibg=#444444 gui=NONE
-hi FoldColumn                   guibg=#444444
+hi FoldColumn     guifg=#737373 guibg=#444444 gui=bold
 hi Folded         guifg=#e6e6e6 guibg=#444444 gui=bold
 
 " Statusline
@@ -61,26 +60,15 @@ hi DiffDelete     guifg=#ff6685 guibg=#444444 gui=NONE
 hi DiffText       guifg=#ffdc72 guibg=#444444 gui=NONE
 
 " Others
-hi SpecialKey     guifg=#e6e6e6 guibg=#4c4c4c gui=NONE
 hi Title          guifg=#e6e6e6 guibg=NONE    gui=bold
 
 " Syntax highlighting
 hi Comment        guifg=#737373               gui=italic
-hi Boolean        guifg=#a6eba6               gui=NONE
-hi String         guifg=#86d1d7               gui=NONE
-hi Identifier     guifg=#a6eba6               gui=NONE
-hi Function       guifg=#dbdbdb               gui=NONE
-hi Type           guifg=#5dc6f5               gui=NONE
-hi Statement      guifg=#86d1d7               gui=bold
-hi Keyword        guifg=#ffdc72               gui=NONE
 hi Constant       guifg=#ff8fff               gui=NONE
-hi Number         guifg=#ffdc72               gui=NONE
-hi Special        guifg=#ffdc72               gui=NONE
+hi Identifier     guifg=#a6eba6               gui=NONE
+hi Statement      guifg=#86d1d7               gui=bold
 hi PreProc        guifg=#ff6685               gui=bold
-hi Interpolation  guifg=#ffdc72               gui=NONE
-hi Method         guifg=#ff8fff               gui=NONE
-hi Symbol         guifg=#a6eba6               gui=NONE
-hi Underlined     guifg=#ff8fff               gui=NONE
+hi Type           guifg=#5dc6f5               gui=NONE
+hi Special        guifg=#ffdc72               gui=NONE
+hi Underlined     guifg=#dbdbdb               gui=NONE
 hi Ignore         guifg=#4c4c4c               gui=NONE
-hi Structure      guifg=#a6eba6               gui=NONE
-hi Delimiter      guifg=#ffdc72               gui=NONE

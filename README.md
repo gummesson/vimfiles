@@ -9,15 +9,14 @@ My (g)Vim files.
 ## Plugins (Submodules)
 
 - [CtrlP](https://github.com/kien/ctrlp.vim "CtrlP")
+- [SnipMate](https://github.com/msanders/snipmate.vim "SnipMate")
 - [Zencoding](https://github.com/mattn/zencoding-vim "Zencoding")
 - [Yankstack](https://github.com/maxbrunsfeld/vim-yankstack "Yankstack")
-- [Endwise](https://github.com/tpope/vim-endwise "Endwise")
 - [Autoclose](https://github.com/Townk/vim-autoclose "Autoclose")
 - [Tabular](https://github.com/godlygeek/tabular "Tabular")
 - [Surround](https://github.com/tpope/vim-surround "Surround")
 - [Commentary](https://github.com/tpope/vim-commentary "Commentary")
 - [Numbers](https://github.com/myusuf3/numbers.vim/ "Numbers")
-- [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides "Indent Guides")
 
 ## Plugins (Custom)
 
@@ -42,4 +41,4 @@ My (g)Vim files.
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
 - [Base16](https://github.com/chriskempson/base16-vim "Base16")
 - [Hemisu](https://github.com/noahfrederick/Hemisu "Hemisu")
-- [Peppermint](https://github.com/gummesson/vimfiles/tree/master/.vim/bundle/peppermint/colors/peppermint.vim "Peppermint")
+- [Peppermint](https://github.com/gummesson/vimfiles/tree/master/.vim/colors/peppermint.vim "Peppermint")

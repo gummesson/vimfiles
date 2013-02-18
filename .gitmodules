@@ -22,21 +22,18 @@
 [submodule ".vim/bundle/hemisu"]
 	path = .vim/bundle/hemisu
 	url = https://github.com/noahfrederick/Hemisu.git
-[submodule ".vim/bundle/indent-guides"]
-	path = .vim/bundle/indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/commentary"]
 	path = .vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule ".vim/bundle/endwise"]
-	path = .vim/bundle/endwise
-	url = https://github.com/tpope/vim-endwise.git
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim
 [submodule ".vim/bundle/yankstack"]
 	path = .vim/bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
