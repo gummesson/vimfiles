@@ -71,6 +71,20 @@ function! WriteMode()
   else                                        " Windows
     set guifont=Liberation_Mono:h14:cDEFAULT
   endif
+  " Remove color column (again)
+  set colorcolumn=0
+endfunction
+
+" Slug
+function! Slug()
+  " Whitespace and forward slashes
+  silent! exec 's /\v(\s+|\/)/-/g'
+  " Punctuation and various other characters
+  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
+  " Trailing dashes
+  silent! exec 's /\v(^\-+|\-+$)//g'
+  " Transform to downcase
+  silent! exec 'normal! guu'
 endfunction
 
 "------------
@@ -79,3 +93,6 @@ endfunction
 
 " Switch to Write Mode
 nnoremap <leader>wm :call WriteMode()<cr>
+
+" Map :call Slug() to :Slug
+command! -nargs=0 Slug call Slug()
