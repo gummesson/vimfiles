@@ -55,7 +55,7 @@ colorscheme peppermint
 " Write Mode
 function! WriteMode()
   " Change colorscheme and background
-  colorscheme hemisu
+  colorscheme brackets
   set background=light
   " Adjust the window
   if has("unix")     " Linux

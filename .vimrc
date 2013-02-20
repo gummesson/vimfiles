@@ -237,6 +237,13 @@ else
   let g:vim_sessions_dir = "~/Git/Sessions"
 endif
 
+" ~ Notes ~
+if has("win32") || has("win64")
+  let g:notes_directory = 'D:\Dropbox\Dokument\Anteckningar'
+else
+  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar'
+endif
+
 "------------
 "  Mappings
 "------------
@@ -308,3 +315,17 @@ nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
 
 " Map :call Scratch to \x
 nnoremap <leader>x :call Scratch()<cr>
+
+" Extended text objects
+" (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
+let items = ["\\", "/", ":", ".", "*"]
+for item in items
+   silent! exec "nnoremap yi".item." T".item."yt".item
+   silent! exec "nnoremap ya".item." F".item."yf".item
+   silent! exec "nnoremap ci".item." T".item."ct".item
+   silent! exec "nnoremap ca".item." F".item."cf".item
+   silent! exec "nnoremap di".item." T".item."dt".item
+   silent! exec "nnoremap da".item." F".item."df".item
+   silent! exec "nnoremap vi".item." T".item."vt".item
+   silent! exec "nnoremap va".item." F".item."vf".item
+endfor

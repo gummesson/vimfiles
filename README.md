@@ -24,6 +24,7 @@ My (g)Vim files.
 - [Easy Session](https://github.com/gummesson/easy-session.vim "Easy Session")
 - [Voutliner](https://github.com/gummesson/voutliner.vim "Voutliner")
 - [Footnotes](https://github.com/gummesson/footnotes.vim "Footnotes")
+- [Notes](https://github.com/gummesson/vimfiles/tree/master/.vim/bundle/notes/autoload/notes.vim "Notes") *(Using ack.vim as a poor man's NVAlt)*
 
 ## Syntax
 
