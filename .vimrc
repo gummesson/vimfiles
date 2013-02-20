@@ -156,13 +156,10 @@ set noswapfile  " No swap file
 "-----------------
 "  Abbreviations
 "-----------------
- 
+
 " Date and time
 iabbrev cdate <C-R>=strftime("%d/%m/%Y")<cr>
 iabbrev ctime <C-R>=strftime("%H:%M")<cr>
-
-" Lorem ipsum
-iabbrev lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 "-------------
 "  Functions
@@ -175,16 +172,14 @@ function! ToggleVExplorer()
     let expl_win_num = bufwinnr(t:expl_buf_num)
     if expl_win_num != -1
       let cur_win_nr = winnr()
-      exec expl_win_num . 'wincmd w'
-      close
-      exec cur_win_nr . 'wincmd w'
+      silent! exec expl_win_num . 'wincmd w | close'
+      silent! exec cur_win_nr . 'wincmd w'
       unlet t:expl_buf_num
     else
       unlet t:expl_buf_num
     endif
   else
-    exec '1wincmd w'
-    Vexplore
+    silent! exec '1wincmd w | Vexplore'
     let t:expl_buf_num = bufnr("%")
   endif
 endfunction
@@ -204,13 +199,19 @@ function! PandocMarkdownPreview()
   echo 'preview.html was generated.'
 endfunction
 
+" Scratch
+function! Scratch()
+  silent! exec 'vnew | vertical resize 45'
+  setlocal noswapfile buftype=nofile bufhidden=hide
+endfunction
+
 "-----------
 "  Plugins
 "-----------
 
 " ~ Netrw ~
 let g:netrw_liststyle = 3     " Tree style listing
-let g:netrw_browse_split = 4  " Open in previous window 
+let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
@@ -231,7 +232,7 @@ call yankstack#setup()
 
 " ~ Easy Session ~
 if has("win32") || has("win64")
-  let g:vim_sessions_dir = "D:/Git/Sessions"
+  let g:vim_sessions_dir = "D:\Git\Sessions"
 else
   let g:vim_sessions_dir = "~/Git/Sessions"
 endif
@@ -241,10 +242,10 @@ endif
 "------------
 
 " Easier window navigation
-nnoremap <C-H> <C-W>h 
-nnoremap <C-J> <C-W>j 
-nnoremap <C-K> <C-W>k 
-nnoremap <C-L> <C-W>l 
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 " Move by display lines rather than linewise
 nnoremap j gj
@@ -277,7 +278,7 @@ nnoremap <F2> :CtrlPBuffer<cr>
 nnoremap <F3> :NumbersToggle<cr>
 
 " Map clear search highlighting to F4
-nnoremap <F4> :nohls<cr>
+nnoremap <F4> :nohlsearch<cr>
 
 " Map paste mode to F6
 set pastetoggle=<F6>          " Enable pasting without indentation
@@ -304,3 +305,6 @@ nnoremap <leader>tw :%s/\s\+$//e<cr>
 
 " Pandoc Markdown preview
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
+
+" Map :call Scratch to \x
+nnoremap <leader>x :call Scratch()<cr>

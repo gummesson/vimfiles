@@ -9,6 +9,7 @@ My (g)Vim files.
 ## Plugins (Submodules)
 
 - [CtrlP](https://github.com/kien/ctrlp.vim "CtrlP")
+- [Ack](https://github.com/mileszs/ack.vim "Ack")
 - [SnipMate](https://github.com/msanders/snipmate.vim "SnipMate")
 - [Zencoding](https://github.com/mattn/zencoding-vim "Zencoding")
 - [Yankstack](https://github.com/maxbrunsfeld/vim-yankstack "Yankstack")
@@ -35,10 +36,9 @@ My (g)Vim files.
 - [Pandoc Markdown Preview](https://gist.github.com/4649514 "Pandoc Markdown Preview")
 - [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L55 "Write Mode") *(changes the colorscheme, font size and window size)*
 - [Slug](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L78 "Slug")
+- [Scratch](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L202 "Scratch")
 
 ## Colorschemes
 
 - [Solarized](https://github.com/altercation/vim-colors-solarized "Solarized")
-- [Base16](https://github.com/chriskempson/base16-vim "Base16")
-- [Hemisu](https://github.com/noahfrederick/Hemisu "Hemisu")
 - [Peppermint](https://github.com/gummesson/vimfiles/tree/master/.vim/colors/peppermint.vim "Peppermint")
