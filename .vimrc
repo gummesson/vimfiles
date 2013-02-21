@@ -205,14 +205,6 @@ function! Scratch()
   setlocal noswapfile buftype=nofile bufhidden=hide
 endfunction
 
-" Basic tab completion
-function! TabCompletion()
-  if strpart(getline("."), 0, col(".")-1) =~ "^\s*$"
-    return "\<Tab>"
-  else
-    return "\<C-n>"
-endfunction
-
 "-----------
 "  Plugins
 "-----------
@@ -274,9 +266,6 @@ nnoremap Y y$
 " Map Space and Ctrl+Space to insert a new line above/below the current line
 nnoremap <Space> O<Esc>
 nnoremap <C-Space> o<Esc>
-
-" Map Tab to basic code completion
-inoremap <Tab> <C-R>=TabCompletion()<cr>
 
 " Remove help toggling from F1
 inoremap <F1> <Nop>
