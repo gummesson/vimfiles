@@ -205,6 +205,14 @@ function! Scratch()
   setlocal noswapfile buftype=nofile bufhidden=hide
 endfunction
 
+" Basic tab completion
+function! TabCompletion()
+  if strpart(getline("."), 0, col(".")-1) =~ "^\s*$"
+    return "\<Tab>"
+  else
+    return "\<C-n>"
+endfunction
+
 "-----------
 "  Plugins
 "-----------
@@ -263,17 +271,17 @@ nnoremap gk k
 " Make Y behave like C and D
 nnoremap Y y$
 
-" Remove help toggling from F1
-inoremap <F1> <nop>
-nnoremap <F1> <nop>
-vnoremap <F1> <nop>
-
 " Map Space and Ctrl+Space to insert a new line above/below the current line
 nnoremap <Space> O<Esc>
 nnoremap <C-Space> o<Esc>
 
-" Map Shift+Tab to unindent in insert mode
-inoremap <S-Tab> <Esc><<I
+" Map Tab to basic code completion
+inoremap <Tab> <C-R>=TabCompletion()<cr>
+
+" Remove help toggling from F1
+inoremap <F1> <Nop>
+nnoremap <F1> <Nop>
+vnoremap <F1> <Nop>
 
 " Map VExplorer (Netrw) to F1
 nnoremap <F1> :call ToggleVExplorer()<cr>
@@ -281,15 +289,15 @@ nnoremap <F1> :call ToggleVExplorer()<cr>
 " Map CtrlP's buffer list to F2
 nnoremap <F2> :CtrlPBuffer<cr>
 
-" Map Numbers to F3
-nnoremap <F3> :NumbersToggle<cr>
+" Map paste mode to F3
+set pastetoggle=<F3>          " Enable pasting without indentation
+au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 
 " Map clear search highlighting to F4
 nnoremap <F4> :nohlsearch<cr>
 
-" Map paste mode to F6
-set pastetoggle=<F6>          " Enable pasting without indentation
-au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
+" Map Numbers to F6
+nnoremap <F6> :NumbersToggle<cr>
 
 " Map Footnotes to F7
 nnoremap <F7> :FootnotesToggle<cr>
