@@ -21,7 +21,7 @@ My (g)Vim files.
 
 ## Plugins (Custom)
 
-- [Easy Session](https://github.com/gummesson/easy-session.vim "Easy Session")
+- [Easy Session](https://github.com/gummesson/easysession.vim "Easy Session")
 - [Voutliner](https://github.com/gummesson/voutliner.vim "Voutliner")
 - [Footnotes](https://github.com/gummesson/footnotes.vim "Footnotes")
 - [Notes](https://github.com/gummesson/vimfiles/tree/master/.vim/bundle/notes/autoload/notes.vim "Notes") *(Using ack.vim as a poor man's NVAlt)*
@@ -38,6 +38,7 @@ My (g)Vim files.
 - [Write Mode](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L55 "Write Mode") *(changes the colorscheme, font size and window size)*
 - [Slug](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L78 "Slug")
 - [Scratch](https://github.com/gummesson/vimfiles/blob/master/.vimrc#L202 "Scratch")
+- [Table of contents (for Markdown)](https://github.com/gummesson/vimfiles/blob/master/.gvimrc#L90 "Table of contents (for Markdown)")
 
 ## Colorschemes
 

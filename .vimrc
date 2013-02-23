@@ -232,14 +232,14 @@ call yankstack#setup()
 
 " ~ Easy Session ~
 if has("win32") || has("win64")
-  let g:vim_sessions_dir = "D:\Git\Sessions"
+  let g:vim_sessions_dir = "D:/Kod/Vim/Sessions"
 else
-  let g:vim_sessions_dir = "~/Git/Sessions"
+  let g:vim_sessions_dir = "~/Kod/Vim/Sessions"
 endif
 
 " ~ Notes ~
 if has("win32") || has("win64")
-  let g:notes_directory = 'D:\Dropbox\Dokument\Anteckningar'
+  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar'
 else
   let g:notes_directory = '~/Dropbox/Dokument/Anteckningar'
 endif

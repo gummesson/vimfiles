@@ -61,7 +61,7 @@ function! WriteMode()
   if has("unix")     " Linux
     set lines=23
     set columns=75
-  else               " Windows 
+  else               " Windows
     set lines=33
     set columns=100
   endif
@@ -87,6 +87,16 @@ function! Slug()
   silent! exec 'normal! guu'
 endfunction
 
+" Markdown headings => table of contents
+function! MarkdownTOC()
+  let search = @/
+  let filename = expand("%")
+    silent! exec 'vnew | vertical resize 45 | read '.filename.' | set filetype=markdown'
+    setlocal noswapfile nobuflisted buftype=nofile bufhidden=delete
+    silent! exec 'file [Table of Contents] | v/^#\+/d | nohlsearch'
+  let @/ = search
+endfunction
+
 "------------
 "  Mappings
 "------------
@@ -95,4 +105,7 @@ endfunction
 nnoremap <leader>wm :call WriteMode()<cr>
 
 " Map :call Slug() to :Slug
-command! -nargs=0 Slug call Slug()
+command! -range -nargs=0 Slug call Slug()
+
+" Map :call MarkdownTOC() to :MdT
+command! -range -nargs=0 MdT call MarkdownTOC()
