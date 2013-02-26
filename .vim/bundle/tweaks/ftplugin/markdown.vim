@@ -24,17 +24,17 @@ setlocal foldlevel=9
 " (http://vimcasts.org/episodes/writing-a-custom-fold-expression/)
 function! MarkdownFolding()
   let line = getline(v:lnum)
-  if match(line, '^#') >= 0
+  if match(line, '^#\s') >= 0
     return ">1"
-  elseif match(line, '^##') >= 0
+  elseif match(line, '^##\s') >= 0
     return ">2"
-  elseif match(line, '^###') >= 0
+  elseif match(line, '^###\s') >= 0
     return ">3"
-  elseif match(line, '^####') >= 0
+  elseif match(line, '^####\s') >= 0
     return ">4"
-  elseif match(line, '^#####') >= 0
+  elseif match(line, '^#####\s') >= 0
     return ">5"
-  elseif match(line, '^######') >= 0
+  elseif match(line, '^######\s') >= 0
     return ">6"
   else
     return "="

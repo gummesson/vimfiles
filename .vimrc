@@ -205,6 +205,16 @@ function! Scratch()
   setlocal noswapfile buftype=nofile bufhidden=hide
 endfunction
 
+" Trim trailing whitespace
+function! TrimWhitespace()
+  let search_history = @/
+  let line = line(".")
+  let col = col(".")
+    silent! exec '%s/\s\+$//e | nohlsearch'
+  call cursor(line, col)
+  let @/ = search_history
+endfunction
+
 "-----------
 "  Plugins
 "-----------
@@ -239,9 +249,9 @@ endif
 
 " ~ Notes ~
 if has("win32") || has("win64")
-  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar'
+  let g:notes_directory = "D:/Dropbox/Dokument/Anteckningar"
 else
-  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar'
+  let g:notes_directory = "~/Dropbox/Dokument/Anteckningar"
 endif
 
 "------------
@@ -305,7 +315,7 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 nnoremap <leader>w :set list!<cr>
 
 " Trim trailing whitespace
-nnoremap <leader>tw :%s/\s\+$//e<cr>
+nnoremap <leader>tw :call TrimWhitespace()<cr>
 
 " Pandoc Markdown preview
 nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
