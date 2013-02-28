@@ -28,8 +28,9 @@ au GUIEnter * set visualbell t_vb=
 "  Interface
 "-------------
 
-set guioptions-=T    " Hide the awful toolbar
-set guioptions+=b,h  " Display a horizontal scrollbar
+set guioptions-=T  " Hide the awful toolbar
+set guioptions+=b  " Display a horizontal scrollbar
+set guioptions+=h
 
 "--------
 "  Font
@@ -87,13 +88,14 @@ function! Slug()
   silent! exec 'normal! guu'
 endfunction
 
-" Markdown headings => table of contents
-function! MarkdownTOC()
+" Table of contents
+function! TOC(pattern)
   let search = @/
   let filename = expand("%")
-    silent! exec 'vnew | vertical resize 45 | read '.filename.' | set filetype=markdown'
+  let filetype = &ft
+    silent! exec 'vnew | vertical resize 45 | read '.filename.' | set filetype='.filetype
     setlocal noswapfile nobuflisted buftype=nofile bufhidden=delete
-    silent! exec 'file [Table of Contents] | v/^#\+/d | nohlsearch'
+    silent! exec 'file [Table of Contents] | v/'.a:pattern.'/d | nohlsearch'
   let @/ = search
 endfunction
 
@@ -107,5 +109,5 @@ nnoremap <leader>wm :call WriteMode()<cr>
 " Map :call Slug() to :Slug
 command! -range -nargs=0 Slug call Slug()
 
-" Map :call MarkdownTOC() to :MdT
-command! -range -nargs=0 MdT call MarkdownTOC()
+" Map :call TOC() to :TOC
+command! -nargs=1 TOC call TOC(<f-args>)

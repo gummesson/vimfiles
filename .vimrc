@@ -73,7 +73,6 @@ set number          " Show line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
-set ruler           " Show line, columns and percentage in status line
 set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
