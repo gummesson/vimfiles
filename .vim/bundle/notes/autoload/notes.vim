@@ -6,7 +6,7 @@ function! notes#All(...)
   else
     "...else do a search inside the actual notes
     let search_term = a:1
-    silent! exec 'Ack --text -i '.search_term.' '.g:notes_directory
+    silent! exec 'Ack --text -i --match '.search_term.' '.g:notes_directory
   endif
 endfunction
 

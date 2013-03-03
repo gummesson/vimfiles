@@ -214,6 +214,19 @@ function! TrimWhitespace()
   let @/ = search_history
 endfunction
 
+" Shell execution function
+function! ExecCmd(exec, cmd)
+  if has("win32") || has("win64")
+    if a:exec == 'jekyll'
+      silent! exec '!start cmd /c set LANG=sv_SV.UTF-8 && '.a:exec.' '.a:cmd.' & pause'
+    else
+      silent! exec '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
+    endif
+  else
+    silent! exec '!'.a:exec.' '.a:cmd
+  endif
+endfunction
+
 "-----------
 "  Plugins
 "-----------
@@ -322,9 +335,17 @@ nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
 " Map :call Scratch to \x
 nnoremap <leader>x :call Scratch()<cr>
 
+" Map Compass functions
+command! -nargs=0 CompassCompile call ExecCmd("compass", "compile")
+command! -nargs=0 CompassWatch call ExecCmd("compass", "watch")
+
+" Map Jekyll functions
+command! -nargs=0 JekyllBuild call ExecCmd("jekyll", "--no-server")
+command! -nargs=0 JekyllWatch call ExecCmd("jekyll", "--auto --server")
+
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
-let items = ["\\", "/", ":", ".", "*"]
+let items = ["\\", "/", ":", ".", "*", "-"]
 for item in items
    silent! exec "nnoremap yi".item." T".item."yt".item
    silent! exec "nnoremap ya".item." F".item."yf".item

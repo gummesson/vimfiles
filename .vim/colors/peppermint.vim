@@ -49,9 +49,9 @@ hi WildMenu       guifg=#5dc6f5 guibg=#444444 gui=bold
 hi Question       guifg=#ffdc72 guibg=#444444 gui=bold
 
 " Messages
-hi ModeMsg        guifg=#ff6685 guibg=#444444 gui=bold
-hi ErrorMsg       guifg=#ffdc72 guibg=#444444 gui=bold
-hi WarningMsg     guifg=#ffdc72 guibg=#444444 gui=bold
+hi ModeMsg        guifg=#ff6685 guibg=#4c4c4c gui=bold
+hi ErrorMsg       guifg=#ffdc72 guibg=#4c4c4c gui=bold
+hi WarningMsg     guifg=#ffdc72 guibg=#4c4c4c gui=bold
 
 " Diff
 hi DiffAdd        guifg=#a6eba6 guibg=#444444 gui=NONE

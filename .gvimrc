@@ -88,15 +88,15 @@ function! Slug()
   silent! exec 'normal! guu'
 endfunction
 
-" Table of contents
+" Table of Contents
 function! TOC(pattern)
-  let search = @/
+  let search_history = @/
   let filename = expand("%")
   let filetype = &ft
     silent! exec 'vnew | vertical resize 45 | read '.filename.' | set filetype='.filetype
     setlocal noswapfile nobuflisted buftype=nofile bufhidden=delete
-    silent! exec 'file [Table of Contents] | v/'.a:pattern.'/d | nohlsearch'
-  let @/ = search
+    silent! exec 'file [Table of Contents] | v/'.a:pattern.'/d | %s/^\s\+/'
+  let @/ = search_history
 endfunction
 
 "------------
