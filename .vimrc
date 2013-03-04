@@ -223,6 +223,7 @@ function! ExecCmd(exec, cmd)
   endif
 endfunction
 
+" Go to project root
 function! GoToRootDir()
   if isdirectory(".git")
     :pwd
@@ -353,7 +354,7 @@ command! -nargs=0 Root call GoToRootDir()
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
-let items = ["\\", "/", ":", ".", "*", "-"]
+let items = ["<bar>", "\\", "/", ":", ".", "*", "-", "_"]
 for item in items
    silent! exec "nnoremap yi".item." T".item."yt".item
    silent! exec "nnoremap ya".item." F".item."yf".item
