@@ -33,8 +33,8 @@ hi NonText        guifg=#737373 guibg=#4c4c4c gui=NONE
 hi Visual         guifg=#e6e6e6 guibg=#ff6685 gui=NONE
 
 " Search
-hi Search         guifg=#e6e6e6 guibg=#ff6685 gui=NONE
-hi IncSearch      guifg=#e6e6e6 guibg=#ff6685 gui=NONE
+hi Search         guifg=#e6e6e6 guibg=#737373 gui=NONE
+hi IncSearch      guifg=#e6e6e6 guibg=#737373 gui=NONE
 
 " Window
 hi LineNr         guifg=#737373 guibg=#444444 gui=bold

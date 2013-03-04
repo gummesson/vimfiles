@@ -78,25 +78,7 @@ endfunction
 
 " Slug
 function! Slug()
-  " Whitespace and forward slashes
-  silent! exec 's /\v(\s+|\/)/-/g'
-  " Punctuation and various other characters
-  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
-  " Trailing dashes
-  silent! exec 's /\v(^\-+|\-+$)//g'
-  " Transform to downcase
-  silent! exec 'normal! guu'
-endfunction
-
-" Table of Contents
-function! TOC(pattern)
-  let search_history = @/
-  let filename = expand("%")
-  let filetype = &ft
-    silent! exec 'vnew | vertical resize 45 | read '.filename.' | set filetype='.filetype
-    setlocal noswapfile nobuflisted buftype=nofile bufhidden=delete
-    silent! exec 'file [Table of Contents] | v/'.a:pattern.'/d | %s/^\s\+/'
-  let @/ = search_history
+  silent! exec 's/\v(\s+|\/)/-/g | s/\v(\.|\?|\!|\:|\#+)//g | s /\v(^\-+|\-+$)//g | normal! guu'
 endfunction
 
 "------------
@@ -106,8 +88,5 @@ endfunction
 " Switch to Write Mode
 nnoremap <leader>wm :call WriteMode()<cr>
 
-" Map :call Slug() to :Slug
+" Map Slug function
 command! -range -nargs=0 Slug call Slug()
-
-" Map :call TOC() to :TOC
-command! -nargs=1 TOC call TOC(<f-args>)

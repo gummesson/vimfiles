@@ -185,15 +185,11 @@ endfunction
 
 " Pandoc Markdown Preview
 function! PandocMarkdownPreview()
-  " Set current working directory as root (for the current window only)
-  silent exec 'lcd %:p:h'
-  " Call Pandoc to do the conversion
-  silent exec '!pandoc -o preview.html %'
-  " Open the preview file in browser
+  silent exec 'lcd %:p:h | !pandoc -o preview.html %'
   if has("win32") || has("win64")             " Windows
-    silent exec '!start cmd /c preview.html'
+    silent! exec '!start cmd /c preview.html'
   else                                        " Linux
-    silent exec '!xdg-open preview.html'
+    silent! exec '!xdg-open preview.html'
   endif
   echo 'preview.html was generated.'
 endfunction
@@ -224,6 +220,16 @@ function! ExecCmd(exec, cmd)
     endif
   else
     silent! exec '!'.a:exec.' '.a:cmd
+  endif
+endfunction
+
+function! GoToRootDir()
+  silent exec 'cd %:p:h'
+  if isdirectory(".git")
+    :pwd
+  else
+    silent! exec 'cd ../'
+    call GoToRootDir()
   endif
 endfunction
 
@@ -341,7 +347,10 @@ command! -nargs=0 CompassWatch call ExecCmd("compass", "watch")
 
 " Map Jekyll functions
 command! -nargs=0 JekyllBuild call ExecCmd("jekyll", "--no-server")
-command! -nargs=0 JekyllWatch call ExecCmd("jekyll", "--auto --server")
+command! -nargs=0 JekyllWatch call ExecCmd("jekyll", "--auto --server --url http://localhost:4000/")
+
+" Map root dir function
+command! -nargs=0 Root call GoToRootDir()
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
