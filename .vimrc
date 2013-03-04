@@ -185,7 +185,7 @@ endfunction
 
 " Pandoc Markdown Preview
 function! PandocMarkdownPreview()
-  silent exec 'lcd %:p:h | !pandoc -o preview.html %'
+  silent! exec 'lcd %:p:h | !pandoc -o preview.html %'
   if has("win32") || has("win64")             " Windows
     silent! exec '!start cmd /c preview.html'
   else                                        " Linux
@@ -224,7 +224,6 @@ function! ExecCmd(exec, cmd)
 endfunction
 
 function! GoToRootDir()
-  silent exec 'cd %:p:h'
   if isdirectory(".git")
     :pwd
   else
