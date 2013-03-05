@@ -171,32 +171,32 @@ function! ToggleVExplorer()
     let expl_win_num = bufwinnr(t:expl_buf_num)
     if expl_win_num != -1
       let cur_win_nr = winnr()
-      silent! exec expl_win_num . 'wincmd w | close'
-      silent! exec cur_win_nr . 'wincmd w'
+      silent! exec expl_win_num . "wincmd w | close"
+      silent! exec cur_win_nr . "wincmd w"
       unlet t:expl_buf_num
     else
       unlet t:expl_buf_num
     endif
   else
-    silent! exec '1wincmd w | Vexplore'
+    silent! exec "1wincmd w | Vexplore"
     let t:expl_buf_num = bufnr("%")
   endif
 endfunction
 
 " Pandoc Markdown Preview
 function! PandocMarkdownPreview()
-  silent! exec 'lcd %:p:h | !pandoc -o preview.html %'
+  silent! exec "lcd %:p:h | !pandoc -o preview.html %"
   if has("win32") || has("win64")             " Windows
-    silent! exec '!start cmd /c preview.html'
+    silent! exec "!start cmd /c preview.html"
   else                                        " Linux
-    silent! exec '!xdg-open preview.html'
+    silent! exec "!xdg-open preview.html"
   endif
-  echo 'preview.html was generated.'
+  echo "preview.html was generated."
 endfunction
 
 " Scratch
 function! Scratch()
-  silent! exec 'vnew | vertical resize 45'
+  silent! exec "vnew | vertical resize 45"
   setlocal noswapfile buftype=nofile bufhidden=hide
 endfunction
 
@@ -205,7 +205,7 @@ function! TrimWhitespace()
   let search_history = @/
   let line = line(".")
   let col = col(".")
-    silent! exec '%s/\s\+$//e | nohlsearch'
+    silent! exec "%s/\s\+$//e | nohlsearch"
   call cursor(line, col)
   let @/ = search_history
 endfunction
@@ -214,12 +214,12 @@ endfunction
 function! ExecCmd(exec, cmd)
   if has("win32") || has("win64")
     if a:exec == 'jekyll'
-      silent! exec '!start cmd /c set LANG=sv_SV.UTF-8 && '.a:exec.' '.a:cmd.' & pause'
+      silent! exec "!start cmd /c set LANG=sv_SV.UTF-8 && ".a:exec." ".a:cmd." & pause"
     else
-      silent! exec '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
+      silent! exec "!start cmd /c ".a:exec." ".a:cmd." & pause"
     endif
   else
-    silent! exec '!'.a:exec.' '.a:cmd
+    silent! exec "!".a:exec." ".a:cmd
   endif
 endfunction
 
@@ -228,7 +228,7 @@ function! GoToRootDir()
   if isdirectory(".git")
     :pwd
   else
-    silent! exec 'cd ../'
+    silent! exec "cd ../"
     call GoToRootDir()
   endif
 endfunction

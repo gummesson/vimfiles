@@ -78,7 +78,7 @@ endfunction
 
 " Slug
 function! Slug()
-  silent! exec 's/\v(\s+|\/)/-/g | s/\v(\.|\?|\!|\:|\#+)//g | s /\v(^\-+|\-+$)//g | normal! guu'
+  silent! exec "s/\v(\s+|\/)/-/g | s/\v(\.|\?|\!|\:|\#+)//g | s /\v(^\-+|\-+$)//g | normal! guu"
 endfunction
 
 "------------
