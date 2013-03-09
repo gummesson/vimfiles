@@ -78,7 +78,14 @@ endfunction
 
 " Slug
 function! Slug()
-  silent! exec "s/\v(\s+|\/)/-/g | s/\v(\.|\?|\!|\:|\#+)//g | s /\v(^\-+|\-+$)//g | normal! guu"
+  " Whitespace and forward slashes
+  silent! exec 's /\v(\s+|\/)/-/g'
+  " Punctuation and various other characters
+  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
+  " Trailing dashes
+  silent! exec 's /\v(^\-+|\-+$)//g'
+  " Transform to downcase
+  silent! exec 'normal! guu'
 endfunction
 
 "------------
