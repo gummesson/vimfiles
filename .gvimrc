@@ -6,8 +6,6 @@
 "  ~ Interface
 "  ~ Font
 "  ~ Colorscheme
-"  ~ Functions
-"  ~ Mappings
 "
 "=================
 
@@ -15,7 +13,7 @@
 "  General
 "-----------
 
-" Autoreload Vim settings
+" Autoreload gVim settings
 augroup reload_gvimrc
   au!
   au BufWritePost $MYGVIMRC source $MYGVIMRC
@@ -46,54 +44,5 @@ end
 "  Colorscheme
 "---------------
 
-" Use Peppermint when in GUI mode
-colorscheme peppermint
-
-"-------------
-"  Functions
-"-------------
-
-" Write Mode
-function! WriteMode()
-  " Change colorscheme and background
-  colorscheme brackets
-  set background=light
-  " Adjust the window
-  if has("unix")     " Linux
-    set lines=23
-    set columns=75
-  else               " Windows
-    set lines=33
-    set columns=100
-  endif
-  " Change the font size
-  if has("gui_gtk2")                          " Linux
-    set guifont=Liberation\ Mono\ 14
-  else                                        " Windows
-    set guifont=Liberation_Mono:h14:cDEFAULT
-  endif
-  " Remove color column (again)
-  set colorcolumn=0
-endfunction
-
-" Slug
-function! Slug()
-  " Whitespace and forward slashes
-  silent! exec 's /\v(\s+|\/)/-/g'
-  " Punctuation and various other characters
-  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
-  " Trailing dashes
-  silent! exec 's /\v(^\-+|\-+$)//g'
-  " Transform to downcase
-  silent! exec 'normal! guu'
-endfunction
-
-"------------
-"  Mappings
-"------------
-
-" Switch to Write Mode
-nnoremap <leader>wm :call WriteMode()<cr>
-
-" Map Slug function
-command! -range -nargs=0 Slug call Slug()
+" Use Tomorrow Night Eighties when in GUI mode
+colorscheme Tomorrow-Night-Eighties

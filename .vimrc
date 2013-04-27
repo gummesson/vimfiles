@@ -171,33 +171,16 @@ function! ToggleVExplorer()
     let expl_win_num = bufwinnr(t:expl_buf_num)
     if expl_win_num != -1
       let cur_win_nr = winnr()
-      silent! exec expl_win_num . "wincmd w | close"
-      silent! exec cur_win_nr . "wincmd w"
+      silent! exec expl_win_num . 'wincmd w | close'
+      silent! exec cur_win_nr . 'wincmd w'
       unlet t:expl_buf_num
     else
       unlet t:expl_buf_num
     endif
   else
-    silent! exec "1wincmd w | Vexplore"
+    silent! exec '1wincmd w | Vexplore'
     let t:expl_buf_num = bufnr("%")
   endif
-endfunction
-
-" Pandoc Markdown Preview
-function! PandocMarkdownPreview()
-  silent! exec "lcd %:p:h | !pandoc -o preview.html %"
-  if has("win32") || has("win64")             " Windows
-    silent! exec "!start cmd /c preview.html"
-  else                                        " Linux
-    silent! exec "!xdg-open preview.html"
-  endif
-  echo "preview.html was generated."
-endfunction
-
-" Scratch
-function! Scratch()
-  silent! exec "vnew | vertical resize 45"
-  setlocal noswapfile buftype=nofile bufhidden=hide
 endfunction
 
 " Trim trailing whitespace
@@ -205,7 +188,7 @@ function! TrimWhitespace()
   let search_history = @/
   let line = line(".")
   let col = col(".")
-    silent! exec "%s/\s\+$//e | nohlsearch"
+    silent! exec '%s/\s\+$//e | nohlsearch'
   call cursor(line, col)
   let @/ = search_history
 endfunction
@@ -213,14 +196,22 @@ endfunction
 " Shell execution function
 function! ExecCmd(exec, cmd)
   if has("win32") || has("win64")
-    if a:exec == 'jekyll'
-      silent! exec "!start cmd /c set LANG=sv_SV.UTF-8 && ".a:exec." ".a:cmd." & pause"
-    else
-      silent! exec "!start cmd /c ".a:exec." ".a:cmd." & pause"
-    endif
+    silent! exec '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
   else
-    silent! exec "!".a:exec." ".a:cmd
+    silent! exec '!'.a:exec.' '.a:cmd
   endif
+endfunction
+
+" Transform a string into a slug
+function! Slug()
+  " Whitespace and forward slashes
+  silent! exec 's /\v(\s+|\/)/-/g'
+  " Punctuation and various other characters
+  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
+  " Trailing dashes
+  silent! exec 's /\v(^\-+|\-+$)//g'
+  " Transform to downcase
+  silent! exec 'normal! guu'
 endfunction
 
 " Go to project root
@@ -228,7 +219,7 @@ function! GoToRootDir()
   if isdirectory(".git")
     :pwd
   else
-    silent! exec "cd ../"
+    silent! exec 'cd ../'
     call GoToRootDir()
   endif
 endfunction
@@ -243,7 +234,7 @@ let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
-let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg"
+let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,node_modules"
 
 " Windows size (percentage of the current window)
 if has("unix")              " Linux
@@ -257,20 +248,6 @@ let g:ctrlp_max_height = 8  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
-
-" ~ Easy Session ~
-if has("win32") || has("win64")
-  let g:vim_sessions_dir = "D:/Kod/Vim/Sessions"
-else
-  let g:vim_sessions_dir = "~/Kod/Vim/Sessions"
-endif
-
-" ~ Notes ~
-if has("win32") || has("win64")
-  let g:notes_directory = "D:/Dropbox/Dokument/Anteckningar"
-else
-  let g:notes_directory = "~/Dropbox/Dokument/Anteckningar"
-endif
 
 "------------
 "  Mappings
@@ -335,33 +312,26 @@ nnoremap <leader>w :set list!<cr>
 " Trim trailing whitespace
 nnoremap <leader>tw :call TrimWhitespace()<cr>
 
-" Pandoc Markdown preview
-nnoremap <leader>pmd :call PandocMarkdownPreview()<cr>
-
-" Map :call Scratch to \x
-nnoremap <leader>x :call Scratch()<cr>
-
-" Map Compass functions
-command! -nargs=0 CompassCompile call ExecCmd("compass", "compile")
-command! -nargs=0 CompassWatch call ExecCmd("compass", "watch")
-
-" Map Jekyll functions
-command! -nargs=0 JekyllBuild call ExecCmd("jekyll", "--no-server")
-command! -nargs=0 JekyllWatch call ExecCmd("jekyll", "--auto --server --url http://localhost:4000/")
-
-" Map root dir function
-command! -nargs=0 Root call GoToRootDir()
-
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
 let items = ["<bar>", "\\", "/", ":", ".", "*", "-", "_"]
 for item in items
-   silent! exec "nnoremap yi".item." T".item."yt".item
-   silent! exec "nnoremap ya".item." F".item."yf".item
-   silent! exec "nnoremap ci".item." T".item."ct".item
-   silent! exec "nnoremap ca".item." F".item."cf".item
-   silent! exec "nnoremap di".item." T".item."dt".item
-   silent! exec "nnoremap da".item." F".item."df".item
-   silent! exec "nnoremap vi".item." T".item."vt".item
-   silent! exec "nnoremap va".item." F".item."vf".item
+   silent! exec 'nnoremap yi'.item.' T'.item.'yt'.item
+   silent! exec 'nnoremap ya'.item.' F'.item.'yf'.item
+   silent! exec 'nnoremap ci'.item.' T'.item.'ct'.item
+   silent! exec 'nnoremap ca'.item.' F'.item.'cf'.item
+   silent! exec 'nnoremap di'.item.' T'.item.'dt'.item
+   silent! exec 'nnoremap da'.item.' F'.item.'df'.item
+   silent! exec 'nnoremap vi'.item.' T'.item.'vt'.item
+   silent! exec 'nnoremap va'.item.' F'.item.'vf'.item
 endfor
+
+" Map root dir function
+command! -nargs=0 Root call GoToRootDir()
+
+" Map Slug function
+command! -range -nargs=0 Slug call Slug()
+
+" Map Compass functions
+command! -nargs=0 CompassCompile call ExecCmd("compass", "compile")
+command! -nargs=0 CompassWatch call ExecCmd("compass", "watch")
