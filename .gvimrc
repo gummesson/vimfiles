@@ -6,6 +6,7 @@
 "  ~ Interface
 "  ~ Font
 "  ~ Colorscheme
+"  ~ Mappings
 "
 "=================
 
@@ -46,3 +47,11 @@ end
 
 " Use Tomorrow Night Eighties when in GUI mode
 colorscheme Tomorrow-Night-Eighties
+
+"------------
+"  Mappings
+"------------
+
+" Map Ctrl+S to :update (for LiveReloading)
+nnoremap <C-s> :update<cr>
+inoremap <C-s> <C-o>:update<cr>

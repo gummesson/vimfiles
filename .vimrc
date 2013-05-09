@@ -216,7 +216,7 @@ endfunction
 
 " Go to project root
 function! GoToRootDir()
-  if isdirectory(".git")
+  if isdirectory(".git") || filereadable("Rakefile") || filereadable("Gruntfile.js")
     :pwd
   else
     silent! exec 'cd ../'
