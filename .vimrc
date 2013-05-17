@@ -77,7 +77,7 @@ set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
 au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
-au InsertLeave * set cursorline    " ...but show it in all the other modes.
+au InsertLeave * set cursorline    " ...but show it in all the other modes
 
 set nowrap            " No word wrap
 set scrolloff=5       " Start scrolling when the cursor is near the edges
@@ -106,6 +106,7 @@ set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
 set showbreak=↪
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
+set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching the first/last character in the line
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 
 " Windows
