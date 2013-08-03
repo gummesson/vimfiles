@@ -31,6 +31,15 @@ set guioptions-=T  " Hide the awful toolbar
 set guioptions+=b  " Display a horizontal scrollbar
 set guioptions+=h
 
+" Window size
+if has("unix")     " Linux
+  set lines=35       " Height
+  set columns=110    " Width
+else               " Windows
+  set lines=45       " Height
+  set columns=130    " Width
+endif
+
 "--------
 "  Font
 "--------

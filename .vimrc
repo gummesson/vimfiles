@@ -27,12 +27,21 @@ else                    " Windows
   language messages en
 endif
 
+" Clipboard
+if has("unix")               " Linux
+  set clipboard=unnamedplus    " Use + register for copy-paste
+else                         " Windows
+  set clipboard=unnamed        " Use * register for copy-paste
+endif
+
 set nocompatible          " No compatibility with Vi
+set t_Co=256              " Enable 256 colors support
 call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
-set encoding=utf-8        " UTF-8 encoding
 filetype plugin on        " Detect filetype
+set encoding=utf-8        " UTF-8 encoding
+set fileencoding=utf-8
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
@@ -57,17 +66,6 @@ let g:solarized_menu=0  " Remove it's menu
 "----------
 "  Visual
 "----------
-
-" Window size and clipboard
-if has("unix")               " Linux
-  set lines=35                 " Height
-  set columns=110              " Width
-  set clipboard=unnamedplus    " Use + register for copy-paste
-else                         " Windows
-  set lines=45                 " Height
-  set columns=130              " Width
-  set clipboard=unnamed        " Use * register for copy-paste
-endif
 
 set number          " Show line numbering
 set laststatus=2    " Always display the status line
@@ -172,14 +170,14 @@ function! ToggleVExplorer()
     let expl_win_num = bufwinnr(t:expl_buf_num)
     if expl_win_num != -1
       let cur_win_nr = winnr()
-      silent! exec expl_win_num . 'wincmd w | close'
-      silent! exec cur_win_nr . 'wincmd w'
+      silent! execute expl_win_num . 'wincmd w | close'
+      silent! execute cur_win_nr . 'wincmd w'
       unlet t:expl_buf_num
     else
       unlet t:expl_buf_num
     endif
   else
-    silent! exec '1wincmd w | Vexplore'
+    silent! execute '1wincmd w | Vexplore'
     let t:expl_buf_num = bufnr("%")
   endif
 endfunction
@@ -189,7 +187,7 @@ function! TrimWhitespace()
   let search_history = @/
   let line = line(".")
   let col = col(".")
-    silent! exec '%s/\s\+$//e | nohlsearch'
+    silent! execute '%s/\s\+$//e | nohlsearch'
   call cursor(line, col)
   let @/ = search_history
 endfunction
@@ -197,30 +195,30 @@ endfunction
 " Shell execution function
 function! ExecCmd(exec, cmd)
   if has("win32") || has("win64")
-    silent! exec '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
+    silent! execute '!start cmd /c '.a:execute.' '.a:cmd.' & pause'
   else
-    silent! exec '!'.a:exec.' '.a:cmd
+    silent! execute '!'.a:execute.' '.a:cmd
   endif
 endfunction
 
 " Transform a string into a slug
 function! Slug()
   " Whitespace and forward slashes
-  silent! exec 's /\v(\s+|\/)/-/g'
+  silent! execute 's /\v(\s+|\/)/-/g'
   " Punctuation and various other characters
-  silent! exec 's /\v(\.|\?|\!|\:|\#+)//g'
+  silent! execute 's /\v(\.|\?|\!|\:|\#+|")//g'
   " Trailing dashes
-  silent! exec 's /\v(^\-+|\-+$)//g'
+  silent! execute 's /\v(^\-+|\-+$)//g'
   " Transform to downcase
-  silent! exec 'normal! guu'
+  silent! execute 'normal! guu'
 endfunction
 
 " Go to project root
 function! GoToRootDir()
   if isdirectory(".git") || filereadable("Rakefile") || filereadable("Gruntfile.js")
-    :pwd
+    pwd
   else
-    silent! exec 'cd ../'
+    silent! execute 'cd ../'
     call GoToRootDir()
   endif
 endfunction
@@ -317,14 +315,14 @@ nnoremap <leader>tw :call TrimWhitespace()<cr>
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
 let items = ["<bar>", "\\", "/", ":", ".", "*", "-", "_"]
 for item in items
-   silent! exec 'nnoremap yi'.item.' T'.item.'yt'.item
-   silent! exec 'nnoremap ya'.item.' F'.item.'yf'.item
-   silent! exec 'nnoremap ci'.item.' T'.item.'ct'.item
-   silent! exec 'nnoremap ca'.item.' F'.item.'cf'.item
-   silent! exec 'nnoremap di'.item.' T'.item.'dt'.item
-   silent! exec 'nnoremap da'.item.' F'.item.'df'.item
-   silent! exec 'nnoremap vi'.item.' T'.item.'vt'.item
-   silent! exec 'nnoremap va'.item.' F'.item.'vf'.item
+   silent! execute 'nnoremap yi'.item.' T'.item.'yt'.item
+   silent! execute 'nnoremap ya'.item.' F'.item.'yf'.item
+   silent! execute 'nnoremap ci'.item.' T'.item.'ct'.item
+   silent! execute 'nnoremap ca'.item.' F'.item.'cf'.item
+   silent! execute 'nnoremap di'.item.' T'.item.'dt'.item
+   silent! execute 'nnoremap da'.item.' F'.item.'df'.item
+   silent! execute 'nnoremap vi'.item.' T'.item.'vt'.item
+   silent! execute 'nnoremap va'.item.' F'.item.'vf'.item
 endfor
 
 " Map root dir function
