@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/commentary"]
 	path = .vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule ".vim/bundle/zencoding"]
-	path = .vim/bundle/zencoding
-	url = https://github.com/mattn/zencoding-vim
 [submodule ".vim/bundle/yankstack"]
 	path = .vim/bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
