@@ -27,9 +27,8 @@ au GUIEnter * set visualbell t_vb=
 "  Interface
 "-------------
 
-set guioptions-=T  " Hide the awful toolbar
-set guioptions+=b  " Display a horizontal scrollbar
-set guioptions+=h
+set guioptions-=T  " Hide the toolbar
+set guioptions-=m  " Hide the menu
 
 " Window size
 if has("unix")     " Linux
