@@ -63,6 +63,14 @@ colorscheme solarized   " Solarized colorscheme
 set background=dark     " Set background to dark
 let g:solarized_menu=0  " Remove it's menu
 
+" Background timer
+if (strftime("%H") >= 9)
+  set background=light
+endif
+if (strftime("%H") >= 21)
+  set background=dark
+endif
+
 "----------
 "  Visual
 "----------
@@ -116,17 +124,16 @@ au VimResized * :wincmd =  " Autoresize windows
 "  Indentation
 "---------------
 
-" Set two spaces as default
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-
 filetype plugin indent on  " Enable indent plugin
 set autoindent             " Enable auto indent
 set smartindent            " Enable context-sensitive indentation
-set smarttab               " Insert spaces on the start of a line (shiftwidth)
 set expandtab              " Replace tabs with spaces
-set shiftround             " Round indent to multiple of shiftwidth
+set smarttab               " Insert spaces on the start of a line (shiftwidth)
+set shiftround             " Round the indent to the multiple of shiftwidth
+
+" Set two spaces as default
+set shiftwidth=2
+set softtabstop=2
 
 "----------
 "  Search
