@@ -63,14 +63,6 @@ colorscheme solarized   " Solarized colorscheme
 set background=dark     " Set background to dark
 let g:solarized_menu=0  " Remove it's menu
 
-" Background timer
-if (strftime("%H") >= 9)
-  set background=light
-endif
-if (strftime("%H") >= 21)
-  set background=dark
-endif
-
 "----------
 "  Visual
 "----------
