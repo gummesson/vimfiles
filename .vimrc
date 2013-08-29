@@ -60,7 +60,7 @@ set autoread  " Reload files that has been changed outside of Vim
 "---------------
 
 " Set Lightline theme
-let g:lightline = { 'colorscheme': 'solarized' }  " Linux
+let g:lightline = { 'colorscheme': 'solarized' }
 
 colorscheme solarized   " Use Solarized colorscheme
 set background=dark     " Set background to dark
