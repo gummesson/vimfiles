@@ -1,8 +1,8 @@
-[submodule ".vim/bundle/numbers.vim"]
+[submodule ".vim/bundle/numbers"]
 	path = .vim/bundle/numbers
 	url = https://github.com/myusuf3/numbers.vim.git
 	ignore = dirty
-[submodule ".vim/bundle/vim-autoclose"]
+[submodule ".vim/bundle/autoclose"]
 	path = .vim/bundle/autoclose
 	url = https://github.com/Townk/vim-autoclose.git
 	ignore = dirty
@@ -10,31 +10,31 @@
 	path = .vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
 	ignore = dirty
-[submodule ".vim/bundle/surround.vim"]
+[submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
 	url = https://github.com/tpope/vim-surround
 	ignore = dirty
-[submodule ".vim/bundle/scss-syntax.vim"]
+[submodule ".vim/bundle/scss-syntax"]
 	path = .vim/bundle/scss-syntax
 	url = https://github.com/cakebaker/scss-syntax.vim.git
 	ignore = dirty
-[submodule ".vim/bundle/vim-colors-solarized"]
+[submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 	ignore = dirty
-[submodule ".vim/bundle/ctrlp.vim"]
+[submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 	ignore = dirty
-[submodule ".vim/bundle/commentary.vim"]
+[submodule ".vim/bundle/commentary"]
 	path = .vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
 	ignore = dirty
-[submodule ".vim/bundle/yankstack.vim"]
+[submodule ".vim/bundle/yankstack"]
 	path = .vim/bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
 	ignore = dirty
-[submodule ".vim/bundle/ack.vim"]
+[submodule ".vim/bundle/ack"]
 	path = .vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
 	ignore = dirty
@@ -42,15 +42,18 @@
 	path = .vim/bundle/tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme
 	ignore = dirty
-[submodule ".vim/bundle/jshint.vim"]
+[submodule ".vim/bundle/jshint"]
 	path = .vim/bundle/jshint
 	url = https://github.com/walm/jshint.vim
 	ignore = dirty
-[submodule ".vim/bundle/vim-ruby"]
+[submodule ".vim/bundle/ruby"]
 	path = .vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby
 	ignore = dirty
-[submodule ".vim/bundle/emmet-vim"]
+[submodule ".vim/bundle/emmet"]
 	path = .vim/bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
 	ignore = dirty
+[submodule ".vim/bundle/lightline"]
+	path = .vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim.git
