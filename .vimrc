@@ -60,11 +60,7 @@ set autoread  " Reload files that has been changed outside of Vim
 "---------------
 
 " Set Lightline theme
-if has("win32") || has("win64")
-  let g:lightline = { 'colorscheme': 'powerline' }  " Windows
-else
-  let g:lightline = { 'colorscheme': 'solarized' }  " Linux
-endif
+let g:lightline = { 'colorscheme': 'solarized' }  " Linux
 
 colorscheme solarized   " Use Solarized colorscheme
 set background=dark     " Set background to dark
