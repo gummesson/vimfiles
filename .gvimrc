@@ -54,9 +54,6 @@ end
 "  Colorscheme
 "---------------
 
-" Set Lightline theme
-let g:lightline = { 'colorscheme': 'powerline' }
-
 " Use Tomorrow Night Eighties when in GUI mode
 colorscheme Tomorrow-Night-Eighties
 
