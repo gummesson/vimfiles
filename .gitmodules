@@ -58,3 +58,9 @@
 	path = .vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim.git
 	ignore = dirty
+[submodule ".vim/bundle/indent-guides"]
+	path = .vim/bundle/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule ".vim/bundle/bclear"]
+	path = .vim/bundle/bclear
+	url = https://github.com/vim-scripts/bclear.git
