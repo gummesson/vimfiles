@@ -217,7 +217,7 @@ endfunction
 
 " Go to project root
 function! GoToRootDir()
-  if isdirectory(".git") || filereadable("Rakefile") || filereadable("Gruntfile.js")
+  if isdirectory(".git") || filereadable(".git")
     pwd
   else
     silent! execute 'cd ../'
@@ -249,6 +249,10 @@ let g:ctrlp_max_height = 8  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
+
+" ~ Indent Guides ~
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1
 
 "------------
 "  Mappings
@@ -302,7 +306,8 @@ nnoremap <F8> za
 vnoremap <F8> zf
 inoremap <F8> <C-o>za
 
-set timeoutlen=500  " Faster leader execution
+" Faster leader execution
+set timeoutlen=750
 
 " Set current file directory as root
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
