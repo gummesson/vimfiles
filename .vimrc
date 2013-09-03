@@ -42,6 +42,7 @@ syntax on                 " Enable syntax highighting
 filetype plugin on        " Detect filetype
 set encoding=utf-8        " UTF-8 encoding
 set fileencoding=utf-8
+set nobomb
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
