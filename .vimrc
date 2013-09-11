@@ -342,7 +342,7 @@ command! -nargs=0 Root call GoToRootDir()
 command! -range -nargs=0 Slug call Slug()
 
 " Map Git functions
-command! -nargs=0 GitStatus call ExecCmd("git", "status")
+command! -nargs=? Git call ExecCmd("git", <q-args>)
 
 " Map Grunt functions
 command! -nargs=? Grunt call ExecCmd("grunt", <q-args>)
