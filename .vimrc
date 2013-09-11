@@ -197,10 +197,12 @@ endfunction
 
 " Shell execution function
 function! ExecCmd(exec, cmd)
-  if has("win32") || has("win64")
-    silent! execute '!start cmd /c '.a:execute.' '.a:cmd.' & pause'
-  else
-    silent! execute '!'.a:execute.' '.a:cmd
+  if executable(a:exec)
+    if has("win32") || has("win64")
+      silent! execute '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
+    else
+      silent! execute '!'.a:exec.' '.a:cmd
+    endif
   endif
 endfunction
 
@@ -339,6 +341,8 @@ command! -nargs=0 Root call GoToRootDir()
 " Map Slug function
 command! -range -nargs=0 Slug call Slug()
 
-" Map Compass functions
-command! -nargs=0 CompassCompile call ExecCmd("compass", "compile")
-command! -nargs=0 CompassWatch call ExecCmd("compass", "watch")
+" Map Git functions
+command! -nargs=0 GitStatus call ExecCmd("git", "status")
+
+" Map Grunt functions
+command! -nargs=? Grunt call ExecCmd("grunt", <q-args>)
