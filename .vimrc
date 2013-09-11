@@ -92,6 +92,7 @@ set wildmenu          " Show options for file/command completion
 " Wild ignores
 set wildignore+=.git               " Version control
 set wildignore+=.sass-cache        " Sass/SCSS
+set wildignore+=node_modules       " Node.js
 set wildignore+=*.jpg,*.png,*.svg  " Graphics
 set wildignore+=*.min.*            " Minified versions
 
@@ -238,7 +239,7 @@ let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
-let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,node_modules"
+let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules"
 
 " Windows size (percentage of the current window)
 if has("unix")              " Linux
