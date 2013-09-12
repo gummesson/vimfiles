@@ -210,11 +210,11 @@ endfunction
 " Transform a string into a slug
 function! Slug()
   " Whitespace and forward slashes
-  silent! execute 's /\v(\s+|\/)/-/g'
+  silent! execute '%s/\v(\s+|\/)/-/g'
   " Punctuation and various other characters
-  silent! execute 's /\v(\.|\?|\!|\:|\#+|")//g'
+  silent! execute '%s/\v(\.|\?|\!|\:|\#+|")//g'
   " Trailing dashes
-  silent! execute 's /\v(^\-+|\-+$)//g'
+  silent! execute '%s/\v(^\-+|\-+$)//g'
   " Transform to downcase
   silent! execute 'normal! guu'
 endfunction
@@ -227,6 +227,14 @@ function! GoToRootDir()
     silent! execute 'cd ../'
     call GoToRootDir()
   endif
+endfunction
+
+" Easier CSS/SCSS class name copying (for BEM formatting)
+function! BEMHelper()
+  let actions = ["0", "yt{", "o\<Esc>", "o\<Esc>", "p", "2j", "g_"]
+  for action in actions
+    call feedkeys(action)
+  endfor
 endfunction
 
 "-----------
@@ -321,6 +329,9 @@ nnoremap <leader>w :set list!<cr>
 
 " Trim trailing whitespace
 nnoremap <leader>tw :call TrimWhitespace()<cr>
+
+" Copy CSS/SCSS class name
+nnoremap <leader>bh :call BEMHelper()<cr>
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
