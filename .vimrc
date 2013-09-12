@@ -276,6 +276,11 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
+" Bubble single lines
+" (http://vimcasts.org/episodes/bubbling-text/)
+nnoremap <C-Up> ddkP
+nnoremap <C-Down> ddp
+
 " Move by display lines rather than linewise
 nnoremap j gj
 nnoremap k gk
