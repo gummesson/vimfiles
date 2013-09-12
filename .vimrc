@@ -341,6 +341,9 @@ nnoremap <leader>tw :call TrimWhitespace()<cr>
 " Copy CSS/SCSS class name
 nnoremap <leader>bh :call BEMHelper()<cr>
 
+" Toggle hexHighlight
+nnoremap <leader>hh :call HexHighlight()<cr>
+
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
 let items = ["<bar>", "\\", "/", ":", ".", "*", "-", "_"]

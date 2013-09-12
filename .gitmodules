@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/bclear"]
 	path = .vim/bundle/bclear
 	url = https://github.com/vim-scripts/bclear.git
+[submodule ".vim/bundle/hexhighlight"]
+	path = .vim/bundle/hexhighlight
+	url = https://github.com/vim-scripts/hexHighlight.vim
