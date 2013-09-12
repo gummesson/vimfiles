@@ -46,10 +46,6 @@
 	path = .vim/bundle/jshint
 	url = https://github.com/walm/jshint.vim
 	ignore = dirty
-[submodule ".vim/bundle/ruby"]
-	path = .vim/bundle/ruby
-	url = https://github.com/vim-ruby/vim-ruby
-	ignore = dirty
 [submodule ".vim/bundle/emmet"]
 	path = .vim/bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
