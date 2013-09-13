@@ -369,3 +369,8 @@ command! -nargs=? Git call ExecCmd("git", <q-args>)
 
 " Map Grunt function
 command! -nargs=? Grunt call ExecCmd("grunt", <q-args>)
+
+" Map Chocolatey function
+if has("win32") || has("win64")
+  command! -nargs=? Chocolatey call ExecCmd("chocolatey", <q-args>)
+endif
