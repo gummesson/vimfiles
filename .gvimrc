@@ -33,8 +33,8 @@ set guioptions-=T  " Hide the toolbar
 if has("unix")     " Linux
   set lines=35       " Height
   set columns=110    " Width
-  set guioptions-=m  " Hide the menu
   set guioptions-=r  " Hide the scrollbar
+  set guioptions-=m  " Hide the menu
 else               " Windows
   set lines=45       " Height
   set columns=130    " Width
@@ -57,7 +57,7 @@ end
 " Set Lightline theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
-" Use Tomorrow Night Eighties when in GUI mode
+" Use Tomorrow theme when in GUI mode
 colorscheme Tomorrow-Night-Eighties
 
 "------------
