@@ -56,6 +56,9 @@ augroup END
 set hidden    " Hide the buffers instead of closing them
 set autoread  " Reload files that has been changed outside of Vim
 
+" Omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
 "---------------
 "  Colorscheme
 "---------------
