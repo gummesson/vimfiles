@@ -300,16 +300,19 @@ nnoremap Y y$
 nnoremap <Space> O<Esc>
 nnoremap <C-Space> o<Esc>
 
+" Map Omnicompletion to Ctrl+Tab
+inoremap <C-Tab> <C-x><C-o>
+
 " Remove help toggling from F1
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 
-" Map VExplorer (Netrw) to F1
-nnoremap <F1> :call ToggleVExplorer()<cr>
+" Map CtrlP's buffer list to F1
+nnoremap <F1> :CtrlPBuffer<cr>
 
-" Map CtrlP's buffer list to F2
-nnoremap <F2> :CtrlPBuffer<cr>
+" Map VExplorer (Netrw) to F2
+nnoremap <F2> :call ToggleVExplorer()<cr>
 
 " Map paste mode to F3
 set pastetoggle=<F3>          " Enable pasting without indentation
@@ -318,16 +321,8 @@ au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 " Map clear search highlighting to F4
 nnoremap <F4> :nohlsearch<cr>
 
-" Map Numbers to F6
-nnoremap <F6> :NumbersToggle<cr>
-
-" Map Footnotes to F7
-nnoremap <F7> :FootnotesToggle<cr>
-
-" Map various code folding actions to F8
-nnoremap <F8> za
-vnoremap <F8> zf
-inoremap <F8> <C-o>za
+" Map Numbers to F5
+nnoremap <F5> :NumbersToggle<cr>
 
 " Faster leader execution
 set timeoutlen=750
@@ -361,11 +356,14 @@ for item in items
    silent! execute 'nnoremap va'.item.' F'.item.'vf'.item
 endfor
 
-" Map root dir function
+" Map GoToRootDir function
 command! -nargs=0 Root call GoToRootDir()
 
 " Map Slug function
 command! -range -nargs=0 Slug call Slug()
+
+" Map FootnotesToggle function
+command! -range -nargs=0 Footnotes call FootnotesToggle()
 
 " Map Git function
 command! -nargs=? Git call ExecCmd("git", <q-args>)
