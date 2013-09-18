@@ -213,18 +213,6 @@ function! ExecCmd(exec, cmd)
   endif
 endfunction
 
-" Transform a string into a slug
-function! Slug()
-  " Whitespace and forward slashes
-  silent! execute '%s/\v(\s+|\/)/-/g'
-  " Punctuation and various other characters
-  silent! execute '%s/\v(\.|\?|\!|\:|\#+|")//g'
-  " Trailing dashes
-  silent! execute '%s/\v(^\-+|\-+$)//g'
-  " Transform to downcase
-  silent! execute 'normal! guu'
-endfunction
-
 " Go to project root
 function! GoToRootDir()
   if isdirectory(".git") || filereadable(".git")
@@ -235,12 +223,16 @@ function! GoToRootDir()
   endif
 endfunction
 
-" Easier CSS/SCSS class name copying (for BEM formatting)
-function! BEMHelper()
-  let actions = ["0", "yt{", "o\<Esc>", "o\<Esc>", "p", "2j", "g_"]
-  for action in actions
-    call feedkeys(action)
-  endfor
+" Transform a string into a slug
+function! Slug()
+  " Whitespace and forward slashes
+  silent! execute '%s/\v(\s+|\/)/-/g'
+  " Punctuation and various other characters
+  silent! execute '%s/\v(\.|\?|\!|\:|\#+|")//g'
+  " Trailing dashes
+  silent! execute '%s/\v(^\-+|\-+$)//g'
+  " Transform to downcase
+  silent! execute 'normal! guu'
 endfunction
 
 "-----------
@@ -335,9 +327,6 @@ nnoremap <leader>w :set list!<cr>
 
 " Trim trailing whitespace
 nnoremap <leader>tw :call TrimWhitespace()<cr>
-
-" Copy CSS/SCSS class name
-nnoremap <leader>bh :call BEMHelper()<cr>
 
 " Toggle hexHighlight
 nnoremap <leader>hh :call HexHighlight()<cr>
