@@ -40,7 +40,7 @@ call pathogen#infect()    " Enable the Pathogen plugin for easier plugin managem
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
 filetype plugin on        " Detect filetype
-set fileformat=unix       " Use Unix line endings
+set fileformat=unix       " Use Unix-style line endings
 set encoding=utf-8        " UTF-8 encoding
 set fileencoding=utf-8
 set nobomb
@@ -248,7 +248,7 @@ let g:netrw_altv = 1          " Split to right
 " Hide wildignore files and folders
 let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules"
 
-" Windows size (percentage of the current window)
+" Window size (percentage of the current window)
 let g:netrw_winsize = 20
 
 " ~ CtrlP ~
