@@ -40,6 +40,7 @@ call pathogen#infect()    " Enable the Pathogen plugin for easier plugin managem
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
 filetype plugin on        " Detect filetype
+set fileformat=unix       " Use Unix line endings
 set encoding=utf-8        " UTF-8 encoding
 set fileencoding=utf-8
 set nobomb
@@ -248,14 +249,10 @@ let g:netrw_altv = 1          " Split to right
 let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules"
 
 " Windows size (percentage of the current window)
-if has("unix")              " Linux
-  let g:netrw_winsize = 20
-else                        " Windows
-  let g:netrw_winsize = 25
-endif
+let g:netrw_winsize = 20
 
 " ~ CtrlP ~
-let g:ctrlp_max_height = 8  " Max window size
+let g:ctrlp_max_height = 10  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
@@ -350,9 +347,6 @@ command! -nargs=0 Root call GoToRootDir()
 
 " Map Slug function
 command! -range -nargs=0 Slug call Slug()
-
-" Map FootnotesToggle function
-command! -range -nargs=0 Footnotes call FootnotesToggle()
 
 " Map Git function
 command! -nargs=? Git call ExecCmd("git", <q-args>)
