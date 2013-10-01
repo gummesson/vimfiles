@@ -40,10 +40,13 @@ call pathogen#infect()    " Enable the Pathogen plugin for easier plugin managem
 call pathogen#helptags()
 syntax on                 " Enable syntax highighting
 filetype plugin on        " Detect filetype
-set fileformat=unix       " Use Unix-style line endings
 set encoding=utf-8        " UTF-8 encoding
 set fileencoding=utf-8
 set nobomb
+
+" Use Unix-style line endings
+set fileformat=unix
+autocmd BufEnter * if &filetype == "" | setlocal fileformat=unix | endif
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
