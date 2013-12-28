@@ -231,7 +231,7 @@ endfunction
 
 " Go to project root
 function! GoToRootDir()
-  if isdirectory('.git') || filereadable('.git') || filereadable('index.html')
+  if isdirectory('.git') || filereadable('.git')
     pwd
   else
     silent! execute 'cd ../'
