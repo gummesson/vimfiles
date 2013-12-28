@@ -32,7 +32,7 @@ set guioptions-=T  " Hide the toolbar
 set guioptions-=r  " Hide the scrollbar
 
 " Window size
-if has("unix")     " Linux
+if has('unix')     " Linux
   set lines=35       " Height
   set columns=110    " Width
 else               " Windows
@@ -44,7 +44,7 @@ endif
 "  Font
 "--------
 
-if has("gui_gtk2")                          " Linux
+if has('gui_gtk2')                          " Linux
   set guifont=Liberation\ Mono\ 10
 else                                        " Windows
   set guifont=Liberation_Mono:h10:cDEFAULT

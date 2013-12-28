@@ -2,6 +2,7 @@
 "  Vim settings
 "===================
 "
+"  ~ Vundle
 "  ~ General
 "  ~ Colorscheme
 "  ~ Visual
@@ -9,44 +10,66 @@
 "  ~ Search
 "  ~ History
 "  ~ Backups
-"  ~ Abbreviations
 "  ~ Functions
+"  ~ Filetypes
 "  ~ Plugins
 "  ~ Mappings
 "
 "===================
 
+"----------
+"  Vundle
+"----------
+
+" Setup
+set nocompatible
+filetype off
+set rtp+=$HOME/.vim/bundle/vundle/
+call vundle#rc()
+
+" Bundles
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'itchyny/lightline.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'Townk/vim-autoclose'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-commentary'
+Bundle 'godlygeek/tabular'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'vim-polyglot'
+Bundle 'tpope/vim-markdown'
+Bundle 'mileszs/ack.vim'
+Bundle 'walm/jshint.vim'
+
 "-----------
 "  General
 "-----------
 
-" Language
-if has("unix")          " Linux
+" Language and clipboard
+if has('unix')
   language messages C
-else                    " Windows
+  set clipboard=unnamedplus
+else
   language messages en
+  set clipboard=unnamed
 endif
 
-" Clipboard
-if has("unix")               " Linux
-  set clipboard=unnamedplus    " Use + register for copy-paste
-else                         " Windows
-  set clipboard=unnamed        " Use * register for copy-paste
-endif
+set t_Co=256        " Enable 256 colors support
+syntax on           " Enable syntax highighting
+filetype plugin on  " Detect filetype
 
-set nocompatible          " No compatibility with Vi
-set t_Co=256              " Enable 256 colors support
-call pathogen#infect()    " Enable the Pathogen plugin for easier plugin management
-call pathogen#helptags()
-syntax on                 " Enable syntax highighting
-filetype plugin on        " Detect filetype
-set encoding=utf-8        " UTF-8 encoding
+" UTF-8 encoding
+set encoding=utf-8
 set fileencoding=utf-8
 set nobomb
 
 " Use Unix-style line endings
 set fileformat=unix
-autocmd BufEnter * if &filetype == "" | setlocal fileformat=unix | endif
+autocmd BufEnter * if &filetype == '' | setlocal fileformat=unix | endif
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
@@ -162,14 +185,6 @@ set undolevels=1000  " Enable many, many, many, many, many undos
 set nobackup    " No backups
 set noswapfile  " No swap file
 
-"-----------------
-"  Abbreviations
-"-----------------
-
-" Date and time
-iabbrev cdate <C-R>=strftime("%d/%m/%Y")<cr>
-iabbrev ctime <C-R>=strftime("%H:%M")<cr>
-
 "-------------
 "  Functions
 "-------------
@@ -177,7 +192,7 @@ iabbrev ctime <C-R>=strftime("%H:%M")<cr>
 " VExplorer (Netrw)
 " (http://stackoverflow.com/questions/5006950/setting-netrw-like-nerdtree)
 function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
+  if exists('t:expl_buf_num')
     let expl_win_num = bufwinnr(t:expl_buf_num)
     if expl_win_num != -1
       let cur_win_nr = winnr()
@@ -189,15 +204,15 @@ function! ToggleVExplorer()
     endif
   else
     silent! execute '1wincmd w | Vexplore'
-    let t:expl_buf_num = bufnr("%")
+    let t:expl_buf_num = bufnr('%')
   endif
 endfunction
 
 " Trim trailing whitespace
 function! TrimWhitespace()
   let search_history = @/
-  let line = line(".")
-  let col = col(".")
+  let line = line('.')
+  let col = col('.')
     silent! execute '%s/\s\+$//e | nohlsearch'
   call cursor(line, col)
   let @/ = search_history
@@ -206,7 +221,7 @@ endfunction
 " Shell execution function
 function! ExecCmd(exec, cmd)
   if executable(a:exec)
-    if has("win32") || has("win64")
+    if has('win32') || has('win64')
       silent! execute '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
     else
       silent! execute '!'.a:exec.' '.a:cmd
@@ -216,7 +231,7 @@ endfunction
 
 " Go to project root
 function! GoToRootDir()
-  if isdirectory(".git") || filereadable(".git") || filereadable("index.html")
+  if isdirectory('.git') || filereadable('.git') || filereadable('index.html')
     pwd
   else
     silent! execute 'cd ../'
@@ -224,17 +239,26 @@ function! GoToRootDir()
   endif
 endfunction
 
-" Transform a string into a slug
-function! Slug()
-  " Whitespace and forward slashes
-  silent! execute '%s/\v(\s+|\/)/-/g'
-  " Punctuation and various other characters
-  silent! execute '%s/\v(\.|\?|\!|\:|\#+|")//g'
-  " Trailing dashes
-  silent! execute '%s/\v(^\-+|\-+$)//g'
-  " Transform to downcase
-  silent! execute 'normal! guu'
+" Better formatting for Markdown documents
+function! MarkdownFormatting()
+  setlocal wrap               " Word wrap without line breaks
+  setlocal linebreak
+  setlocal nolist
+  setlocal textwidth=0
+  setlocal wrapmargin=0
+  setlocal formatoptions+=l
+  setlocal colorcolumn=0     " Remove color column
+  setlocal nocursorline      " Remove cursorline
+  setlocal showbreak=        " Remove showbreak
 endfunction
+
+
+"-------------
+"  Filetypes
+"-------------
+
+" Markdown
+au BufRead,BufNewFile *{txt,md,mkdown,mkd} call MarkdownFormatting()
 
 "-----------
 "  Plugins
@@ -246,7 +270,7 @@ let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 
 " Hide wildignore files and folders
-let g:netrw_list_hide = ".git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules"
+let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules'
 
 " Window size (percentage of the current window)
 let g:netrw_winsize = 20
@@ -256,10 +280,6 @@ let g:ctrlp_max_height = 10  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
-
-" ~ Indent Guides ~
-let g:indent_guides_start_level = 1
-let g:indent_guides_guide_size = 1
 
 "------------
 "  Mappings
@@ -285,12 +305,8 @@ nnoremap gk k
 " Make Y behave like C and D
 nnoremap Y y$
 
-" Map Space and Ctrl+Space to insert a new line above/below the current line
-nnoremap <Space> O<Esc>
-nnoremap <C-Space> o<Esc>
-
-" Map Omnicompletion to Ctrl+Tab
-inoremap <C-Tab> <C-x><C-o>
+" Map Omnicompletion to Ctrl+Space
+inoremap <C-Space> <C-x><C-o>
 
 " Remove help toggling from F1
 inoremap <F1> <Nop>
@@ -319,18 +335,12 @@ set timeoutlen=750
 " Set current file directory as root
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Toggle whitespace
-nnoremap <leader>w :set list!<cr>
-
 " Trim trailing whitespace
-nnoremap <leader>tw :call TrimWhitespace()<cr>
-
-" Toggle hexHighlight
-nnoremap <leader>hh :call HexHighlight()<cr>
+nnoremap <leader>w :call TrimWhitespace()<cr>
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
-let items = ["<bar>", "\\", "/", ":", ".", "*", "-", "_"]
+let items = ['<bar>', '\\', '/', ':', '.', '*', '-', '_']
 for item in items
    silent! execute 'nnoremap yi'.item.' T'.item.'yt'.item
    silent! execute 'nnoremap ya'.item.' F'.item.'yf'.item
@@ -345,16 +355,8 @@ endfor
 " Map GoToRootDir function
 command! -nargs=0 Root call GoToRootDir()
 
-" Map Slug function
-command! -range -nargs=0 Slug call Slug()
-
 " Map Git function
-command! -nargs=? Git call ExecCmd("git", <q-args>)
+command! -nargs=? Git call ExecCmd('git', <q-args>)
 
 " Map Grunt function
-command! -nargs=? Grunt call ExecCmd("grunt", <q-args>)
-
-" Map Chocolatey function
-if has("win32") || has("win64")
-  command! -nargs=? Chocolatey call ExecCmd("chocolatey", <q-args>)
-endif
+command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
