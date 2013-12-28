@@ -189,6 +189,19 @@ set noswapfile  " No swap file
 "  Functions
 "-------------
 
+" Formatting for Markdown documents
+function! MarkdownFormatting()
+  setlocal wrap               " Word wrap without line breaks
+  setlocal linebreak
+  setlocal nolist
+  setlocal textwidth=0
+  setlocal wrapmargin=0
+  setlocal formatoptions+=l
+  setlocal colorcolumn=0     " Remove color column
+  setlocal nocursorline      " Remove cursorline
+  setlocal showbreak=        " Remove showbreak
+endfunction
+
 " VExplorer (Netrw)
 " (http://stackoverflow.com/questions/5006950/setting-netrw-like-nerdtree)
 function! ToggleVExplorer()
@@ -218,17 +231,6 @@ function! TrimWhitespace()
   let @/ = search_history
 endfunction
 
-" Shell execution function
-function! ExecCmd(exec, cmd)
-  if executable(a:exec)
-    if has('win32') || has('win64')
-      silent! execute '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
-    else
-      silent! execute '!'.a:exec.' '.a:cmd
-    endif
-  endif
-endfunction
-
 " Go to project root
 function! GoToRootDir()
   if isdirectory('.git') || filereadable('.git')
@@ -239,17 +241,15 @@ function! GoToRootDir()
   endif
 endfunction
 
-" Better formatting for Markdown documents
-function! MarkdownFormatting()
-  setlocal wrap               " Word wrap without line breaks
-  setlocal linebreak
-  setlocal nolist
-  setlocal textwidth=0
-  setlocal wrapmargin=0
-  setlocal formatoptions+=l
-  setlocal colorcolumn=0     " Remove color column
-  setlocal nocursorline      " Remove cursorline
-  setlocal showbreak=        " Remove showbreak
+" Shell execution
+function! ExecCmd(exec, cmd)
+  if executable(a:exec)
+    if has('win32') || has('win64')
+      silent! execute '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
+    else
+      silent! execute '!'.a:exec.' '.a:cmd
+    endif
+  endif
 endfunction
 
 "-------------
@@ -351,11 +351,10 @@ for item in items
    silent! execute 'nnoremap va'.item.' F'.item.'vf'.item
 endfor
 
-" Map GoToRootDir function
+" Map `GoToRootDir` function
 command! -nargs=0 Root call GoToRootDir()
 
-" Map Git function
+" Map shell executions helpers
 command! -nargs=? Git call ExecCmd('git', <q-args>)
-
-" Map Grunt function
 command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
+command! -nargs=? NPM call ExecCmd('npm', <q-args>)
