@@ -41,7 +41,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
-Bundle 'tpope/vim-markdown'
 Bundle 'mileszs/ack.vim'
 Bundle 'walm/jshint.vim'
 
