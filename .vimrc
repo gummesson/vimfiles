@@ -252,7 +252,6 @@ function! MarkdownFormatting()
   setlocal showbreak=        " Remove showbreak
 endfunction
 
-
 "-------------
 "  Filetypes
 "-------------
