@@ -256,7 +256,8 @@ endfunction
 "-------------
 
 " Markdown
-au BufRead,BufNewFile *{txt,md,mkdown,mkd} call MarkdownFormatting()
+au BufRead,BufNewFile *.txt set filetype=markdown
+au BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} call MarkdownFormatting()
 
 "-----------
 "  Plugins
