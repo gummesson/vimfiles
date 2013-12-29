@@ -6,7 +6,6 @@
 "  ~ Interface
 "  ~ Font
 "  ~ Colorscheme
-"  ~ Mappings
 "
 "=================
 
@@ -32,21 +31,21 @@ set guioptions-=T  " Hide the toolbar
 set guioptions-=r  " Hide the scrollbar
 
 " Window size
-if has('unix')     " Linux
-  set lines=35       " Height
-  set columns=110    " Width
-else               " Windows
-  set lines=45       " Height
-  set columns=130    " Width
+if has('unix')
+  set lines=35
+  set columns=110
+else
+  set lines=45
+  set columns=130
 endif
 
 "--------
 "  Font
 "--------
 
-if has('gui_gtk2')                          " Linux
+if has('gui_gtk2')
   set guifont=Liberation\ Mono\ 10
-else                                        " Windows
+else
   set guifont=Liberation_Mono:h10:cDEFAULT
 end
 
@@ -59,11 +58,3 @@ let g:lightline = { 'colorscheme': 'powerline' }
 
 " Use Tomorrow theme when in GUI mode
 colorscheme Tomorrow-Night-Eighties
-
-"------------
-"  Mappings
-"------------
-
-" Map Ctrl+S to :update (for LiveReloading)
-nnoremap <C-s> :update<cr>
-inoremap <C-s> <C-o>:update<cr>
