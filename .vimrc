@@ -253,13 +253,7 @@ function! ExecCmd(exec, cmd)
   endif
 endfunction
 
-" Poor man's Notational Velocity
-if has('unix')
-  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
-else
-  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar/'
-endif
-
+" A poor man's Notational Velocity
 function! ListNotes(pattern)
   if strlen(a:pattern) == 0
     silent! execute 'Sexplore '.g:notes_directory
@@ -304,6 +298,13 @@ let g:ctrlp_max_height = 10  " Max window size
 
 " ~ Yankstack ~
 call yankstack#setup()
+
+" ~ Notes ~
+if has('unix')
+  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
+else
+  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar/'
+endif
 
 "------------
 "  Mappings
