@@ -253,6 +253,29 @@ function! ExecCmd(exec, cmd)
   endif
 endfunction
 
+" Poor man's Notational Velocity
+if has('unix')
+  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
+else
+  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar/'
+endif
+
+function! ListNotes(pattern)
+  if strlen(a:pattern) == 0
+    silent! execute 'Sexplore '.g:notes_directory
+  else
+    silent! execute 'lcd '.g:notes_directory.' | vimgrep /'.a:pattern.'/gj *.txt | copen'
+  endif
+endfunction
+
+function! CreateNote(filename)
+  if strlen(a:filename) == 0
+    echom 'No filename!'
+  else
+    silent! execute 'enew | lcd '.g:notes_directory.' | w '.a:filename.'.txt'
+  endif
+endfunction
+
 "-------------
 "  Filetypes
 "-------------
@@ -360,3 +383,7 @@ command! -nargs=0 Root call GoToRootDir()
 command! -nargs=? Git call ExecCmd('git', <q-args>)
 command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
 command! -nargs=? NPM call ExecCmd('npm', <q-args>)
+
+" Map notes function
+command! -nargs=? Notes call ListNotes(<q-args>)
+command! -nargs=? Note call CreateNote(<q-args>)
