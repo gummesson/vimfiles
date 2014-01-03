@@ -199,6 +199,8 @@ function! MarkdownFormatting()
   setlocal colorcolumn=0     " Remove color column
   setlocal nocursorline      " Remove cursorline
   setlocal showbreak=        " Remove showbreak
+  setlocal shiftwidth=4      " Use four spaces
+  setlocal softtabstop=4
 endfunction
 
 " VExplorer (Netrw)
