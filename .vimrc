@@ -384,6 +384,6 @@ command! -nargs=? Git call ExecCmd('git', <q-args>)
 command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
 command! -nargs=? NPM call ExecCmd('npm', <q-args>)
 
-" Map notes function
+" Map notes functions
 command! -nargs=? Notes call ListNotes(<q-args>)
 command! -nargs=? Note call CreateNote(<q-args>)
