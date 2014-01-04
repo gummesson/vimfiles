@@ -43,6 +43,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'mileszs/ack.vim'
 Bundle 'walm/jshint.vim'
+Bundle 'gummesson/note.vim'
+Bundle 'gummesson/footnotes.vim'
 
 "-----------
 "  General
@@ -203,25 +205,6 @@ function! MarkdownFormatting()
   setlocal softtabstop=4
 endfunction
 
-" VExplorer (Netrw)
-" (http://stackoverflow.com/questions/5006950/setting-netrw-like-nerdtree)
-function! ToggleVExplorer()
-  if exists('t:expl_buf_num')
-    let expl_win_num = bufwinnr(t:expl_buf_num)
-    if expl_win_num != -1
-      let cur_win_nr = winnr()
-      silent! execute expl_win_num . 'wincmd w | close'
-      silent! execute cur_win_nr . 'wincmd w'
-      unlet t:expl_buf_num
-    else
-      unlet t:expl_buf_num
-    endif
-  else
-    silent! execute '1wincmd w | Vexplore'
-    let t:expl_buf_num = bufnr('%')
-  endif
-endfunction
-
 " Trim trailing whitespace
 function! TrimWhitespace()
   let search_history = @/
@@ -250,23 +233,6 @@ function! ExecCmd(exec, cmd)
     else
       silent! execute '!'.a:exec.' '.a:cmd
     endif
-  endif
-endfunction
-
-" A poor man's Notational Velocity
-function! ListNotes(pattern)
-  if strlen(a:pattern) == 0
-    silent! execute 'Sexplore '.g:notes_directory
-  else
-    silent! execute 'lcd '.g:notes_directory.' | vimgrep /'.a:pattern.'/gj *.txt | copen'
-  endif
-endfunction
-
-function! CreateNote(filename)
-  if strlen(a:filename) == 0
-    echom 'No filename!'
-  else
-    silent! execute 'enew | lcd '.g:notes_directory.' | w '.a:filename.'.txt'
   endif
 endfunction
 
@@ -299,7 +265,7 @@ let g:ctrlp_max_height = 10  " Max window size
 " ~ Yankstack ~
 call yankstack#setup()
 
-" ~ Notes ~
+" ~ Note ~
 if has('unix')
   let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
 else
@@ -341,8 +307,8 @@ vnoremap <F1> <Nop>
 " Map CtrlP's buffer list to F1
 nnoremap <F1> :CtrlPBuffer<cr>
 
-" Map VExplorer (Netrw) to F2
-nnoremap <F2> :call ToggleVExplorer()<cr>
+" Map Numbers to F2
+nnoremap <F2> :NumbersToggle<cr>
 
 " Map paste mode to F3
 set pastetoggle=<F3>          " Enable pasting without indentation
@@ -350,9 +316,6 @@ au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 
 " Map clear search highlighting to F4
 nnoremap <F4> :nohlsearch<cr>
-
-" Map Numbers to F5
-nnoremap <F5> :NumbersToggle<cr>
 
 " Faster leader execution
 set timeoutlen=750
@@ -384,7 +347,3 @@ command! -nargs=0 Root call GoToRootDir()
 command! -nargs=? Git call ExecCmd('git', <q-args>)
 command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
 command! -nargs=? NPM call ExecCmd('npm', <q-args>)
-
-" Map notes functions
-command! -nargs=? Notes call ListNotes(<q-args>)
-command! -nargs=? Note call CreateNote(<q-args>)
