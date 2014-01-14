@@ -23,8 +23,8 @@
 
 " Setup
 set nocompatible
-filetype off
-set rtp+=$HOME/.vim/bundle/vundle/
+filetype plugin off
+set runtimepath+=$HOME/.vim/bundle/vundle/
 call vundle#rc()
 
 " Bundles
@@ -86,8 +86,8 @@ set noerrorbells visualbell t_vb=
 
 " Autoreload Vim settings
 augroup reload_vimrc
-  au!
-  au BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
 set hidden    " Hide the buffers instead of closing them
@@ -118,8 +118,8 @@ set showmode        " Display the current mode
 set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
-au InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
-au InsertLeave * set cursorline    " ...but show it in all the other modes
+autocmd InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
+autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
 
 set nowrap            " No word wrap
 set scrolloff=5       " Start scrolling when the cursor is near the edges
@@ -155,7 +155,7 @@ set virtualedit=block           " Enable visual block mode to go beyond the char
 " Windows
 set splitbelow
 set splitright
-au VimResized * :wincmd =  " Autoresize windows
+autocmd VimResized * :wincmd =  " Autoresize windows
 
 "---------------
 "  Indentation
@@ -250,8 +250,8 @@ endfunction
 "-------------
 
 " Markdown
-au BufRead,BufNewFile *.txt set filetype=markdown
-au BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} call MarkdownFormatting()
+autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
+autocmd FileType markdown call MarkdownFormatting()
 
 "-----------
 "  Plugins
@@ -320,8 +320,8 @@ nnoremap <F1> :CtrlPBuffer<cr>
 nnoremap <F2> :NumbersToggle<cr>
 
 " Map paste mode to F3
-set pastetoggle=<F3>          " Enable pasting without indentation
-au InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
+set pastetoggle=<F3>               " Enable pasting without indentation
+autocmd InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
 
 " Map clear search highlighting to F4
 nnoremap <F4> :nohlsearch<cr>
@@ -329,7 +329,7 @@ nnoremap <F4> :nohlsearch<cr>
 " Faster leader execution
 set timeoutlen=750
 
-" Set current file directory as root
+" Set current directory as root
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Trim trailing whitespace
@@ -354,5 +354,6 @@ command! -nargs=0 Root call GoToRootDir()
 
 " Map shell executions helpers
 command! -nargs=? Git call ExecCmd('git', <q-args>)
-command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
 command! -nargs=? NPM call ExecCmd('npm', <q-args>)
+command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
+command! -nargs=? Gulp call ExecCmd('gulp', <q-args>)
