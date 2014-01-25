@@ -13,14 +13,8 @@
 "  General
 "-----------
 
-" Autoreload gVim settings
-augroup reload_gvimrc
-  au!
-  au BufWritePost $MYGVIMRC source $MYGVIMRC
-augroup END
-
 " Remove sound and visual error
-au GUIEnter * set visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 "-------------
 "  Interface
@@ -52,9 +46,9 @@ end
 "---------------
 "  Colorscheme
 "---------------
-"
+
 " Set Lightline theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
-" Use Tomorrow theme when in GUI mode
+" Use 'Tomorrow theme' when in GUI mode
 colorscheme Tomorrow-Night-Eighties
