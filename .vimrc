@@ -29,28 +29,24 @@ call vundle#rc()
 
 " Bundles
 Bundle 'gmarik/vundle'
-
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'gummesson/stereokai.vim'
 Bundle 'itchyny/lightline.vim'
-
 Bundle 'kien/ctrlp.vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'mattn/emmet-vim'
-
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'junegunn/vim-easy-align'
-
 Bundle 'mileszs/ack.vim'
 Bundle 'walm/jshint.vim'
-
 Bundle 'myusuf3/numbers.vim'
 Bundle 'gummesson/note.vim'
 Bundle 'gummesson/footnotes.vim'
-
+Bundle 'othree/html5.vim'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'wavded/vim-stylus'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'gorodinskiy/vim-coloresque'
