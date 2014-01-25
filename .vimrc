@@ -56,7 +56,7 @@ Bundle 'gorodinskiy/vim-coloresque'
 "  General
 "-----------
 
-" Language and clipboard
+" Set language and clipboard
 if has('unix')
   language messages C
   set clipboard=unnamedplus
@@ -69,7 +69,7 @@ set t_Co=256        " Enable 256 colors support
 syntax on           " Enable syntax highighting
 filetype plugin on  " Detect filetype
 
-" UTF-8 encoding
+" Use UTF-8 encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set nobomb
@@ -99,7 +99,7 @@ augroup END
 set hidden    " Hide the buffers instead of closing them
 set autoread  " Reload files that has been changed outside of Vim
 
-" Omnicompletion
+" Use omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
 "---------------
@@ -205,6 +205,7 @@ set noswapfile  " No swap file
 "  Abbreviations
 "-----------------
 
+" Shebang!
 iabbrev #! #!/usr/bin/env
 
 "-------------
