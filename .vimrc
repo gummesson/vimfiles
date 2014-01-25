@@ -10,6 +10,7 @@
 "  ~ Search
 "  ~ History
 "  ~ Backups
+"  ~ Abbreviations
 "  ~ Functions
 "  ~ Filetypes
 "  ~ Plugins
@@ -75,7 +76,16 @@ set nobomb
 
 " Use Unix-style line endings
 set fileformat=unix
-autocmd BufEnter * if &filetype == '' | setlocal fileformat=unix | endif
+
+function! UnixLineEndings()
+  if &filetype == ''
+    if &modifiable == '1'
+      setlocal fileformat=unix
+    endif
+  endif
+endfunction
+
+autocmd BufEnter * call UnixLineEndings()
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
@@ -190,6 +200,12 @@ set undolevels=1000  " Enable many, many, many, many, many undos
 
 set nobackup    " No backups
 set noswapfile  " No swap file
+
+"-----------------
+"  Abbreviations
+"-----------------
+
+iabbrev #! #!/usr/bin/env
 
 "-------------
 "  Functions
