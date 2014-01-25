@@ -109,7 +109,7 @@ set omnifunc=syntaxcomplete#Complete
 " Set Lightline theme
 let g:lightline = { 'colorscheme': 'solarized' }
 
-colorscheme solarized   " Use Solarized colorscheme
+colorscheme solarized   " Use 'Solarized'
 set background=dark     " Set background to dark
 let g:solarized_menu=0  " Remove the menu
 
