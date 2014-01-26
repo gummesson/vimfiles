@@ -280,12 +280,10 @@ augroup END
 let g:netrw_liststyle = 3     " Tree style listing
 let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
+let g:netrw_winsize = 25      " Window size (percentage of the current window)
 
 " Hide wildignore files and folders
-let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules'
-
-" Window size (percentage of the current window)
-let g:netrw_winsize = 20
+let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules,public'
 
 " ~ CtrlP ~
 let g:ctrlp_max_height = 10  " Max window size
@@ -348,6 +346,9 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Trim trailing whitespace
 nnoremap <leader>w :call TrimWhitespace()<cr>
+
+" Open Netrw as a project drawer
+nnoremap <leader>v :Vexplore<cr>
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
