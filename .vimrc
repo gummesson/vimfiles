@@ -91,7 +91,7 @@ autocmd BufEnter * call UnixLineEndings()
 set noerrorbells visualbell t_vb=
 
 " Autoreload Vim settings
-augroup reload_vimrc
+augroup ReloadSettings
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
@@ -124,8 +124,11 @@ set showmode        " Display the current mode
 set colorcolumn=81  " Show a color column at the 81st column
 
 " Cursorline
-autocmd InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
-autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
+augroup ToggleCursorLine
+  autocmd!
+  autocmd InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
+  autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
+augroup END
 
 set nowrap            " No word wrap
 set scrolloff=5       " Start scrolling when the cursor is near the edges
@@ -263,8 +266,11 @@ endfunction
 "-------------
 
 " Markdown
-autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
-autocmd FileType markdown call MarkdownFormatting()
+augroup MarkdownFiles
+  autocmd!
+  autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
+  autocmd FileType markdown call MarkdownFormatting()
+augroup END
 
 "-----------
 "  Plugins
