@@ -1,26 +1,22 @@
-"===================
-"  Vim settings
-"===================
+" -- .vimrc -------------------------------------------------------- {{{
 "
-"  ~ Vundle
-"  ~ General
-"  ~ Colorscheme
-"  ~ Visual
-"  ~ Indentation
-"  ~ Search
-"  ~ History
-"  ~ Backups
-"  ~ Abbreviations
-"  ~ Functions
-"  ~ Filetypes
-"  ~ Plugins
-"  ~ Mappings
+" -- Vundle
+" -- General
+" -- Colorscheme
+" -- Visual
+" -- Indentation
+" -- Search
+" -- History
+" -- Backups
+" -- Abbreviations
+" -- Functions
+" -- Filetypes
+" -- Plugins
+" -- Mappings
 "
-"===================
+" }}}
 
-"----------
-"  Vundle
-"----------
+" -- Vundle -------------------------------------------------------- {{{
 
 " Setup
 set nocompatible
@@ -52,9 +48,9 @@ Bundle 'wavded/vim-stylus'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'gorodinskiy/vim-coloresque'
 
-"-----------
-"  General
-"-----------
+" }}}
+
+" -- General ------------------------------------------------------- {{{
 
 " Set language and clipboard
 if has('unix')
@@ -102,20 +98,20 @@ set autoread  " Reload files that has been changed outside of Vim
 " Use omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
-"---------------
-"  Colorscheme
-"---------------
+" }}}
+
+" -- Colorscheme --------------------------------------------------- {{{
 
 " Set Lightline theme
 let g:lightline = { 'colorscheme': 'solarized' }
 
-colorscheme solarized   " Use 'Solarized'
+colorscheme solarized   " Use `solarized`
 set background=dark     " Set background to dark
 let g:solarized_menu=0  " Remove the menu
 
-"----------
-"  Visual
-"----------
+" }}}
+
+" -- Visual -------------------------------------------------------- {{{
 
 set number          " Show line numbering
 set laststatus=2    " Always display the status line
@@ -166,9 +162,9 @@ set splitbelow
 set splitright
 autocmd VimResized * :wincmd =  " Autoresize windows
 
-"---------------
-"  Indentation
-"---------------
+" }}}
+
+" -- Indentation --------------------------------------------------- {{{
 
 filetype plugin indent on  " Enable indent plugin
 set autoindent             " Enable auto indent
@@ -181,39 +177,39 @@ set shiftround             " Round the indent to the multiple of shiftwidth
 set shiftwidth=2
 set softtabstop=2
 
-"----------
-"  Search
-"----------
+" }}}
+
+" -- Search -------------------------------------------------------- {{{
 
 set hlsearch    " Highlight search terms
 set incsearch   " Show search matches as they get typed
 set ignorecase  " Ignore case when searching
 set smartcase   " Ignore case if search pattern is all lowercase, otherwise make it case-sensitive
 
-"-----------
-"  History
-"-----------
+" }}}
+
+" -- History ------------------------------------------------------- {{{
 
 set history=1000     " Remember more commands and a longer search history
 set undolevels=1000  " Enable many, many, many, many, many undos
 
-"-----------
-"  Backups
-"-----------
+" }}}
+
+" -- Backups ------------------------------------------------------- {{{
 
 set nobackup    " No backups
-set noswapfile  " No swap file
+set noswapfile  " No swap files
 
-"-----------------
-"  Abbreviations
-"-----------------
+" }}}
+
+" -- Abbreviations ------------------------------------------------- {{{
 
 " Shebang!
 iabbrev #! #!/usr/bin/env
 
-"-------------
-"  Functions
-"-------------
+" }}}
+
+" -- Functions ----------------------------------------------------- {{{
 
 " Formatting for Markdown documents
 function! MarkdownFormatting()
@@ -261,9 +257,9 @@ function! ExecCmd(exec, cmd)
   endif
 endfunction
 
-"-------------
-"  Filetypes
-"-------------
+" }}}
+
+" -- Filetypes ----------------------------------------------------- {{{
 
 " Markdown
 augroup MarkdownFiles
@@ -272,11 +268,12 @@ augroup MarkdownFiles
   autocmd FileType markdown call MarkdownFormatting()
 augroup END
 
-"-----------
-"  Plugins
-"-----------
+" }}}
 
-" ~ Netrw ~
+" -- Plugins ------------------------------------------------------- {{{
+
+" -- Netrw --
+
 let g:netrw_liststyle = 3     " Tree style listing
 let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
@@ -285,22 +282,25 @@ let g:netrw_winsize = 25      " Window size (percentage of the current window)
 " Hide wildignore files and folders
 let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules,public'
 
-" ~ CtrlP ~
+" -- CtrlP --
+
 let g:ctrlp_max_height = 10  " Max window size
 
-" ~ Yankstack ~
+" -- Yankstack --
+
 call yankstack#setup()
 
-" ~ Note ~
+" -- Note --
+
 if has('unix')
   let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
 else
   let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar/'
 endif
 
-"------------
-"  Mappings
-"------------
+" }}}
+
+" -- Mappings ------------------------------------------------------ {{{
 
 " Easier window navigation
 nnoremap <C-H> <C-W>h
@@ -372,3 +372,7 @@ command! -nargs=? Git call ExecCmd('git', <q-args>)
 command! -nargs=? NPM call ExecCmd('npm', <q-args>)
 command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
 command! -nargs=? Gulp call ExecCmd('gulp', <q-args>)
+
+" }}}
+
+" vim:foldmethod=marker
