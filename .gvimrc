@@ -1,24 +1,20 @@
-"=================
-"  gVim Settings
-"=================
+" -- .gvimrc ------------------------------------------------------- {{{
 "
-"  ~ General
-"  ~ Interface
-"  ~ Font
-"  ~ Colorscheme
+" -- General
+" -- Interface
+" -- Font
+" -- Colorscheme
 "
-"=================
+" }}}
 
-"-----------
-"  General
-"-----------
+" -- General  ------------------------------------------------------ {{{
 
 " Remove sound and visual error
 autocmd GUIEnter * set visualbell t_vb=
 
-"-------------
-"  Interface
-"-------------
+" }}}
+
+" -- Interface ----------------------------------------------------- {{{
 
 set guioptions-=m  " Hide the menu
 set guioptions-=T  " Hide the toolbar
@@ -33,9 +29,9 @@ else
   set columns=130
 endif
 
-"--------
-"  Font
-"--------
+" }}}
+
+" -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
   set guifont=Liberation\ Mono\ 10
@@ -43,12 +39,16 @@ else
   set guifont=Liberation_Mono:h10:cDEFAULT
 end
 
-"---------------
-"  Colorscheme
-"---------------
+" }}}
+
+" -- Colorscheme --------------------------------------------------- {{{
 
 " Set Lightline theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
-" Use 'Tomorrow theme' when in GUI mode
+" Use `tomorrow-night-eighties` when in GUI mode
 colorscheme Tomorrow-Night-Eighties
+
+" }}}
+
+" vim:foldmethod=marker
