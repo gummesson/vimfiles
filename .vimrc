@@ -98,6 +98,9 @@ set autoread  " Reload files that has been changed outside of Vim
 " Use omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
+" Faster leader execution
+set timeoutlen=750
+
 " }}}
 
 " -- Colorscheme --------------------------------------------------- {{{
@@ -302,6 +305,8 @@ endif
 
 " -- Mappings ------------------------------------------------------ {{{
 
+" -- Keys --
+
 " Easier window navigation
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
@@ -317,38 +322,16 @@ nnoremap gk k
 " Make Y behave like C and D
 nnoremap Y y$
 
-" Map Omnicompletion to Ctrl+Space
-inoremap <C-Space> <C-x><C-o>
-
 " Remove help toggling from F1
-inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
+inoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 
-" Map CtrlP's buffer list to F1
-nnoremap <F1> :CtrlPBuffer<cr>
+" Map clear search highlighting to Enter
+nnoremap <Enter> :nohlsearch<cr>
 
-" Map Numbers to F2
-nnoremap <F2> :NumbersToggle<cr>
-
-" Map paste mode to F3
-set pastetoggle=<F3>               " Enable pasting without indentation
-autocmd InsertLeave * set nopaste  " Disable paste mode when leaving insert mode
-
-" Map clear search highlighting to F4
-nnoremap <F4> :nohlsearch<cr>
-
-" Faster leader execution
-set timeoutlen=750
-
-" Set current directory as root
-nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-" Trim trailing whitespace
-nnoremap <leader>w :call TrimWhitespace()<cr>
-
-" Open Netrw as a project drawer
-nnoremap <leader>v :Vexplore<cr>
+" Map Omnicompletion to Ctrl+Space
+inoremap <C-Space> <C-x><C-o>
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
@@ -363,6 +346,22 @@ for item in items
    silent! execute 'nnoremap vi'.item.' T'.item.'vt'.item
    silent! execute 'nnoremap va'.item.' F'.item.'vf'.item
 endfor
+
+" -- Leader --
+
+" Set current directory as root
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Trim trailing whitespace
+nnoremap <leader>w :call TrimWhitespace()<cr>
+
+" Open Netrw as a project drawer
+nnoremap <leader>v :Vexplore<cr>
+
+" Toggle between absolute and relative numbers
+nnoremap <leader>n :NumbersToggle<cr>
+
+" -- Commands --
 
 " Map `GoToRootDir` function
 command! -nargs=0 Root call GoToRootDir()
