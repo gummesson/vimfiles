@@ -98,6 +98,9 @@ set autoread  " Reload files that has been changed outside of Vim
 " Use omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
+set formatoptions-=r  " Don't insert the current comment leader when hitting Enter in insert mode
+set formatoptions-=o  " Don't insert the current comment leader when hitting o or O in insert mode
+
 " Faster leader execution
 set timeoutlen=750
 
