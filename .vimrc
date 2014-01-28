@@ -18,13 +18,15 @@
 
 " -- Vundle -------------------------------------------------------- {{{
 
-" Setup
+"  -- Setup --
+
 set nocompatible
 filetype plugin off
 set runtimepath+=$HOME/.vim/bundle/vundle/
 call vundle#rc()
 
-" Bundles
+" -- Bundles --
+
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
@@ -98,8 +100,8 @@ set autoread  " Reload files that has been changed outside of Vim
 " Use omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
-set formatoptions-=r  " Don't insert the current comment leader when hitting Enter in insert mode
-set formatoptions-=o  " Don't insert the current comment leader when hitting o or O in insert mode
+set formatoptions-=r  " Don't insert the current comment leader when hitting `Enter` in insert mode
+set formatoptions-=o  " Don't insert the current comment leader when hitting `o` or `O` in insert mode
 
 " Faster leader execution
 set timeoutlen=750
@@ -108,7 +110,7 @@ set timeoutlen=750
 
 " -- Colorscheme --------------------------------------------------- {{{
 
-" Set Lightline theme
+" Set `lightline` theme
 let g:lightline = { 'colorscheme': 'solarized' }
 
 colorscheme solarized   " Use `solarized`
@@ -322,21 +324,21 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" Make Y behave like C and D
+" Make `Y` behave like `C` and `D`
 nnoremap Y y$
 
-" Remove help toggling from F1
+" Remove help toggling from `F1`
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 
-" Map clear search highlighting to Enter
+" Map clear search highlighting to `Enter`
 nnoremap <Enter> :nohlsearch<cr>
 
-" Map fold toggling to Space
+" Map fold toggling to `Space`
 nnoremap <Space> za
 
-" Map Omnicompletion to Ctrl+Space
+" Map Omnicompletion to `Ctrl+Space`
 inoremap <C-Space> <C-x><C-o>
 
 " Extended text objects

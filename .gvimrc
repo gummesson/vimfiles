@@ -43,7 +43,7 @@ end
 
 " -- Colorscheme --------------------------------------------------- {{{
 
-" Set Lightline theme
+" Set `lightline` theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
 " Use `tomorrow-night-eighties` when in GUI mode
