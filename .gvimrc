@@ -4,6 +4,8 @@
 " -- Interface
 " -- Font
 " -- Colorscheme
+" -- Functions
+" -- Mappings
 "
 " }}}
 
@@ -31,6 +33,16 @@ endif
 
 " }}}
 
+" -- Colorscheme --------------------------------------------------- {{{
+
+" Set `lightline` theme
+let g:lightline = { 'colorscheme': 'powerline' }
+
+" Use `badwolf` when in GUI mode
+colorscheme badwolf
+
+" }}}
+
 " -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
@@ -41,13 +53,23 @@ end
 
 " }}}
 
-" -- Colorscheme --------------------------------------------------- {{{
+" -- Functions ----------------------------------------------------- {{{
 
-" Set `lightline` theme
-let g:lightline = { 'colorscheme': 'powerline' }
+" Set the font size in a more convenient way
+function! SetFontSize(size)
+  if has('win32') || has('win64')
+    let name = split(&guifont, ':')[0]
+    let font = name.':h'.a:size.':cDEFAULT'
+    silent! execute 'set guifont='.font
+  endif
+endfunction
 
-" Use `tomorrow-night-eighties` when in GUI mode
-colorscheme Tomorrow-Night-Eighties
+" }}}
+
+" -- Mappings ------------------------------------------------------ {{{
+
+" Map `SetFontSize`
+command! -nargs=1 FontSize call SetFontSize(<q-args>)
 
 " }}}
 
