@@ -276,6 +276,7 @@ augroup MarkdownFiles
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
   autocmd FileType markdown call MarkdownFormatting()
+  autocmd FileType markdown syntax match Comment /\%^---\_.\{-}---$/
 augroup END
 
 " }}}
