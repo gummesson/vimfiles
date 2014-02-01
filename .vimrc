@@ -334,11 +334,8 @@ nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 
-" Map clear search highlighting to `Enter`
-nnoremap <Enter> :nohlsearch<cr>
-
-" Map fold toggling to `Space`
-nnoremap <Space> za
+" Map clear search highlighting to `Space`
+nnoremap <Space> :nohlsearch<cr>
 
 " Map Omnicompletion to `Ctrl+Space`
 inoremap <C-Space> <C-x><C-o>
