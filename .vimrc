@@ -30,6 +30,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'chriskempson/base16-vim'
+Bundle 'sjl/badwolf'
 Bundle 'gummesson/stereokai.vim'
 Bundle 'itchyny/lightline.vim'
 Bundle 'kien/ctrlp.vim'
