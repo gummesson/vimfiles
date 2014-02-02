@@ -289,6 +289,7 @@ let g:netrw_liststyle = 3     " Tree style listing
 let g:netrw_browse_split = 4  " Open in previous window
 let g:netrw_altv = 1          " Split to right
 let g:netrw_winsize = 25      " Window size (percentage of the current window)
+let g:netrw_banner=0          " Remove the information banner at the top
 
 " Hide wildignore files and folders
 let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules,public'
