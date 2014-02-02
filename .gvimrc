@@ -55,7 +55,7 @@ end
 
 " -- Functions ----------------------------------------------------- {{{
 
-" Use a larger font size and retain the window size
+" Use a larger font size but retain the window size
 function! BigMode()
   if has('gui_gtk2')
     set guifont=Liberation\ Mono\ 10
