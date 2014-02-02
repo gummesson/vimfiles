@@ -55,24 +55,25 @@ end
 
 " -- Functions ----------------------------------------------------- {{{
 
-" Set the font size in a more convenient way
-function! SetFontSize(size)
-  if has('gui_win32') || has('gui_macvim')
-    let name = substitute(join(split(&guifont, ':')[0:-2]), '\ ', '\\ ', 'g')
-    let font = name.':h'.a:size
+" Use a larger font size and retain the window size
+function! BigMode()
+  if has('gui_gtk2')
+    set guifont=Liberation\ Mono\ 10
+    set lines=28
+    set columns=88
   else
-    let name = join(split(&guifont, '\\ ')[0:-2], '\ ')
-    let font = name.'\ '.a:size
+    set guifont=Liberation\ Mono:h13
+    set lines=36
+    set columns=104
   endif
-  silent! execute 'set guifont='.font
 endfunction
 
 " }}}
 
 " -- Mappings ------------------------------------------------------ {{{
 
-" Map `SetFontSize`
-command! -nargs=1 FontSize call SetFontSize(<args>)
+" Map `BigMode`
+command! -nargs=0 Bigger call BigMode()
 
 " }}}
 
