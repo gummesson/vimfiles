@@ -254,17 +254,6 @@ function! GoToRootDir()
   endif
 endfunction
 
-" Shell execution
-function! ExecCmd(exec, cmd)
-  if executable(a:exec)
-    if has('win32') || has('win64')
-      silent! execute '!start cmd /c '.a:exec.' '.a:cmd.' & pause'
-    else
-      silent! execute '!'.a:exec.' '.a:cmd
-    endif
-  endif
-endfunction
-
 " }}}
 
 " -- Filetypes ----------------------------------------------------- {{{
@@ -371,12 +360,6 @@ nnoremap <leader>n :NumbersToggle<cr>
 
 " Map `GoToRootDir` function
 command! -nargs=0 Root call GoToRootDir()
-
-" Map shell executions helpers
-command! -nargs=? Git call ExecCmd('git', <q-args>)
-command! -nargs=? NPM call ExecCmd('npm', <q-args>)
-command! -nargs=? Grunt call ExecCmd('grunt', <q-args>)
-command! -nargs=? Gulp call ExecCmd('gulp', <q-args>)
 
 " }}}
 
