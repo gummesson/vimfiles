@@ -142,14 +142,12 @@ set sidescrolloff=10
 set sidescroll=1      " Scroll one character at a time
 set showmatch         " Show matching parenthesis
 set matchtime=1       " Show matching paren a tenth of a second
-set wildmenu          " Show options for file/command completion
+set wildmenu          " Show options for file and command completion
 
 " Wild ignores
-set wildignore+=.git               " Version control
-set wildignore+=.sass-cache        " Sass/SCSS
-set wildignore+=node_modules       " Node.js
-set wildignore+=*.jpg,*.png,*.svg  " Graphics
-set wildignore+=*.min.*            " Minified versions
+set wildignore+=.git,.sass-cache,tmp,*.min.*
+set wildignore+=node_modules,bower_components
+set wildignore+=*.jpg,*.png,*.svg,*.ico
 
 " Mouse
 set mouse=a    " Enable mouse usage
@@ -285,18 +283,17 @@ augroup END
 
 " -- Netrw --
 
-let g:netrw_liststyle = 3     " Tree style listing
-let g:netrw_browse_split = 4  " Open in previous window
-let g:netrw_altv = 1          " Split to right
-let g:netrw_winsize = 25      " Window size (percentage of the current window)
-let g:netrw_banner=0          " Remove the information banner at the top
-
-" Hide wildignore files and folders
-let g:netrw_list_hide = '.git,.sass-cache,*.jpg,*.png,*.svg,*.min.*,node_modules,public'
+let g:netrw_liststyle = 3            " Tree style listing
+let g:netrw_browse_split = 4         " Open in previous window
+let g:netrw_altv = 1                 " Split to right
+let g:netrw_winsize = 25             " Window size (percentage of the current window)
+let g:netrw_banner=0                 " Remove the information banner at the top
+let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 " -- CtrlP --
 
-let g:ctrlp_max_height = 10  " Max window size
+let g:ctrlp_max_height = 10                  " Maximum window size
+let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static files
 
 " -- Yankstack --
 
