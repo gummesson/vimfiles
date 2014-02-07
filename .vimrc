@@ -328,16 +328,16 @@ inoremap <C-Space> <C-x><C-o>
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
-let items = ['<bar>', '\\', '/', ':', '.', '*', '-', '_']
-for item in items
-   silent! execute 'nnoremap yi'.item.' T'.item.'yt'.item
-   silent! execute 'nnoremap ya'.item.' F'.item.'yf'.item
-   silent! execute 'nnoremap ci'.item.' T'.item.'ct'.item
-   silent! execute 'nnoremap ca'.item.' F'.item.'cf'.item
-   silent! execute 'nnoremap di'.item.' T'.item.'dt'.item
-   silent! execute 'nnoremap da'.item.' F'.item.'df'.item
-   silent! execute 'nnoremap vi'.item.' T'.item.'vt'.item
-   silent! execute 'nnoremap va'.item.' F'.item.'vf'.item
+let textobjects = ['<bar>', '\\', '/', ':', '.', '*', '-', '_']
+for object in textobjects
+   silent! execute 'nnoremap yi'.object.' T'.object.'yt'.object
+   silent! execute 'nnoremap ya'.object.' F'.object.'yf'.object
+   silent! execute 'nnoremap ci'.object.' T'.object.'ct'.object
+   silent! execute 'nnoremap ca'.object.' F'.object.'cf'.object
+   silent! execute 'nnoremap di'.object.' T'.object.'dt'.object
+   silent! execute 'nnoremap da'.object.' F'.object.'df'.object
+   silent! execute 'nnoremap vi'.object.' T'.object.'vt'.object
+   silent! execute 'nnoremap va'.object.' F'.object.'vf'.object
 endfor
 
 " -- Leader --
