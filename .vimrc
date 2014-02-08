@@ -66,6 +66,7 @@ else
 endif
 
 set t_Co=256        " Enable 256 colors support
+set lazyredraw      " Don't redraw the screen while executing macros
 syntax on           " Enable syntax highighting
 filetype plugin on  " Detect filetype
 
