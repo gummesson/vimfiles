@@ -123,6 +123,7 @@ let g:solarized_menu=0  " Remove the menu
 
 " -- Visual -------------------------------------------------------- {{{
 
+set shortmess+=I    " Hide the intro message
 set number          " Show line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
