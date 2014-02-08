@@ -233,12 +233,14 @@ cabbrev sudo w !sudo tee % >/dev/null
 
 " Formatting for Markdown documents
 function! MarkdownFormatting()
-  setlocal wrap               " Word wrap without line breaks
+  setlocal wrap              " Word wrap without line breaks
   setlocal linebreak
   setlocal nolist
   setlocal textwidth=0
   setlocal wrapmargin=0
   setlocal formatoptions+=l
+  setlocal spell             " Hablo inglés
+  setlocal spelllang=en_us
   setlocal colorcolumn=0     " Remove color column
   setlocal nocursorline      " Remove cursorline
   setlocal showbreak=        " Remove showbreak
