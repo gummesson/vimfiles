@@ -222,6 +222,9 @@ cabbrev Q q
 cabbrev Q! q!
 cabbrev E e
 
+" Write as `sudo`
+cabbrev sudo w !sudo tee % >/dev/null
+
 " }}}
 
 " -- Functions ----------------------------------------------------- {{{
