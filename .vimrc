@@ -87,7 +87,10 @@ function! UnixLineEndings()
   endif
 endfunction
 
-autocmd BufEnter * call UnixLineEndings()
+augroup LineEndings
+  autocmd!
+  autocmd BufEnter * call UnixLineEndings()
+augroup END
 
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
