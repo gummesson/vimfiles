@@ -51,6 +51,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'wavded/vim-stylus'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'jnwhiteh/vim-golang'
 
 " }}}
 
