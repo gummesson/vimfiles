@@ -237,17 +237,24 @@ cabbrev sudo w !sudo tee % >/dev/null
 
 " Formatting for Markdown documents
 function! MarkdownFormatting()
-  setlocal wrap              " Word wrap without line breaks
+  " Wrap long lines without adding line breaks
+  setlocal wrap
   setlocal linebreak
   setlocal nolist
   setlocal textwidth=0
   setlocal wrapmargin=0
   setlocal formatoptions+=l
-  setlocal spell             " Hablo inglés
+  " Hablo inglés, por favor
+  setlocal spell
   setlocal spelllang=en_us
-  setlocal colorcolumn=0     " Remove color column
-  setlocal nocursorline      " Remove cursorline
-  setlocal showbreak=        " Remove showbreak
+  " Remove `colorcolumn`, `cursorline` and `showbreak`
+  setlocal colorcolumn=0
+  setlocal nocursorline
+  setlocal showbreak=
+  " Syntax highlighting for Jekyll
+  syntax match Comment /\v^(---)$(\_.*)^(---)$/
+  syntax match PreProc /\v\{(\{|\%)(.*)(\%|\})\}/
+  syntax match PreProc /\v\{:\s+(.*)\s+\}/
 endfunction
 
 " Trim trailing whitespace
@@ -279,7 +286,6 @@ augroup MarkdownFiles
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
   autocmd FileType markdown call MarkdownFormatting()
-  autocmd FileType markdown syntax match Comment /\%^---\_.\{-}---$/
 augroup END
 
 " }}}
