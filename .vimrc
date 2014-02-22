@@ -259,12 +259,12 @@ endfunction
 
 " Trim trailing whitespace
 function! TrimWhitespace()
-  let search_history = @/
+  let hist = @/
   let line = line('.')
-  let col = col('.')
-    silent! execute '%s/\s\+$//e | nohlsearch'
+  let col  = col('.')
+  silent! execute '%s/\s\+$//e | nohlsearch'
   call cursor(line, col)
-  let @/ = search_history
+  let @/ = hist
 endfunction
 
 " Go to project root
@@ -286,6 +286,12 @@ augroup MarkdownFiles
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
   autocmd FileType markdown call MarkdownFormatting()
+augroup END
+
+" All
+augroup AllFiles
+  autocmd!
+  autocmd BufWrite * call TrimWhitespace()
 augroup END
 
 " }}}
