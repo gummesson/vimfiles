@@ -18,7 +18,7 @@
 
 " -- Vundle -------------------------------------------------------- {{{
 
-"  -- Setup --
+" -- Setup --
 
 set nocompatible
 filetype plugin off
