@@ -57,24 +57,28 @@ Bundle 'jnwhiteh/vim-golang'
 
 " -- General ------------------------------------------------------- {{{
 
-" Set language and clipboard
-if has('unix')
-  language messages C
-  set clipboard=unnamedplus
-else
-  language messages en
-  set clipboard=unnamed
-endif
+set langmenu=none                     " Set language to english
+set t_Co=256                          " Enable 256 colors support
+set lazyredraw                        " Don't redraw the screen while executing macros
+set hidden                            " Hide the buffers instead of closing them
+set autoread                          " Reload files that has been changed outside of Vim
+set timeoutlen=750                    " Faster leader execution
+set omnifunc=syntaxcomplete#Complete  " Use omnicompletion
 
-set t_Co=256        " Enable 256 colors support
-set lazyredraw      " Don't redraw the screen while executing macros
 syntax on           " Enable syntax highighting
 filetype plugin on  " Detect filetype
+
+" Format options
+set formatoptions-=r  " Don't insert the current comment leader when hitting `Enter` in insert mode
+set formatoptions-=o  " Don't insert the current comment leader when hitting `o` or `O` in insert mode
 
 " Use UTF-8 encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set nobomb
+
+" Remove sound and visual error
+set noerrorbells visualbell t_vb=
 
 " Use Unix-style line endings
 set fileformat=unix
@@ -92,26 +96,18 @@ augroup LineEndings
   autocmd BufEnter * call UnixLineEndings()
 augroup END
 
-" Remove sound and visual error
-set noerrorbells visualbell t_vb=
+" Set clipboard
+if has('unix')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
 
 " Autoreload Vim settings
 augroup ReloadSettings
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
-
-set hidden    " Hide the buffers instead of closing them
-set autoread  " Reload files that has been changed outside of Vim
-
-" Use omnicompletion
-set omnifunc=syntaxcomplete#Complete
-
-set formatoptions-=r  " Don't insert the current comment leader when hitting `Enter` in insert mode
-set formatoptions-=o  " Don't insert the current comment leader when hitting `o` or `O` in insert mode
-
-" Faster leader execution
-set timeoutlen=750
 
 " }}}
 
@@ -171,7 +167,7 @@ set backspace=indent,eol,start  " Enable backspacing over everything in insert m
 set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching the first/last character in the line
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 
-" Windows
+" Windows and splits
 set splitbelow
 set splitright
 autocmd VimResized * :wincmd =  " Autoresize windows
@@ -180,16 +176,17 @@ autocmd VimResized * :wincmd =  " Autoresize windows
 
 " -- Indentation --------------------------------------------------- {{{
 
-filetype plugin indent on  " Enable indent plugin
+filetype plugin indent on  " Enable indentation
 set autoindent             " Enable auto indent
 set smartindent            " Enable context-sensitive indentation
-set expandtab              " Replace tabs with spaces
-set smarttab               " Insert spaces on the start of a line (shiftwidth)
-set shiftround             " Round the indent to the multiple of shiftwidth
 
 " Set two spaces as default
 set shiftwidth=2
 set softtabstop=2
+
+set expandtab   " Replace tabs with spaces
+set smarttab    " Insert spaces on the start of a line (shiftwidth)
+set shiftround  " Round the indent to the multiple of shiftwidth
 
 " }}}
 
