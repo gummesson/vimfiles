@@ -381,6 +381,9 @@ nnoremap <leader>v :Vexplore<cr>
 " Toggle between absolute and relative numbers
 nnoremap <leader>n :NumbersToggle<cr>
 
+" Align (visually) selected text
+vmap <Enter> <Plug>(EasyAlign)
+
 " -- Commands --
 
 " Map `GoToRootDir` function
