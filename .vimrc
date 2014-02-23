@@ -139,6 +139,7 @@ augroup ToggleCursorLine
 augroup END
 
 set nowrap            " No word wrap
+set nostartofline     " Keep the cursor on the same column when moving around
 set scrolloff=5       " Start scrolling when the cursor is near the edges
 set sidescrolloff=10
 set sidescroll=1      " Scroll one character at a time
