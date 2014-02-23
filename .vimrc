@@ -301,7 +301,7 @@ augroup END
 let g:netrw_liststyle = 3            " Tree style listing
 let g:netrw_browse_split = 4         " Open in previous window
 let g:netrw_altv = 1                 " Split to right
-let g:netrw_winsize = 25             " Window size (percentage of the current window)
+let g:netrw_winsize = 20             " Window size (percentage of the current window)
 let g:netrw_banner = 0               " Remove the information banner at the top
 let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
