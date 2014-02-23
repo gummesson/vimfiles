@@ -375,13 +375,16 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Trim trailing whitespace
 nnoremap <leader>w :call TrimWhitespace()<cr>
 
-" Open Netrw as a project drawer
+" Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
 
-" Toggle between absolute and relative numbers
+" Open up `CtrlP`'s buffer list
+nnoremap <leader>b :CtrlPBuffer<cr>
+
+" Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
 
-" Align (visually) selected text
+" Align (visually) selected text with `EasyAlign`
 vmap <Enter> <Plug>(EasyAlign)
 
 " -- Commands --
