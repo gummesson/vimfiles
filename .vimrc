@@ -353,6 +353,9 @@ nnoremap <Space> :nohlsearch<cr>
 " Map Omnicompletion to `Ctrl+Space`
 inoremap <C-Space> <C-x><C-o>
 
+" Align (visually) selected text with `EasyAlign`
+vmap <Enter> <Plug>(EasyAlign)
+
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
 let textobjects = ['<bar>', '\\', '/', ':', '.', '*', '-', '_']
@@ -383,9 +386,6 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
-
-" Align (visually) selected text with `EasyAlign`
-vmap <Enter> <Plug>(EasyAlign)
 
 " -- Commands --
 
