@@ -40,6 +40,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tommcdo/vim-exchange'
+Bundle 'justinmk/vim-sneak'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'mileszs/ack.vim'
 Bundle 'walm/jshint.vim'
@@ -346,6 +347,10 @@ inoremap <C-Space> <C-x><C-o>
 
 " Align (visually) selected text with `EasyAlign`
 vmap <Enter> <Plug>(EasyAlign)
+
+" Search two letters forward and backward with `Sneak`
+nmap s <Plug>Sneak_s
+nmap S <Plug>Sneak_S
 
 " Extended text objects
 " (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
