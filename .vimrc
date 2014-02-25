@@ -311,14 +311,6 @@ let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static fi
 
 call yankstack#setup()
 
-" -- Note --
-
-if has('unix')
-  let g:notes_directory = '~/Dropbox/Dokument/Anteckningar/'
-else
-  let g:notes_directory = 'D:/Dropbox/Dokument/Anteckningar/'
-endif
-
 " }}}
 
 " -- Mappings ------------------------------------------------------ {{{
