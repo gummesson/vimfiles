@@ -33,19 +33,19 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'chriskempson/base16-vim'
 Bundle 'sjl/badwolf'
 Bundle 'itchyny/lightline.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'maxbrunsfeld/vim-yankstack'
-Bundle 'mattn/emmet-vim'
+Bundle 'wellle/targets.vim'
+Bundle 'justinmk/vim-sneak'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tommcdo/vim-exchange'
-Bundle 'justinmk/vim-sneak'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'mileszs/ack.vim'
-Bundle 'walm/jshint.vim'
-Bundle 'myusuf3/numbers.vim'
+Bundle 'tommcdo/vim-lion'
+Bundle 'gcmt/wildfire.vim'
 Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'wavded/vim-stylus'
@@ -345,26 +345,9 @@ nnoremap <Space> :nohlsearch<cr>
 " Map Omnicompletion to `Ctrl+Space`
 inoremap <C-Space> <C-x><C-o>
 
-" Align (visually) selected text with `EasyAlign`
-vmap <Enter> <Plug>(EasyAlign)
-
 " Search two letters forward and backward with `Sneak`
 nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
-
-" Extended text objects
-" (http://connermcd.com/blog/2012/10/01/extending-vim%27s-text-objects/)
-let textobjects = ['<bar>', '\\', '/', ':', '.', '*', '-', '_']
-for object in textobjects
-   silent! execute 'nnoremap yi'.object.' T'.object.'yt'.object
-   silent! execute 'nnoremap ya'.object.' F'.object.'yf'.object
-   silent! execute 'nnoremap ci'.object.' T'.object.'ct'.object
-   silent! execute 'nnoremap ca'.object.' F'.object.'cf'.object
-   silent! execute 'nnoremap di'.object.' T'.object.'dt'.object
-   silent! execute 'nnoremap da'.object.' F'.object.'df'.object
-   silent! execute 'nnoremap vi'.object.' T'.object.'vt'.object
-   silent! execute 'nnoremap va'.object.' F'.object.'vf'.object
-endfor
 
 " -- Leader --
 
