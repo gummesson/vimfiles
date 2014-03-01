@@ -233,25 +233,28 @@ cabbrev sudo w !sudo tee % >/dev/null
 " -- Functions ----------------------------------------------------- {{{
 
 " Formatting for Markdown documents
-function! MarkdownFormatting()
+function! MarkdownMode()
   " Wrap long lines without adding line breaks
-  setlocal wrap
-  setlocal linebreak
-  setlocal nolist
-  setlocal textwidth=0
-  setlocal wrapmargin=0
-  setlocal formatoptions+=l
+  setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions+=l
   " Hablo inglés, por favor
-  setlocal spell
-  setlocal spelllang=en_us
+  setlocal spell spelllang=en_us
   " Remove `colorcolumn`, `cursorline` and `showbreak`
-  setlocal colorcolumn=0
-  setlocal nocursorline
-  setlocal showbreak=
+  setlocal colorcolumn=0 nocursorline showbreak=
   " Syntax highlighting for Jekyll
   syntax match Comment /\v^(---)$(\_.*)^(---)$/
   syntax match PreProc /\v\{(\{|\%)(.*)(\%|\})\}/
   syntax match PreProc /\v\{:\s+(.*)\s+\}/
+endfunction
+
+" Focus current window
+function! FocusWindow()
+  let size  = winwidth(0)
+  let width = 80
+  if size < width
+    silent! execute 'vertical resize '.width
+  elseif size >= width
+    silent! execute 'only'
+  end
 endfunction
 
 " Trim trailing whitespace
@@ -282,7 +285,7 @@ endfunction
 augroup MarkdownFiles
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
-  autocmd FileType markdown call MarkdownFormatting()
+  autocmd FileType markdown call MarkdownMode()
 augroup END
 
 " All
@@ -353,6 +356,9 @@ nmap S <Plug>Sneak_S
 
 " Set current directory as root
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+" Focus the current window
+nnoremap <leader>f :call FocusWindow()<cr>
 
 " Trim trailing whitespace
 nnoremap <leader>w :call TrimWhitespace()<cr>
