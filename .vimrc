@@ -360,11 +360,11 @@ nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Focus the current window
 nnoremap <leader>f :call FocusWindow()<cr>
 
-" Trim trailing whitespace
-nnoremap <leader>w :call TrimWhitespace()<cr>
-
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
+
+" Trim trailing whitespace
+nnoremap <leader>w :call TrimWhitespace()<cr>
 
 " Open up `CtrlP`'s buffer list
 nnoremap <leader>b :CtrlPBuffer<cr>
