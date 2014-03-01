@@ -249,7 +249,7 @@ endfunction
 " Focus current window
 function! FocusWindow()
   let size  = winwidth(0)
-  let width = 80
+  let width = 90
   if size < width
     silent! execute 'vertical resize '.width
   elseif size >= width
