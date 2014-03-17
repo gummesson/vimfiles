@@ -44,6 +44,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tommcdo/vim-lion'
 Bundle 'gcmt/wildfire.vim'
+Bundle 'MattesGroeger/vim-bookmarks'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5-syntax.vim'
@@ -315,6 +316,10 @@ let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static fi
 " -- Yankstack --
 
 call yankstack#setup()
+
+" -- Bookmarks --
+
+let g:bookmark_sign = '»'
 
 " }}}
 
