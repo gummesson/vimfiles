@@ -247,17 +247,6 @@ function! MarkdownMode()
   syntax match PreProc /\v\{:\s+(.*)\s+\}/
 endfunction
 
-" Focus current window
-function! FocusWindow()
-  let size  = winwidth(0)
-  let width = 90
-  if size < width
-    silent! execute 'vertical resize '.width
-  elseif size >= width
-    silent! execute 'only'
-  end
-endfunction
-
 " Trim trailing whitespace
 function! TrimWhitespace()
   let hist = @/
@@ -362,8 +351,8 @@ nmap S <Plug>Sneak_S
 " Set current directory as root
 nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Focus the current window
-nnoremap <leader>f :call FocusWindow()<cr>
+" Focus current window
+nnoremap <leader>f :only<cr>
 
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
