@@ -17,4 +17,4 @@ ln -s [SOURCE] [DESTINATION]   # Unix
 mklink [DESTINATION] [SOURCE]  # Windows
 ~~~
 
-Launch [Vim](http://www.vim.org/) and run `:BundleInstall`.
+Launch [Vim](http://www.vim.org/) and run `:PluginInstall`.
