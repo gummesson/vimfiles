@@ -259,16 +259,6 @@ function! TrimWhitespace()
   let @/ = hist
 endfunction
 
-" Go to project root
-function! GoToRootDir()
-  if isdirectory('.git') || filereadable('.git')
-    pwd
-  else
-    silent! execute 'cd ../'
-    call GoToRootDir()
-  endif
-endfunction
-
 " }}}
 
 " -- Filetypes ----------------------------------------------------- {{{
@@ -367,13 +357,6 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
-
-" -- Commands --
-
-" Map `GoToRootDir` function
-command! -nargs=0 Root call GoToRootDir()
-
-" }}}
 
 " -- Miscellaneous ------------------------------------------------- {{{
 
