@@ -7,7 +7,7 @@ My (g)Vim files.
 Get [Vundle](https://github.com/gmarik/vundle):
 
 ~~~ bash
-git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/vundle
 ~~~
 
 Symlink the `.vimrc` and `.gvimrc` files:
