@@ -13,6 +13,7 @@
 " -- Filetypes
 " -- Plugins
 " -- Mappings
+" -- Miscellaneous
 "
 " }}}
 
@@ -156,9 +157,11 @@ set wildignore+=*.jpg,*.png,*.svg,*.ico
 set mouse=a    " Enable mouse usage
 set mousehide  " Hide the mouse cursor while typing
 
-" Code folding
-set foldenable         " Enable code folding
-set foldmethod=manual  " Use manual code folding
+" Folding
+set foldenable         " Enable folding
+set foldmethod=indent  " Fold by indentation
+set foldlevelstart=99  " Start with open folds
+set foldnestmax=9      " Only fold nine levels deep
 
 " Whitespace characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
@@ -370,6 +373,15 @@ nnoremap <leader>n :NumbersToggle<cr>
 
 " Map `GoToRootDir` function
 command! -nargs=0 Root call GoToRootDir()
+
+" }}}
+
+" -- Miscellaneous ------------------------------------------------- {{{
+
+" Source additional/experimental settings
+if filereadable($HOME.'/.vimrc.local')
+  source $HOME/.vimrc.local
+endif
 
 " }}}
 
