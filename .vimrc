@@ -117,9 +117,8 @@ augroup END
 " Set `lightline` theme
 let g:lightline = { 'colorscheme': 'solarized' }
 
-colorscheme solarized   " Use `solarized`
-set background=dark     " Set background to dark
-let g:solarized_menu=0  " Remove the menu
+colorscheme solarized  " Use `solarized`
+set background=dark    " Set background to dark
 
 " }}}
 
