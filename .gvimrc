@@ -4,6 +4,8 @@
 " -- Interface
 " -- Font
 " -- Colorscheme
+" -- Functions
+" -- Mappings
 "
 " }}}
 
@@ -48,6 +50,24 @@ if has('gui_gtk2')
 else
   set guifont=Liberation\ Mono:h10
 end
+
+" }}}
+
+" -- Functions ----------------------------------------------------- {{{
+
+function! BigMode()
+  set lines=40
+  set columns=120
+  set guifont=Liberation\ Mono:h13
+endfunction
+
+" }}}
+
+" -- Mappings ------------------------------------------------------ {{{
+
+" -- Commands --
+
+command! -nargs=0 -bang Bigger call BigMode()
 
 " }}}
 
