@@ -84,18 +84,20 @@ set noerrorbells visualbell t_vb=
 " Use Unix-style line endings
 set fileformat=unix
 
-function! UnixLineEndings()
-  if &filetype == ''
-    if &modifiable == '1'
-      setlocal fileformat=unix
+if has('win32')
+  function! UnixLineEndings()
+    if &filetype == ''
+      if &modifiable == '1'
+        setlocal fileformat=unix
+      endif
     endif
-  endif
-endfunction
+  endfunction
 
-augroup LineEndings
-  autocmd!
-  autocmd BufEnter * call UnixLineEndings()
-augroup END
+  augroup LineEndings
+    autocmd!
+    autocmd BufEnter * call UnixLineEndings()
+  augroup END
+endif
 
 " Set clipboard
 if has('unix')
