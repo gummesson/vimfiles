@@ -3,9 +3,6 @@
 " -- General
 " -- Interface
 " -- Font
-" -- Colorscheme
-" -- Functions
-" -- Mappings
 "
 " }}}
 
@@ -23,13 +20,8 @@ set guioptions-=T  " Hide the toolbar
 set guioptions-=r  " Hide the scrollbar
 
 " Window size
-if has('gui_gtk2')
-  set lines=35
-  set columns=110
-else
-  set lines=45
-  set columns=130
-endif
+set lines=40
+set columns=120
 
 " }}}
 
@@ -38,36 +30,23 @@ endif
 " Set `lightline` theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
-" Use `badwolf` when in GUI mode
-colorscheme badwolf
+" Use `Tomorrow Night` when in GUI mode
+colorscheme Tomorrow-Night
 
 " }}}
 
 " -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
-  set guifont=Liberation\ Mono\ 10
+  set guifont=Source\ Code\ Pro\ 11
 else
-  set guifont=Liberation\ Mono:h10
+  set guifont=Source\ Code\ Pro:h11
 end
 
-" }}}
-
-" -- Functions ----------------------------------------------------- {{{
-
-function! BigMode()
-  set lines=40
-  set columns=120
-  set guifont=Liberation\ Mono:h13
-endfunction
-
-" }}}
-
-" -- Mappings ------------------------------------------------------ {{{
-
-" -- Commands --
-
-command! -nargs=0 -bang Bigger call BigMode()
+" Fix massive linespacing
+if has('win32')
+  set linespace=-1
+endif
 
 " }}}
 
