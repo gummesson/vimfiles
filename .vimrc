@@ -32,7 +32,6 @@ Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'chriskempson/base16-vim'
-Plugin 'sjl/badwolf'
 Plugin 'itchyny/lightline.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'kien/ctrlp.vim'
@@ -302,6 +301,7 @@ call yankstack#setup()
 " -- Bookmarks --
 
 let g:bookmark_sign = '»'
+let g:bookmark_auto_save = 0
 
 " }}}
 
