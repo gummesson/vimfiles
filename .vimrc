@@ -44,14 +44,12 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'tommcdo/vim-lion'
 Plugin 'gcmt/wildfire.vim'
-Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'jnwhiteh/vim-golang'
 
 " }}}
 
@@ -298,11 +296,6 @@ let g:ctrlp_show_hidden = 1                  " Show hidden files
 " -- Yankstack --
 
 call yankstack#setup()
-
-" -- Bookmarks --
-
-let g:bookmark_sign = '»'
-let g:bookmark_auto_save = 0
 
 " }}}
 
