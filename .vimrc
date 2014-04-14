@@ -303,25 +303,18 @@ call yankstack#setup()
 
 " -- Keys --
 
-" Easier window navigation
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-
 " Move by display lines rather than linewise
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" Make `Y` behave like `C` and `D`
-nnoremap Y y$
+" Move to the first non-blank character/end of the line
+nnoremap H ^
+nnoremap L $
 
-" Remove help toggling from `F1`
-nnoremap <F1> <Nop>
-inoremap <F1> <Nop>
-vnoremap <F1> <Nop>
+" Make `Y` behave like `C` and `D` (ie. end of line)
+nnoremap Y y$
 
 " Map clear search highlighting to `Space`
 nnoremap <Space> :nohlsearch<cr>
@@ -336,16 +329,13 @@ nmap S <Plug>Sneak_S
 " -- Leader --
 
 " Set current directory as root
-nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
 " Focus current window
 nnoremap <leader>f :only<cr>
 
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
-
-" Trim trailing whitespace
-nnoremap <leader>w :call TrimWhitespace()<cr>
 
 " Open up `CtrlP`'s buffer list
 nnoremap <leader>b :CtrlPBuffer<cr>
