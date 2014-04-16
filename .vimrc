@@ -313,7 +313,11 @@ nnoremap gk k
 nnoremap H ^
 nnoremap L $
 
-" Make `Y` behave like `C` and `D` (ie. end of line)
+" Faster buffer navigation
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+
+" Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
 " Map clear search highlighting to `Space`
