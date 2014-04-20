@@ -263,14 +263,20 @@ endfunction
 " -- Filetypes ----------------------------------------------------- {{{
 
 " Markdown
-augroup MarkdownFiles
+augroup MarkdownSettings
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
   autocmd FileType markdown call MarkdownMode()
 augroup END
 
-" All filetypes
-augroup AllFiles
+" JavaScript
+augroup JavaScriptSettings
+  autocmd!
+  autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=javascript
+augroup END
+
+" Global
+augroup GlobalSettings
   autocmd!
   autocmd BufWrite * call TrimWhitespace()
 augroup END
