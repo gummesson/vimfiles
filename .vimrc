@@ -35,6 +35,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'dyng/ctrlsf.vim'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'wellle/targets.vim'
 Plugin 'justinmk/vim-sneak'
@@ -320,11 +321,14 @@ nnoremap <S-Tab> :bprevious<cr>
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
-" Map clear search highlighting to `Space`
+" Clear the search highlighting
 nnoremap <Space> :nohlsearch<cr>
 
-" Map Omnicompletion to `Ctrl+Space`
+" Map Omnicompletion to something a bit more useful
 inoremap <C-Space> <C-x><C-o>
+
+" Map `CtrlSF` for searching inside files with `ack`
+nnoremap <C-s> :CtrlSF
 
 " Search two letters forward and backward with `Sneak`
 nmap s <Plug>Sneak_s
