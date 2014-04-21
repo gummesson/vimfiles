@@ -30,8 +30,8 @@ set columns=120
 " Set `lightline` theme
 let g:lightline = { 'colorscheme': 'powerline' }
 
-" Use `Tomorrow Night` when in GUI mode
-colorscheme Tomorrow-Night
+" Use a different colorscheme when in GUI mode
+colorscheme base16-chalk
 
 " }}}
 
