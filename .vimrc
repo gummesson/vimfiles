@@ -238,8 +238,6 @@ cabbrev sudo w !sudo tee % >/dev/null
 function! MarkdownMode()
   " Wrap long lines without adding line breaks
   setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions+=l
-  " Hablo inglés, por favor
-  setlocal spell spelllang=en_us
   " Remove `colorcolumn`, `cursorline` and `showbreak`
   setlocal colorcolumn=0 nocursorline showbreak=
   " Syntax highlighting for Jekyll
@@ -345,7 +343,7 @@ nmap S <Plug>Sneak_S
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
-" Focus current window
+" Focus on the current buffer
 nnoremap <leader>f :only<cr>
 
 " Open `netrw` as a project drawer
@@ -356,6 +354,9 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
+
+" Toggle spell checking
+nnoremap <leader>s :setlocal spell!<cr>
 
 " -- Miscellaneous ------------------------------------------------- {{{
 
