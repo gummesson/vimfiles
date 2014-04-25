@@ -44,9 +44,7 @@ else
 end
 
 " Fix massive linespacing
-if has('win32')
-  set linespace=-1
-endif
+set linespace=-1
 
 " }}}
 
