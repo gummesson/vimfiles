@@ -90,6 +90,7 @@ if has('win32')
       endif
     endif
   endfunction
+
   augroup LineEndings
     autocmd!
     autocmd BufEnter * call UnixLineEndings()
