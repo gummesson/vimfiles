@@ -129,7 +129,8 @@ set number          " Show line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
-set colorcolumn=81  " Show a color column at the 81st column
+set textwidth=80    " The maximum line length (for reformatting)
+set colorcolumn=+1  " Show some color at the 81st column
 
 " Cursorline
 augroup ToggleCursorLine
@@ -138,7 +139,7 @@ augroup ToggleCursorLine
   autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
 augroup END
 
-set nowrap            " No word wrap
+set nowrap            " No automatic line wrapping
 set nostartofline     " Keep the cursor on the same column when moving around
 set scrolloff=5       " Start scrolling when the cursor is near the edges
 set sidescrolloff=10
