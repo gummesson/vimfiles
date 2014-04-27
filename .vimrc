@@ -63,7 +63,7 @@ set hidden                            " Hide the buffers instead of closing them
 set autoread                          " Reload files that has been changed outside of Vim
 set timeoutlen=750                    " Faster leader execution
 set omnifunc=syntaxcomplete#Complete  " Use omnicompletion
-set iskeyword+=-                      " Autocomplete "keywords" with dashes
+set iskeyword+=-                      " Autocomplete keywords with dashes
 
 syntax on           " Enable syntax highighting
 filetype plugin on  " Detect filetype
