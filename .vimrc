@@ -212,12 +212,9 @@ cabbrev sudo w !sudo tee % >/dev/null
 
 " Formatting for Markdown
 function! MarkdownMode()
-  " Wrap long lines without adding line breaks
-  setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions+=l
-  " Remove `colorcolumn`, `cursorline` and `showbreak`
-  setlocal colorcolumn=0 nocursorline showbreak=
-  " Syntax highlighting for Jekyll
-  syntax match Comment /\v^(---)$(\_.*)^(---)$/
+  setlocal wrap linebreak textwidth=0 wrapmargin=0 formatoptions+=l  " Wrap lines without adding line breaks
+  setlocal colorcolumn=0 nocursorline nolist showbreak=              " Turn off visual cues
+  syntax match Comment /\v^(---)$(\_.*)^(---)$/                      " Syntax highlighting for Jekyll
   syntax match PreProc /\v\{(\{|\%)(.*)(\%|\})\}/
   syntax match PreProc /\v\{:\s+(.*)\s+\}/
 endfunction
@@ -226,9 +223,9 @@ endfunction
 function! TrimWhitespace()
   let hist = @/
   let line = line('.')
-  let col = col('.')
+  let cols = col('.')
   silent! execute '%s/\s\+$//e | nohlsearch'
-  call cursor(line, col)
+  call cursor(line, cols)
   let @/ = hist
 endfunction
 
