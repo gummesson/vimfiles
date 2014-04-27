@@ -84,21 +84,6 @@ set nobomb
 " Use Unix-style line endings
 set fileformat=unix
 
-if has('win32')
-  function! UnixLineEndings()
-    if &filetype == ''
-      if &modifiable == '1'
-        setlocal fileformat=unix
-      endif
-    endif
-  endfunction
-
-  augroup LineEndings
-    autocmd!
-    autocmd BufEnter * call UnixLineEndings()
-  augroup END
-endif
-
 " Set clipboard
 if has('unix')
   set clipboard=unnamedplus
@@ -127,13 +112,6 @@ set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
 set textwidth=80    " The maximum line length (for reformatting)
 set colorcolumn=+1  " Show the 81st column
-
-" Cursorline
-augroup ToggleCursorLine
-  autocmd!
-  autocmd InsertEnter * set nocursorline  " Don't show the cursorline in insert mode...
-  autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
-augroup END
 
 set nowrap            " No soft wrapping
 set nostartofline     " Keep the cursor on the same column when moving around
@@ -232,7 +210,7 @@ cabbrev sudo w !sudo tee % >/dev/null
 
 " -- Functions ----------------------------------------------------- {{{
 
-" Formatting for Markdown documents
+" Formatting for Markdown
 function! MarkdownMode()
   " Wrap long lines without adding line breaks
   setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions+=l
@@ -248,10 +226,19 @@ endfunction
 function! TrimWhitespace()
   let hist = @/
   let line = line('.')
-  let col  = col('.')
+  let col = col('.')
   silent! execute '%s/\s\+$//e | nohlsearch'
   call cursor(line, col)
   let @/ = hist
+endfunction
+
+" Consistent line endings
+function! UnixLineEndings()
+  if &filetype == ''
+    if &modifiable == '1'
+      setlocal fileformat=unix
+    endif
+  endif
 endfunction
 
 " }}}
@@ -274,13 +261,18 @@ augroup END
 " Vim
 augroup VimSettings
   autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC  " Autoreload settings when saved
 augroup END
 
 " Global
 augroup GlobalSettings
   autocmd!
+  autocmd InsertEnter * set nocursorline       " Don't show the cursorline in insert mode...
+  autocmd InsertLeave * set cursorline         " ...but show it in all the other modes
   autocmd BufWrite * call TrimWhitespace()
+  if has('win32')
+    autocmd BufEnter * call UnixLineEndings()
+  endif
 augroup END
 
 " }}}
