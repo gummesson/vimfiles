@@ -63,21 +63,23 @@ set hidden                            " Hide the buffers instead of closing them
 set autoread                          " Reload files that has been changed outside of Vim
 set timeoutlen=750                    " Faster leader execution
 set omnifunc=syntaxcomplete#Complete  " Use omnicompletion
+set iskeyword+=-                      " Autocomplete "keywords" with dashes
 
 syntax on           " Enable syntax highighting
 filetype plugin on  " Detect filetype
 
+" Remove sound and visual error
+set noerrorbells visualbell t_vb=
+
 " Format options
 set formatoptions-=r  " Don't insert the current comment leader when hitting `Enter` in insert mode
 set formatoptions-=o  " Don't insert the current comment leader when hitting `o` or `O` in insert mode
+set formatoptions-=t  " Don't hard wrap lines
 
 " Use UTF-8 encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set nobomb
-
-" Remove sound and visual error
-set noerrorbells visualbell t_vb=
 
 " Use Unix-style line endings
 set fileformat=unix
@@ -104,12 +106,6 @@ else
   set clipboard=unnamed
 endif
 
-" Autoreload Vim settings
-augroup ReloadSettings
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
-
 " }}}
 
 " -- Colorscheme --------------------------------------------------- {{{
@@ -130,7 +126,7 @@ set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
 set textwidth=80    " The maximum line length (for reformatting)
-set colorcolumn=+1  " Show some color at the 81st column
+set colorcolumn=+1  " Show the 81st column
 
 " Cursorline
 augroup ToggleCursorLine
@@ -139,14 +135,13 @@ augroup ToggleCursorLine
   autocmd InsertLeave * set cursorline    " ...but show it in all the other modes
 augroup END
 
-set nowrap            " No automatic line wrapping
-set formatoptions-=t
+set nowrap            " No soft wrapping
 set nostartofline     " Keep the cursor on the same column when moving around
 set scrolloff=5       " Start scrolling when the cursor is near the edges
 set sidescrolloff=10
 set sidescroll=1      " Scroll one character at a time
-set showmatch         " Show matching parenthesis
-set matchtime=1       " Show matching paren a tenth of a second
+set showmatch         " Show matching parens...
+set matchtime=1       " ...for a tenth of a second
 set wildmenu          " Show options for file and command completion
 
 " Wild ignores
@@ -274,6 +269,12 @@ augroup END
 augroup JavaScriptSettings
   autocmd!
   autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=javascript
+augroup END
+
+" Vim
+augroup VimSettings
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
 " Global
