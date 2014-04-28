@@ -7,14 +7,16 @@ My (g)Vim files.
 Get [Vundle](https://github.com/gmarik/vundle):
 
 ~~~ bash
-git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 ~~~
 
-Symlink the `.vimrc` and `.gvimrc` files:
+Symlink the `.vimrc` and `.gvimrc` files to `~/`:
 
 ~~~ bash
 ln -s [SOURCE] [DESTINATION]   # Unix
 mklink [DESTINATION] [SOURCE]  # Windows
 ~~~
 
-Launch [Vim](http://www.vim.org/) and run `:PluginInstall`.
+## Installation
+
+Launch [(g)Vim](http://www.vim.org/) and run `:PluginInstall`.
