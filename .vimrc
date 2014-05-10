@@ -24,7 +24,7 @@
 set nocompatible
 filetype plugin off
 set runtimepath+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " -- Plugins --
 
@@ -51,6 +51,10 @@ Plugin 'othree/html5-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
+
+" -- Teardown --
+
+call vundle#end()
 
 " }}}
 
