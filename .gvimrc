@@ -41,7 +41,7 @@ colorscheme gruvbox
 " -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
-  set guifont=Source\ Code\ Pro\ 11
+  set guifont=Source\ Code\ Pro\ 11.5
 else
   set guifont=Source\ Code\ Pro:h11
 end
