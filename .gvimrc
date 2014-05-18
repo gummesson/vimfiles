@@ -34,7 +34,7 @@ set columns=120
 let g:lightline = { 'colorscheme': 'powerline' }
 
 " Use a different colorscheme when in GUI mode
-colorscheme base16-chalk
+colorscheme gruvbox
 
 " }}}
 
