@@ -219,9 +219,6 @@ cabbrev sudo w !sudo tee % >/dev/null
 function! MarkdownMode()
   setlocal wrap linebreak textwidth=0 wrapmargin=0 formatoptions+=l  " Wrap lines without adding line breaks
   setlocal colorcolumn=0 nocursorline nolist showbreak=              " Turn off visual cues
-  syntax match Comment /\v^(---)$(\_.*)^(---)$/                      " Syntax highlighting for Jekyll
-  syntax match PreProc /\v\{(\{|\%)(.*)(\%|\})\}/
-  syntax match PreProc /\v\{:\s+(.*)\s+\}/
 endfunction
 
 " Trim trailing whitespace
