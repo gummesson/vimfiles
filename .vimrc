@@ -160,7 +160,7 @@ autocmd VimResized * :wincmd =  " Autoresize windows
 " -- Indentation --------------------------------------------------- {{{
 
 filetype plugin indent on  " Enable indentation
-set autoindent             " Enable auto indent
+set autoindent             " Enable auto indentation
 set smartindent            " Enable context-sensitive indentation
 
 " Set two spaces as default
