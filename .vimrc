@@ -103,9 +103,6 @@ endif
 
 " -- Colorscheme --------------------------------------------------- {{{
 
-" Set `lightline` theme
-let g:lightline = { 'colorscheme': 'solarized' }
-
 colorscheme solarized  " Use `solarized`
 set background=dark    " Set background to dark
 

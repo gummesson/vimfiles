@@ -30,9 +30,6 @@ set columns=120
 
 " -- Colorscheme --------------------------------------------------- {{{
 
-" Set `lightline` theme
-let g:lightline = { 'colorscheme': 'powerline' }
-
 " Use a different colorscheme when in GUI mode
 colorscheme gruvbox
 
