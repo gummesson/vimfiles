@@ -52,6 +52,9 @@ Plugin 'othree/html5-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
+if has('unix')
+  Plugin 'drmikehenry/vim-fixkey'
+endif
 
 " -- Teardown --
 
