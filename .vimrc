@@ -202,7 +202,7 @@ set noswapfile  " No swap files
 iabbrev #! #!/usr/bin/env
 
 " Fenced code blocks
-iabbrev ~ ~~~<cr><cr>~~~<Up><Up>
+iabbrev ~~ ~~~<cr><cr>~~~<Up><Up>
 
 " Mistypes
 cabbrev W w
