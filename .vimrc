@@ -336,7 +336,7 @@ nnoremap <C-s> :CtrlSF
 nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
 
-" Reload file
+" Redetect file
 nnoremap <F5> :edit<cr>
 
 " -- Leader --
