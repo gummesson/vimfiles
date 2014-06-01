@@ -336,6 +336,9 @@ nnoremap <C-s> :CtrlSF
 nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
 
+" Reload file
+nnoremap <F5> :edit<cr>
+
 " -- Leader --
 
 " Set current directory as root
