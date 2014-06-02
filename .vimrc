@@ -339,7 +339,7 @@ nnoremap <F5> :edit<cr>
 " -- Leader --
 
 " Set current directory as root and generate `ctags`
-nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>:silent !ctags<cr>
+nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>:silent! !ctags<cr>:redraw!<cr>
 
 " Focus on the current buffer
 nnoremap <leader>f :only<cr>
