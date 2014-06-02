@@ -338,8 +338,8 @@ nnoremap <F5> :edit<cr>
 
 " -- Leader --
 
-" Set current directory as root and generate `ctags`
-nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>:silent! !ctags<cr>:redraw!<cr>
+" Set current directory as root
+nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
 " Focus on the current buffer
 nnoremap <leader>f :only<cr>
@@ -356,7 +356,10 @@ nnoremap <leader>n :NumbersToggle<cr>
 " Toggle spell checking
 nnoremap <leader>s :setlocal spell!<cr>
 
-" Open `CtrlP`'s ctags list
+" Generate `ctags`
+nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
+
+" Open `CtrlP`'s `ctags` list
 nnoremap <leader>t :CtrlPTag<cr>
 
 " -- Miscellaneous ------------------------------------------------- {{{
