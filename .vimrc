@@ -326,9 +326,6 @@ nnoremap <Space> :nohlsearch<cr>
 " Map Omnicompletion to something a bit more useful
 inoremap <C-Space> <C-x><C-o>
 
-" Map `CtrlSF` for searching inside files with `ack`
-nnoremap <C-s> :CtrlSF
-
 " Search two letters forward and backward with `Sneak`
 nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
