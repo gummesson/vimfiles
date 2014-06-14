@@ -47,12 +47,9 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'mattn/emmet-vim'
-Plugin 'othree/html5-syntax.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'wavded/vim-stylus'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'sheerun/vim-polyglot'
 
 " -- Teardown --
 
@@ -323,9 +320,6 @@ nnoremap Y y$
 
 " Clear the search highlighting
 nnoremap <Space> :nohlsearch<cr>
-
-" Map Omnicompletion to something a bit more useful
-inoremap <C-Space> <C-x><C-o>
 
 " Search two letters forward and backward with `Sneak`
 nmap s <Plug>Sneak_s
