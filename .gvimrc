@@ -31,7 +31,7 @@ set columns=120
 " -- Colorscheme --------------------------------------------------- {{{
 
 " Use a different colorscheme when in GUI mode
-colorscheme gruvbox
+colorscheme pencil
 
 " }}}
 
