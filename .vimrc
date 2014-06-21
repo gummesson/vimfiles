@@ -311,6 +311,9 @@ nnoremap gk k
 nnoremap H ^
 nnoremap L $
 
+" Faster paren navigation
+nnoremap <BS> %
+
 " Faster buffer navigation
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
