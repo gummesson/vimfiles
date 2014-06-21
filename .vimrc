@@ -312,13 +312,6 @@ nnoremap gk k
 nnoremap H ^
 nnoremap L $
 
-" Faster paren navigation
-nnoremap <BS> %
-
-" Faster buffer navigation
-nnoremap <Tab> :bnext<cr>
-nnoremap <S-Tab> :bprevious<cr>
-
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
@@ -348,9 +341,6 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
-
-" Toggle spell checking
-nnoremap <leader>s :setlocal spell!<cr>
 
 " Generate `ctags`
 nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
