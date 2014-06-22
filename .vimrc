@@ -329,9 +329,6 @@ nnoremap <F5> :edit<cr>
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
-" Focus on the current buffer
-nnoremap <leader>f :only<cr>
-
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
 
