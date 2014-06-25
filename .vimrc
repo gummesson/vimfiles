@@ -312,9 +312,6 @@ nnoremap gk k
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
-" Clear the search highlighting
-nnoremap <Space> :nohlsearch<cr>
-
 " Search two letters forward and backward with `Sneak`
 nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
