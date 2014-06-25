@@ -307,10 +307,6 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" Move to the first non-blank character/end of the line
-nnoremap H ^
-nnoremap L $
-
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
