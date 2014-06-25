@@ -50,6 +50,8 @@ Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'ajh17/VimCompletesMe'
+Plugin '1995eaton/vim-better-css-completion'
+Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'sheerun/vim-polyglot'
 
 " -- Teardown --
