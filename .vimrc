@@ -182,8 +182,10 @@ set smartcase   " Ignore case if search pattern is all lowercase, otherwise make
 
 " -- History ------------------------------------------------------- {{{
 
-set history=1000     " Remember more commands and a longer search history
-set undolevels=1000  " Enable many, many, many, many, many undos
+set history=1000             " Remember more commands and a longer search history
+set undodir=$HOME/.vim/undo  " Set the undo directory
+set undofile                 " Use persistent undo
+set undolevels=1000          " Enable many, many, many, many, many undos
 
 " }}}
 
