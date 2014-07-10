@@ -50,6 +50,7 @@ Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'mbbill/undotree'
 Plugin '1995eaton/vim-better-css-completion'
 Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'sheerun/vim-polyglot'
@@ -295,6 +296,10 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static files
 let g:ctrlp_show_hidden = 1                  " Show hidden files
 
+" -- Undotree --
+
+let g:undotree_WindowLayout = 2
+
 " -- Yankstack --
 
 call yankstack#setup()
@@ -340,6 +345,9 @@ nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
 
 " Open `CtrlP`'s `ctags` list
 nnoremap <leader>t :CtrlPTag<cr>
+
+" Toggle `Undotree`
+nnoremap <leader>u :UndotreeToggle
 
 " -- Miscellaneous ------------------------------------------------- {{{
 
