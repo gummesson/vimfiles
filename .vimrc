@@ -329,6 +329,9 @@ nmap S <Plug>Sneak_S
 " Redetect file
 nnoremap <F5> :edit<cr>
 
+" Trigger omnicompletion
+inoremap <C-Space> <C-x><C-o>
+
 " -- Leader --
 
 " Set current directory as root
