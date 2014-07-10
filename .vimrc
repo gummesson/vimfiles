@@ -255,10 +255,10 @@ augroup MarkdownSettings
   autocmd FileType markdown call MarkdownMode()
 augroup END
 
-" JavaScript
-augroup JavaScriptSettings
+" JSON
+augroup JSONSettings
   autocmd!
-  autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=javascript
+  autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=json
 augroup END
 
 " Vim
