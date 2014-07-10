@@ -221,8 +221,14 @@ cabbrev sudo w !sudo tee % >/dev/null
 
 " Formatting for Markdown
 function! MarkdownMode()
-  setlocal wrap linebreak textwidth=0 wrapmargin=0 formatoptions+=l  " Wrap lines without adding line breaks
-  setlocal colorcolumn=0 nocursorline nolist showbreak=              " Turn off visual cues
+  setlocal wrap              " Wrap lines without adding line breaks
+  setlocal linebreak
+  setlocal textwidth=0
+  setlocal wrapmargin=0
+  setlocal formatoptions+=l
+  setlocal colorcolumn=0     " Turn off visual cues
+  setlocal nolist
+  setlocal showbreak=
 endfunction
 
 " Trim trailing whitespace
