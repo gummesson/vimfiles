@@ -49,7 +49,6 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'ajh17/VimCompletesMe'
 Plugin 'sheerun/vim-polyglot'
 
 " -- Teardown --
