@@ -351,7 +351,7 @@ nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
 nnoremap <leader>t :CtrlPTag<cr>
 
 " Toggle `Undotree`
-nnoremap <leader>u :UndotreeToggle
+nnoremap <leader>u :UndotreeToggle<cr>
 
 " -- Miscellaneous ------------------------------------------------- {{{
 
