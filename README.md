@@ -13,8 +13,8 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 Symlink the `.vimrc` and `.gvimrc` files to `~/`:
 
 ~~~ bash
-ln -s [SOURCE] [DESTINATION]   # Unix
-mklink [DESTINATION] [SOURCE]  # Windows
+ln -s <source> <destination>   # Unix
+mklink <destination> <source>  # windows
 ~~~
 
 ## Installation
