@@ -35,10 +35,10 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'sgur/ctrlp-extensions.vim'
 Plugin 'mbbill/undotree'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'wellle/targets.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'justinmk/vim-sneak'
@@ -297,16 +297,13 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 " -- CtrlP --
 
-let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static files
-let g:ctrlp_show_hidden = 1                  " Show hidden files
+let g:ctrlp_custom_ignore = 'public\|_site'               " Ignore directories with static files
+let g:ctrlp_show_hidden = 1                               " Show hidden files
+let g:ctrlp_extensions = ['yankring', 'cmdline', 'menu']  " Extend CtrlP's statusline
 
 " -- Undotree --
 
 let g:undotree_WindowLayout = 2
-
-" -- Yankstack --
-
-call yankstack#setup()
 
 " }}}
 
@@ -352,6 +349,9 @@ nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
 
 " Open `CtrlP`'s `ctags` list
 nnoremap <leader>t :CtrlPTag<cr>
+
+" Open `CtrlP`'s yankring
+nnoremap <leader>y :CtrlPYankring<cr>
 
 " Toggle `Undotree`
 nnoremap <leader>u :UndotreeToggle<cr>
