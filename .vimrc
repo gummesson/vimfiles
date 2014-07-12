@@ -126,7 +126,7 @@ set wildmenu               " Show options for file and command completion
 set wildmode=list:longest  " Complete only up to the point of ambiguity
 
 " Wild ignores
-set wildignore+=.git,.sass-cache,tmp,*.min.*
+set wildignore+=.git,.sass-cache,tmp,*.min.*,tags
 set wildignore+=node_modules,bower_components
 set wildignore+=*.jpg,*.png,*.svg,*.ico
 
