@@ -23,12 +23,12 @@
 
 set nocompatible
 filetype plugin off
-set runtimepath+=$HOME/.vim/bundle/vundle/
+set runtimepath+=$HOME/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " -- Plugins --
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'chriskempson/base16-vim'
