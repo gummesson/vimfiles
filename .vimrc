@@ -107,7 +107,7 @@ set background=dark    " Set background to dark
 
 " -- Visual -------------------------------------------------------- {{{
 
-set shortmess+=I    " Hide the intro message
+set shortmess=Iat   " Hide the intro and abbreviate and truncate command line messages
 set number          " Show line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
