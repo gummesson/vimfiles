@@ -115,15 +115,15 @@ set showmode        " Display the current mode
 set textwidth=80    " The maximum line length (for reformatting)
 set colorcolumn=+1  " Show the 81st column
 
-set nowrap                 " No soft wrapping
-set nostartofline          " Keep the cursor on the same column when moving around
-set scrolloff=5            " Start scrolling when the cursor is near the edges
+set nowrap                      " No soft wrapping
+set nostartofline               " Keep the cursor on the same column when moving around
+set scrolloff=5                 " Start scrolling when the cursor is near the edges
 set sidescrolloff=10
-set sidescroll=1           " Scroll one character at a time
-set showmatch              " Show matching parens...
-set matchtime=1            " ...for a tenth of a second
-set wildmenu               " Show options for file and command completion
-set wildmode=list:longest  " Complete only up to the point of ambiguity
+set sidescroll=1                " Scroll one character at a time
+set showmatch                   " Show matching parens...
+set matchtime=1                 " ...for a tenth of a second
+set wildmenu                    " Show options for file and command completion
+set wildmode=longest:full,full  " Complete only up to the point of ambiguity
 
 " Wild ignores
 set wildignore+=.git,.sass-cache,tmp,*.min.*,tags
