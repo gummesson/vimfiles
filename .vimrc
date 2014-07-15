@@ -227,12 +227,12 @@ endfunction
 
 " Trim trailing whitespace
 function! TrimWhitespace()
-  let hist = @/
-  let line = line('.')
-  let cols = col('.')
+  let l:history = @/
+  let l:lines = line('.')
+  let l:cols = col('.')
   silent! execute '%s/\s\+$//e | nohlsearch'
-  call cursor(line, cols)
-  let @/ = hist
+  call cursor(l:lines, l:cols)
+  let @/ = l:history
 endfunction
 
 " Consistent line endings
