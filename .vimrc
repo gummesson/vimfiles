@@ -269,14 +269,14 @@ augroup END
 " Global
 augroup GlobalSettings
   autocmd!
-  autocmd VimResized * :wincmd =                      " Autoresize windows
-  autocmd InsertEnter * set nocursorline              " Don't show the cursorline in insert mode...
-  autocmd InsertLeave * set cursorline                " ...but show it in all the other modes
   autocmd BufNewFile,BufRead * set formatoptions-=ro  " Don't insert the current comment leader
   autocmd BufWrite * call TrimWhitespace()
   if has('win32')
     autocmd BufEnter * call UnixLineEndings()
   endif
+  autocmd InsertEnter * set nocursorline              " Don't show the cursorline in insert mode...
+  autocmd InsertLeave * set cursorline                " ...but show it in all the other modes
+  autocmd VimResized * :wincmd =                      " Autoresize windows
 augroup END
 
 " }}}
