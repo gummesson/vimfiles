@@ -237,15 +237,15 @@ endfunction
 
 augroup MARKDOWN
   autocmd!
-  autocmd BufRead,BufNewFile *{txt,md} set filetype=markdown
+  autocmd BufRead,BufNewFile *.{txt,md} set filetype=markdown
   autocmd FileType markdown setlocal formatoptions+=w1
-  autocmd InsertEnter *{txt,md} setlocal formatoptions+=a
-  autocmd InsertLeave *{txt,md} setlocal formatoptions-=a
+  autocmd InsertEnter *.{txt,md} setlocal formatoptions+=a
+  autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a
 augroup END
 
 augroup JSON
   autocmd!
-  autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=json
+  autocmd BufRead,BufNewFile *.{jshintrc,bowerrc} set filetype=json
 augroup END
 
 augroup VIM
