@@ -76,11 +76,6 @@ filetype plugin on  " Detect filetype
 " Remove sound and visual error
 set noerrorbells visualbell t_vb=
 
-" Format options
-set formatoptions-=r  " Don't insert the current comment leader when hitting `Enter` in insert mode
-set formatoptions-=o  " Don't insert the current comment leader when hitting `o` or `O` in insert mode
-set formatoptions-=t  " Don't hard wrap lines
-
 " Use UTF-8 encoding
 set encoding=utf-8
 set fileencoding=utf-8
@@ -275,8 +270,9 @@ augroup END
 " Global
 augroup GlobalSettings
   autocmd!
-  autocmd InsertEnter * set nocursorline       " Don't show the cursorline in insert mode...
-  autocmd InsertLeave * set cursorline         " ...but show it in all the other modes
+  autocmd InsertEnter * set nocursorline              " Don't show the cursorline in insert mode...
+  autocmd InsertLeave * set cursorline                " ...but show it in all the other modes
+  autocmd BufNewFile,BufRead * set formatoptions-=ro  " Don't insert the current comment leader
   autocmd BufWrite * call TrimWhitespace()
   if has('win32')
     autocmd BufEnter * call UnixLineEndings()
