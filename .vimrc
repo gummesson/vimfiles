@@ -216,9 +216,9 @@ cabbrev w!! w !sudo tee % >/dev/null
 function! TrimWhitespace()
   let l:history = @/
   let l:lines = line('.')
-  let l:cols = col('.')
+  let l:columns = col('.')
   silent! execute '%s/\s\+$//e | nohlsearch'
-  call cursor(l:lines, l:cols)
+  call cursor(l:lines, l:columns)
   let @/ = l:history
 endfunction
 
