@@ -322,6 +322,9 @@ nnoremap <Enter> :nohlsearch<cr>
 " Trigger omnicompletion
 inoremap <C-Space> <C-x><C-o>
 
+" Toggle paste mode
+set pastetoggle=<F2>
+
 " -- Leader --
 
 " Set current directory as root
