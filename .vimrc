@@ -235,8 +235,7 @@ endfunction
 
 " -- Filetypes ----------------------------------------------------- {{{
 
-" Markdown
-augroup MarkdownSettings
+augroup MARKDOWN
   autocmd!
   autocmd BufRead,BufNewFile *{txt,md} set filetype=markdown
   autocmd FileType markdown setlocal formatoptions+=w1
@@ -244,20 +243,17 @@ augroup MarkdownSettings
   autocmd InsertLeave *{txt,md} setlocal formatoptions-=a
 augroup END
 
-" JSON
-augroup JSONSettings
+augroup JSON
   autocmd!
   autocmd BufRead,BufNewFile *{jshintrc,bowerrc} set filetype=json
 augroup END
 
-" Vim
-augroup VimSettings
+augroup VIM
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC  " Autoreload settings when saved
 augroup END
 
-" Global
-augroup GlobalSettings
+augroup ALL
   autocmd!
   autocmd BufNewFile,BufRead * set formatoptions-=ro  " Don't insert the current comment leader
   autocmd BufWrite * call TrimWhitespace()
