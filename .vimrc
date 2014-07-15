@@ -348,6 +348,8 @@ nnoremap <leader>y :CtrlPYankring<cr>
 " Toggle `Undotree`
 nnoremap <leader>u :UndotreeToggle<cr>
 
+" }}}
+
 " -- Miscellaneous ------------------------------------------------- {{{
 
 " Source additional/experimental settings
