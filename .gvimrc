@@ -3,6 +3,7 @@
 " -- General
 " -- Interface
 " -- Font
+" -- Functions
 "
 " }}}
 
@@ -47,6 +48,24 @@ end
 
 " Fix massive linespacing
 set linespace=-1
+
+" }}}
+
+" -- Functions ----------------------------------------------------- {{{
+
+" Prose mode
+function! Prose()
+  if g:colors_name != 'pencil'
+    colorscheme pencil
+  endif
+  if &background != 'light'
+    set background=light
+  endif
+  set foldcolumn=12
+endfunction
+
+" Map `call Prose()` to `:Prose`
+command! -bang -nargs=0 Prose call Prose()
 
 " }}}
 
