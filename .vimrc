@@ -212,18 +212,6 @@ cabbrev w!! w !sudo tee % >/dev/null
 
 " -- Functions ----------------------------------------------------- {{{
 
-" Formatting for Markdown
-function! MarkdownMode()
-  setlocal wrap              " Wrap lines without adding line breaks
-  setlocal linebreak
-  setlocal textwidth=0
-  setlocal wrapmargin=0
-  setlocal formatoptions+=l
-  setlocal colorcolumn=0     " Turn off visual cues
-  setlocal nolist
-  setlocal showbreak=
-endfunction
-
 " Trim trailing whitespace
 function! TrimWhitespace()
   let l:history = @/
@@ -250,8 +238,10 @@ endfunction
 " Markdown
 augroup MarkdownSettings
   autocmd!
-  autocmd BufRead,BufNewFile *{txt,md,markdown,mkdown,mkd} set filetype=markdown
-  autocmd FileType markdown call MarkdownMode()
+  autocmd BufRead,BufNewFile *{txt,md} set filetype=markdown
+  autocmd FileType markdown setlocal formatoptions+=w1
+  autocmd InsertEnter *{txt,md} setlocal formatoptions+=a
+  autocmd InsertLeave *{txt,md} setlocal formatoptions-=a
 augroup END
 
 " JSON
