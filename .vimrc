@@ -313,6 +313,12 @@ nmap S <Plug>Sneak_S
 " Redetect file
 nnoremap <F5> :edit<cr>
 
+" Toggle folds
+nnoremap <Space> za
+
+" Turn off search highlighing
+nnoremap <Enter> :nohlsearch<cr>
+
 " Trigger omnicompletion
 inoremap <C-Space> <C-x><C-o>
 
