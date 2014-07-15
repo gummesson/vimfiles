@@ -8,8 +8,10 @@
 
 " -- General  ------------------------------------------------------ {{{
 
-" Remove sound and visual error
-autocmd GUIEnter * set visualbell t_vb=
+augroup GUI
+  autocmd!
+  autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
+augroup END
 
 " }}}
 
