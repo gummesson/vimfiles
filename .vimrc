@@ -133,7 +133,7 @@ set mousehide  " Hide the mouse cursor while typing
 set foldenable         " Enable folding
 set foldmethod=indent  " Fold by indentation
 set foldlevelstart=99  " Start with open folds
-set foldnestmax=9      " Only fold nine levels deep
+set foldnestmax=3      " Only fold three levels deep
 
 " Whitespace characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
