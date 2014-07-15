@@ -79,6 +79,7 @@ set noerrorbells visualbell t_vb=
 " Use UTF-8 encoding
 set encoding=utf-8
 set fileencoding=utf-8
+scriptencoding utf-8
 set nobomb
 
 " Use Unix-style line endings
