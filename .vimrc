@@ -356,6 +356,9 @@ nnoremap <leader>u :UndotreeToggle<cr>
 
 " -- Miscellaneous ------------------------------------------------- {{{
 
+set exrc    " Enable per-directory `.vimrc` files...
+set secure  " ...but disable unsafe commands in them
+
 " Source additional/experimental settings
 if filereadable($HOME.'/.vimrc.local')
   source $HOME/.vimrc.local
