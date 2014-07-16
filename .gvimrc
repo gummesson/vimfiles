@@ -61,7 +61,8 @@ function! Prose()
   if &background != 'light'
     set background=light
   endif
-  set foldcolumn=12
+  set foldcolumn=12             " Add padding to the left side of the screen
+  set scrolloff=999             " Keep the cursor centered vertically
 endfunction
 
 " Map `call Prose()` to `:Prose`
