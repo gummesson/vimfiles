@@ -241,7 +241,7 @@ augroup MARKDOWN
   autocmd BufRead,BufNewFile *.{txt,md} set filetype=markdown
   autocmd FileType markdown setlocal formatoptions+=w1         " Use whitespace as a marker
   autocmd InsertEnter *.{txt,md} setlocal formatoptions+=a     " Automatically format paragraphs...
-  autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a     " ..but only in insert mode
+  autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a     " ...but only in insert mode
 augroup END
 
 augroup JSON
