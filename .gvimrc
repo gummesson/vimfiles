@@ -22,8 +22,8 @@ set guioptions-=m  " Hide the menu
 set guioptions-=T  " Hide the toolbar
 set guioptions-=r  " Hide the scrollbar
 
-" Use a non blinking cursor
-set guicursor=a:blinkon0
+" Use a non blinking block cursor
+set guicursor=a:block-blinkon0
 
 " Default window size
 set lines=40
