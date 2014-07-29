@@ -25,7 +25,7 @@ set guioptions-=r  " Hide the scrollbar
 " Use a non blinking block cursor
 set guicursor=a:block-blinkon0
 
-" Default window size
+" Set window size
 set lines=40
 set columns=120
 
