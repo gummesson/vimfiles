@@ -61,7 +61,11 @@ call vundle#end()
 
 " -- General ------------------------------------------------------- {{{
 
-set langmenu=none                     " Set language to english
+" Set language to english
+set langmenu=none
+set spelllang=en
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+
 set t_Co=256                          " Enable 256 colors support
 set lazyredraw                        " Don't redraw the screen while executing macros
 set hidden                            " Hide the buffers instead of closing them
