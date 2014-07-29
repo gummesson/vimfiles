@@ -41,13 +41,10 @@ colorscheme pencil
 " -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
-  set guifont=Source\ Code\ Pro\ 11.5
+  set guifont=Inconsolata\ 13.5
 else
-  set guifont=Source\ Code\ Pro:h11
+  set guifont=Inconsolata:h13
 end
-
-" Fix massive linespacing
-set linespace=-1
 
 " }}}
 
