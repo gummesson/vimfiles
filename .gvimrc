@@ -41,7 +41,7 @@ colorscheme pencil
 " -- Font ---------------------------------------------------------- {{{
 
 if has('gui_gtk2')
-  set guifont=Inconsolata\ 13.5
+  set guifont=Inconsolata\ 13
 else
   set guifont=Inconsolata:h13
 end
