@@ -290,10 +290,6 @@ let g:ctrlp_custom_ignore = 'public\|_site'               " Ignore directories w
 let g:ctrlp_show_hidden = 1                               " Show hidden files
 let g:ctrlp_extensions = ['yankring', 'cmdline', 'menu']  " Extend CtrlP's statusline
 
-" -- Undotree --
-
-let g:undotree_WindowLayout = 2
-
 " }}}
 
 " -- Mappings ------------------------------------------------------ {{{
@@ -353,9 +349,6 @@ nnoremap <leader>t :CtrlPTag<cr>
 
 " Open `CtrlP`'s yankring
 nnoremap <leader>y :CtrlPYankring<cr>
-
-" Toggle `Undotree`
-nnoremap <leader>u :UndotreeToggle<cr>
 
 " }}}
 
