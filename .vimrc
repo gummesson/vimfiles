@@ -321,6 +321,10 @@ nnoremap <Space> za
 " Turn off search highlighing
 nnoremap <Enter> :nohlsearch<cr>
 
+" Easy buffer navigation
+nnoremap <Tab> :bnext<cr>
+nnoremap <S-Tab> :bprevious<cr>
+
 " Trigger omnicompletion
 inoremap <C-Space> <C-x><C-o>
 
