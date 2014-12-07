@@ -13,7 +13,6 @@
 " -- Filetypes
 " -- Plugins
 " -- Mappings
-" -- Miscellaneous
 "
 " }}}
 
@@ -353,18 +352,6 @@ nnoremap <leader>t :CtrlPTag<cr>
 
 " Open `CtrlP`'s yankring
 nnoremap <leader>y :CtrlPYankring<cr>
-
-" }}}
-
-" -- Miscellaneous ------------------------------------------------- {{{
-
-set exrc    " Enable per-directory `.vimrc` files...
-set secure  " ...but disable unsafe commands in them
-
-" Source additional/experimental settings
-if filereadable($HOME.'/.vimrc.local')
-  source $HOME/.vimrc.local
-endif
 
 " }}}
 
