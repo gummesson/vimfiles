@@ -3,7 +3,6 @@
 " -- General
 " -- Interface
 " -- Font
-" -- Functions
 "
 " }}}
 
@@ -45,25 +44,6 @@ if has('gui_gtk2')
 else
   set guifont=Inconsolata:h13
 end
-
-" }}}
-
-" -- Functions ----------------------------------------------------- {{{
-
-" Prose mode
-function! Prose()
-  if g:colors_name != 'pencil'
-    colorscheme pencil
-  endif
-  if &background != 'light'
-    set background=light
-  endif
-  set foldcolumn=12             " Add padding to the left side of the screen
-  set scrolloff=999             " Keep the cursor centered vertically
-endfunction
-
-" Map `call Prose()` to `:Prose`
-command! -bang -nargs=0 Prose call Prose()
 
 " }}}
 
