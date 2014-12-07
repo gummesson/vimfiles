@@ -17,7 +17,7 @@ ln -s <source> <destination>   # Unix
 mklink <destination> <source>  # Windows
 ~~~
 
-Symlink the `snippets` folder to `~/.vim/UltiSnips`/`~/vimfiles/UltiSnips`:
+Symlink the `snippets` folder to `~/.vim/UltiSnips` and `~/vimfiles/UltiSnips`:
 
 ~~~ bash
 ln -s <source> <destination>      # Unix
