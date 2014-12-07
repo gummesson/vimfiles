@@ -50,6 +50,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'sheerun/vim-polyglot'
 
 " -- Teardown --
