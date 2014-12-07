@@ -14,7 +14,14 @@ Symlink the `.vimrc` and `.gvimrc` files to `~/`:
 
 ~~~ bash
 ln -s <source> <destination>   # Unix
-mklink <destination> <source>  # windows
+mklink <destination> <source>  # Windows
+~~~
+
+Symlink the `snippets` folder to `~/.vim/UltiSnips`/`~/vimfiles/UltiSnips`:
+
+~~~ bash
+ln -s <source> <destination>      # Unix
+mklink /D <destination> <source>  # Windows
 ~~~
 
 ## Installation
