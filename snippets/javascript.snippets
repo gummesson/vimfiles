@@ -1,0 +1,16 @@
+snippet func
+function $1($2) {
+	$0
+}
+endsnippet
+
+snippet req
+var $1 = require('${2:$1}');
+$0
+endsnippet
+
+snippet test
+test('$1', function(${2:assert}) {
+	$0
+});
+endsnippet

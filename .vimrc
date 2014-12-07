@@ -198,12 +198,6 @@ set noswapfile  " No swap files
 
 " -- Abbreviations ------------------------------------------------- {{{
 
-" Shebang!
-iabbrev #! #!/usr/bin/env
-
-" Fenced code blocks
-iabbrev ~~ ~~~<cr><cr>~~~<Up><Up>
-
 " Mistypes
 cabbrev W w
 cabbrev W! w!
