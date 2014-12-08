@@ -149,6 +149,7 @@ set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching th
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 
 " Windows and splits
+set equalalways
 set splitbelow
 set splitright
 
@@ -261,7 +262,6 @@ augroup ALL
   endif
   autocmd InsertEnter * set nocursorline                   " Don't show the cursorline in insert mode...
   autocmd InsertLeave * set cursorline                     " ...but show it in all the other modes
-  autocmd VimResized * :wincmd =                           " Autoresize windows
 augroup END
 
 " }}}
