@@ -343,9 +343,6 @@ nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
 " Open `CtrlP`'s `ctags` list
 nnoremap <leader>t :CtrlPTag<cr>
 
-" Open `CtrlP`'s yankring
-nnoremap <leader>y :CtrlPYankring<cr>
-
 " }}}
 
 " vim:foldmethod=marker
