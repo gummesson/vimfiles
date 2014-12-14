@@ -9,7 +9,6 @@
 " -- History
 " -- Backups
 " -- Abbreviations
-" -- Functions
 " -- Filetypes
 " -- Plugins
 " -- Mappings
@@ -48,6 +47,7 @@ Plugin 'tommcdo/vim-lion'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'SirVer/ultisnips'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'sheerun/vim-polyglot'
 
 " -- Teardown --
@@ -208,29 +208,6 @@ cabbrev w!! w !sudo tee % >/dev/null
 
 " }}}
 
-" -- Functions ----------------------------------------------------- {{{
-
-" Trim trailing whitespace
-function! TrimWhitespace()
-  let l:history = @/
-  let l:lines = line('.')
-  let l:columns = col('.')
-  silent! execute '%s/\s\+$//e | nohlsearch'
-  call cursor(l:lines, l:columns)
-  let @/ = l:history
-endfunction
-
-" Consistent line endings
-function! UnixLineEndings()
-  if &filetype == ''
-    if &modifiable == '1'
-      setlocal fileformat=unix
-    endif
-  endif
-endfunction
-
-" }}}
-
 " -- Filetypes ----------------------------------------------------- {{{
 
 augroup MARKDOWN
@@ -254,10 +231,6 @@ augroup END
 augroup ALL
   autocmd!
   autocmd BufNewFile,BufRead * setlocal formatoptions-=ro  " Don't insert the current comment leader
-  autocmd BufWrite * call TrimWhitespace()
-  if has('win32')
-    autocmd BufEnter * call UnixLineEndings()
-  endif
   autocmd InsertEnter * set nocursorline                   " Don't show the cursorline in insert mode...
   autocmd InsertLeave * set cursorline                     " ...but show it in all the other modes
 augroup END
@@ -279,6 +252,10 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static files
 let g:ctrlp_show_hidden = 1                  " Show hidden files
+
+" -- Better Whitespace --
+
+let g:strip_whitespace_on_save = 1  " Trim trailing whitespace on save
 
 " }}}
 
