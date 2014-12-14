@@ -218,11 +218,6 @@ augroup MARKDOWN
   autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a     " ...but only in insert mode
 augroup END
 
-augroup JSON
-  autocmd!
-  autocmd BufRead,BufNewFile *.{jshintrc,bowerrc} set filetype=json
-augroup END
-
 augroup VIM
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC  " Autoreload settings when saved
