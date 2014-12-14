@@ -29,8 +29,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'chriskempson/base16-vim'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kien/ctrlp.vim'
