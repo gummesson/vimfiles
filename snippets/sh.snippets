@@ -1,0 +1,11 @@
+snippet if
+if [ $1 ]; then
+	$2
+fi
+endsnippet
+
+snippet for
+for ${1:\$i} in \{$2}; do
+	$0
+done
+endsnippet
