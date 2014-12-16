@@ -308,9 +308,6 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
 
-" Generate `ctags`
-nnoremap <leader>c :silent! !ctags<cr>:redraw!<cr>
-
 " Open `CtrlP`'s `ctags` list
 nnoremap <leader>t :CtrlPTag<cr>
 
