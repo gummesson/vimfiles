@@ -282,7 +282,9 @@ nnoremap <F5> :edit<cr>
 nnoremap <Space> za
 
 " Turn off search highlighing
-nnoremap <Enter> :nohlsearch<cr>
+if !&ft == 'qf'
+  nnoremap <Enter> :nohlsearch<cr>
+endif
 
 " Easy buffer navigation
 nnoremap <Tab> :bnext<cr>
