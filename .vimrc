@@ -281,11 +281,6 @@ nnoremap <F5> :edit<cr>
 " Toggle folds
 nnoremap <Space> za
 
-" Turn off search highlighing
-if !&ft == 'qf'
-  nnoremap <Enter> :nohlsearch<cr>
-endif
-
 " Easy buffer navigation
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
