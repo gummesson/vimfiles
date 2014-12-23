@@ -257,6 +257,19 @@ let g:ctrlp_show_hidden = 1                  " Show hidden files
 
 let g:strip_whitespace_on_save = 1  " Trim trailing whitespace on save
 
+" -- Lightline --
+
+let g:lightline = {
+\ 'active': {
+\   'left': [ ['mode'], ['filename', 'modified'], ['fugitive'] ]
+\ },
+\ 'component': {
+\   'fugitive': '%{exists("*fugitive#head") ? fugitive#head() : ""}'
+\ },
+\ 'component_visible_condition': {
+\   'fugitive': '(exists("*fugitive#head") && "" != fugitive#head())'
+\ } }
+
 " }}}
 
 " -- Mappings ------------------------------------------------------ {{{
