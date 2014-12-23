@@ -271,10 +271,6 @@ nnoremap Y y$
 " Mark, select, join and reformat current paragraph
 nnoremap Q mQvipJgvgq`Q
 
-" Search two letters forward and backward with `Sneak`
-nmap s <Plug>Sneak_s
-nmap S <Plug>Sneak_S
-
 " Redetect file
 nnoremap <F5> :edit<cr>
 
@@ -290,6 +286,10 @@ inoremap <C-Space> <C-x><C-o>
 
 " Toggle paste mode
 set pastetoggle=<F2>
+
+" Search two letters forward and backward with `Sneak`
+nmap s <Plug>Sneak_s
+nmap S <Plug>Sneak_S
 
 " -- Leader --
 
