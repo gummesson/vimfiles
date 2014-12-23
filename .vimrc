@@ -51,6 +51,7 @@ Plugin 'AndrewRadev/sideways.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
+Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'sheerun/vim-polyglot'
 
