@@ -306,8 +306,8 @@ nmap s <Plug>Sneak_s
 nmap S <Plug>Sneak_S
 
 " Move arguments left or right with `Sideways`
-nnoremap <S-h> :SidewaysLeft<cr>
-nnoremap <S-l> :SidewaysRight<cr>
+nnoremap <C-h> :SidewaysLeft<cr>
+nnoremap <C-l> :SidewaysRight<cr>
 
 " -- Leader --
 
