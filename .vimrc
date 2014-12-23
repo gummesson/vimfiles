@@ -50,7 +50,7 @@ Plugin 'AndrewRadev/splitjoin.vim'         " Switch between multi-line and singl
 Plugin 'AndrewRadev/sideways.vim'          " Move arguments
 Plugin 'ntpeters/vim-better-whitespace'    " Highlight and remove trailing whitespace
 Plugin 'jiangmiao/auto-pairs'              " Insert or delete brackets, parens, quotes in pairs
-Plugin 'mattn/emmet-vim'                   " Emmet abbreviations
+Plugin 'mattn/emmet-vim'                   " Emmet abbreviations and expansions
 Plugin 'ervandew/supertab'                 " Automatic insert mode completions
 Plugin 'SirVer/ultisnips'                  " Snippets engine
 Plugin 'sheerun/vim-polyglot'              " Language pack
