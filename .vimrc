@@ -26,34 +26,34 @@ call vundle#begin()
 
 " -- Plugins --
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'reedes/vim-colors-pencil'
-Plugin 'itchyny/lightline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'b3niup/numbers.vim'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'gummesson/vim-grepany'
-Plugin 'bruno-/vim-husk'
-Plugin 'wellle/targets.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'justinmk/vim-sneak'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-abolish'
-Plugin 'tommcdo/vim-exchange'
-Plugin 'tommcdo/vim-lion'
-Plugin 'tommcdo/vim-kangaroo'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'AndrewRadev/sideways.vim'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'mattn/emmet-vim'
-Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'sheerun/vim-polyglot'
+Plugin 'gmarik/Vundle.vim'                 " Package manager
+Plugin 'altercation/vim-colors-solarized'  " Terminal colorscheme
+Plugin 'reedes/vim-colors-pencil'          " Graphical colorscheme
+Plugin 'itchyny/lightline.vim'             " Statusline enhancer
+Plugin 'kien/ctrlp.vim'                    " Fuzzy file and buffer finder
+Plugin 'b3niup/numbers.vim'                " Toggle between absolute and relative numbers
+Plugin 'ludovicchabant/vim-gutentags'      " Automatic tags generation
+Plugin 'gummesson/vim-grepany'             " Pattern searching
+Plugin 'bruno-/vim-husk'                   " Readline mappings in command line mode
+Plugin 'wellle/targets.vim'                " Additional text objects
+Plugin 'vim-scripts/matchit.zip'           " Additional `%` targets
+Plugin 'justinmk/vim-sneak'                " Jump to any location specified by two characters
+Plugin 'tpope/vim-fugitive'                " Git wrapper
+Plugin 'tpope/vim-unimpaired'              " Additional pairs of mappings
+Plugin 'tpope/vim-surround'                " Insert and change brackets, parens, quotes and tags
+Plugin 'tpope/vim-commentary'              " Comment and uncomment lines
+Plugin 'tpope/vim-abolish'                 " Case-insensitive abbreviations and substitutions
+Plugin 'tommcdo/vim-exchange'              " Exchange operator
+Plugin 'tommcdo/vim-lion'                  " Alignment operator
+Plugin 'tommcdo/vim-kangaroo'              " Maintain a manually-defined jump stack
+Plugin 'AndrewRadev/splitjoin.vim'         " Switch between multi-line and single-line statements
+Plugin 'AndrewRadev/sideways.vim'          " Move arguments
+Plugin 'ntpeters/vim-better-whitespace'    " Highlight and remove trailing whitespace
+Plugin 'jiangmiao/auto-pairs'              " Insert or delete brackets, parens, quotes in pairs
+Plugin 'mattn/emmet-vim'                   " Emmet abbreviations
+Plugin 'ervandew/supertab'                 " Automatic insert mode completions
+Plugin 'SirVer/ultisnips'                  " Snippets engine
+Plugin 'sheerun/vim-polyglot'              " Language pack
 
 " -- Teardown --
 
