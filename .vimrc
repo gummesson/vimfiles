@@ -218,7 +218,7 @@ cabbrev w!! w !sudo tee % >/dev/null
 
 augroup MARKDOWN
   autocmd!
-  autocmd BufRead,BufNewFile *.{txt,md} set filetype=markdown
+  autocmd BufRead,BufNewFile *.txt set filetype=markdown
   autocmd FileType markdown setlocal formatoptions+=w1         " Use whitespace as a marker
   autocmd InsertEnter *.{txt,md} setlocal formatoptions+=a     " Automatically format paragraphs...
   autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a     " ...but only in insert mode
