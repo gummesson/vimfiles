@@ -17,8 +17,8 @@ curl --fail --location --output \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Symlinking files..."
-ln -s $gitpath/.vimrc $HOME/.vimrc
-ln -s $gitpath/.gvimrc $HOME/.gvimrc
+ln -sf $gitpath/.vimrc $HOME/.vimrc
+ln -sf $gitpath/.gvimrc $HOME/.gvimrc
 
 echo "Symlinking folders..."
-ln -s $gitpath/snippets $vimpath/UltiSnips
+ln -sf $gitpath/snippets $vimpath/UltiSnips
