@@ -50,7 +50,7 @@ Plug 'AndrewRadev/splitjoin.vim'                    " Switch between multi-line 
 Plug 'AndrewRadev/sideways.vim'                     " Move arguments
 Plug 'ntpeters/vim-better-whitespace'               " Highlight and remove trailing whitespace
 Plug 'jiangmiao/auto-pairs'                         " Insert or delete brackets, parens, quotes in pairs
-Plug 'mattn/emmet-vim'                              " Emmet abbreviations and expansions
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }  " Emmet abbreviations and expansions
 Plug 'ervandew/supertab'                            " Automatic insert mode completions
 Plug 'SirVer/ultisnips'                             " Snippets engine
 
