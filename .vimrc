@@ -29,6 +29,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'                 " Package manager
 Plugin 'altercation/vim-colors-solarized'  " Terminal colorscheme
 Plugin 'reedes/vim-colors-pencil'          " Graphical colorscheme
+Plugin 'sheerun/vim-polyglot'              " Language pack
 Plugin 'itchyny/lightline.vim'             " Statusline enhancer
 Plugin 'kien/ctrlp.vim'                    " Fuzzy file and buffer finder
 Plugin 'b3niup/numbers.vim'                " Toggle between absolute and relative numbers
@@ -53,7 +54,6 @@ Plugin 'jiangmiao/auto-pairs'              " Insert or delete brackets, parens, 
 Plugin 'mattn/emmet-vim'                   " Emmet abbreviations and expansions
 Plugin 'ervandew/supertab'                 " Automatic insert mode completions
 Plugin 'SirVer/ultisnips'                  " Snippets engine
-Plugin 'sheerun/vim-polyglot'              " Language pack
 
 " -- Teardown --
 
