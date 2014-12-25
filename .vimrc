@@ -34,11 +34,11 @@ Plugin 'kien/ctrlp.vim'                    " Fuzzy file and buffer finder
 Plugin 'b3niup/numbers.vim'                " Toggle between absolute and relative numbers
 Plugin 'ludovicchabant/vim-gutentags'      " Automatic tags generation
 Plugin 'gummesson/vim-grepany'             " Pattern searching
-Plugin 'bruno-/vim-husk'                   " Readline mappings in command line mode
 Plugin 'wellle/targets.vim'                " Additional text objects
 Plugin 'vim-scripts/matchit.zip'           " Additional `%` targets
 Plugin 'justinmk/vim-sneak'                " Jump to any location specified by two characters
 Plugin 'tpope/vim-fugitive'                " Git wrapper
+Plugin 'tpope/vim-repeat'                  " Repeat plugin-defined mappings
 Plugin 'tpope/vim-unimpaired'              " Additional pairs of mappings
 Plugin 'tpope/vim-surround'                " Insert and change brackets, parens, quotes and tags
 Plugin 'tpope/vim-commentary'              " Comment and uncomment lines
