@@ -313,10 +313,6 @@ nnoremap <S-Tab> :bprevious<cr>
 " Toggle paste mode
 set pastetoggle=<F2>
 
-" Search two letters forward and backward with `Sneak`
-nmap s <Plug>Sneak_s
-nmap S <Plug>Sneak_S
-
 " Move arguments left or right with `Sideways`
 nnoremap <C-h> :SidewaysLeft<cr>
 nnoremap <C-l> :SidewaysRight<cr>
