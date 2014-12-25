@@ -2,28 +2,13 @@
 
 My (g)Vim files.
 
-## Setup
-
-Get [Vundle](https://github.com/gmarik/vundle):
-
-~~~ bash
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-~~~
-
-Symlink the `.vimrc` and `.gvimrc` files to `~/`:
-
-~~~ bash
-ln -s <source> <destination>   # Unix
-mklink <destination> <source>  # Windows
-~~~
-
-Symlink the `snippets` folder to `~/.vim/UltiSnips` and `~/vimfiles/UltiSnips`:
-
-~~~ bash
-ln -s <source> <destination>      # Unix
-mklink /D <destination> <source>  # Windows
-~~~
-
 ## Installation
 
-Launch [(g)Vim](http://www.vim.org/) and run `:PluginInstall`.
+1. Run `scripts/install.sh` (on Linux) or `scripts/install.cmd` (on Windows).
+2. Launch [(g)Vim](http://www.vim.org/) and run `:PlugInstall`.
+
+## Troubleshooting
+
+1. On Windows, you need to have `C:\Program Files (x86)\Git\bin` in your PATH.
+2. On Windows, you may need to run the `install.cmd` script as an
+   *Administrator*.

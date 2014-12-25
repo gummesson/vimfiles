@@ -1,6 +1,6 @@
 " -- .vimrc -------------------------------------------------------- {{{
 "
-" -- Vundle
+" -- Plugins
 " -- General
 " -- Colorscheme
 " -- Visual
@@ -8,6 +8,8 @@
 " -- Search
 " -- History
 " -- Backups
+" -- Language
+" -- System
 " -- Abbreviations
 " -- Filetypes
 " -- Plugins
@@ -15,59 +17,51 @@
 "
 " }}}
 
-" -- Vundle -------------------------------------------------------- {{{
+" -- Plugins ------------------------------------------------------- {{{
 
 " -- Setup --
 
-set nocompatible
-filetype plugin off
-set runtimepath+=$HOME/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin()
 
 " -- Plugins --
 
-Plugin 'gmarik/Vundle.vim'                 " Package manager
-Plugin 'altercation/vim-colors-solarized'  " Terminal colorscheme
-Plugin 'reedes/vim-colors-pencil'          " Graphical colorscheme
-Plugin 'sheerun/vim-polyglot'              " Language pack
-Plugin 'itchyny/lightline.vim'             " Statusline enhancer
-Plugin 'kien/ctrlp.vim'                    " Fuzzy file and buffer finder
-Plugin 'b3niup/numbers.vim'                " Toggle between absolute and relative numbers
-Plugin 'ludovicchabant/vim-gutentags'      " Automatic tags generation
-Plugin 'gummesson/vim-grepany'             " Pattern searching
-Plugin 'wellle/targets.vim'                " Additional text objects
-Plugin 'vim-scripts/matchit.zip'           " Additional `%` targets
-Plugin 'justinmk/vim-sneak'                " Jump to any location specified by two characters
-Plugin 'tpope/vim-fugitive'                " Git wrapper
-Plugin 'tpope/vim-repeat'                  " Repeat plugin-defined mappings
-Plugin 'tpope/vim-unimpaired'              " Additional pairs of mappings
-Plugin 'tpope/vim-surround'                " Insert and change brackets, parens, quotes and tags
-Plugin 'tpope/vim-commentary'              " Comment and uncomment lines
-Plugin 'tpope/vim-abolish'                 " Case-insensitive abbreviations and substitutions
-Plugin 'tommcdo/vim-exchange'              " Exchange operator
-Plugin 'tommcdo/vim-lion'                  " Alignment operator
-Plugin 'tommcdo/vim-kangaroo'              " Maintain a manually-defined jump stack
-Plugin 'AndrewRadev/splitjoin.vim'         " Switch between multi-line and single-line statements
-Plugin 'AndrewRadev/sideways.vim'          " Move arguments
-Plugin 'ntpeters/vim-better-whitespace'    " Highlight and remove trailing whitespace
-Plugin 'jiangmiao/auto-pairs'              " Insert or delete brackets, parens, quotes in pairs
-Plugin 'mattn/emmet-vim'                   " Emmet abbreviations and expansions
-Plugin 'ervandew/supertab'                 " Automatic insert mode completions
-Plugin 'SirVer/ultisnips'                  " Snippets engine
+Plug 'altercation/vim-colors-solarized'  " Terminal colorscheme
+Plug 'reedes/vim-colors-pencil'          " Graphical colorscheme
+Plug 'sheerun/vim-polyglot'              " Language pack
+Plug 'itchyny/lightline.vim'             " Statusline enhancer
+Plug 'kien/ctrlp.vim'                    " Fuzzy file and buffer finder
+Plug 'b3niup/numbers.vim'                " Toggle between absolute and relative numbers
+Plug 'ludovicchabant/vim-gutentags'      " Automatic tags generation
+Plug 'gummesson/vim-grepany'             " Pattern searching
+Plug 'wellle/targets.vim'                " Additional text objects
+Plug 'vim-scripts/matchit.zip'           " Additional `%` targets
+Plug 'justinmk/vim-sneak'                " Jump to any location specified by two characters
+Plug 'tpope/vim-fugitive'                " Git wrapper
+Plug 'tpope/vim-repeat'                  " Repeat plugin-defined mappings
+Plug 'tpope/vim-unimpaired'              " Additional pairs of mappings
+Plug 'tpope/vim-surround'                " Insert and change brackets, parens, quotes and tags
+Plug 'tpope/vim-commentary'              " Comment and uncomment lines
+Plug 'tpope/vim-abolish'                 " Case-insensitive abbreviations and substitutions
+Plug 'tommcdo/vim-exchange'              " Exchange operator
+Plug 'tommcdo/vim-lion'                  " Alignment operator
+Plug 'tommcdo/vim-kangaroo'              " Maintain a manually-defined jump stack
+Plug 'AndrewRadev/splitjoin.vim'         " Switch between multi-line and single-line statements
+Plug 'AndrewRadev/sideways.vim'          " Move arguments
+Plug 'ntpeters/vim-better-whitespace'    " Highlight and remove trailing whitespace
+Plug 'jiangmiao/auto-pairs'              " Insert or delete brackets, parens, quotes in pairs
+Plug 'mattn/emmet-vim'                   " Emmet abbreviations and expansions
+Plug 'ervandew/supertab'                 " Automatic insert mode completions
+Plug 'SirVer/ultisnips'                  " Snippets engine
 
 " -- Teardown --
 
-call vundle#end()
+call plug#end()
 
 " }}}
 
 " -- General ------------------------------------------------------- {{{
 
-" Set language to english
-set langmenu=none
-set spelllang=en
-set spellfile=$HOME/.vim/spell/en.utf-8.add
-
+syntax on                             " Enable syntax highighting
 set t_Co=256                          " Enable 256 colors support
 set lazyredraw                        " Don't redraw the screen while executing macros
 set hidden                            " Hide the buffers instead of closing them
@@ -76,11 +70,10 @@ set timeoutlen=750                    " Faster leader execution
 set omnifunc=syntaxcomplete#Complete  " Use omnicompletion
 set iskeyword+=-                      " Autocomplete keywords with dashes
 
-syntax on           " Enable syntax highighting
-filetype plugin on  " Detect filetype
-
 " Remove sound and visual error
-set noerrorbells visualbell t_vb=
+set noerrorbells
+set visualbell
+set t_vb=
 
 " Use UTF-8 encoding
 set encoding=utf-8
@@ -90,13 +83,6 @@ set nobomb
 
 " Use Unix-style line endings
 set fileformat=unix
-
-" Set clipboard
-if has('unix')
-  set clipboard=unnamedplus
-else
-  set clipboard=unnamed
-endif
 
 " }}}
 
@@ -161,9 +147,8 @@ set splitright
 
 " -- Indentation --------------------------------------------------- {{{
 
-filetype plugin indent on  " Enable indentation
-set autoindent             " Enable auto indentation
-set smartindent            " Enable context-sensitive indentation
+set autoindent   " Enable auto indentation
+set smartindent  " Enable context-sensitive indentation
 
 " Set two spaces as default
 set shiftwidth=2
@@ -186,10 +171,9 @@ set smartcase   " Ignore case if search pattern is all lowercase, otherwise make
 
 " -- History ------------------------------------------------------- {{{
 
-set history=1000             " Remember more commands and searches
-set undodir=$HOME/.vim/undo  " Set the undo directory
-set undofile                 " Use persistent undo
-set undolevels=1000          " Enable many undos
+set history=1000     " Remember more commands and searches
+set undofile         " Use persistent undo
+set undolevels=1000  " Enable many undos
 
 " }}}
 
@@ -197,6 +181,28 @@ set undolevels=1000          " Enable many undos
 
 set nobackup    " No backups
 set noswapfile  " No swap files
+
+" }}}
+
+" -- Language ------------------------------------------------------ {{{
+
+set langmenu=none
+set spelllang=en
+
+" }}}
+
+" -- System -------------------------------------------------------- {{{
+
+" Set clipboard, `undodir` and `spellfile`
+if has('unix')
+  set clipboard=unnamedplus
+  set undodir=$HOME/.vim/undo
+  set spellfile=$HOME/.vim/spell/en.utf-8.add
+else
+  set clipboard=unnamed
+  set undodir=$HOME/vimfiles/undo
+  set spellfile=$HOME/vimfiles/spell/en.utf-8.add
+endif
 
 " }}}
 
