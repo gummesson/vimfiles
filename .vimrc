@@ -61,7 +61,6 @@ call plug#end()
 
 " -- General ------------------------------------------------------- {{{
 
-syntax on                             " Enable syntax highighting
 set t_Co=256                          " Enable 256 colors support
 set lazyredraw                        " Don't redraw the screen while executing macros
 set hidden                            " Hide the buffers instead of closing them
