@@ -27,7 +27,7 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'                                   " Terminal colorscheme
 Plug 'reedes/vim-colors-pencil'                                           " Graphical colorscheme
-Plug 'sheerun/vim-polyglot'                                               " Language pack
+Plug 'sheerun/vim-polyglot'                                               " Language packs
 Plug 'itchyny/lightline.vim'                                              " Statusline enhancer
 Plug 'kien/ctrlp.vim'                                                     " Fuzzy file and buffer finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                        " Browse undo history
