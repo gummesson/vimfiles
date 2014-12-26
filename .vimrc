@@ -35,7 +35,7 @@ Plug 'b3niup/numbers.vim'                                                     " 
 Plug 'ludovicchabant/vim-gutentags'                                           " Automatic tags generation
 Plug 'gummesson/vim-grepany'                                                  " Pattern searching
 Plug 'wellle/targets.vim'                                                     " Additional text objects
-Plug 'vim-scripts/matchit.zip'                                                " Additional `%` targets
+Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'lua', 'sh'] }      " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                                     " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                     " Git wrapper
 Plug 'tpope/vim-repeat'                                                       " Repeat plugin-defined mappings
