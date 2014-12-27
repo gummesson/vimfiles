@@ -224,9 +224,6 @@ cabbrev w!! w !sudo tee % >/dev/null
 augroup MARKDOWN
   autocmd!
   autocmd BufRead,BufNewFile *.txt set filetype=markdown
-  autocmd FileType markdown setlocal formatoptions+=w1         " Use whitespace as a marker
-  autocmd InsertEnter *.{txt,md} setlocal formatoptions+=a     " Automatically format paragraphs...
-  autocmd InsertLeave *.{txt,md} setlocal formatoptions-=a     " ...but only in insert mode
 augroup END
 
 augroup VIM
@@ -236,9 +233,8 @@ augroup END
 
 augroup ALL
   autocmd!
-  autocmd BufNewFile,BufRead * setlocal formatoptions-=ro  " Don't insert the current comment leader
-  autocmd InsertEnter * setlocal nocursorline              " Don't show the cursorline in insert mode...
-  autocmd InsertLeave * setlocal cursorline                " ...but show it in all the other modes
+  autocmd InsertEnter * setlocal nocursorline  " Don't show the cursorline in insert mode...
+  autocmd InsertLeave * setlocal cursorline    " ...but show it in all the other modes
 augroup END
 
 " }}}
@@ -295,8 +291,8 @@ nnoremap gk k
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
-" Mark, select, join and reformat current paragraph
-nnoremap Q mQvipJgvgq`Q
+" Reformat the current paragraph
+nnoremap Q gqap
 
 " Redetect file
 nnoremap <F5> :edit<cr>
