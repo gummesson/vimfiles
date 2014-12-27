@@ -297,9 +297,6 @@ nnoremap Q gqap
 " Redetect file
 nnoremap <F5> :edit<cr>
 
-" Toggle folds
-nnoremap <Space> za
-
 " Easy buffer navigation
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
