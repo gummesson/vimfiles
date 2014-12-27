@@ -2,17 +2,16 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 set vimpath=%USERPROFILE%\vimfiles
-set vaupath=%vimpath%\autoload
 set gitpath=D:\Git\vimfiles
 
 echo Creating folders...
-md %vaupath%
+md %vimpath%\autoload
 md %vimpath%\undo
 md %vimpath%\spell
 
 echo Installing vim-plug...
 curl --fail --location --output^
-  %vaupath%/plug.vim^
+  %vimpath%\autoload\plug.vim^
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo Symlinking files...
