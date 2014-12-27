@@ -321,6 +321,8 @@ nnoremap <leader>t :CtrlPTag<cr>
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
 
+" Toggle `Undotree`
+nnoremap <leader>u :UndotreeToggle<cr>
 
 " }}}
 
