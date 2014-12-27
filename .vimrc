@@ -315,11 +315,12 @@ nnoremap <leader>v :Vexplore<cr>
 " Open up `CtrlP`'s buffer list
 nnoremap <leader>b :CtrlPBuffer<cr>
 
+" Open `CtrlP`'s `ctags` list
+nnoremap <leader>t :CtrlPTag<cr>
+
 " Toggle between absolute and relative numbers with `Numbers`
 nnoremap <leader>n :NumbersToggle<cr>
 
-" Open `CtrlP`'s `ctags` list
-nnoremap <leader>t :CtrlPTag<cr>
 
 " }}}
 
