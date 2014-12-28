@@ -17,9 +17,8 @@ augroup END
 
 " -- Interface ----------------------------------------------------- {{{
 
-set guioptions-=m  " Hide the menu
-set guioptions-=T  " Hide the toolbar
-set guioptions-=r  " Hide the scrollbar
+" Remove all GUI features
+set guioptions=
 
 " Use a non blinking block cursor
 set guicursor=a:block-blinkon0
