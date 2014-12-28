@@ -296,10 +296,6 @@ nnoremap Q gqip
 " Redetect file
 nnoremap <F5> :edit<cr>
 
-" Easy buffer navigation
-nnoremap <Tab> :bnext<cr>
-nnoremap <S-Tab> :bprevious<cr>
-
 " Toggle paste mode
 set pastetoggle=<F2>
 
