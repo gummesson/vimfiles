@@ -18,7 +18,7 @@ augroup END
 " -- Interface ----------------------------------------------------- {{{
 
 " Remove all GUI features
-set guioptions=
+set guioptions=c
 
 " Use a non blinking block cursor
 set guicursor=a:block-blinkon0
