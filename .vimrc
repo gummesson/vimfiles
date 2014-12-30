@@ -46,7 +46,6 @@ Plug 'tpope/vim-commentary'                           " Comment and uncomment li
 Plug 'tpope/vim-abolish', { 'on': ['Subvert', 'S'] }  " Case-insensitive abbreviations and substitutions
 Plug 'tommcdo/vim-exchange'                           " Exchange operator
 Plug 'tommcdo/vim-lion'                               " Alignment operator
-Plug 'tommcdo/vim-kangaroo'                           " Maintain a manually-defined jump stack
 Plug 'AndrewRadev/splitjoin.vim'                      " Switch between multi-line and single-line statements
 Plug 'ntpeters/vim-better-whitespace'                 " Highlight and remove trailing whitespace
 Plug 'jiangmiao/auto-pairs'                           " Insert or delete brackets, parens, quotes in pairs
