@@ -35,6 +35,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }    " Browse undo history
 Plug 'b3niup/numbers.vim'                             " Toggle between absolute and relative numbers
 Plug 'ludovicchabant/vim-gutentags'                   " Automatic tags generation
 Plug 'gummesson/vim-grepany'                          " Pattern searching
+Plug 'stefandtw/quickfix-reflector.vim'               " Make changes right in the quickfix window
 Plug 'wellle/targets.vim'                             " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': 'html' }     " Additional `%` targets
 Plug 'justinmk/vim-sneak'                             " Jump to any location specified by two characters
