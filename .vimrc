@@ -48,7 +48,7 @@ Plug 'tommcdo/vim-exchange'                           " Exchange operator
 Plug 'tommcdo/vim-lion'                               " Alignment operator
 Plug 'AndrewRadev/splitjoin.vim'                      " Switch between multi-line and single-line statements
 Plug 'ntpeters/vim-better-whitespace'                 " Highlight and remove trailing whitespace
-Plug 'jiangmiao/auto-pairs'                           " Insert or delete brackets, parens, quotes in pairs
+Plug 'jiangmiao/auto-pairs'                           " Insert or delete brackets, parens and quotes in pairs
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }    " Emmet abbreviations and expansions
 Plug 'ervandew/supertab'                              " Automatic insert mode completions
 Plug 'SirVer/ultisnips'                               " Snippets engine
