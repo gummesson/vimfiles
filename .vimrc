@@ -32,7 +32,6 @@ Plug 'sheerun/vim-polyglot'                           " Language packs
 Plug 'itchyny/lightline.vim'                          " Statusline enhancer
 Plug 'kien/ctrlp.vim'                                 " Fuzzy file and buffer finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }    " Browse undo history
-Plug 'b3niup/numbers.vim'                             " Toggle between absolute and relative numbers
 Plug 'ludovicchabant/vim-gutentags'                   " Automatic tags generation
 Plug 'gummesson/vim-grepany'                          " Pattern searching
 Plug 'stefandtw/quickfix-reflector.vim'               " Make changes right in the quickfix window
@@ -96,6 +95,7 @@ set background=dark    " Set background to dark
 
 set shortmess+=Iat  " Hide the intro and abbreviate and truncate command line messages
 set number          " Show line numbering
+set relativenumber  " use relative line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
