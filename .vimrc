@@ -27,10 +27,9 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'               " Terminal colorscheme
 Plug 'reedes/vim-colors-pencil'                       " Graphical colorscheme
-Plug 'whatyouhide/vim-gotham'                         " Alternative graphical colorscheme
 Plug 'sheerun/vim-polyglot'                           " Language packs
 Plug 'itchyny/lightline.vim'                          " Statusline enhancer
-Plug 'kien/ctrlp.vim'                                 " Fuzzy file and buffer finder
+Plug 'ctrlpvim/ctrlp.vim'                             " Fuzzy file, buffer, MRU and tag finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }    " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                   " Automatic tags generation
 Plug 'gummesson/vim-grepany'                          " Pattern searching
