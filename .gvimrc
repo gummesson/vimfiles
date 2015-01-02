@@ -44,6 +44,9 @@ else
   set guifont=Inconsolata:h14
 end
 
+" Remove extraneous line spacing
+set linespace=0
+
 " }}}
 
 " vim:foldmethod=marker
