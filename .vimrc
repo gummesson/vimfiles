@@ -291,7 +291,7 @@ nnoremap gk k
 " Make `Y` behave like `C` and `D` (ie. to the end of line)
 nnoremap Y y$
 
-" Reformat the current paragraph
+" Reformat current paragraph
 nnoremap Q gqip
 vnoremap Q gq
 
