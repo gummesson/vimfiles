@@ -112,7 +112,7 @@ set showmatch                   " Show matching parens...
 set matchtime=1                 " ...for a tenth of a second
 set wildmenu                    " Show options for file and command completion
 set wildmode=longest:full,full  " Complete only up to the point of ambiguity
-set wildignorecase              " Ignore case on files and diretories on the command line
+set wildignorecase              " Ignore case on files and directories on the command line
 
 " Wild ignores
 set wildignore+=.git,.sass-cache,tmp,.bundle,*.min.*,tags
