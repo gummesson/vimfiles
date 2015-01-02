@@ -136,6 +136,7 @@ set showbreak=↪
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
 set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching the first/last character in the line
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
+set nrformats-=octal            " Disable octal increments and decrements
 
 " Windows and splits
 set equalalways
