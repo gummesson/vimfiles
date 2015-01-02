@@ -293,6 +293,7 @@ nnoremap Y y$
 
 " Reformat the current paragraph
 nnoremap Q gqip
+vnoremap Q gq
 
 " Redetect file
 nnoremap <F5> :edit<cr>
