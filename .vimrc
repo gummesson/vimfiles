@@ -51,7 +51,7 @@ Plug 'jiangmiao/auto-pairs'                                                 " In
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }                          " Emmet abbreviations and expansions
 Plug 'ervandew/supertab'                                                    " Automatic insert mode completions
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }  " Better JavaScript...
-Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }                " ...And CSS omnicompletion
+Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }                " ...and CSS omnicompletion
 Plug 'SirVer/ultisnips'                                                     " Snippets engine
 
 " -- Teardown --
