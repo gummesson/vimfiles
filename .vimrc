@@ -27,6 +27,7 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'                                     " Terminal colorscheme
 Plug 'reedes/vim-colors-pencil'                                             " Graphical colorscheme
+Plug 'whatyouhide/vim-gotham'                                               " Alternative colorscheme
 Plug 'sheerun/vim-polyglot'                                                 " Language packs
 Plug 'itchyny/lightline.vim'                                                " Statusline enhancer
 Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
