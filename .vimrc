@@ -266,6 +266,10 @@ let g:undotree_WindowLayout = 2
 
 let g:strip_whitespace_on_save = 1  " Trim trailing whitespace on save
 
+" -- Supertab --
+
+let g:SuperTabDefaultCompletionType = "context"
+
 " -- Lightline --
 
 let g:lightline = {
