@@ -1,19 +1,13 @@
 " -- .gvimrc ------------------------------------------------------- {{{
 "
-" -- General
 " -- Interface
+" -- Colorscheme
 " -- Font
+" -- Functions
+" -- Autocommmands
 "
 " }}}
 
-" -- General  ------------------------------------------------------ {{{
-
-augroup GUI
-  autocmd!
-  autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
-augroup END
-
-" }}}
 
 " -- Interface ----------------------------------------------------- {{{
 
@@ -46,6 +40,35 @@ end
 
 " Remove extraneous line spacing
 set linespace=0
+
+" }}}
+
+" -- Functions ----------------------------------------------------- {{{
+
+function! s:lightlineColorscheme()
+  if !exists('g:loaded_lightline')
+    return
+  endif
+  try
+    if g:colors_name =~# 'solarized\|gotham'
+      let g:lightline.colorscheme = g:colors_name
+      call lightline#init()
+      call lightline#colorscheme()
+      call lightline#update()
+    endif
+  catch
+  endtry
+endfunction
+
+" }}}
+"
+" -- Autocommmands ------------------------------------------------- {{{
+
+augroup GUI
+  autocmd!
+  autocmd GUIEnter * set visualbell t_vb=              " Remove sound and visual error
+  autocmd ColorScheme * call s:lightlineColorscheme()  " Switch `lightline` theme
+augroup END
 
 " }}}
 
