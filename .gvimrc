@@ -50,12 +50,16 @@ function! s:lightlineColorscheme()
     return
   endif
   try
-    if g:colors_name =~# 'solarized\|gotham'
+    if g:colors_name =~# 'solarized'
+      let g:lightline.colorscheme = g:colors_name . "_" . &background
+    elseif g:colors_name =~# 'gotham'
       let g:lightline.colorscheme = g:colors_name
-      call lightline#init()
-      call lightline#colorscheme()
-      call lightline#update()
+    else
+      let g:lightline.colorscheme = 'powerline'
     endif
+    call lightline#init()
+    call lightline#colorscheme()
+    call lightline#update()
   catch
   endtry
 endfunction
