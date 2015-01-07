@@ -51,7 +51,7 @@ function! s:lightlineColorscheme()
   endif
   try
     if g:colors_name =~# 'solarized'
-      let g:lightline.colorscheme = g:colors_name . "_" . &background
+      let g:lightline.colorscheme = g:colors_name . '_' . &background
     elseif g:colors_name =~# 'gotham'
       let g:lightline.colorscheme = g:colors_name
     else
