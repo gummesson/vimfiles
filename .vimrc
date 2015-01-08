@@ -36,7 +36,7 @@ Plug 'ludovicchabant/vim-gutentags'                                         " Au
 Plug 'gummesson/vim-grepany'                                                " Pattern searching
 Plug 'stefandtw/quickfix-reflector.vim'                                     " Make changes right in the quickfix window
 Plug 'wellle/targets.vim'                                                   " Additional text objects
-Plug 'vim-scripts/matchit.zip', { 'for': 'html' }                           " Additional `%` targets
+Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                 " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                                   " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                   " Git wrapper
 Plug 'tpope/vim-repeat'                                                     " Repeat plugin-defined mappings
