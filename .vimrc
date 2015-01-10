@@ -117,8 +117,8 @@ set wildmode=longest:full,full  " Complete only up to the point of ambiguity
 set wildignorecase              " Ignore case on files and directories on the command line
 
 " Wild ignores
-set wildignore+=.git,.sass-cache,tmp,.bundle,*.min.*,tags
-set wildignore+=node_modules,bower_components,vendor
+set wildignore+=.git,.sass-cache,.bundle,tmp,log,*.log,tags
+set wildignore+=node_modules,bower_components,vendor,.gems,.gs
 set wildignore+=*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
 " Mouse
