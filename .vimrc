@@ -255,8 +255,8 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 " -- CtrlP --
 
-let g:ctrlp_custom_ignore = 'public\|_site'  " Ignore directories with static files
-let g:ctrlp_show_hidden = 1                  " Show hidden files
+let g:ctrlp_custom_ignore = 'public\|_site\|doc'  " Ignore directories with static files
+let g:ctrlp_show_hidden = 1                       " Show hidden files
 
 " -- Undotree --
 
