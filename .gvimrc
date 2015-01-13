@@ -33,7 +33,7 @@ colorscheme pencil
 " -- Font ---------------------------------------------------------- {{{
 
 if has('unix')
-  set guifont=Inconsolata\ 14
+  set guifont=Inconsolata\ 14.5
 else
   set guifont=Inconsolata:h14
 end
