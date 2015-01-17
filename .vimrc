@@ -302,11 +302,12 @@ nnoremap Y y$
 nnoremap Q gqip
 vnoremap Q gq
 
+" Toggle paste mode
+set pastetoggle=<F2>
+
 " Redetect file
 nnoremap <F5> :edit<cr>
 
-" Toggle paste mode
-set pastetoggle=<F2>
 
 " -- Leader --
 
