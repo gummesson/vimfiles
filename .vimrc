@@ -310,7 +310,7 @@ set pastetoggle=<F2>
 nnoremap <F5> :edit<cr>
 
 " Toggle `Goyo`
-nnoremap <F11> :Goyo<cr>
+nnoremap <F12> :Goyo<cr>
 
 " -- Leader --
 
