@@ -30,6 +30,7 @@ Plug 'reedes/vim-colors-pencil'                                             " Gr
 Plug 'whatyouhide/vim-gotham'                                               " Alternative colorscheme
 Plug 'sheerun/vim-polyglot'                                                 " Language packs
 Plug 'itchyny/lightline.vim'                                                " Statusline enhancer
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                  " Distraction-free writing
 Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                          " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                                         " Automatic tags generation
@@ -308,6 +309,8 @@ set pastetoggle=<F2>
 " Redetect file
 nnoremap <F5> :edit<cr>
 
+" Toggle `Goyo`
+nnoremap <F11> :Goyo<cr>
 
 " -- Leader --
 
