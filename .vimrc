@@ -45,6 +45,7 @@ Plug 'tpope/vim-unimpaired'                                  " Additional pairs 
 Plug 'tpope/vim-surround'                                    " Insert and change brackets, parens, quotes and tags
 Plug 'tpope/vim-commentary'                                  " Comment and uncomment lines
 Plug 'tpope/vim-abolish', { 'on': ['Subvert', 'S'] }         " Case-insensitive abbreviations and substitutions
+Plug 'tpope/vim-eunuch'                                      " UNIX (and Git Bash) helpers
 Plug 'tommcdo/vim-exchange'                                  " Exchange operator
 Plug 'tommcdo/vim-lion'                                      " Alignment operator
 Plug 'AndrewRadev/splitjoin.vim'                             " Switch between multi-line and single-line statements
@@ -215,9 +216,6 @@ cabbrev W! w!
 cabbrev Q q
 cabbrev Q! q!
 cabbrev E e
-
-" Write as `sudo`
-cabbrev w!! w !sudo tee % >/dev/null
 
 " }}}
 
