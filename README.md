@@ -1,11 +1,11 @@
 # Vimfiles
 
-My (g)Vim files.
+My [(g)Vim](http://www.vim.org/) files.
 
 ## Installation
 
 1. Run `scripts/install.sh` (on Linux) or `scripts/install.cmd` (on Windows).
-2. Launch [(g)Vim](http://www.vim.org/) and run `:PlugInstall`.
+2. Launch (g)Vim and run `:PlugInstall`.
 
 ## Troubleshooting
 
