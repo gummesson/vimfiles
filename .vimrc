@@ -296,8 +296,8 @@ nnoremap gk k
 nnoremap Y y$
 
 " Reformat current paragraph
-nnoremap Q gqip
-vnoremap Q gq
+nnoremap Q gwip
+vnoremap Q gw
 
 " Toggle paste mode
 set pastetoggle=<F2>
