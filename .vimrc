@@ -84,6 +84,10 @@ set nobomb
 set fileformat=unix
 set fileformats=unix,dos
 
+" Eanble local `.vimrc` files
+set exrc
+set secure
+
 " }}}
 
 " -- Colorscheme --------------------------------------------------- {{{
