@@ -256,8 +256,8 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 " -- CtrlP --
 
-let g:ctrlp_custom_ignore = 'public\|_site\|doc'  " Ignore directories with static files
-let g:ctrlp_show_hidden = 1                       " Show hidden files
+let g:ctrlp_custom_ignore = 'public\|_site\|build\|doc'
+let g:ctrlp_show_hidden = 1
 
 " -- Undotree --
 
@@ -265,11 +265,11 @@ let g:undotree_WindowLayout = 2
 
 " -- Better Whitespace --
 
-let g:strip_whitespace_on_save = 1  " Trim trailing whitespace on save
+let g:strip_whitespace_on_save = 1
 
 " -- Supertab --
 
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = 'context'
 
 " -- Lightline --
 
