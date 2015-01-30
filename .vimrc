@@ -39,7 +39,7 @@ Plug 'nelstrom/vim-qargs', { 'on': 'Qargs' }                 " Populate the argu
 Plug 'wellle/targets.vim'                                    " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }  " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                    " Jump to any location specified by two characters
-Plug 'tpope/vim-projectionist'                               " Granular project configuratio
+Plug 'tpope/vim-projectionist'                               " Granular project configurations
 Plug 'tpope/vim-fugitive'                                    " Git wrapper
 Plug 'tpope/vim-repeat'                                      " Repeat plugin-defined mappings
 Plug 'tpope/vim-unimpaired'                                  " Additional pairs of mappings
