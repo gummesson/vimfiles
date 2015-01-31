@@ -220,7 +220,6 @@ cabbrev W w
 cabbrev W! w!
 cabbrev Q q
 cabbrev Q! q!
-cabbrev E e
 
 " }}}
 
