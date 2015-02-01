@@ -35,7 +35,7 @@ Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffe
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
 Plug 'gummesson/vim-grepany'                                 " Pattern searching
-Plug 'nelstrom/vim-qargs', { 'on': 'Qargs' }                 " Populate the argument list with files from the quickfix list
+Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }               " Run a command over every entry in the quickfix or location list
 Plug 'wellle/targets.vim'                                    " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }  " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                    " Jump to any location specified by two characters
