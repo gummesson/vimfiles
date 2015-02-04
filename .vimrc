@@ -246,6 +246,10 @@ augroup END
 
 " -- Plugins ------------------------------------------------------- {{{
 
+" -- Polyglot --
+
+let g:markdown_folding = 1
+
 " -- Netrw --
 
 let g:netrw_liststyle = 3            " Tree style listing
