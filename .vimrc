@@ -215,7 +215,8 @@ endif
 
 " -- Abbreviations ------------------------------------------------- {{{
 
-" Mistypes
+" -- Mistypes --
+
 cabbrev W w
 cabbrev W! w!
 cabbrev Q q
