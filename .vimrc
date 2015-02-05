@@ -31,6 +31,7 @@ Plug 'whatyouhide/vim-gotham'                                " Alternative color
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'itchyny/lightline.vim'                                 " Statusline enhancer
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
@@ -229,6 +230,7 @@ cabbrev Q! q!
 augroup MARKDOWN
   autocmd!
   autocmd BufRead,BufNewFile *.txt set filetype=markdown
+  autocmd User GoyoLeave Limelight!
 augroup END
 
 augroup VIM
@@ -249,6 +251,10 @@ augroup END
 " -- Polyglot --
 
 let g:markdown_folding = 1
+
+" -- Limelight --
+
+let g:limelight_conceal_ctermfg = 'darkgray'
 
 " -- Netrw --
 
