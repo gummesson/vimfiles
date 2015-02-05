@@ -66,8 +66,8 @@ call plug#end()
 
 " -- General ------------------------------------------------------- {{{
 
-set t_Co=256                          " Enable 256 colors sup
-set lazyredraw                        " Don't redraw the screing macros
+set t_Co=256                          " Enable 256 colors
+set lazyredraw                        " Don't redraw during macros
 set hidden                            " Hide the buffers instead of closing them
 set autoread                          " Reload files that has been changed outside of Vim
 set timeoutlen=750                    " Faster leader execution
