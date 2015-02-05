@@ -62,7 +62,7 @@ call plug#end()
 
 " }}}
 
-" -- General ------------------------------------------------
+" -- General ------------------------------------------------------- {{{
 
 set t_Co=256                          " Enable 256 colors sup
 set lazyredraw                        " Don't redraw the screing macros
