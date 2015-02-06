@@ -10,11 +10,8 @@
 
 " -- Interface ----------------------------------------------------- {{{
 
-" Remove all GUI features
-set guioptions=c
-
-" Use a non blinking block cursor
-set guicursor=a:block-blinkon0
+set guioptions=c                " Remove all GUI features
+set guicursor=a:block-blinkon0  " Use a non blinking block cursor
 
 " Set window size
 set lines=40
