@@ -43,35 +43,11 @@ set linespace=0
 
 " }}}
 
-" -- Functions ----------------------------------------------------- {{{
-
-function! s:lightlineColorscheme()
-  if !exists('g:loaded_lightline')
-    return
-  endif
-  try
-    if g:colors_name =~# 'solarized'
-      let g:lightline.colorscheme = g:colors_name . '_' . &background
-    elseif g:colors_name =~# 'gotham'
-      let g:lightline.colorscheme = g:colors_name
-    else
-      let g:lightline.colorscheme = 'powerline'
-    endif
-    call lightline#init()
-    call lightline#colorscheme()
-    call lightline#update()
-  catch
-  endtry
-endfunction
-
-" }}}
-"
 " -- Autocommmands ------------------------------------------------- {{{
 
 augroup GUI
   autocmd!
-  autocmd GUIEnter * set visualbell t_vb=              " Remove sound and visual error
-  autocmd ColorScheme * call s:lightlineColorscheme()  " Switch `lightline` theme
+  autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
 augroup END
 
 " }}}
