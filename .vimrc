@@ -29,9 +29,9 @@ Plug 'altercation/vim-colors-solarized'                      " Terminal colorsch
 Plug 'reedes/vim-colors-pencil'                              " Graphical colorscheme
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'itchyny/lightline.vim'                                 " Statusline enhancer
+Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
-Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
 Plug 'gummesson/vim-grepany'                                 " Pattern searching
