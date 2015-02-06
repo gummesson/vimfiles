@@ -32,6 +32,8 @@ Plug 'itchyny/lightline.vim'                                 " Statusline enhanc
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
+Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
+Plug 'reedes/vim-wordy', { 'for': 'markdown' }               " Uncover usage problems in writing
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
 Plug 'gummesson/vim-grepany'                                 " Pattern searching
@@ -230,6 +232,7 @@ cabbrev Q! q!
 augroup MARKDOWN
   autocmd!
   autocmd BufRead,BufNewFile *.txt set filetype=markdown
+  autocmd FileType markdown call litecorrect#init()
   autocmd User GoyoLeave Limelight!
 augroup END
 
