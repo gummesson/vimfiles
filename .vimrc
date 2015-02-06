@@ -11,7 +11,7 @@
 " -- Language
 " -- System
 " -- Abbreviations
-" -- Filetypes
+" -- Groups
 " -- Plugins
 " -- Mappings
 "
@@ -227,7 +227,7 @@ cabbrev Q! q!
 
 " }}}
 
-" -- Filetypes ----------------------------------------------------- {{{
+" -- Groups -------------------------------------------------------- {{{
 
 augroup MARKDOWN
   autocmd!

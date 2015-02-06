@@ -3,8 +3,7 @@
 " -- Interface
 " -- Colorscheme
 " -- Font
-" -- Functions
-" -- Autocommmands
+" -- Groups
 "
 " }}}
 
@@ -43,7 +42,7 @@ set linespace=0
 
 " }}}
 
-" -- Autocommmands ------------------------------------------------- {{{
+" -- Groups -------------------------------------------------------- {{{
 
 augroup GUI
   autocmd!
