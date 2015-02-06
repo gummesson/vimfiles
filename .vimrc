@@ -27,7 +27,6 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'                      " Terminal colorscheme
 Plug 'reedes/vim-colors-pencil'                              " Graphical colorscheme
-Plug 'whatyouhide/vim-gotham'                                " Alternative colorscheme
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'itchyny/lightline.vim'                                 " Statusline enhancer
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
