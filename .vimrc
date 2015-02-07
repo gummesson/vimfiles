@@ -158,12 +158,12 @@ set splitright
 
 " -- Indentation --------------------------------------------------- {{{
 
-set autoindent   " Enable auto indentation
-set smartindent  " Enable context-sensitive indentation
-
 " Set two spaces as default
 set shiftwidth=2
 set softtabstop=2
+
+set autoindent   " Enable auto indentation
+set smartindent  " Enable context-sensitive indentation
 
 set expandtab   " Replace tabs with spaces
 set smarttab    " Insert spaces on the start of a line (shiftwidth)
