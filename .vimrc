@@ -190,8 +190,9 @@ set undolevels=1000  " Enable many undos
 
 " -- Backups ------------------------------------------------------- {{{
 
-set nobackup    " No backups
-set noswapfile  " No swap files
+set noswapfile     " No swap files
+set nobackup       " No backups
+set nowritebackup
 
 " }}}
 
