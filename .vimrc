@@ -287,6 +287,10 @@ let g:strip_whitespace_on_save = 1
 
 let g:SuperTabDefaultCompletionType = 'context'
 
+" -- Auto Pairs --
+
+let g:AutoPairsShortcutFastWrap = ''
+
 " -- Lightline --
 
 let g:lightline = {
