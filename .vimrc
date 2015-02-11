@@ -47,7 +47,7 @@ Plug 'tpope/vim-repeat'                                      " Repeat plugin-def
 Plug 'tpope/vim-unimpaired'                                  " Additional pairs of mappings
 Plug 'tpope/vim-surround'                                    " Insert and change brackets, parens, quotes and tags
 Plug 'tpope/vim-commentary'                                  " Comment and uncomment lines
-Plug 'tpope/vim-abolish', { 'on': ['Subvert', 'S'] }         " Case-insensitive abbreviations and substitutions
+Plug 'tpope/vim-abolish'                                     " Case-insensitive abbreviations and substitutions
 Plug 'tpope/vim-eunuch'                                      " UNIX (and Git Bash) helpers
 Plug 'tommcdo/vim-exchange'                                  " Exchange operator
 Plug 'tommcdo/vim-lion'                                      " Alignment operator
