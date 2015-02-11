@@ -36,7 +36,7 @@ Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }               " Uncover usage problems in writing
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
-Plug 'gummesson/vim-grepany', { 'on': 'Grep' }               " Pattern searching
+Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }    " Pattern searching
 Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }               " Run a command over every entry in the quickfix or location list
 Plug 'wellle/targets.vim'                                    " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }  " Additional `%` targets
