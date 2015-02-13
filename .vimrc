@@ -332,6 +332,9 @@ nnoremap <F5> :edit<cr>
 " Toggle `Goyo`
 nnoremap <F12> :Goyo<cr>
 
+" Enable `Wordy`
+nnoremap § :NextWordy<cr>
+
 " -- Leader --
 
 " Set current directory as root
