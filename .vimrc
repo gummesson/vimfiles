@@ -199,7 +199,7 @@ set nowritebackup
 " -- Language ------------------------------------------------------ {{{
 
 set langmenu=none
-set spelllang=en
+set spelllang=en,sv
 
 " }}}
 
