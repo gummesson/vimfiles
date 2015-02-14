@@ -323,6 +323,9 @@ nnoremap Y y$
 nnoremap Q gwip
 vnoremap Q gw
 
+" Enable `Wordy`
+nnoremap § :NextWordy<cr>
+
 " Toggle paste mode
 set pastetoggle=<F2>
 
@@ -331,9 +334,6 @@ nnoremap <F5> :edit<cr>
 
 " Toggle `Goyo`
 nnoremap <F12> :Goyo<cr>
-
-" Enable `Wordy`
-nnoremap § :NextWordy<cr>
 
 " -- Leader --
 
