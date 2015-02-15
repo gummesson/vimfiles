@@ -33,7 +33,7 @@ Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffe
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
-Plug 'reedes/vim-wordy', { 'for': 'markdown' }               " Uncover usage problems in writing
+Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }               " Uncover usage problems in writing
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
 Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }    " Pattern searching
