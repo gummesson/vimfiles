@@ -30,6 +30,7 @@ Plug 'reedes/vim-colors-pencil'                              " Graphical colorsc
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'itchyny/lightline.vim'                                 " Statusline enhancer
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
@@ -261,6 +262,21 @@ let g:markdown_folding = 1
 
 let g:limelight_conceal_ctermfg = 'darkgray'
 
+" -- Syntastic --
+
+" Disable automatic checking
+let g:syntastic_mode_map = {
+\ 'mode': 'passive',
+\ 'active_filetypes': [],
+\ 'passive_filetypes': [] }
+
+" Use the location list
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+" Syntax checkers
+let g:syntastic_javascript_checkers = ['eslint']
+
 " -- Netrw --
 
 let g:netrw_liststyle = 3            " Tree style listing
@@ -351,6 +367,9 @@ nnoremap <leader>t :CtrlPTag<cr>
 
 " Toggle `Undotree`
 nnoremap <leader>u :UndotreeToggle<cr>
+
+" Run `SyntasticCheck`
+nnoremap <leader>c :SyntasticCheck<cr>
 
 " }}}
 
