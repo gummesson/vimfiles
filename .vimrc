@@ -279,10 +279,6 @@ let g:ctrlp_show_hidden = 1
 
 let g:undotree_WindowLayout = 2
 
-" -- Better Whitespace --
-
-let g:strip_whitespace_on_save = 1
-
 " -- Supertab --
 
 let g:SuperTabDefaultCompletionType = 'context'
@@ -290,6 +286,10 @@ let g:SuperTabDefaultCompletionType = 'context'
 " -- Auto Pairs --
 
 let g:AutoPairsShortcutFastWrap = ''
+
+" -- Better Whitespace --
+
+let g:strip_whitespace_on_save = 1
 
 " -- Lightline --
 
@@ -343,7 +343,7 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
 
-" Open up `CtrlP`'s buffer list
+" Open `CtrlP`'s buffer list
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Open `CtrlP`'s `ctags` list
