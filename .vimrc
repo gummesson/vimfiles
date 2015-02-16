@@ -276,7 +276,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 
 " Symbols
-let g:syntastic_error_symbol = '!!'
+let g:syntastic_error_symbol = 'X'
 let g:syntastic_warning_symbol = '!'
 
 " Syntax checkers
