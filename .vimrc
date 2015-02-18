@@ -141,6 +141,7 @@ set foldenable         " Enable folding
 set foldmethod=syntax  " Fold by indentation
 set foldlevelstart=99  " Start with open folds
 set foldnestmax=3      " Only fold three levels deep
+set foldopen-=block    " Don't open folds on `(`, `{` etc.
 
 " Whitespace characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
