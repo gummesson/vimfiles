@@ -90,7 +90,7 @@ set nobomb
 
 " Use Unix-style line endings
 set fileformat=unix
-set fileformats=unix,dos
+set fileformats=unix,dos,mac
 
 " Eanble local `.vimrc` files
 set exrc
