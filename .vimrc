@@ -153,7 +153,6 @@ set virtualedit=block           " Enable visual block mode to go beyond the char
 set formatoptions+=j            " Remove comment character when joining lines
 set nrformats-=octal            " Disable octal increments and decrements
 
-" Windows and splits
 set equalalways
 set splitbelow
 set splitright
