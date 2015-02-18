@@ -153,9 +153,9 @@ set virtualedit=block           " Enable visual block mode to go beyond the char
 set formatoptions+=j            " Remove comment character when joining lines
 set nrformats-=octal            " Disable octal increments and decrements
 
-set equalalways
-set splitbelow
-set splitright
+set equalalways  " Make windows the same size after splitting or closing a window
+set splitbelow   " Put a split beneath the current one
+set splitright   " Put a split to the right the current one
 
 " }}}
 
