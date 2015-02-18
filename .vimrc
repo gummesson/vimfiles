@@ -145,13 +145,14 @@ set foldopen-=block    " Don't open folds on `(`, `{` etc.
 
 " Whitespace characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
-set showbreak=↪
+set showbreak=
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
 set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching the first/last character in the line
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 set formatoptions+=j            " Remove comment character when joining lines
 set nrformats-=octal            " Disable octal increments and decrements
+set nojoinspaces                " Don't insert two spaces after `.` when using `J`
 
 set equalalways  " Make windows the same size after splitting or closing a window
 set splitbelow   " Put a split beneath the current one
