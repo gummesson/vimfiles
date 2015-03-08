@@ -261,6 +261,7 @@ augroup END
 " -- Polyglot --
 
 let g:markdown_folding = 1
+let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'ruby']
 
 " -- Limelight --
 
