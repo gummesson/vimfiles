@@ -25,7 +25,7 @@ set columns=120
 let g:pencil_gui_spell_undercurl = 1
 
 " Use a different colorscheme when in GUI mode
-colorscheme pencil
+colorscheme railscasts
 
 " }}}
 
