@@ -32,7 +32,7 @@ colorscheme railscasts
 " -- Font ---------------------------------------------------------- {{{
 
 if has('unix')
-  set guifont=Inconsolata\ 12.5
+  set guifont=M+\ 1m\ 12.5
 else
   set guifont=m+_1m_regular:h12
 end
