@@ -14,8 +14,8 @@ set guioptions=c                " Remove all GUI features
 set guicursor=a:block-blinkon0  " Use a non blinking block cursor
 
 " Set window size
-set lines=40
-set columns=120
+set lines=35
+set columns=160
 
 " }}}
 
@@ -32,9 +32,9 @@ colorscheme railscasts
 " -- Font ---------------------------------------------------------- {{{
 
 if has('unix')
-  set guifont=Inconsolata\ 14.5
+  set guifont=Inconsolata\ 12.5
 else
-  set guifont=Inconsolata:h14
+  set guifont=m+_1m_regular:h12
 end
 
 " Remove extraneous line spacing
