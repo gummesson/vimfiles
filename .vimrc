@@ -156,6 +156,18 @@ set equalalways  " Make windows the same size after splitting or closing a windo
 set splitbelow   " Put a split beneath the current one
 set splitright   " Put a split to the right the current one
 
+" -- Statusline --
+
+set statusline=\ %f\                                                 " Relative filename
+set statusline+=%m                                                   " Modified flag
+set statusline+=%r                                                   " Read only flag
+set statusline+=%{fugitive#statusline()}                             " Fugitive
+set statusline+=%=                                                   " Separator
+set statusline+=%{strlen(&filetype)?&filetype:'none'}                " Filetype
+set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
+set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}      " file format
+set statusline+=\ \|\ %2l/%L\                                        " Line position and total lines
+
 " }}}
 
 " -- Indentation --------------------------------------------------- {{{
