@@ -44,7 +44,6 @@ Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                      " Run a comm
 Plug 'wellle/targets.vim'                                           " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }         " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                           " Jump to any location specified by two characters
-Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make', 'Start'] }  " Asynchronous build and test dispatche
 Plug 'tpope/vim-projectionist'                                      " Granular project configurations
 Plug 'tpope/vim-fugitive'                                           " Git wrapper
 Plug 'tpope/vim-repeat'                                             " Repeat plugin-defined mappings
