@@ -30,7 +30,6 @@ Plug 'reedes/vim-colors-pencil'                                     " Graphical 
 Plug 'whatyouhide/vim-gotham'                                       " Alternate...
 Plug 'justincampbell/vim-railscasts'                                " ...colorschemes
 Plug 'sheerun/vim-polyglot'                                         " Language packs
-Plug 'itchyny/lightline.vim'                                        " Statusline enhancer
 Plug 'ctrlpvim/ctrlp.vim'                                           " Fuzzy file, buffer, MRU and tag finder
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }             " Syntax checker
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                          " Distraction-free writing
@@ -313,21 +312,6 @@ let g:AutoPairsShortcutFastWrap = ''
 " -- Better Whitespace --
 
 let g:strip_whitespace_on_save = 1
-
-" -- Lightline --
-
-let g:lightline = {
-\ 'active': {
-\   'left': [ ['mode'], ['filename', 'modified'], ['fugitive'] ]
-\ },
-\ 'component': {
-\   'fugitive': '%{exists("*fugitive#head") ? fugitive#head() : ""}'
-\ },
-\ 'component_visible_condition': {
-\   'fugitive': '(exists("*fugitive#head") && "" != fugitive#head())'
-\ } }
-
-" }}}
 
 " -- Mappings ------------------------------------------------------ {{{
 
