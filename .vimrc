@@ -25,41 +25,41 @@ call plug#begin()
 
 " -- Plugins --
 
-Plug 'altercation/vim-colors-solarized'                             " Terminal colorscheme
-Plug 'reedes/vim-colors-pencil'                                     " Graphical colorscheme
-Plug 'whatyouhide/vim-gotham'                                       " Alternate...
-Plug 'justincampbell/vim-railscasts'                                " ...colorschemes
-Plug 'sheerun/vim-polyglot'                                         " Language packs
-Plug 'ctrlpvim/ctrlp.vim'                                           " Fuzzy file, buffer, MRU and tag finder
-Plug 'bruno-/vim-husk'                                              " Readline keybinds for command line mode
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }             " Syntax checker
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                          " Distraction-free writing
-Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                " Hyper-focused writing
-Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                " Lightweight auto-correction
-Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                      " Uncover usage problems in writing
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                  " Browse undo history
-Plug 'ludovicchabant/vim-gutentags'                                 " Automatic tags generation
-Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }           " Pattern searching
-Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                      " Run a command over every entry in the quickfix or location list
-Plug 'wellle/targets.vim'                                           " Additional text objects
-Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }         " Additional `%` targets
-Plug 'justinmk/vim-sneak'                                           " Jump to any location specified by two characters
-Plug 'tpope/vim-fugitive'                                           " Git wrapper
-Plug 'tpope/vim-repeat'                                             " Repeat plugin-defined mappings
-Plug 'tpope/vim-unimpaired'                                         " Additional pairs of mappings
-Plug 'tpope/vim-surround'                                           " Insert and change brackets, parens, quotes and tags
-Plug 'tpope/vim-commentary'                                         " Comment and uncomment lines
-Plug 'tpope/vim-abolish'                                            " Case-insensitive abbreviations and substitutions
-Plug 'tpope/vim-eunuch'                                             " UNIX (and Git Bash) helpers
-Plug 'tommcdo/vim-exchange'                                         " Exchange operator
-Plug 'tommcdo/vim-lion'                                             " Alignment operator
-Plug 'AndrewRadev/splitjoin.vim'                                    " Switch between multi-line and single-line statements
-Plug 'AndrewRadev/switch.vim'                                       " Switch segments with predefined replacements
-Plug 'ntpeters/vim-better-whitespace'                               " Highlight and remove trailing whitespace
-Plug 'jiangmiao/auto-pairs'                                         " Insert or delete brackets, parens and quotes in pairs
-Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }                  " Emmet abbreviations and expansions
-Plug 'ervandew/supertab'                                            " Automatic insert mode completions
-Plug 'SirVer/ultisnips'                                             " Snippets engine
+Plug 'altercation/vim-colors-solarized'                      " Colorschemes
+Plug 'reedes/vim-colors-pencil'
+Plug 'whatyouhide/vim-gotham'
+Plug 'justincampbell/vim-railscasts'
+Plug 'sheerun/vim-polyglot'                                  " Language packs
+Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
+Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
+Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
+Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }               " Uncover usage problems in writing
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo history
+Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
+Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }    " Pattern searching
+Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }               " Run a command over every entry in the quickfix or location list
+Plug 'wellle/targets.vim'                                    " Additional text objects
+Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }  " Additional `%` targets
+Plug 'justinmk/vim-sneak'                                    " Jump to any location specified by two characters
+Plug 'tpope/vim-fugitive'                                    " Git wrapper
+Plug 'tpope/vim-repeat'                                      " Repeat plugin-defined mappings
+Plug 'tpope/vim-unimpaired'                                  " Additional pairs of mappings
+Plug 'tpope/vim-surround'                                    " Insert and change brackets, parens, quotes and tags
+Plug 'tpope/vim-commentary'                                  " Comment and uncomment lines
+Plug 'tpope/vim-abolish'                                     " Case-insensitive abbreviations and substitutions
+Plug 'tpope/vim-eunuch'                                      " UNIX (and Git Bash) helpers
+Plug 'tommcdo/vim-exchange'                                  " Exchange operator
+Plug 'tommcdo/vim-lion'                                      " Alignment operator
+Plug 'AndrewRadev/splitjoin.vim'                             " Switch between multi-line and single-line statements
+Plug 'AndrewRadev/switch.vim'                                " Switch segments with predefined replacements
+Plug 'ntpeters/vim-better-whitespace'                        " Highlight and remove trailing whitespace
+Plug 'jiangmiao/auto-pairs'                                  " Insert or delete brackets, parens and quotes in pairs
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }           " Emmet abbreviations and expansions
+Plug 'ervandew/supertab'                                     " Automatic insert mode completions
+Plug 'SirVer/ultisnips'                                      " Snippets engine
 
 " -- Teardown --
 
