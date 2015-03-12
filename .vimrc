@@ -28,6 +28,7 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'                      " Colorschemes
 Plug 'reedes/vim-colors-pencil'
 Plug 'whatyouhide/vim-gotham'
+Plug 'ajh17/Spacegray.vim'
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
