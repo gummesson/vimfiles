@@ -167,7 +167,7 @@ set statusline+=%=                                                   " Separator
 set statusline+=\ %{strlen(&filetype)?&filetype:'none'}              " Filetype
 set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
 set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}      " file format
-set statusline+=\ \|\ %2l/%L\                                        " Line position and total lines
+set statusline+=\ \|\ %c/%l/%L\                                      " Cursor and line position, and total lines
 
 " }}}
 
