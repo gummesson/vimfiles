@@ -31,6 +31,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
+Plug 'editorconfig/editorconfig-vim'                         " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
