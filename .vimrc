@@ -159,14 +159,11 @@ set splitright   " Put a split to the right the current one
 
 " -- Statusline --
 
-set statusline=%#WildMenu#                                           " Use colors from `WildMenu`
-set statusline+=\ %f\                                                " Relative filename
-set statusline+=%*\                                                  " Reset colors
+set statusline=\ %f\                                                 " Relative filename
 set statusline+=%m                                                   " Modified flag
 set statusline+=%r                                                   " Read only flag
 set statusline+=%{fugitive#statusline()}                             " Fugitive
 set statusline+=%=                                                   " Separator
-set statusline+=%#WildMenu#                                          " Use colors from `WildMenu`
 set statusline+=\ %{strlen(&filetype)?&filetype:'none'}              " Filetype
 set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
 set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}      " file format
