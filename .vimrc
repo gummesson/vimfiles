@@ -31,6 +31,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'ajh17/Spacegray.vim'
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
+Plug 'justincampbell/vim-eighties'                           " Automatically resize windows
 Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
 Plug 'editorconfig/editorconfig-vim'                         " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
