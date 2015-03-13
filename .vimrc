@@ -31,10 +31,9 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'ajh17/Spacegray.vim'
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
-Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }     " Automatically resize windows
-Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
 Plug 'editorconfig/editorconfig-vim'                         " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
+Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }     " Automatically resize windows
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
@@ -43,6 +42,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }           " Browse undo histo
 Plug 'ludovicchabant/vim-gutentags'                          " Automatic tags generation
 Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }    " Pattern searching
 Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }               " Run a command over every entry in the quickfix or location list
+Plug 'bruno-/vim-husk'                                       " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                    " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }  " Additional `%` targets
 Plug 'justinmk/vim-sneak'                                    " Jump to any location specified by two characters
