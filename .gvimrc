@@ -15,7 +15,7 @@ set guicursor=a:block-blinkon0  " Use a non blinking block cursor
 
 " Set window size
 set lines=35
-set columns=160
+set columns=140
 
 " }}}
 
@@ -32,9 +32,10 @@ colorscheme spacegray
 " -- Font ---------------------------------------------------------- {{{
 
 if has('unix')
-  set guifont=M+\ 1m\ 12.5
+  set guifont=Fira\ Mono\ 12.5
 else
-  set guifont=m+_1m_regular:h12
+  set guifont=Fira_Mono:h12
+  set renderoptions=type:directx,gamma:1.0,contrast:0.2,level:1.0,geom:1,renmode:5,taamode:1
 end
 
 " Remove extraneous line spacing
