@@ -344,6 +344,9 @@ nnoremap <Space> za
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
+" Run `npm test`
+nnoremap £ :!npm test<cr>:redraw!<cr>
+
 " Toggle paste mode
 set pastetoggle=<F2>
 
