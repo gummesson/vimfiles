@@ -345,7 +345,7 @@ nnoremap <Space> za
 nnoremap § :NextWordy<cr>
 
 " Run `npm test`
-if has("unix")
+if has('unix')
   nnoremap £ :!clear && npm test<cr>
 else
   nnoremap £ :!cls && npm test<cr>:redraw!<cr>
