@@ -255,11 +255,6 @@ augroup MARKDOWN
   autocmd User GoyoLeave Limelight!
 augroup END
 
-augroup VIM
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC  " Autoreload settings when saved
-augroup END
-
 augroup ALL
   autocmd!
   autocmd InsertEnter * setlocal nocursorline  " Don't show the cursorline in insert mode...
