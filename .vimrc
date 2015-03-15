@@ -129,7 +129,8 @@ set wildmode=longest:full,full  " Complete only up to the point of ambiguity
 set wildignorecase              " Ignore case on files and directories on the command line
 
 " Wild ignores
-set wildignore+=.git,.sass-cache,.bundle,.gems,.gs,node_modules,bower_components,vendor,tmp,log
+set wildignore+=.bundle,.gems,.git,.gs,.sass-cache,bower_components,node_modules,vendor
+set wildignore+=_site,build,coverage,dist,public,tmp
 set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
 " Mouse
@@ -308,7 +309,6 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 " -- CtrlP --
 
-let g:ctrlp_custom_ignore = '\(_site\|public\|build\|dist\|doc\)$'
 let g:ctrlp_show_hidden = 1
 
 " -- Undotree --
