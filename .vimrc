@@ -228,6 +228,7 @@ if has('unix')
   set undodir=$HOME/.vim/undo
   set spellfile=$HOME/.vim/spell/custom.utf-8.add
 else
+  set shellslash
   set clipboard=unnamed
   set undodir=$HOME/vimfiles/undo
   set spellfile=$HOME/vimfiles/spell/custom.utf-8.add
