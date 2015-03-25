@@ -157,9 +157,10 @@ set formatoptions+=j            " Remove comment character when joining lines
 set nrformats-=octal            " Disable octal increments and decrements
 set nojoinspaces                " Don't insert two spaces after `.` when using `J`
 
-set equalalways  " Make windows the same size after splitting or closing a window
-set splitbelow   " Put a split beneath the current one
-set splitright   " Put a split to the right the current one
+set equalalways       " Make windows the same size after splitting or closing a window
+set splitbelow        " Put a split beneath the current one
+set splitright        " Put a split to the right the current one
+set fillchars=vert:\  " Remove `|` from vertical splits
 
 " -- Statusline --
 
