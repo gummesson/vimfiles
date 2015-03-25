@@ -29,6 +29,7 @@ Plug 'altercation/vim-colors-solarized'                      " Colorschemes
 Plug 'reedes/vim-colors-pencil'
 Plug 'whatyouhide/vim-gotham'
 Plug 'ajh17/Spacegray.vim'
+Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'                                  " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                    " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                         " EditorConfig
