@@ -340,10 +340,7 @@ nnoremap Q gwip
 vnoremap Q gw
 
 " Toggle search highlighting
-nnoremap <Enter> :set nohlsearch!<cr>
-
-" Toggle folds
-nnoremap <Space> za
+nnoremap <Space> :set nohlsearch!<cr>
 
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
