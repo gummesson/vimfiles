@@ -314,6 +314,10 @@ let g:ctrlp_show_hidden = 1
 
 let g:undotree_WindowLayout = 2
 
+" -- Sneak --
+
+let g:sneak#streak = 1
+
 " -- Supertab --
 
 let g:SuperTabDefaultCompletionType = 'context'
