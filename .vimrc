@@ -345,13 +345,6 @@ nnoremap <Space> :set nohlsearch!<cr>
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
-" Run `npm test`
-if has('unix')
-  nnoremap £ :!clear && npm test<cr>
-else
-  nnoremap £ :!cls && npm test<cr>:redraw!<cr>
-endif
-
 " Toggle paste mode
 set pastetoggle=<F2>
 
