@@ -34,6 +34,7 @@ Plug 'editorconfig/editorconfig-vim'                         " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }      " Syntax checker
 Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }     " Automatically resize windows
 Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle' }        " Maximize a single window (temporarily)
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' }                    " Delete a buffer without closing its window
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                   " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }         " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }         " Lightweight auto-correction
