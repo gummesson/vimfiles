@@ -379,6 +379,12 @@ nnoremap <leader>u :UndotreeToggle<cr>
 " Run `SyntasticCheck`
 nnoremap <leader>c :SyntasticCheck<cr>
 
+" Enable `Eighties`
+nnoremap <leader>e :Eighties<cr>
+
+" Toggle `Maximizer`
+nnoremap <leader>m :MaximizerToggle<cr>
+
 " }}}
 
 " vim:foldmethod=marker
