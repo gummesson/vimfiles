@@ -282,10 +282,7 @@ let g:limelight_conceal_ctermfg = 'darkgray'
 " -- Syntastic --
 
 " Disable automatic checking
-let g:syntastic_mode_map = {
-\ 'mode': 'passive',
-\ 'active_filetypes': [],
-\ 'passive_filetypes': [] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
 
 " Use the location list
 let g:syntastic_always_populate_loc_list = 1
