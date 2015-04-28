@@ -4,6 +4,7 @@
 " -- Colorscheme
 " -- Font
 " -- Groups
+" -- Mappings
 "
 " }}}
 
@@ -53,6 +54,20 @@ augroup GUI
   autocmd!
   autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
 augroup END
+
+" }}}
+
+" -- Mappings ------------------------------------------------------ {{{
+
+" Window creation
+nnoremap <A-s> <C-W>s
+nnoremap <A-v> <C-W>v
+
+" Window navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " }}}
 
