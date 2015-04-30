@@ -41,6 +41,7 @@ Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }            " Hyper-focused 
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }            " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                  " Uncover usage problems in writing
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }              " Browse undo history
+Plug 'cohama/agit.vim', { 'on': 'Agit' }                        " `gitk` clone
 Plug 'ludovicchabant/vim-gutentags'                             " Automatic tags generation
 Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }       " Pattern searching
 Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                  " Run a command over every entry in the quickfix or location list
@@ -311,6 +312,10 @@ let g:ctrlp_show_hidden = 1
 " -- Undotree --
 
 let g:undotree_WindowLayout = 2
+
+" -- Agit --
+
+let g:agit_enable_auto_show_commit = 0
 
 " -- Sneak --
 
