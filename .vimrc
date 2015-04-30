@@ -382,6 +382,9 @@ nnoremap <leader>e :Eighties<cr>
 " Toggle `Maximizer`
 nnoremap <leader>m :MaximizerToggle<cr>
 
+" Highlight and search for the current word under the cursor
+nnoremap <leader>w :set hlsearch<cr>*N
+
 " }}}
 
 " vim:foldmethod=marker
