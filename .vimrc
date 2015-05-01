@@ -36,6 +36,7 @@ Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }        " Automatically 
 Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle' }           " Maximize a single window (temporarily)
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' }                       " Delete a buffer without closing its window
 Plug 'artnez/vim-wipeout', { 'on': 'Wipeout' }                  " Destroy all buffers that are not open in any tabs or windows
+Plug 'junegunn/vim-peekaboo'                                    " Preview the contents of registers
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                      " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }            " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }            " Lightweight auto-correction
