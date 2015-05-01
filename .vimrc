@@ -120,7 +120,6 @@ set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
 set textwidth=80    " The maximum line length (for reformatting)
 set colorcolumn=+1  " Show the 81st column
-set cursorline      " Show the cursorline
 
 set nowrap                      " No soft wrapping
 set nostartofline               " Keep the cursor on the same column when moving around
@@ -260,12 +259,6 @@ augroup MARKDOWN
   autocmd BufRead,BufNewFile *.txt set filetype=markdown
   autocmd FileType markdown call litecorrect#init()
   autocmd User GoyoLeave Limelight!
-augroup END
-
-augroup ALL
-  autocmd!
-  autocmd InsertEnter * setlocal nocursorline  " Don't show the cursorline in insert mode...
-  autocmd InsertLeave * setlocal cursorline    " ...but show it in all the other modes
 augroup END
 
 " }}}
