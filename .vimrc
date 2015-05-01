@@ -262,18 +262,23 @@ augroup END
 
 " -- Plugins ------------------------------------------------------- {{{
 
+" -- Netrw --
+
+let g:netrw_liststyle = 3            " Tree style listing
+let g:netrw_browse_split = 4         " Open in previous window
+let g:netrw_altv = 1                 " Split to right
+let g:netrw_winsize = 20             " Window size (percentage of the current window)
+let g:netrw_banner = 0               " Remove the information banner at the top
+let g:netrw_list_hide = &wildignore  " Hide certain files and folders
+
 " -- Polyglot --
 
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
 
-" -- Peekabo --
+" -- CtrlP --
 
-let g:peekaboo_delay = 750
-
-" -- Limelight --
-
-let g:limelight_conceal_ctermfg = 'darkgray'
+let g:ctrlp_show_hidden = 1
 
 " -- Syntastic --
 
@@ -291,18 +296,13 @@ let g:syntastic_warning_symbol = '!'
 " Syntax checkers
 let g:syntastic_javascript_checkers = ['eslint']
 
-" -- Netrw --
+" -- Peekabo --
 
-let g:netrw_liststyle = 3            " Tree style listing
-let g:netrw_browse_split = 4         " Open in previous window
-let g:netrw_altv = 1                 " Split to right
-let g:netrw_winsize = 20             " Window size (percentage of the current window)
-let g:netrw_banner = 0               " Remove the information banner at the top
-let g:netrw_list_hide = &wildignore  " Hide certain files and folders
+let g:peekaboo_delay = 750
 
-" -- CtrlP --
+" -- Limelight --
 
-let g:ctrlp_show_hidden = 1
+let g:limelight_conceal_ctermfg = 'darkgray'
 
 " -- Undotree --
 
@@ -316,13 +316,13 @@ let g:agit_enable_auto_show_commit = 0
 
 let g:sneak#streak = 1
 
-" -- Supertab --
-
-let g:SuperTabDefaultCompletionType = 'context'
-
 " -- Auto Pairs --
 
 let g:AutoPairsShortcutFastWrap = ''
+
+" -- Supertab --
+
+let g:SuperTabDefaultCompletionType = 'context'
 
 " -- Mappings ------------------------------------------------------ {{{
 
