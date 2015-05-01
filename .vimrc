@@ -123,9 +123,9 @@ set cursorline      " Show the cursorline
 
 set nowrap                      " No soft wrapping
 set nostartofline               " Keep the cursor on the same column when moving around
-set scrolloff=3                 " Start scrolling when the cursor is near the edges
-set sidescrolloff=5
+set scrolloff=999               " Start scrolling when the cursor is near the edges
 set sidescroll=1                " Scroll one character at a time
+set sidescrolloff=1
 set showmatch                   " Show matching parens...
 set matchtime=1                 " ...for a tenth of a second
 set wildmenu                    " Show options for file and command completion
