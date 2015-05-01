@@ -267,6 +267,10 @@ augroup END
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
 
+" -- Peekabo --
+
+let g:peekaboo_delay = 750
+
 " -- Limelight --
 
 let g:limelight_conceal_ctermfg = 'darkgray'
