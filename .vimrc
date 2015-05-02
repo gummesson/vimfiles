@@ -29,6 +29,7 @@ Plug 'altercation/vim-colors-solarized'                         " Colorschemes
 Plug 'reedes/vim-colors-pencil'
 Plug 'ajh17/Spacegray.vim'
 Plug 'sheerun/vim-polyglot'                                     " Language packs
+Plug 'ajh17/VimCompletesMe'                                     " Tab-completion
 Plug 'ctrlpvim/ctrlp.vim'                                       " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                            " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }         " Syntax checker
