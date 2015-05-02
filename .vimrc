@@ -32,7 +32,7 @@ Plug 'sheerun/vim-polyglot'                                                 " La
 Plug 'ajh17/VimCompletesMe'                                                 " Tab-completion
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
-Plug 'ahayman/vim-nodejs-complete', { 'for': 'javascript' }
+Plug 'myhere/vim-nodejs-complete', { 'for': 'javascript' }
 Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                                        " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                     " Syntax checker
