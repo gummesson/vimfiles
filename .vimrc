@@ -331,10 +331,6 @@ let g:sneak#streak = 1
 
 let g:AutoPairsShortcutFastWrap = ''
 
-" -- Supertab --
-
-let g:SuperTabDefaultCompletionType = 'context'
-
 " -- Mappings ------------------------------------------------------ {{{
 
 " -- Keys --
