@@ -261,8 +261,7 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  autocmd BufRead,BufNewFile *.js set previewheight=1
-  autocmd InsertLeave *.js :pclose
+  autocmd FileType javascript set completeopt-=preview
 augroup END
 
 " }}}
