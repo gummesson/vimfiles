@@ -18,6 +18,3 @@ curl --fail --location --output \
 echo "Symlinking files..."
 ln -sf $gitpath/.vimrc $HOME/.vimrc
 ln -sf $gitpath/.gvimrc $HOME/.gvimrc
-
-echo "Symlinking folders..."
-ln -sf $gitpath/snippets $vimpath/UltiSnips
