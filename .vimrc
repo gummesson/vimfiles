@@ -32,6 +32,7 @@ Plug 'sheerun/vim-polyglot'                                                 " La
 Plug 'ajh17/VimCompletesMe'                                                 " Tab-completion
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
+Plug 'ahayman/vim-nodejs-complete', { 'for': 'javascript' }
 Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                                        " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                     " Syntax checker
@@ -258,6 +259,12 @@ augroup MARKDOWN
   autocmd User GoyoLeave Limelight!
 augroup END
 
+augroup JAVASCRIPT
+  autocmd!
+  autocmd BufRead,BufNewFile *.js set previewheight=1
+  autocmd InsertLeave *.js :pclose
+augroup END
+
 " }}}
 
 " -- Plugins ------------------------------------------------------- {{{
@@ -275,6 +282,10 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
+
+" -- nodejs-complete --
+
+let g:nodejs_complete_config = { 'js_compl_fn': 'js#CompleteJS' }
 
 " -- CtrlP --
 
