@@ -64,7 +64,6 @@ Plug 'AndrewRadev/switch.vim'                                   " Switch segment
 Plug 'jiangmiao/auto-pairs'                                     " Insert or delete brackets, parens and quotes in pairs
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }  " Emmet abbreviations and expansions
 Plug 'ervandew/supertab'                                        " Automatic insert mode completions
-Plug 'SirVer/ultisnips'                                         " Snippets engine
 
 " -- Teardown --
 
