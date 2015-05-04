@@ -142,6 +142,9 @@ set wildignore+=.bundle,.gems,.git,.gs,.sass-cache,bower_components,node_modules
 set wildignore+=_site,build,coverage,dist,public,tmp,db
 set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
+" Omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
 " Mouse
 set mouse=a    " Enable mouse usage
 set mousehide  " Hide the mouse cursor while typing
