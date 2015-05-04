@@ -144,6 +144,7 @@ set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
 " Omnicompletion
 set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
 
 " Mouse
 set mouse=a    " Enable mouse usage
@@ -268,11 +269,6 @@ augroup MARKDOWN
   autocmd BufRead,BufNewFile *.txt set filetype=markdown
   autocmd FileType markdown call litecorrect#init()
   autocmd User GoyoLeave Limelight!
-augroup END
-
-augroup JAVASCRIPT
-  autocmd!
-  autocmd FileType javascript set completeopt-=preview
 augroup END
 
 " }}}
