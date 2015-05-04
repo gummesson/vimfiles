@@ -245,6 +245,10 @@ endif
 
 " -- Abbreviations ------------------------------------------------- {{{
 
+" -- Helpers --
+
+iabbrev #! #!/usr/bin/env
+
 " -- Mistypes --
 
 cabbrev W w
