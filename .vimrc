@@ -84,6 +84,9 @@ set hidden          " Hide the buffers instead of closing them
 set autoread        " Reload files that has been changed outside of Vim
 set timeoutlen=750  " Faster leader execution
 
+" Enable filetype plugins and indentation
+filetype plugin indent on
+
 " Remove sound and visual error
 set noerrorbells
 set visualbell
@@ -106,6 +109,7 @@ set secure
 
 " -- Colorscheme --------------------------------------------------- {{{
 
+syntax on
 colorscheme solarized  " Use `solarized`
 set background=dark    " Set background to dark
 
