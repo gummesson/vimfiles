@@ -395,8 +395,8 @@ nnoremap <leader>e :Eighties<cr>
 " Toggle `Maximizer`
 nnoremap <leader>m :MaximizerToggle<cr>
 
-" Highlight and search for the current word under the cursor
-nnoremap <leader>w :set hlsearch<cr>*N
+" Highlight and show count of the current word under the cursor
+nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " }}}
 
