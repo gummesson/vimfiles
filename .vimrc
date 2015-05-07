@@ -354,9 +354,6 @@ nnoremap Y y$
 nnoremap Q gwip
 vnoremap Q gw
 
-" Toggle search highlighting
-nnoremap <Space> :set nohlsearch!<cr>
-
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
@@ -370,6 +367,9 @@ nnoremap <F5> :edit<cr>
 nnoremap <F12> :Goyo<cr>
 
 " -- Leader --
+
+" Toggle search highlighting
+nnoremap <leader><leader> :set nohlsearch!<cr>
 
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
