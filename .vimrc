@@ -178,7 +178,7 @@ set fillchars=vert:\  " Remove `|` from vertical splits
 set statusline=\ %f\                                                 " Relative filename
 set statusline+=%m                                                   " Modified flag
 set statusline+=%r                                                   " Read only flag
-set statusline+=%{fugitive#statusline()}                             " Fugitive
+set statusline+=%{fugitive#statusline()[4:-2]}                       " Fugitive
 set statusline+=%=                                                   " Separator
 set statusline+=\ %{strlen(&filetype)?&filetype:'none'}              " Filetype
 set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
