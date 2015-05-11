@@ -28,6 +28,9 @@ let g:pencil_gui_spell_undercurl = 1
 " Use a different colorscheme when in GUI mode
 colorscheme spacegray
 
+" Use non-text color for indent lines
+let g:indentLine_color_gui = '#3E4853'
+
 " }}}
 
 " -- Font ---------------------------------------------------------- {{{
