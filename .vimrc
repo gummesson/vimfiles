@@ -25,47 +25,47 @@ call plug#begin()
 
 " -- Plugins --
 
-Plug 'altercation/vim-colors-solarized'                                            " Colorschemes
+Plug 'altercation/vim-colors-solarized'                                     " Colorschemes
 Plug 'reedes/vim-colors-pencil'
 Plug 'ajh17/Spacegray.vim'
-Plug 'sheerun/vim-polyglot'                                                        " Language packs
-Plug 'ajh17/VimCompletesMe'                                                        " Tab-completion
+Plug 'sheerun/vim-polyglot'                                                 " Language packs
+Plug 'ajh17/VimCompletesMe'                                                 " Tab-completion
 Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
 Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
 Plug 'myhere/vim-nodejs-complete', { 'for': 'javascript' }
-Plug 'ctrlpvim/ctrlp.vim'                                                          " Fuzzy file, buffer, MRU and tag finder
-Plug 'editorconfig/editorconfig-vim'                                               " EditorConfig
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                            " Syntax checker
-Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }                           " Automatically resize windows
-Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle' }                              " Maximize a single window (temporarily)
-Plug 'moll/vim-bbye', { 'on': 'Bdelete' }                                          " Delete a buffer without closing its window
-Plug 'artnez/vim-wipeout', { 'on': 'Wipeout' }                                     " Destroy all buffers that are not open in any tabs or windows
-Plug 'junegunn/vim-peekaboo'                                                       " Preview the contents of registers
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                         " Distraction-free writing
-Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                               " Hyper-focused writing
-Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                               " Lightweight auto-correction
-Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                                     " Uncover usage problems in writing
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                                 " Browse undo history
-Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }                             " `gitk` clone
-Plug 'ludovicchabant/vim-gutentags'                                                " Automatic tags generation
-Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                          " Pattern searching
-Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                                     " Run a command over every entry in the quickfix or location list
-Plug 'bruno-/vim-husk'                                                             " Readline keybindings for command line mode
-Plug 'wellle/targets.vim'                                                          " Additional text objects
-Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                        " Additional `%` targets
-Plug 'justinmk/vim-sneak'                                                          " Jump to any location specified by two characters
-Plug 'tpope/vim-fugitive'                                                          " Git wrapper
-Plug 'tpope/vim-repeat'                                                            " Repeat plugin-defined mappings
-Plug 'tpope/vim-unimpaired'                                                        " Additional pairs of mappings
-Plug 'tpope/vim-surround'                                                          " Insert and change brackets, parens, quotes and tags
-Plug 'tpope/vim-commentary'                                                        " Comment and uncomment lines
-Plug 'tpope/vim-abolish'                                                           " Case-insensitive abbreviations and substitutions
-Plug 'tpope/vim-eunuch'                                                            " UNIX (and Git Bash) helpers
-Plug 'tommcdo/vim-exchange'                                                        " Exchange operator
-Plug 'tommcdo/vim-lion'                                                            " Alignment operator
-Plug 'AndrewRadev/splitjoin.vim'                                                   " Switch between multi-line and single-line statements
-Plug 'jiangmiao/auto-pairs'                                                        " Insert or delete brackets, parens and quotes in pairs
-Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }                     " Emmet abbreviations and expansions
+Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
+Plug 'editorconfig/editorconfig-vim'                                        " EditorConfig
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                     " Syntax checker
+Plug 'justincampbell/vim-eighties', { 'on': 'Eighties' }                    " Automatically resize windows
+Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle' }                       " Maximize a single window (temporarily)
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' }                                   " Delete a buffer without closing its window
+Plug 'artnez/vim-wipeout', { 'on': 'Wipeout' }                              " Destroy all buffers that are not open in any tabs or windows
+Plug 'junegunn/vim-peekaboo'                                                " Preview the contents of registers
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                  " Distraction-free writing
+Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                        " Hyper-focused writing
+Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                        " Lightweight auto-correction
+Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                              " Uncover usage problems in writing
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                          " Browse undo history
+Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }                      " `gitk` clone
+Plug 'ludovicchabant/vim-gutentags'                                         " Automatic tags generation
+Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                   " Pattern searching
+Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                              " Run a command over every entry in the quickfix or location list
+Plug 'bruno-/vim-husk'                                                      " Readline keybindings for command line mode
+Plug 'wellle/targets.vim'                                                   " Additional text objects
+Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                 " Additional `%` targets
+Plug 'justinmk/vim-sneak'                                                   " Jump to any location specified by two characters
+Plug 'tpope/vim-fugitive'                                                   " Git wrapper
+Plug 'tpope/vim-repeat'                                                     " Repeat plugin-defined mappings
+Plug 'tpope/vim-unimpaired'                                                 " Additional pairs of mappings
+Plug 'tpope/vim-surround'                                                   " Insert and change brackets, parens, quotes and tags
+Plug 'tpope/vim-commentary'                                                 " Comment and uncomment lines
+Plug 'tpope/vim-abolish'                                                    " Case-insensitive abbreviations and substitutions
+Plug 'tpope/vim-eunuch'                                                     " UNIX (and Git Bash) helpers
+Plug 'tommcdo/vim-exchange'                                                 " Exchange operator
+Plug 'tommcdo/vim-lion'                                                     " Alignment operator
+Plug 'AndrewRadev/splitjoin.vim'                                            " Switch between multi-line and single-line statements
+Plug 'jiangmiao/auto-pairs'                                                 " Insert or delete brackets, parens and quotes in pairs
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }              " Emmet abbreviations and expansions
 
 " -- Teardown --
 
