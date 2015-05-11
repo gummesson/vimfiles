@@ -157,7 +157,8 @@ set foldnestmax=3      " Only fold three levels deep
 set foldopen-=block    " Don't open folds on `(`, `{` etc.
 
 " Whitespace characters
-set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«
+set list
+set listchars=trail:·,extends:»,precedes:«
 set showbreak=
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
