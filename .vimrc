@@ -297,6 +297,7 @@ let g:nodejs_complete_config = { 'js_compl_fn': 'js#CompleteJS' }
 " -- CtrlP --
 
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_use_caching = 0
 
 " -- Syntastic --
 
