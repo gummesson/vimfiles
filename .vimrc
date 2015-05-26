@@ -61,6 +61,7 @@ Plug 'tpope/vim-surround'                                                   " In
 Plug 'tpope/vim-commentary'                                                 " Comment and uncomment lines
 Plug 'tpope/vim-abolish'                                                    " Case-insensitive abbreviations and substitutions
 Plug 'tpope/vim-eunuch'                                                     " UNIX (and Git Bash) helpers
+Plug 'tommcdo/vim-lister'                                                   " Manipulate the argument, buffer, location and quickfix list
 Plug 'tommcdo/vim-exchange'                                                 " Exchange operator
 Plug 'tommcdo/vim-lion'                                                     " Alignment operator
 Plug 'AndrewRadev/splitjoin.vim'                                            " Switch between multi-line and single-line statements
