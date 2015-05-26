@@ -50,7 +50,6 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                          " Br
 Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }                      " `gitk` clone
 Plug 'ludovicchabant/vim-gutentags'                                         " Automatic tags generation
 Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                   " Pattern searching
-Plug 'Peeja/vim-cdo', { 'on': ['Cdo', 'Ldo'] }                              " Run a command over every entry in the quickfix or location list
 Plug 'bruno-/vim-husk'                                                      " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                   " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                 " Additional `%` targets
