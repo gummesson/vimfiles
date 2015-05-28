@@ -298,7 +298,7 @@ let g:nodejs_complete_config = { 'js_compl_fn': 'js#CompleteJS' }
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0
-let g:ctrlp_custom_ignore = '\.git'
+let g:ctrlp_custom_ignore = '\.git$'
 
 " -- Syntastic --
 
