@@ -139,7 +139,7 @@ set wildignorecase              " Ignore case on files and directories on the co
 
 " Wild ignores
 set wildignore+=.bundle,.gems,.git,.gs,.sass-cache,bower_components,node_modules,vendor
-set wildignore+=_site,build,coverage,dist,public,tmp,db
+set wildignore+=_site,build,coverage,dist,public,www,tmp,db
 set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
 " Omnicompletion
