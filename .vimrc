@@ -138,7 +138,7 @@ set wildmode=longest:full,full  " Complete only up to the point of ambiguity
 set wildignorecase              " Ignore case on files and directories on the command line
 
 " Wild ignores
-set wildignore+=.bundle,.gems,.git,.gs,.sass-cache,bower_components,node_modules,vendor
+set wildignore+=.bundle,.gems,.gs,.sass-cache,bower_components,node_modules,vendor
 set wildignore+=_site,build,coverage,dist,public,www,tmp,db
 set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 
@@ -298,6 +298,7 @@ let g:nodejs_complete_config = { 'js_compl_fn': 'js#CompleteJS' }
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0
+let g:ctrlp_custom_ignore = '\.git'
 
 " -- Syntastic --
 
