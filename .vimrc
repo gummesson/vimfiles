@@ -53,6 +53,7 @@ Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                   " Pa
 Plug 'bruno-/vim-husk'                                                      " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                   " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                 " Additional `%` targets
+Plug 'vim-scripts/ReplaceWithRegister'                                      " Replace text with motions
 Plug 'justinmk/vim-sneak'                                                   " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                   " Git wrapper
 Plug 'tpope/vim-repeat'                                                     " Repeat plugin-defined mappings
