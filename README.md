@@ -7,11 +7,6 @@ My [(g)Vim](http://www.vim.org/) files.
 1. Run `scripts/install.sh` (on Linux) or `scripts/install.cmd` (on Windows).
 2. Launch (g)Vim and run `:PlugInstall`.
 
-### `nodejs-complete`
-
-To update `nodejs-complete`'s completion data, run `scripts/node.sh` (on Linux)
-or `scripts/node.cmd` (on Windows).
-
 ## Troubleshooting
 
 1. On Windows, you need to have `C:\Program Files (x86)\Git\bin` in your PATH.

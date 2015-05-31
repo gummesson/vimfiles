@@ -31,9 +31,7 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'                                                 " Language packs
 Plug 'ajh17/VimCompletesMe'                                                 " Tab-completion
-Plug '1995eaton/vim-better-css-completion', { 'for': 'css' }
-Plug '1995eaton/vim-better-javascript-completion', { 'for': 'javascript' }
-Plug 'myhere/vim-nodejs-complete', { 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }                        " JavaScript omni-completion
 Plug 'ctrlpvim/ctrlp.vim'                                                   " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                                        " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                     " Syntax checker
@@ -290,10 +288,6 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
-
-" -- nodejs-complete --
-
-let g:nodejs_complete_config = { 'js_compl_fn': 'js#CompleteJS' }
 
 " -- CtrlP --
 
