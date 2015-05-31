@@ -271,6 +271,11 @@ augroup MARKDOWN
   autocmd User GoyoLeave Limelight!
 augroup END
 
+augroup JAVASCRIPT
+  autocmd!
+  autocmd FileType javascript let b:vcm_tab_complete = 'omni'
+augroup END
+
 " }}}
 
 " -- Plugins ------------------------------------------------------- {{{
