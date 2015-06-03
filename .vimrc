@@ -10,7 +10,6 @@
 " -- Backups
 " -- Language
 " -- System
-" -- Abbreviations
 " -- Groups
 " -- Plugins
 " -- Mappings
@@ -244,21 +243,6 @@ else
   set undodir=$HOME/vimfiles/undo
   set spellfile=$HOME/vimfiles/spell/custom.utf-8.add
 endif
-
-" }}}
-
-" -- Abbreviations ------------------------------------------------- {{{
-
-" -- Helpers --
-
-iabbrev #! #!/usr/bin/env
-
-" -- Mistypes --
-
-cabbrev W w
-cabbrev W! w!
-cabbrev Q q
-cabbrev Q! q!
 
 " }}}
 
