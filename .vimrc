@@ -65,6 +65,7 @@ Plug 'tommcdo/vim-lion'                                                    " Ali
 Plug 'AndrewRadev/splitjoin.vim'                                           " Switch between multi-line and single-line statements
 Plug 'jiangmiao/auto-pairs'                                                " Insert or delete brackets, parens and quotes in pairs
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }             " Emmet abbreviations and expansions
+Plug 'SirVer/ultisnips'                                                    " Snippets engine
 
 " -- Teardown --
 
@@ -323,6 +324,13 @@ let g:sneak#streak = 1
 " -- Auto Pairs --
 
 let g:AutoPairsShortcutFastWrap = ''
+
+" -- UltiSnips --
+
+let g:UltiSnipsExpandTrigger = '<C-Tab>'
+let g:UltiSnipsListSnippets = '<C-S-Tab>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " -- Mappings ------------------------------------------------------ {{{
 

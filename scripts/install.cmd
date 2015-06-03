@@ -18,4 +18,7 @@ echo Symlinking files...
 mklink %USERPROFILE%\.vimrc %gitpath%\.vimrc
 mklink %USERPROFILE%\.gvimrc %gitpath%\.gvimrc
 
+echo Symlinking folders...
+mklink /d %vimpath%\UltiSnips %gitpath%\snippets
+
 endlocal

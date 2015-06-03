@@ -1,0 +1,23 @@
+snippet code
+\`\`\` $1
+${0:${VISUAL}}
+\`\`\`
+endsnippet
+
+snippet jfm
+---
+title: "$1"
+tags: [$2]
+layout: "post"
+comments: ${3:true}
+link: ${4:false}
+---
+
+$0
+endsnippet
+
+snippet jhl
+\{% highlight $1 %}
+${0:${VISUAL}}
+\{% endhighlight %}
+endsnippet
