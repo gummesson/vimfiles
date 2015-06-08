@@ -285,6 +285,10 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_custom_ignore = '\.git$'
 
+" -- EditorConfig --
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 " -- Syntastic --
 
 " Disable automatic checking
