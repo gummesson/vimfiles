@@ -357,6 +357,9 @@ vnoremap Q gw
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
+" Jump between current and previously edited file
+nnoremap <BS> <C-^>
+
 " Toggle paste mode
 set pastetoggle=<F2>
 
