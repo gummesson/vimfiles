@@ -146,6 +146,10 @@ set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
+" File navigation and completion
+set path+=**
+set suffixesadd+=.js,.css
+
 " Mouse
 set mouse=a    " Enable mouse usage
 set mousehide  " Hide the mouse cursor while typing
