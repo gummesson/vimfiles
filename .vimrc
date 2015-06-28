@@ -34,7 +34,6 @@ Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " Jav
 Plug 'ctrlpvim/ctrlp.vim'                                                  " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
-Plug 'moll/vim-bbye', { 'on': 'Bdelete' }                                  " Delete a buffer without closing its window
 Plug 'artnez/vim-wipeout', { 'on': 'Wipeout' }                             " Destroy all buffers that are not open in any tabs or windows
 Plug 'junegunn/vim-peekaboo'                                               " Preview the contents of registers
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                 " Distraction-free writing
