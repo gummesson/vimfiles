@@ -9,7 +9,6 @@
 "
 " }}}
 
-
 " -- Interface ----------------------------------------------------- {{{
 
 set guioptions=c                " Remove all GUI features
