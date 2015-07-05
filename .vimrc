@@ -263,6 +263,11 @@ augroup JAVASCRIPT
   autocmd FileType javascript let b:vcm_tab_complete = 'omni'
 augroup END
 
+augroup CSS
+  autocmd!
+  autocmd FileType css,html setlocal iskeyword+=-
+augroup END
+
 " }}}
 
 " -- Plugins ------------------------------------------------------- {{{
