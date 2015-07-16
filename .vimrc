@@ -360,6 +360,10 @@ nnoremap Y y$
 nnoremap Q gwip
 vnoremap Q gw
 
+" Enable easier window commands
+nnoremap gw <C-w>
+vnoremap gw <C-w>
+
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
