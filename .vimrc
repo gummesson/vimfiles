@@ -116,7 +116,6 @@ set background=dark    " Set background to dark
 
 set shortmess+=Iat  " Hide the intro and abbreviate and truncate command line messages
 set number          " Show line numbering
-set relativenumber  " use relative line numbering
 set laststatus=2    " Always display the status line
 set showcmd         " Show current command in the bottom right of the screen
 set showmode        " Display the current mode
