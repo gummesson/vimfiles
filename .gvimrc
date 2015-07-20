@@ -63,23 +63,19 @@ augroup END
 let g:thematic#themes = {
 \ 'anonymous': {
 \   'typeface': 'Anonymous Pro',
-\   'font-size': 13,
-\   'linespace': 3
+\   'font-size': 13
 \ },
 \ 'fantasque': {
 \   'typeface': 'Fantasque Sans Mono',
-\   'font-size': 13,
-\   'linespace': 3
+\   'font-size': 13
 \ },
 \ 'fira': {
 \   'typeface': 'Fira Mono',
-\   'font-size': 12,
-\   'linespace': 0
+\   'font-size': 12
 \ },
 \ 'terminus': {
 \   'typeface': 'Terminus',
-\   'font-size': 12,
-\   'linespace': 2
+\   'font-size': 12
 \ } }
 
 " }}}
