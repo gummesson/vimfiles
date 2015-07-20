@@ -14,8 +14,8 @@ set guioptions=c                " Remove all GUI features
 set guicursor=a:block-blinkon0  " Use a non blinking block cursor
 
 " Set window size
-set lines=35
-set columns=140
+set lines=40
+set columns=120
 
 " }}}
 
