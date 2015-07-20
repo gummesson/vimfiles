@@ -24,9 +24,6 @@ set columns=120
 " Use curled underlines for spelling highlights (when using `pencil`)
 let g:pencil_gui_spell_undercurl = 1
 
-" Use a different colorscheme when in GUI mode
-colorscheme spacegray
-
 " }}}
 
 " -- Font ---------------------------------------------------------- {{{

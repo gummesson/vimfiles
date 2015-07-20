@@ -26,7 +26,6 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'                                    " Colorschemes
 Plug 'reedes/vim-colors-pencil'
-Plug 'ajh17/Spacegray.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
