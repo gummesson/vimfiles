@@ -39,7 +39,7 @@ end
 
 " Fix font rendering
 if has('win32') || has('win64')
-  set renderoptions=type:directx,gamma:1.0,contrast:0.2,level:1.0,geom:1,renmode:5,taamode:1
+  set renderoptions=type:directx,geom:1,renmode:5,taamode:1
 endif
 
 " Remove extraneous line spacing
