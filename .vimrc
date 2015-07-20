@@ -107,8 +107,8 @@ set secure
 " -- Colorscheme --------------------------------------------------- {{{
 
 syntax on
-colorscheme solarized  " Use `solarized`
-set background=dark    " Set background to dark
+colorscheme base16-ocean
+set background=dark
 
 " }}}
 
