@@ -143,7 +143,7 @@ set completeopt=longest,menuone
 
 " File navigation and completion
 set path+=**
-set suffixesadd+=.js,.css
+set suffixesadd+=.js,.css,.md,.txt
 
 " Mouse
 set mouse=a    " Enable mouse usage
