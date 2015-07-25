@@ -1,7 +1,6 @@
 " -- .gvimrc ------------------------------------------------------- {{{
 "
 " -- Interface
-" -- Colorscheme
 " -- Font
 " -- Groups
 "
@@ -15,13 +14,6 @@ set guicursor=a:block-blinkon0  " Use a non blinking block cursor
 " Set window size
 set lines=40
 set columns=120
-
-" }}}
-
-" -- Colorscheme --------------------------------------------------- {{{
-
-" Use curled underlines for spelling highlights (when using `pencil`)
-let g:pencil_gui_spell_undercurl = 1
 
 " }}}
 
