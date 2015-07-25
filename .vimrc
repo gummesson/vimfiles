@@ -30,6 +30,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
+Plug 'EinfachToll/DidYouMean'                                              " Open the right file
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
 Plug 'junegunn/vim-peekaboo'                                               " Preview the contents of registers
