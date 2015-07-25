@@ -72,7 +72,7 @@ set t_Co=256        " Enable 256 colors
 set lazyredraw      " Don't redraw during macros
 set gdefault        " Use global substitution by default
 set synmaxcol=300   " Only highlight the first 300 columns in the buffer
-set hidden          " Hide the buffers instead of closing them
+set hidden          " Hide buffers instead of closing them
 set autoread        " Reload files that has been changed outside of Vim
 set timeoutlen=750  " Faster leader execution
 
