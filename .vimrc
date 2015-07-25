@@ -39,7 +39,6 @@ Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyp
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
-Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }                     " `gitk` clone
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                  " Pattern searching
 Plug 'bruno-/vim-husk'                                                     " Readline keybindings for command line mode
@@ -315,10 +314,6 @@ let g:peekaboo_delay = 750
 " -- Limelight --
 
 let g:limelight_conceal_ctermfg = 'darkgray'
-
-" -- Agit --
-
-let g:agit_enable_auto_show_commit = 0
 
 " -- Sneak --
 
