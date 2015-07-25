@@ -384,6 +384,10 @@ nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 " Run `SyntasticCheck`
 nnoremap <leader>c :SyntasticCheck<cr>
 
+" -- Commands --
+
+command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
+
 " }}}
 
 " vim:foldmethod=marker
