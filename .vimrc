@@ -30,7 +30,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
-Plug 'ctrlpvim/ctrlp.vim'                                                  " Fuzzy file, buffer, MRU and tag finder
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
 Plug 'junegunn/vim-peekaboo'                                               " Preview the contents of registers
@@ -290,12 +289,6 @@ let g:netrw_list_hide = &wildignore  " Hide certain files and folders
 let g:markdown_folding = 1
 let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
 
-" -- CtrlP --
-
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_use_caching = 0
-let g:ctrlp_custom_ignore = '\.git$'
-
 " -- EditorConfig --
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
@@ -386,14 +379,6 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
 
-" Open `CtrlP`'s buffer list
-nnoremap <leader>b :CtrlPBuffer<cr>
-
-" Open `CtrlP`'s `ctags` list
-nnoremap <leader>t :CtrlPTag<cr>
-
-" Toggle `Undotree`
-nnoremap <leader>u :UndotreeToggle<cr>
 
 " Run `SyntasticCheck`
 nnoremap <leader>c :SyntasticCheck<cr>
