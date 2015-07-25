@@ -31,6 +31,7 @@ Plug 'sheerun/vim-polyglot'                                                " Lan
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
+Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
 Plug 'junegunn/vim-peekaboo'                                               " Preview the contents of registers
@@ -39,7 +40,6 @@ Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyp
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
-Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'bruno-/vim-husk'                                                     " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
