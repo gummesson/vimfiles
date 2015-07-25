@@ -379,12 +379,11 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Open `netrw` as a project drawer
 nnoremap <leader>v :Vexplore<cr>
 
+" Highlight and show count of the current word under the cursor
+nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " Run `SyntasticCheck`
 nnoremap <leader>c :SyntasticCheck<cr>
-
-" Highlight and show count of the current word under the cursor
-nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " }}}
 
