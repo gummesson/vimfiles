@@ -38,7 +38,6 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                 " Dis
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyper-focused writing
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
-Plug 'reedes/vim-thematic'                                                 " Manage Vim's appearance to suit the task and environment
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                         " Browse undo history
 Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }                     " `gitk` clone

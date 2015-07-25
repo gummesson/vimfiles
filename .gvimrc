@@ -4,7 +4,6 @@
 " -- Colorscheme
 " -- Font
 " -- Groups
-" -- Plugins
 "
 " }}}
 
@@ -50,30 +49,6 @@ augroup GUI
   autocmd!
   autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
 augroup END
-
-" }}}
-
-" -- Plugins ------------------------------------------------------- {{{
-
-" -- Thematic --
-
-let g:thematic#themes = {
-\ 'anonymous': {
-\   'typeface': 'Anonymous Pro',
-\   'font-size': 13
-\ },
-\ 'fantasque': {
-\   'typeface': 'Fantasque Sans Mono',
-\   'font-size': 13
-\ },
-\ 'fira': {
-\   'typeface': 'Fira Mono',
-\   'font-size': 12
-\ },
-\ 'terminus': {
-\   'typeface': 'Terminus',
-\   'font-size': 12
-\ } }
 
 " }}}
 
