@@ -40,7 +40,6 @@ Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lig
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
-Plug 'gummesson/vim-grepany', { 'on': ['Grep', 'LGrep'] }                  " Pattern searching
 Plug 'bruno-/vim-husk'                                                     " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
@@ -242,9 +241,19 @@ else
   set spellfile=$HOME/vimfiles/spell/custom.utf-8.add
 endif
 
+if executable('ack')
+  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
 " }}}
 
 " -- Groups -------------------------------------------------------- {{{
+
+augroup GLOBAL
+  autocmd!
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
 
 augroup MARKDOWN
   autocmd!
