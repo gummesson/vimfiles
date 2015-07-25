@@ -386,6 +386,7 @@ nnoremap <leader>c :SyntasticCheck<cr>
 
 " -- Commands --
 
+" Helper for `grep`
 command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
 
 " }}}
