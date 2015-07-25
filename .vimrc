@@ -129,9 +129,9 @@ set wildmode=longest:full,full  " Complete only up to the point of ambiguity
 set wildignorecase              " Ignore case on files and directories on the command line
 
 " Wild ignores
-set wildignore+=.bundle,.gems,.gs,.sass-cache,bower_components,node_modules,vendor
-set wildignore+=_site,build,coverage,dist,public,www,tmp,db
-set wildignore+=tags,*.log,*.min.*,*.jpg,*.png,*.svg,*.ico,*.pdf,*.epub
+set wildignore+=*/.bundle/*,*/.gems/*,*/.sass-cache/*,*/db/*,*/node_modules/*,*/tmp/*,*/vendor/*
+set wildignore+=*/_site/*,*/build/*,*/coverage/*,*/dist/*,*/public/*,*/www/*
+set wildignore+=*.log,*.jpg,*.png,*.svg,*.pdf,*.epub
 
 " Omnicompletion
 set omnifunc=syntaxcomplete#Complete
@@ -278,12 +278,11 @@ augroup END
 
 " -- Netrw --
 
-let g:netrw_liststyle = 3            " Tree style listing
-let g:netrw_browse_split = 4         " Open in previous window
-let g:netrw_altv = 1                 " Split to right
-let g:netrw_winsize = 20             " Window size (percentage of the current window)
-let g:netrw_banner = 0               " Remove the information banner at the top
-let g:netrw_list_hide = &wildignore  " Hide certain files and folders
+let g:netrw_liststyle = 3     " Tree style listing
+let g:netrw_browse_split = 4  " Open in previous window
+let g:netrw_altv = 1          " Split to right
+let g:netrw_winsize = 20      " Window size
+let g:netrw_banner = 0        " Remove the banner at the top
 
 " -- Polyglot --
 
