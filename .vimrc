@@ -350,15 +350,14 @@ nnoremap Y y$
 nnoremap Q gwip
 vnoremap Q gw
 
-" Enable easier window commands
-nnoremap gw <C-w>
-vnoremap gw <C-w>
-
 " Enable `Wordy`
 nnoremap § :NextWordy<cr>
 
 " Jump between current and previously edited file
 nnoremap <BS> <C-^>
+
+" Cycle between windows
+nnoremap <Tab> <C-w><C-W>
 
 " Toggle paste mode
 set pastetoggle=<F2>
