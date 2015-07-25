@@ -350,8 +350,8 @@ nnoremap Y y$
 nnoremap Q gwip
 vnoremap Q gw
 
-" Enable `Wordy`
-nnoremap § :NextWordy<cr>
+" List and switch buffers
+nnoremap § :ls<cr>:b
 
 " Jump between current and previously edited file
 nnoremap <BS> <C-^>
