@@ -28,8 +28,6 @@ Plug 'altercation/vim-colors-solarized'                                    " Col
 Plug 'reedes/vim-colors-pencil'
 Plug 'chriskempson/base16-vim'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
-Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
-Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
@@ -57,8 +55,10 @@ Plug 'tommcdo/vim-exchange'                                                " Exc
 Plug 'tommcdo/vim-lion'                                                    " Alignment operator
 Plug 'AndrewRadev/splitjoin.vim'                                           " Switch between multi-line and single-line statements
 Plug 'jiangmiao/auto-pairs'                                                " Insert or delete brackets, parens and quotes in pairs
+Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }             " Emmet abbreviations and expansions
 Plug 'SirVer/ultisnips'                                                    " Snippets engine
+Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
 
 " -- Teardown --
 
