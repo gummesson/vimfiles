@@ -171,6 +171,10 @@ set splitbelow        " Put a split beneath the current one
 set splitright        " Put a split to the right the current one
 set fillchars=vert:\  " Remove `|` from vertical splits
 
+" Sessions
+set sessionoptions-=blank    " Don't save empty buffers...
+set sessionoptions-=options  " ...or mapping and other options
+
 " -- Statusline --
 
 set statusline=\ %f\                                                 " Relative filename
