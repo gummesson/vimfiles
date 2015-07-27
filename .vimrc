@@ -38,6 +38,7 @@ Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyp
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
+Plug 'duff/vim-scratch', { 'on': ['Scratch', 'Sscratch'] }                 " Create a temporary scratch buffer
 Plug 'bruno-/vim-husk'                                                     " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
@@ -348,6 +349,9 @@ nnoremap Y y$
 " Reformat current paragraph
 nnoremap Q gwip
 vnoremap Q gw
+
+" Open scratch buffer
+nnoremap gs :Sscratch<cr>
 
 " List and switch buffers
 nnoremap § :ls<cr>:b
