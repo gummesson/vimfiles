@@ -293,7 +293,6 @@ let g:netrw_banner = 0        " Remove the banner at the top
 " -- Polyglot --
 
 let g:markdown_folding = 1
-let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json', 'ruby']
 
 " -- EditorConfig --
 
