@@ -283,11 +283,11 @@ augroup END
 
 " -- Netrw --
 
-let g:netrw_liststyle = 3     " Tree style listing
-let g:netrw_browse_split = 4  " Open in previous window
-let g:netrw_altv = 1          " Split to right
-let g:netrw_winsize = 20      " Window size
-let g:netrw_banner = 0        " Remove the banner at the top
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+let g:netrw_banner = 0
 
 " -- Polyglot --
 
@@ -299,18 +299,11 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " -- Syntastic --
 
-" Disable automatic checking
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
-
-" Use the location list
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-
-" Symbols
 let g:syntastic_error_symbol = 'X'
 let g:syntastic_warning_symbol = '!'
-
-" Syntax checkers
 let g:syntastic_javascript_checkers = ['eslint']
 
 " -- Peekabo --
