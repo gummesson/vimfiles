@@ -24,8 +24,7 @@ call plug#begin()
 
 " -- Plugins --
 
-Plug 'altercation/vim-colors-solarized'                                    " Colorschemes
-Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'                                             " Colorschemes
 Plug 'reedes/vim-colors-pencil'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
