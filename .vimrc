@@ -379,7 +379,7 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " Run `SyntasticCheck`
-nnoremap <leader>c :SyntasticCheck<cr>
+nnoremap <leader>s :SyntasticCheck<cr>
 
 " -- Commands --
 
