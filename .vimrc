@@ -355,8 +355,9 @@ nnoremap § :ls<cr>:b
 " Jump between current and previously edited file
 nnoremap <BS> <C-^>
 
-" Cycle between windows
-nnoremap <Tab> <C-w><C-W>
+" Window management and navigation
+nnoremap <Tab> <C-w>
+nnoremap <Tab><Tab> <C-w><C-w>
 
 " Toggle paste mode
 set pastetoggle=<F2>
