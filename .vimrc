@@ -54,7 +54,7 @@ Plug 'tommcdo/vim-lister'                                                  " Man
 Plug 'tommcdo/vim-exchange'                                                " Exchange operator
 Plug 'tommcdo/vim-lion'                                                    " Alignment operator
 Plug 'AndrewRadev/splitjoin.vim'                                           " Switch between multi-line and single-line statements
-Plug 'jiangmiao/auto-pairs'                                                " Insert or delete brackets, parens and quotes in pairs
+Plug 'Raimondi/delimitMate'                                                " Insert or delete brackets, parens and quotes in pairs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }             " Emmet abbreviations and expansions
 Plug 'SirVer/ultisnips'                                                    " Snippets engine
@@ -318,9 +318,10 @@ let g:limelight_conceal_ctermfg = 'darkgray'
 
 let g:sneak#streak = 1
 
-" -- Auto Pairs --
+" -- delimitMate --
 
-let g:AutoPairsShortcutFastWrap = ''
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
 
 " -- UltiSnips --
 
