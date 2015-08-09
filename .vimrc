@@ -348,6 +348,9 @@ nnoremap gk k
 " Make `Y` behave like `C` and `D` (to the end of line)
 nnoremap Y y$
 
+" Search for the current word under the cursor
+nnoremap K :Grep! <cword><cr>
+
 " Reformat current paragraph
 nnoremap Q gwip
 vnoremap Q gw
