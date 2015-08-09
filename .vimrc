@@ -345,7 +345,7 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" Make `Y` behave like `C` and `D` (ie. to the end of line)
+" Make `Y` behave like `C` and `D` (to the end of line)
 nnoremap Y y$
 
 " Reformat current paragraph
