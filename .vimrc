@@ -332,6 +332,11 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " -- Mappings ------------------------------------------------------ {{{
 
+" -- Commands --
+
+" Helper for `grep`
+command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
+
 " -- Keys --
 
 " Move by display lines rather than linewise
@@ -382,11 +387,6 @@ nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " Run `SyntasticCheck`
 nnoremap <leader>s :SyntasticCheck<cr>
-
-" -- Commands --
-
-" Helper for `grep`
-command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
 
 " }}}
 
