@@ -154,7 +154,7 @@ set foldopen-=block    " Don't open folds on `(`, `{` etc.
 
 " Whitespace characters
 set list
-set listchars=tab:▸\ ,trail:·,extends:»,precedes:«
+set listchars=tab:›\ ,trail:·,extends:»,precedes:«
 set showbreak=
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
