@@ -26,7 +26,6 @@ call plug#begin()
 
 Plug 'chriskempson/base16-vim'                                             " Colorschemes
 Plug 'reedes/vim-colors-pencil'
-Plug 'gilgigilgil/anderson.vim'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
