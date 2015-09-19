@@ -20,9 +20,9 @@ set columns=120
 " -- Font ---------------------------------------------------------- {{{
 
 if has('unix')
-  set guifont=Fira\ Mono\ 12
+  set guifont=Fantasque\ Sans\ Mono\ 13
 else
-  set guifont=Fira_Mono:h12
+  set guifont=Fantasque_Sans_Mono:h13
 end
 
 " Fix font rendering
