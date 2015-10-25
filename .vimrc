@@ -385,11 +385,11 @@ nnoremap <leader><leader> :set nohlsearch!<cr>
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
-" Highlight and show count of the current word under the cursor
-nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
-
 " Run `SyntasticCheck`
 nnoremap <leader>s :SyntasticCheck<cr>
+
+" Highlight and show count of the current word under the cursor
+nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " }}}
 
