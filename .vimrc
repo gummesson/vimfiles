@@ -247,7 +247,7 @@ else
 endif
 
 if executable('ack')
-  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
+  set grepprg=ack\ -s\ --with-filename\ --nogroup\ --nocolor\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
