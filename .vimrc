@@ -28,7 +28,7 @@ Plug 'chriskempson/base16-vim'                                             " Col
 Plug 'reedes/vim-colors-pencil'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
-Plug 'justinmk/vim-dirvish', { 'on': 'Dirvish' }                           " Minimalist directory viewer
+Plug 'justinmk/vim-dirvish'                                                " Minimalist directory viewer
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
