@@ -41,7 +41,6 @@ Plug 'bruno-/vim-husk'                                                     " Rea
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
 Plug 'vim-scripts/ReplaceWithRegister'                                     " Replace text with motions
-Plug 'ggVGc/vim-fuzzysearch', { 'on': 'FuzzySearch' }                      " Enable fuzzy searching capabilities
 Plug 'justinmk/vim-sneak'                                                  " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                  " Git wrapper
 Plug 'tpope/vim-repeat'                                                    " Repeat plugin-defined mappings
@@ -377,9 +376,6 @@ nnoremap <F12> :Goyo<cr>
 
 " Toggle search highlighting
 nnoremap <leader><leader> :set nohlsearch!<cr>
-
-" Run `FuzzySearch`
-nnoremap <leader>f :FuzzySearch<cr>
 
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
