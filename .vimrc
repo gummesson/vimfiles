@@ -28,7 +28,6 @@ Plug 'chriskempson/base16-vim'                                             " Col
 Plug 'reedes/vim-colors-pencil'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'EinfachToll/DidYouMean'                                              " Open the right file
-Plug 'justinmk/vim-dirvish'                                                " Minimalist directory viewer
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
@@ -42,6 +41,7 @@ Plug 'bruno-/vim-husk'                                                     " Rea
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
 Plug 'vim-scripts/ReplaceWithRegister'                                     " Replace text with motions
+Plug 'justinmk/vim-dirvish'                                                " Minimalist directory viewer
 Plug 'justinmk/vim-sneak'                                                  " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                  " Git wrapper
 Plug 'tpope/vim-repeat'                                                    " Repeat plugin-defined mappings
