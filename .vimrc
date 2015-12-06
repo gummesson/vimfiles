@@ -377,6 +377,9 @@ nnoremap <F12> :Goyo<cr>
 " Toggle search highlighting
 nnoremap <leader><leader> :set nohlsearch!<cr>
 
+" Open `Dirvish`
+nnoremap <leader>d :Dirvish<cr>
+
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
