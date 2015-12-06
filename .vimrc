@@ -383,7 +383,7 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Run `SyntasticCheck`
 nnoremap <leader>s :SyntasticCheck<cr>
 
-" Highlight and show count of the current word under the cursor
+" Highlight and count the current word under the cursor
 nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
 " }}}
