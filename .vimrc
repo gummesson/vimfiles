@@ -374,9 +374,6 @@ nnoremap <F12> :Goyo<cr>
 
 " -- Leader --
 
-" Remap the `leader` key
-let mapleader = "\<Space>"
-
 " Toggle search highlighting
 nnoremap <leader><leader> :set nohlsearch!<cr>
 
