@@ -383,6 +383,9 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Run `SyntasticCheck`
 nnoremap <leader>s :SyntasticCheck<cr>
 
+" Yank whole buffer (to clipboard)
+nnoremap <leader>y :%y+<cr>
+
 " Highlight and count the current word under the cursor
 nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
 
