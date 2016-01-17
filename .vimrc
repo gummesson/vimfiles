@@ -173,7 +173,7 @@ set fillchars=vert:\  " Remove `|` from vertical splits
 
 " Sessions
 set sessionoptions-=blank    " Don't save empty buffers...
-set sessionoptions-=options  " ...or mapping and other options
+set sessionoptions-=options  " ...or mappings and other options
 
 " -- Statusline --
 
