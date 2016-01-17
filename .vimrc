@@ -248,6 +248,10 @@ if executable('ack')
   set grepprg=ack\ --column\ --nogroup\ --nocolor
 endif
 
+if executable('sift')
+  set grepprg=sift\ --no-group\ --no-color
+endif
+
 " }}}
 
 " -- Groups -------------------------------------------------------- {{{
