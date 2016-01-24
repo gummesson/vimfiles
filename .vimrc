@@ -121,8 +121,8 @@ set colorcolumn=+1  " Show the 81st column
 set nowrap                      " No soft wrapping
 set nostartofline               " Keep the cursor on the same column when moving around
 set scrolloff=1                 " Start scrolling when the cursor is near the edges
-set sidescroll=1                " Scroll one character at a time
-set sidescrolloff=1
+set sidescroll=1                " Scroll one character at a time...
+set sidescrolloff=2             " ...even when `list` is set
 set showmatch                   " Show matching parens...
 set matchtime=1                 " ...for a tenth of a second
 set wildmenu                    " Show options for file and command completion
