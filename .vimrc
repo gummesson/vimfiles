@@ -248,6 +248,7 @@ endif
 
 if executable('sift')
   set grepprg=sift\ --no-group\ --no-color
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 " }}}
