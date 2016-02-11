@@ -103,7 +103,7 @@ set secure
 " -- Colorscheme --------------------------------------------------- {{{
 
 syntax on
-colorscheme base16-duotone-darksea
+colorscheme duotone-darksea
 set background=dark
 
 " }}}
