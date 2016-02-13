@@ -4,22 +4,22 @@ function $1($2) {
 }
 endsnippet
 
+snippet afn
+($1) => {
+	$2
+}
+endsnippet
+
 snippet cb
-$1($2function($3) {
+$1($2($3) => {
 	$0
 })
 endsnippet
 
 snippet cbs
-$1('$2', function($3) {
+$1('$2', ($3) => {
 	$0
 })
-endsnippet
-
-snippet afn
-($1) => {
-	$2
-}
 endsnippet
 
 snippet log
@@ -36,11 +36,15 @@ import ${1} from '${2:$1}'
 endsnippet
 
 snippet ex
+export ${1:default} $0
+endsnippet
+
+snippet mex
 module.exports = $0
 endsnippet
 
 snippet t
-test('$1', function(${2:assert}) {
+test('$1', (${2:assert}) => {
 	$0
 })
 endsnippet
