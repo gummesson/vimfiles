@@ -40,7 +40,7 @@ Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Unc
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
 Plug 'vim-utils/vim-husk'                                                  " Readline keybindings for command line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
-Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby'] }                " Additional `%` targets
+Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'vim'] }         " Additional `%` targets
 Plug 'vim-scripts/ReplaceWithRegister'                                     " Replace text with motions
 Plug 'embear/vim-foldsearch'                                               " Fold away lines that don't match a specific search pattern
 Plug 'justinmk/vim-dirvish'                                                " Minimalist directory viewer
@@ -58,7 +58,7 @@ Plug 'tommcdo/vim-lion'                                                    " Ali
 Plug 'AndrewRadev/splitjoin.vim'                                           " Switch between multi-line and single-line statements
 Plug 'Raimondi/delimitMate'                                                " Insert or delete brackets, parens and quotes in pairs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
-Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'markdown'] }             " Emmet abbreviations and expansions
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'sass', 'markdown'] }     " Emmet abbreviations and expansions
 Plug 'SirVer/ultisnips'                                                    " Snippets engine
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
 
