@@ -379,6 +379,9 @@ nnoremap <F12> :Goyo<cr>
 " Toggle search highlighting
 nnoremap <leader><leader> :set nohlsearch!<cr>
 
+" Show information about current cursor position
+nnoremap <leader>c g<C-g>
+
 " Run `Dirvish`
 nnoremap <leader>d :Dirvish<cr>
 
