@@ -35,6 +35,7 @@ Plug 'junegunn/vim-peekaboo'                                               " Pre
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                 " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyper-focused writing
 Plug 'junegunn/gv.vim', { 'on': 'GV' }                                     " Git commit browser
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                         " Browse the undo tree
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
@@ -313,6 +314,10 @@ let g:peekaboo_delay = 750
 " -- Limelight --
 
 let g:limelight_conceal_ctermfg = 'darkgray'
+
+" -- Undotree --
+
+let g:undotree_WindowLayout = 2
 
 " -- Sneak --
 
