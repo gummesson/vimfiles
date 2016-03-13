@@ -4,6 +4,7 @@ set -e
 
 userpath="${HOME}"
 vimpath="${HOME}/.vim"
+nvimpath="${HOME}/.config/nvim"
 gitpath="${HOME}/Git/vimfiles"
 
 echo "Creating folders..."
@@ -19,6 +20,8 @@ curl --fail --location --output \
 echo "Symlinking files..."
 ln -sf $gitpath/.vimrc $userpath/.vimrc
 ln -sf $gitpath/.gvimrc $userpath/.gvimrc
+ln -sf $gitpath/init.vim $vimpath/init.vim
 
 echo "Symlinking folders..."
 ln -sf $gitpath/snippets $vimpath/UltiSnips
+ln -sf $vimpath $nvimpath
