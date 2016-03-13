@@ -23,7 +23,7 @@ augroup END
 
 " -- Mappings ------------------------------------------------------ {{{
 
-" -- Commands --
+" -- Keys --
 
 " Switch to normal mode with `Esc`
 tnoremap <Esc> <C-\><C-n>
