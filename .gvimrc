@@ -3,6 +3,7 @@
 " -- Interface
 " -- Font
 " -- Groups
+" -- Commands
 "
 " }}}
 
@@ -41,6 +42,16 @@ augroup GUI
   autocmd!
   autocmd GUIEnter * set visualbell t_vb=  " Remove sound and visual error
 augroup END
+
+" }}}
+
+" -- Mappings ------------------------------------------------------ {{{
+
+" -- Commands --
+
+" Change font size on the fly
+command! Bigger :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)+1', '')
+command! Smaller :let &guifont = substitute(&guifont, '\d\+$', '\=submatch(0)-1', '')
 
 " }}}
 
