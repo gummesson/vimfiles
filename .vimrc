@@ -381,6 +381,9 @@ nnoremap <F12> :Goyo<cr>
 " Toggle search highlighting
 nnoremap <leader><leader> :set nohlsearch!<cr>
 
+" Run `CtrlPBuffer`
+nnoremap <leader>b :CtrlPBuffer<cr>
+
 " Show information about current cursor position
 nnoremap <leader>c g<C-g>
 
