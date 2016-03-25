@@ -3,7 +3,7 @@
 " -- Interface
 " -- Font
 " -- Groups
-" -- Commands
+" -- Mappings
 "
 " }}}
 
