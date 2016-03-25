@@ -28,6 +28,7 @@ Plug 'chriskempson/base16-vim'                                             " Col
 Plug 'atelierbram/vim-colors_duotones'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
+Plug 'ctrlpvim/ctrlp.vim'                                                  " Fuzzy finder
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
@@ -293,6 +294,10 @@ let g:netrw_banner = 0
 " -- Polyglot --
 
 let g:markdown_folding = 1
+
+" -- CtrlP --
+
+let g:ctrlp_user_command = 'sift --no-conf --ignore-case --no-color --no-group --git --targets --path "" %s'
 
 " -- EditorConfig --
 
