@@ -376,10 +376,6 @@ nnoremap <F5> :edit<cr>
 " Toggle `Goyo`
 nnoremap <F12> :Goyo<cr>
 
-" Saner command-line history cycling
-cnoremap <C-n> <Down>
-cnoremap <C-p> <Up>
-
 " -- Leader --
 
 " Toggle search highlighting
