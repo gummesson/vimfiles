@@ -391,9 +391,6 @@ nnoremap <leader>c g<C-g>
 " Run `Dirvish`
 nnoremap <leader>d :Dirvish<cr>
 
-" Browse `oldfiles` list
-nnoremap <leader>f :browse oldfiles<cr>
-
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
