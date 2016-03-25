@@ -396,6 +396,9 @@ nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 " Run `SyntasticCheck`
 nnoremap <leader>s :SyntasticCheck<cr>
 
+" Run `CtrlPTag`
+nnoremap <leader>t :CtrlPTag<cr>
+
 " Yank whole buffer (to clipboard)
 nnoremap <leader>y :%y+<cr>
 

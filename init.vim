@@ -28,11 +28,6 @@ augroup END
 " Switch to normal mode with `Esc`
 tnoremap <Esc> <C-\><C-n>
 
-" -- Leader --
-
-" Open terminal
-nnoremap <leader>t :vsplit<cr>:terminal<cr>
-
 " }}}
 
 " vim:foldmethod=marker
