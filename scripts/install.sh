@@ -24,4 +24,5 @@ ln -sf $gitpath/init.vim $vimpath/init.vim
 
 echo "Symlinking folders..."
 ln -sf $gitpath/snippets $vimpath/UltiSnips
+ln -sf $gitpath/after $vimpath/after
 ln -sf $vimpath $nvimpath
