@@ -95,6 +95,9 @@ set nobomb
 set fileformat=unix
 set fileformats=unix,dos,mac
 
+" Use forward slashes in paths
+set shellslash
+
 " Eanble local `.vimrc` files
 set exrc
 set secure
