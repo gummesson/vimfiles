@@ -288,7 +288,9 @@ let g:markdown_folding = 1
 
 " -- CtrlP --
 
-let g:ctrlp_user_command = 'sift --no-conf --ignore-case --no-color --no-group --git --targets --path "" %s'
+if executable('sift')
+  let g:ctrlp_user_command = 'sift --no-conf --ignore-case --no-color --no-group --git --targets --path "" %s'
+endif
 
 " -- EditorConfig --
 
