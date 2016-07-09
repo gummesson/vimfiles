@@ -25,7 +25,6 @@ call plug#begin()
 " -- Plugins --
 
 Plug 'chriskempson/base16-vim'                                             " Colorschemes
-Plug 'atelierbram/vim-colors_duotones'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sheerun/vim-polyglot'                                                " Language packs
 Plug 'ctrlpvim/ctrlp.vim'                                                  " Fuzzy finder
@@ -105,7 +104,7 @@ set secure
 " -- Colorscheme --------------------------------------------------- {{{
 
 syntax on
-colorscheme duotone-darksea
+colorscheme base16-ocean
 set background=dark
 
 " }}}
