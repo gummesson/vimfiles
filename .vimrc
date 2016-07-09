@@ -285,10 +285,6 @@ augroup END
 
 " -- Plugins ------------------------------------------------------- {{{
 
-" -- Polyglot --
-
-let g:markdown_folding = 1
-
 " -- CtrlP --
 
 if executable('sift')
