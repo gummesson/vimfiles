@@ -356,9 +356,6 @@ nnoremap K :Grep! <cword><cr>
 nnoremap Q gwip
 vnoremap Q gw
 
-" List and switch buffers
-nnoremap § :ls<cr>:b
-
 " Jump between current and previously edited file
 nnoremap <BS> <C-^>
 
