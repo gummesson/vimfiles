@@ -9,6 +9,7 @@ My [(g)Vim](http://www.vim.org/) files.
 
 ## Troubleshooting
 
-1. On Windows, you need to have `C:\Program Files (x86)\Git\bin` in your PATH.
+1. On Windows, you need to have [curl](https://curl.haxx.se/) installed
+   globally.
 2. On Windows, you may need to run the `install.cmd` script as an
    *Administrator*.
