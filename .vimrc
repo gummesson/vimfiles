@@ -387,6 +387,9 @@ nnoremap <leader>c g<C-g>
 " Run `Dirvish`
 nnoremap <leader>d :Dirvish<cr>
 
+" Open help in new tab
+nnoremap <leader>h :tab h<Space>
+
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
 
