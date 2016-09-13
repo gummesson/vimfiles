@@ -163,7 +163,7 @@ set listchars=tab:›\ ,trail:·,extends:»,precedes:«
 set showbreak=
 
 set backspace=indent,eol,start  " Enable backspacing over everything in insert mode
-set whichwrap=h,l,b,<,>,~,[,]   " Go to the previous/next line after reaching the first/last character in the line
+set whichwrap+=h,l,<,>,~,[,]    " Go to the previous/next line after reaching the first/last character in the line
 set virtualedit=block           " Enable visual block mode to go beyond the characters at the of a line
 set formatoptions+=j            " Remove comment character when joining lines
 set nrformats-=octal            " Disable octal increments and decrements
@@ -235,7 +235,6 @@ set nowritebackup
 
 " -- Language ------------------------------------------------------ {{{
 
-set langmenu=none
 set spelllang=en,sv
 
 " }}}
@@ -368,7 +367,7 @@ nnoremap <Tab><Tab> <C-w><C-w>
 set pastetoggle=<F2>
 
 " Redetect file
-nnoremap <F5> :edit<cr>
+nnoremap <F5> :e<cr>
 
 " Toggle `Goyo`
 nnoremap <F12> :Goyo<cr>
