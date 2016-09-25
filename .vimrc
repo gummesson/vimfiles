@@ -180,15 +180,11 @@ set sessionoptions-=options  " ...or mappings and other options
 
 " -- Statusline --
 
-set statusline=\ %f\                                                 " Relative filename
-set statusline+=%m                                                   " Modified flag
-set statusline+=%r                                                   " Read only flag
-set statusline+=%{fugitive#statusline()[4:-2]}                       " Fugitive
-set statusline+=%=                                                   " Separator
+set statusline=\ %f\ %m%r                                            " Relative filename, modified flag and read-only flag
+set statusline+=%{fugitive#statusline()[4:-2]}%=                     " Fugitive status and separator
 set statusline+=\ %{strlen(&filetype)?&filetype:'none'}              " Filetype
 set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
-set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}      " file format
-set statusline+=\ \|\ %c/%l/%L\                                      " Cursor and line position, and total lines
+set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}\     " file format
 
 " }}}
 
