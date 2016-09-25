@@ -43,7 +43,6 @@ Plug 'wellle/targets.vim'                                                  " Add
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'vim'] }         " Additional `%` targets
 Plug 'vim-scripts/ReplaceWithRegister'                                     " Replace text with motions
 Plug 'embear/vim-foldsearch'                                               " Fold away lines that don't match a specific search pattern
-Plug 'justinmk/vim-dirvish'                                                " Minimalist directory viewer
 Plug 'justinmk/vim-sneak'                                                  " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                  " Git wrapper
 Plug 'tpope/vim-repeat'                                                    " Repeat plugin-defined mappings
@@ -52,6 +51,7 @@ Plug 'tpope/vim-surround'                                                  " Ins
 Plug 'tpope/vim-commentary'                                                " Comment and uncomment lines
 Plug 'tpope/vim-abolish'                                                   " Case-insensitive abbreviations and substitutions
 Plug 'tpope/vim-eunuch'                                                    " UNIX (and Git Bash) helpers
+Plug 'tpope/vim-vinegar'                                                   " Enhance `netrw`
 Plug 'tommcdo/vim-lister'                                                  " Manipulate the argument, buffer, location and quickfix list
 Plug 'tommcdo/vim-exchange'                                                " Exchange operator
 Plug 'tommcdo/vim-lion'                                                    " Alignment operator
@@ -382,8 +382,8 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 " Show information about current cursor position
 nnoremap <leader>c g<C-g>
 
-" Run `Dirvish`
-nnoremap <leader>d :Dirvish<cr>
+" Explore current directory
+nnoremap <leader>e :Explore<cr>
 
 " Open help in new tab
 nnoremap <leader>h :tab h<Space>
