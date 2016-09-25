@@ -36,7 +36,7 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                 " Dis
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyper-focused writing
 Plug 'junegunn/gv.vim', { 'on': 'GV' }                                     " Git commit browser
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                         " Browse the undo tree
-Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
+Plug 'reedes/vim-litecorrect'                                              " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'dbmrq/vim-ditto'                                                     " Highlight overused words
 Plug 'vim-utils/vim-husk'                                                  " Readline keybindings for command-line mode
