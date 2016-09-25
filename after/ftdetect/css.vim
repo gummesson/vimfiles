@@ -1,1 +1,1 @@
-autocmd FileType css,html setlocal iskeyword+=-
+autocmd FileType css setlocal iskeyword+=-
