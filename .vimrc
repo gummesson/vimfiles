@@ -38,6 +38,7 @@ Plug 'junegunn/gv.vim', { 'on': 'GV' }                                     " Git
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                         " Browse the undo tree
 Plug 'reedes/vim-litecorrect', { 'for': 'markdown' }                       " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
+Plug 'dbmrq/vim-ditto'                                                     " Highlight overused words
 Plug 'vim-utils/vim-husk'                                                  " Readline keybindings for command-line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'vim'] }         " Additional `%` targets
