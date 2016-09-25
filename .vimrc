@@ -254,26 +254,10 @@ endif
 
 " -- Groups -------------------------------------------------------- {{{
 
-augroup GLOBAL
+augroup USER
   autocmd!
   autocmd QuickFixCmdPost *grep* cwindow
-augroup END
-
-augroup MARKDOWN
-  autocmd!
-  autocmd BufRead,BufNewFile *.txt set filetype=markdown
-  autocmd FileType markdown call litecorrect#init()
   autocmd User GoyoLeave Limelight!
-augroup END
-
-augroup JAVASCRIPT
-  autocmd!
-  autocmd FileType javascript let b:vcm_tab_complete = 'omni'
-augroup END
-
-augroup CSS
-  autocmd!
-  autocmd FileType css,html setlocal iskeyword+=-
 augroup END
 
 " }}}
