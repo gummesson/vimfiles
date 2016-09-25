@@ -1,5 +1,4 @@
-" Fix highlighting for more variation and less noise
-silent! hi link jsStorageClass Identifier
-silent! hi link jsFunction Identifier
-silent! hi link jsFuncName Normal
-silent! hi link jsFuncParens Normal
+silent! highlight link jsStorageClass Identifier
+silent! highlight link jsFunction Identifier
+silent! highlight link jsFuncName Normal
+silent! highlight link jsFuncParens Normal
