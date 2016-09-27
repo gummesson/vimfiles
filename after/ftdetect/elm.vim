@@ -1,3 +1,3 @@
 if executable('elm-format')
-  command! -bang Format silent! !elm-format --yes %
+  command! -bang -nargs=1 -complete=file Format silent! !elm-format --yes <args>
 endif
