@@ -330,7 +330,7 @@ nnoremap gk k
 nnoremap Y y$
 
 " Search for the current word under the cursor
-nnoremap K :Grep! <cword><cr>
+nnoremap K :Grep! <cword><CR>
 
 " Reformat current paragraph
 nnoremap Q gwip
@@ -347,42 +347,42 @@ nnoremap <Tab><Tab> <C-w><C-w>
 set pastetoggle=<F2>
 
 " Redetect file
-nnoremap <F5> :e<cr>
+nnoremap <F5> :e<CR>
 
 " Toggle `Goyo`
-nnoremap <F12> :Goyo<cr>
+nnoremap <F12> :Goyo<CR>
 
 " -- Leader --
 
 " Toggle search highlighting
-nnoremap <leader><leader> :set nohlsearch!<cr>
+nnoremap <leader><leader> :set nohlsearch!<CR>
 
 " Run `CtrlPBuffer`
-nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Show information about current cursor position
 nnoremap <leader>c g<C-g>
 
 " Explore current directory
-nnoremap <leader>e :Explore<cr>
+nnoremap <leader>e :Explore<CR>
 
 " Open help in new tab
 nnoremap <leader>h :tab h<Space>
 
 " Set current directory as root
-nnoremap <leader>r :cd %:p:h<cr>:pwd<cr>
+nnoremap <leader>r :cd %:p:h<CR>:pwd<CR>
 
 " Run `SyntasticCheck`
-nnoremap <leader>s :SyntasticCheck<cr>
+nnoremap <leader>s :SyntasticCheck<CR>
 
 " Run `CtrlPTag`
-nnoremap <leader>t :CtrlPTag<cr>
+nnoremap <leader>t :CtrlPTag<CR>
 
 " Yank whole buffer (to clipboard)
-nnoremap <leader>y :%y+<cr>
+nnoremap <leader>y :%y+<CR>
 
 " Highlight and count the current word under the cursor
-nnoremap <leader>w :set hlsearch<cr>*N:%s///gn<cr>
+nnoremap <leader>w :set hlsearch<CR>*N:%s///gn<CR>
 
 " }}}
 
