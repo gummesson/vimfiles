@@ -43,7 +43,6 @@ Plug 'vim-utils/vim-husk'                                                  " Rea
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'vim'] }         " Additional `%` targets
 Plug 'vim-scripts/ReplaceWithRegister'                                     " Replace text with motions
-Plug 'embear/vim-foldsearch'                                               " Fold away lines that don't match a specific search pattern
 Plug 'justinmk/vim-sneak'                                                  " Jump to any location specified by two characters
 Plug 'tpope/vim-fugitive'                                                  " Git wrapper
 Plug 'tpope/vim-repeat'                                                    " Repeat plugin-defined mappings
