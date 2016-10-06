@@ -328,9 +328,6 @@ nnoremap gk k
 " Make `Y` behave like `C` and `D` (to the end of line)
 nnoremap Y y$
 
-" Search for the current word under the cursor
-nnoremap K :Grep! <cword><CR>
-
 " Reformat current paragraph
 nnoremap Q gwip
 vnoremap Q gw
@@ -364,6 +361,9 @@ nnoremap <leader>c g<C-g>
 
 " Explore current directory
 nnoremap <leader>e :Explore<CR>
+
+" Search for the current word under the cursor
+nnoremap <leader>g :Grep! <cword><CR>
 
 " Open help in new tab
 nnoremap <leader>h :tab h<Space>
