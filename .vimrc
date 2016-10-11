@@ -231,6 +231,7 @@ set nowritebackup
 " -- Language ------------------------------------------------------ {{{
 
 set spelllang=en,sv
+set spellcapcheck=   " Don't check for capital letters at start of sentence
 
 " }}}
 
