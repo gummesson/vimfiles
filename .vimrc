@@ -311,6 +311,8 @@ let g:UltiSnipsListSnippets = '<C-l>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
+" }}}
+
 " -- Mappings ------------------------------------------------------ {{{
 
 " -- Commands --
