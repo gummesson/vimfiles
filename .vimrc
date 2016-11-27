@@ -341,10 +341,6 @@ vnoremap Q gw
 " Jump between current and previously edited file
 nnoremap <BS> <C-^>
 
-" Window management and navigation
-nnoremap <Tab> <C-w>
-nnoremap <Tab><Tab> <C-w><C-w>
-
 " Toggle paste mode
 set pastetoggle=<F2>
 
@@ -373,6 +369,9 @@ nnoremap <leader>g :Grep! <cword><CR>
 
 " Open help in new tab
 nnoremap <leader>h :tab h<Space>
+
+" Cycle between windows
+nnoremap <leader>n <C-w><C-w>
 
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<CR>:pwd<CR>
