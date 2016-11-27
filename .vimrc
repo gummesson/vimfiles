@@ -137,9 +137,10 @@ set wildignore+=*/.bundle/*,*/.gems/*,*/.sass-cache/*,*/db/*,*/elm-stuff/*,*/nod
 set wildignore+=*/_site/*,*/build/*,*/coverage/*,*/dist/*,*/public/*,*/www/*
 set wildignore+=*.log,*.jpg,*.png,*.svg,*.pdf,*.epub
 
-" Omnicompletion
-set omnifunc=syntaxcomplete#Complete
+" Completion
+set complete-=i,t
 set completeopt=longest,menuone
+set omnifunc=syntaxcomplete#Complete
 
 " File navigation and completion
 set path+=**
