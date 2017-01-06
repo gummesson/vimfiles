@@ -109,6 +109,7 @@ syntax on
 set termguicolors
 colorscheme base16-ocean
 set background=dark
+set t_ut=
 
 " }}}
 
