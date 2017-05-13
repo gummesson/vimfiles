@@ -186,7 +186,7 @@ set sessionoptions-=options  " ...or mappings and other options
 set statusline=\ %f                                                  " Relative filename
 set statusline+=\ %{fugitive#statusline()}                           " Fugitive status
 set statusline+=%m%r%=                                               " Modified flag, read-only flag and separator
-set statusline+=\%{strlen(&filetype)?&filetype:'none'}               " Filetype
+set statusline+=\ %{strlen(&filetype)?&filetype:'none'}              " Filetype
 set statusline+=\ [%{ALEGetStatusLine()}\]                           " ALE status
 set statusline+=\ \|\ %{strlen(&fileencoding)?&fileencoding:'none'}  " File encoding
 set statusline+=\ \|\ %{strlen(&fileformat)?&fileformat:'none'}\     " file format
