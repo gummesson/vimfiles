@@ -30,7 +30,7 @@ Plug 'sheerun/vim-polyglot'                                                " Lan
 Plug 'ctrlpvim/ctrlp.vim'                                                  " Fuzzy finder
 Plug 'ludovicchabant/vim-gutentags'                                        " Automatic tags generation
 Plug 'editorconfig/editorconfig-vim'                                       " EditorConfig
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }                    " Syntax checker
+Plug 'w0rp/ale'                                                            " Asynchronous lint engine
 Plug 'junegunn/vim-peekaboo'                                               " Preview the contents of registers
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }                                 " Distraction-free writing
 Plug 'junegunn/limelight.vim', { 'on': 'Limelight' }                       " Hyper-focused writing
@@ -277,16 +277,11 @@ endif
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" -- Syntastic --
+" -- ALE --
 
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_warning_symbol = '!'
-let g:syntastic_style_warning_symbol = '>'
-let g:syntastic_error_symbol = 'X'
-let g:syntastic_style_error_symbol = '>'
-let g:syntastic_javascript_checkers = findfile('.eslintrc.json', '.;') != '' ? ['eslint'] : ['standard']
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
 
 " -- Peekabo --
 
@@ -372,14 +367,15 @@ nnoremap <leader>g :Grep! <cword><CR>
 " Open help in new tab
 nnoremap <leader>h :tab h<Space>
 
+" ALE navigation
+nnoremap <leader>j :ALEPreviousWrap<CR>
+nnoremap <leader>k :ALENextWrap<CR>
+
 " Cycle between windows
 nnoremap <leader>n <C-w><C-w>
 
 " Set current directory as root
 nnoremap <leader>r :cd %:p:h<CR>:pwd<CR>
-
-" Run `SyntasticCheck`
-nnoremap <leader>s :SyntasticCheck<CR>
 
 " Run `CtrlPTag`
 nnoremap <leader>t :CtrlPTag<CR>
