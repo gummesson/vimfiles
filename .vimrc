@@ -316,6 +316,11 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " -- Mappings ------------------------------------------------------ {{{
 
+" -- Abbreviations --
+
+iabbrev :date: <C-r>=strftime("%Y-%m-%d")<CR>
+iabbrev :time: <C-r>=strftime("%H:%M:%S")<CR>
+
 " -- Commands --
 
 " Helper for `grep`
