@@ -1,6 +1,7 @@
 " -- init.vim ------------------------------------------------------ {{{
 "
 " -- General
+" -- Visual
 " -- Groups
 " -- Mappings
 "
@@ -10,6 +11,12 @@
 
 " Use the `.vimrc` file for base configuration
 source ~/.vimrc
+
+" }}}
+
+" -- Visual -------------------------------------------------------- {{{
+
+set inccommand=nosplit  " Preview substitutions
 
 " }}}
 
