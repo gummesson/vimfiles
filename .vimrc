@@ -39,6 +39,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }                         " Bro
 Plug 'reedes/vim-litecorrect'                                              " Lightweight auto-correction
 Plug 'reedes/vim-wordy', { 'on': 'NextWordy' }                             " Uncover usage problems in writing
 Plug 'dbmrq/vim-ditto'                                                     " Highlight overused words
+Plug 'lukaszkorecki/workflowish'                                           " Workflowy clone
 Plug 'vim-utils/vim-husk'                                                  " Readline keybindings for command-line mode
 Plug 'wellle/targets.vim'                                                  " Additional text objects
 Plug 'vim-scripts/matchit.zip', { 'for': ['html', 'ruby', 'vim'] }         " Additional `%` targets
