@@ -110,6 +110,7 @@ syntax on
 let base16colorspace=256
 colorscheme base16-ocean
 set background=dark
+set t_ut=
 
 " }}}
 
