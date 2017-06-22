@@ -59,8 +59,8 @@ Plug 'tommcdo/vim-lion'                                                    " Ali
 Plug 'AndrewRadev/splitjoin.vim'                                           " Switch between multi-line and single-line statements
 Plug 'Raimondi/delimitMate'                                                " Insert or delete brackets, parens and quotes in pairs
 Plug 'ajh17/VimCompletesMe'                                                " Tab-completion
-Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'sass', 'markdown'] }     " Emmet abbreviations and expansions
 Plug 'SirVer/ultisnips'                                                    " Snippets engine
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'sass', 'markdown'] }     " Emmet abbreviations and expansions
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }  " JavaScript omni-completion
 
 " -- Teardown --
