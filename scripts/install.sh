@@ -2,7 +2,6 @@
 
 set -e
 
-userpath="$HOME"
 vimpath="$HOME/.vim"
 nvimpath="$HOME/.config/nvim"
 gitpath="$HOME/Code/vimfiles"
@@ -18,8 +17,8 @@ curl --fail --location --output \
   "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
 echo "Symlinking files..."
-ln -sf "$gitpath/.vimrc" "$userpath/.vimrc"
-ln -sf "$gitpath/.gvimrc" "$userpath/.gvimrc"
+ln -sf "$gitpath/.vimrc" "$HOME/.vimrc"
+ln -sf "$gitpath/.gvimrc" "$HOME/.gvimrc"
 ln -sf "$gitpath/init.vim" "$vimpath/init.vim"
 
 echo "Symlinking folders..."
