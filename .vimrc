@@ -70,7 +70,6 @@ call plug#end()
 
 " -- General ------------------------------------------------------- {{{
 
-set t_Co=256        " Enable 256 colors
 set lazyredraw      " Don't redraw during macros
 set synmaxcol=300   " Only highlight the first 300 columns in the buffer
 set hidden          " Hide buffers instead of closing them
@@ -106,7 +105,6 @@ set secure
 " -- Colorscheme --------------------------------------------------- {{{
 
 syntax on
-let base16colorspace=256
 colorscheme base16-ocean
 set background=dark
 set t_ut=
