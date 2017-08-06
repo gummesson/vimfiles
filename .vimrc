@@ -105,7 +105,7 @@ set secure
 " -- Colorscheme --------------------------------------------------- {{{
 
 syntax on
-colorscheme base16-ocean
+colorscheme base16-circus
 set background=dark
 set t_ut=
 
